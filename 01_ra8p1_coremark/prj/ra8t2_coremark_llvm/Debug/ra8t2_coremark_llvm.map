@@ -1,0 +1,1751 @@
+     VMA      LMA     Size Align Out     In      Symbol
+       0        0        0     1 RAM_START = 0x22000000
+       0        0        0     1 RAM_LENGTH = 0x001d4000
+       0        0        0     1 FLASH_START = 0x02000000
+       0        0        0     1 FLASH_LENGTH = 0x00100000
+       0        0        0     1 DATA_FLASH_START = 0x27000000
+       0        0        0     1 DATA_FLASH_LENGTH = 0x00000000
+       0        0        0     1 SDRAM_START = 0x68000000
+       0        0        0     1 SDRAM_LENGTH = 0x08000000
+       0        0        0     1 OSPI0_CS0_START = 0x80000000
+       0        0        0     1 OSPI0_CS0_LENGTH = 0x10000000
+       0        0        0     1 OSPI0_CS1_START = 0x90000000
+       0        0        0     1 OSPI0_CS1_LENGTH = 0x10000000
+       0        0        0     1 OSPI1_CS0_START = 0x70000000
+       0        0        0     1 OSPI1_CS0_LENGTH = 0x08000000
+       0        0        0     1 OSPI1_CS1_START = 0x78000000
+       0        0        0     1 OSPI1_CS1_LENGTH = 0x08000000
+       0        0        0     1 OPTION_SETTING_OFS0_START = 0x02c9f040
+       0        0        0     1 OPTION_SETTING_OFS0_LENGTH = 0x00000004
+       0        0        0     1 OPTION_SETTING_OFS2_START = 0x02c9f044
+       0        0        0     1 OPTION_SETTING_OFS2_LENGTH = 0x00000004
+       0        0        0     1 OPTION_SETTING_SAS_START = 0x02c9f074
+       0        0        0     1 OPTION_SETTING_SAS_LENGTH = 0x00000004
+       0        0        0     1 OPTION_SETTING_OFS1_START = 0x12c9f4c0
+       0        0        0     1 OPTION_SETTING_OFS1_LENGTH = 0x00000004
+       0        0        0     1 OPTION_SETTING_OFS1_SEC_START = 0x02c9f0c0
+       0        0        0     1 OPTION_SETTING_OFS1_SEC_LENGTH = 0x00000004
+       0        0        0     1 OPTION_SETTING_OFS1_SEL_START = 0x02c9f120
+       0        0        0     1 OPTION_SETTING_OFS1_SEL_LENGTH = 0x00000004
+       0        0        0     1 OPTION_SETTING_OFS3_START = 0x12c9f4c4
+       0        0        0     1 OPTION_SETTING_OFS3_LENGTH = 0x00000004
+       0        0        0     1 OPTION_SETTING_OFS3_SEC_START = 0x02c9f0c4
+       0        0        0     1 OPTION_SETTING_OFS3_SEC_LENGTH = 0x00000004
+       0        0        0     1 OPTION_SETTING_OFS3_SEL_START = 0x02c9f124
+       0        0        0     1 OPTION_SETTING_OFS3_SEL_LENGTH = 0x00000004
+       0        0        0     1 OPTION_SETTING_BPS_START = 0x12c9f600
+       0        0        0     1 OPTION_SETTING_BPS_LENGTH = 0x00000080
+       0        0        0     1 OPTION_SETTING_BPS_SEC_START = 0x02c9f200
+       0        0        0     1 OPTION_SETTING_BPS_SEC_LENGTH = 0x00000080
+       0        0        0     1 OPTION_SETTING_OTP_FSBLCTRL0_START = 0x02e07600
+       0        0        0     1 OPTION_SETTING_OTP_FSBLCTRL0_LENGTH = 0x00000004
+       0        0        0     1 OPTION_SETTING_OTP_FSBLCTRL1_START = 0x02e07604
+       0        0        0     1 OPTION_SETTING_OTP_FSBLCTRL1_LENGTH = 0x00000004
+       0        0        0     1 OPTION_SETTING_OTP_FSBLCTRL2_START = 0x02e07608
+       0        0        0     1 OPTION_SETTING_OTP_FSBLCTRL2_LENGTH = 0x00000004
+       0        0        0     1 OPTION_SETTING_OTP_SAMR_START = 0x02e07614
+       0        0        0     1 OPTION_SETTING_OTP_SAMR_LENGTH = 0x00000004
+       0        0        0     1 OPTION_SETTING_OTP_SACC00_START = 0x02e07620
+       0        0        0     1 OPTION_SETTING_OTP_SACC00_LENGTH = 0x00000004
+       0        0        0     1 OPTION_SETTING_OTP_SACC10_START = 0x02e07630
+       0        0        0     1 OPTION_SETTING_OTP_SACC10_LENGTH = 0x00000004
+       0        0        0     1 OPTION_SETTING_OTP_SACC01_START = 0x02e07640
+       0        0        0     1 OPTION_SETTING_OTP_SACC01_LENGTH = 0x00000004
+       0        0        0     1 OPTION_SETTING_OTP_SACC11_START = 0x02e07650
+       0        0        0     1 OPTION_SETTING_OTP_SACC11_LENGTH = 0x00000004
+       0        0        0     1 OPTION_SETTING_OTP_SACC02_START = 0x02e07660
+       0        0        0     1 OPTION_SETTING_OTP_SACC02_LENGTH = 0x00000004
+       0        0        0     1 OPTION_SETTING_OTP_SACC12_START = 0x02e07670
+       0        0        0     1 OPTION_SETTING_OTP_SACC12_LENGTH = 0x00000004
+       0        0        0     1 OPTION_SETTING_OTP_SACC03_START = 0x02e07680
+       0        0        0     1 OPTION_SETTING_OTP_SACC03_LENGTH = 0x00000004
+       0        0        0     1 OPTION_SETTING_OTP_SACC13_START = 0x02e07690
+       0        0        0     1 OPTION_SETTING_OTP_SACC13_LENGTH = 0x00000004
+       0        0        0     1 OPTION_SETTING_OTP_PBPS_SEC_START = 0x02e17700
+       0        0        0     1 OPTION_SETTING_OTP_PBPS_SEC_LENGTH = 0x00000080
+       0        0        0     1 OPTION_SETTING_OTP_PBPS_START = 0x12e17780
+       0        0        0     1 OPTION_SETTING_OTP_PBPS_LENGTH = 0x00000080
+       0        0        0     1 OPTION_SETTING_OTP_ZHUK_START = 0x02e17920
+       0        0        0     1 OPTION_SETTING_OTP_ZHUK_LENGTH = 0x00000004
+       0        0        0     1 ITCM_START = 0x00000000
+       0        0        0     1 ITCM_LENGTH = 0x00020000
+       0        0        0     1 DTCM_START = 0x20000000
+       0        0        0     1 DTCM_LENGTH = 0x00020000
+90000000 90000000        0     1 .ospi0_cs1.startof
+90000000 90000000        0     1         __ddsc_OSPI0_CS1_START = .
+68000000 68000000        0     1 .sdram.startof
+68000000 68000000        0     1         __ddsc_SDRAM_START = .
+68000000 68000000        0     1 __sdram_from_ospi0_cs1$$
+68000000 68000000        0     1         __sdram_from_ospi0_cs1$$Base = .
+68000000 68000000        0     1         __sdram_from_ospi0_cs1$$Load = LOADADDR ( __sdram_from_ospi0_cs1$$ )
+68000000 68000000        0     1         __sdram_from_ospi0_cs1$$Limit = .
+80000000 80000000        0     1 .ospi0_cs0.startof
+80000000 80000000        0     1         __ddsc_OSPI0_CS0_START = .
+80000000 80000000        0     1 __ospi0_cs0_from_ospi0_cs1$$
+80000000 80000000        0     1         __ospi0_cs0_from_ospi0_cs1$$Base = .
+80000000 80000000        0     1         __ospi0_cs0_from_ospi0_cs1$$Load = LOADADDR ( __ospi0_cs0_from_ospi0_cs1$$ )
+80000000 80000000        0     1         __ospi0_cs0_from_ospi0_cs1$$Limit = .
+70000000 70000000        0     1 .ospi1_cs0.startof
+70000000 70000000        0     1         __ddsc_OSPI1_CS0_START = .
+70000000 70000000        0     1 __ospi1_cs0_from_ospi0_cs1$$
+70000000 70000000        0     1         __ospi1_cs0_from_ospi0_cs1$$Base = .
+70000000 70000000        0     1         __ospi1_cs0_from_ospi0_cs1$$Load = LOADADDR ( __ospi1_cs0_from_ospi0_cs1$$ )
+70000000 70000000        0     1         __ospi1_cs0_from_ospi0_cs1$$Limit = .
+       0        0        0     1 .itcm.startof
+       0        0        0     1         __ddsc_ITCM_START = .
+       0        0        0     1 __itcm_from_ospi0_cs1$$
+       0        0        0     1         __itcm_from_ospi0_cs1$$Base = .
+       0        0        0     1         __itcm_from_ospi0_cs1$$Load = LOADADDR ( __itcm_from_ospi0_cs1$$ )
+       0        0        0     1         __itcm_from_ospi0_cs1$$Limit = .
+20000000 20000000        0     1 .dtcm.startof
+20000000 20000000        0     1         __ddsc_DTCM_START = .
+20000000 20000000        0     1 __dtcm_from_ospi0_cs1$$
+20000000 20000000        0     1         __dtcm_from_ospi0_cs1$$Base = .
+20000000 20000000        0     1         __dtcm_from_ospi0_cs1$$Load = LOADADDR ( __dtcm_from_ospi0_cs1$$ )
+20000000 20000000        0     1         __dtcm_from_ospi0_cs1$$Limit = .
+22000000 22000000        0     1 .ram.startof
+22000000 22000000        0     1         __ddsc_RAM_START = .
+22000000 22000000        0     1 __ram_dtc_vector$$
+22000000 22000000        0     1         __ram_dtc_vector$$Base = .
+22000000 22000000        0     1         __ram_dtc_vector$$Limit = .
+22000000 22000000        0     1 __ram_from_ospi0_cs1$$
+22000000 22000000        0     1         __ram_from_ospi0_cs1$$Base = .
+22000000 22000000        0     1         __ram_from_ospi0_cs1$$Load = LOADADDR ( __ram_from_ospi0_cs1$$ )
+22000000 22000000        0     1         __ram_from_ospi0_cs1$$Limit = .
+90000000 90000000        0     1 __ospi0_cs1_readonly$$
+90000000 90000000        0     1         __ospi0_cs1_readonly$$Base = .
+90000000 90000000        0     1         __ospi0_cs1_readonly$$Limit = .
+90000000 90000000        0     1 __ospi0_cs1_noinit$$
+90000000 90000000        0     1         __ospi0_cs1_noinit$$Base = .
+90000000 90000000        0     1         __ospi0_cs1_noinit$$Limit = .
+90000000 90000000        0     1 .ospi0_cs1.endof
+90000000 90000000        0     1         __ddsc_OSPI0_CS1_END = .
+78000000 78000000        0     1 .ospi1_cs1.startof
+78000000 78000000        0     1         __ddsc_OSPI1_CS1_START = .
+68000000 68000000        0     1 __sdram_from_ospi1_cs1$$
+68000000 68000000        0     1         __sdram_from_ospi1_cs1$$Base = .
+68000000 68000000        0     1         __sdram_from_ospi1_cs1$$Load = LOADADDR ( __sdram_from_ospi1_cs1$$ )
+68000000 68000000        0     1         __sdram_from_ospi1_cs1$$Limit = .
+80000000 80000000        0     1 __ospi0_cs0_from_ospi1_cs1$$
+80000000 80000000        0     1         __ospi0_cs0_from_ospi1_cs1$$Base = .
+80000000 80000000        0     1         __ospi0_cs0_from_ospi1_cs1$$Load = LOADADDR ( __ospi0_cs0_from_ospi1_cs1$$ )
+80000000 80000000        0     1         __ospi0_cs0_from_ospi1_cs1$$Limit = .
+70000000 70000000        0     1 __ospi1_cs0_from_ospi1_cs1$$
+70000000 70000000        0     1         __ospi1_cs0_from_ospi1_cs1$$Base = .
+70000000 70000000        0     1         __ospi1_cs0_from_ospi1_cs1$$Load = LOADADDR ( __ospi1_cs0_from_ospi1_cs1$$ )
+70000000 70000000        0     1         __ospi1_cs0_from_ospi1_cs1$$Limit = .
+       0        0        0     1 __itcm_from_ospi1_cs1$$
+       0        0        0     1         __itcm_from_ospi1_cs1$$Base = .
+       0        0        0     1         __itcm_from_ospi1_cs1$$Load = LOADADDR ( __itcm_from_ospi1_cs1$$ )
+       0        0        0     1         __itcm_from_ospi1_cs1$$Limit = .
+20000000 20000000        0     1 __dtcm_from_ospi1_cs1$$
+20000000 20000000        0     1         __dtcm_from_ospi1_cs1$$Base = .
+20000000 20000000        0     1         __dtcm_from_ospi1_cs1$$Load = LOADADDR ( __dtcm_from_ospi1_cs1$$ )
+20000000 20000000        0     1         __dtcm_from_ospi1_cs1$$Limit = .
+22000000 22000000        0     1 __ram_from_ospi1_cs1$$
+22000000 22000000        0     1         __ram_from_ospi1_cs1$$Base = .
+22000000 22000000        0     1         __ram_from_ospi1_cs1$$Load = LOADADDR ( __ram_from_ospi1_cs1$$ )
+22000000 22000000        0     1         __ram_from_ospi1_cs1$$Limit = .
+78000000 78000000        0     1 __ospi1_cs1_readonly$$
+78000000 78000000        0     1         __ospi1_cs1_readonly$$Base = .
+78000000 78000000        0     1         __ospi1_cs1_readonly$$Limit = .
+78000000 78000000        0     1 __ospi1_cs1_noinit$$
+78000000 78000000        0     1         __ospi1_cs1_noinit$$Base = .
+78000000 78000000        0     1         __ospi1_cs1_noinit$$Limit = .
+78000000 78000000        0     1 .ospi1_cs1.endof
+78000000 78000000        0     1         __ddsc_OSPI1_CS1_END = .
+27000000 27000000        0     1 .data_flash.startof
+27000000 27000000        0     1         __ddsc_DATA_FLASH_START = .
+68000000 68000000        0     1 __sdram_from_data_flash$$
+68000000 68000000        0     1         __sdram_from_data_flash$$Base = .
+68000000 68000000        0     1         __sdram_from_data_flash$$Load = LOADADDR ( __sdram_from_data_flash$$ )
+68000000 68000000        0     1         __sdram_from_data_flash$$Limit = .
+80000000 80000000        0     1 __ospi0_cs0_from_data_flash$$
+80000000 80000000        0     1         __ospi0_cs0_from_data_flash$$Base = .
+80000000 80000000        0     1         __ospi0_cs0_from_data_flash$$Load = LOADADDR ( __ospi0_cs0_from_data_flash$$ )
+80000000 80000000        0     1         __ospi0_cs0_from_data_flash$$Limit = .
+70000000 70000000        0     1 __ospi1_cs0_from_data_flash$$
+70000000 70000000        0     1         __ospi1_cs0_from_data_flash$$Base = .
+70000000 70000000        0     1         __ospi1_cs0_from_data_flash$$Load = LOADADDR ( __ospi1_cs0_from_data_flash$$ )
+70000000 70000000        0     1         __ospi1_cs0_from_data_flash$$Limit = .
+       0        0        0     1 __itcm_from_data_flash$$
+       0        0        0     1         __itcm_from_data_flash$$Base = .
+       0        0        0     1         __itcm_from_data_flash$$Load = LOADADDR ( __itcm_from_data_flash$$ )
+       0        0        0     1         __itcm_from_data_flash$$Limit = .
+20000000 20000000        0     1 __dtcm_from_data_flash$$
+20000000 20000000        0     1         __dtcm_from_data_flash$$Base = .
+20000000 20000000        0     1         __dtcm_from_data_flash$$Load = LOADADDR ( __dtcm_from_data_flash$$ )
+20000000 20000000        0     1         __dtcm_from_data_flash$$Limit = .
+22000000 22000000        0     1 __ram_from_data_flash$$
+22000000 22000000        0     1         __ram_from_data_flash$$Base = .
+22000000 22000000        0     1         __ram_from_data_flash$$Load = LOADADDR ( __ram_from_data_flash$$ )
+22000000 22000000        0     1         __ram_from_data_flash$$Limit = .
+27000000 27000000        0     1 __data_flash_readonly$$
+27000000 27000000        0     1         __data_flash_readonly$$Base = .
+27000000 27000000        0     1         __data_flash_readonly$$Limit = .
+27000000 27000000        0     1 __data_flash_noinit$$
+27000000 27000000        0     1         __data_flash_noinit$$Base = .
+27000000 27000000        0     1         __data_flash_noinit$$Limit = .
+27000000 27000000        0     1 .data_flash.endof
+27000000 27000000        0     1         __ddsc_DATA_FLASH_END = .
+ 2000000  2000000        0     1 .flash.startof
+ 2000000  2000000        0     1         __ddsc_FLASH_START = .
+ 2000000  2000000       50     4 __flash_vectors$$
+ 2000000  2000000        0     1         __flash_vectors$$Base = .
+ 2000000  2000000        0     1         _VECTORS = .
+ 2000000  2000000       40     4         ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o:(.fixed_vectors)
+ 2000000  2000000       40     1                 __Vectors
+ 2000040  2000040       10     4         ./ra_gen/vector_data.o:(.application_vectors)
+ 2000040  2000040       10     1                 g_vector_table
+ 2000050  2000050        0     1         __flash_vectors$$Limit = .
+ 2000050  2000050        0     1 __flash_noinit$$
+ 2000050  2000050        0     1         __flash_noinit$$Base = .
+ 2000050  2000050        0     1         __flash_noinit$$Limit = .
+68000000 68000000        0     1 __sdram_from_flash$$
+68000000 68000000        0     1         __sdram_from_flash$$Base = .
+68000000 68000000        0     1         __sdram_from_flash$$Load = LOADADDR ( __sdram_from_flash$$ )
+68000000 68000000        0     1         __sdram_from_flash$$Limit = .
+68000000 68000000        0     1 __sdram_noinit_nocache$$
+68000000 68000000        0     1         __sdram_noinit_nocache$$Base = .
+68000000 68000000        0     1         __sdram_noinit_nocache$$Limit = .
+68000000 68000000        0     1 __sdram_zero_nocache$$
+68000000 68000000        0     1         __sdram_zero_nocache$$Base = .
+68000000 68000000        0     1         . = ALIGN ( 32 )
+68000000 68000000        0     1         __sdram_zero_nocache$$Limit = .
+68000000 68000000        0     1 __sdram_noinit$$
+68000000 68000000        0     1         __sdram_noinit$$Base = .
+68000000 68000000        0     1         __sdram_noinit$$Limit = .
+68000000 68000000        0     1 __sdram_zero$$
+68000000 68000000        0     1         __sdram_zero$$Base = .
+68000000 68000000        0     1         __sdram_zero$$Limit = .
+68000000 68000000        0     1 .sdram.endof
+68000000 68000000        0     1         __ddsc_SDRAM_END = .
+80000000 80000000        0     1 __ospi0_cs0_from_flash$$
+80000000 80000000        0     1         __ospi0_cs0_from_flash$$Base = .
+80000000 80000000        0     1         __ospi0_cs0_from_flash$$Load = LOADADDR ( __ospi0_cs0_from_flash$$ )
+80000000 80000000        0     1         __ospi0_cs0_from_flash$$Limit = .
+80000000 80000000        0     1 __ospi0_cs0_noinit_nocache$$
+80000000 80000000        0     1         __ospi0_cs0_noinit_nocache$$Base = .
+80000000 80000000        0     1         __ospi0_cs0_noinit_nocache$$Limit = .
+80000000 80000000        0     1 __ospi0_cs0_zero_nocache$$
+80000000 80000000        0     1         __ospi0_cs0_zero_nocache$$Base = .
+80000000 80000000        0     1         . = ALIGN ( 32 )
+80000000 80000000        0     1         __ospi0_cs0_zero_nocache$$Limit = .
+80000000 80000000        0     1 __ospi0_cs0_noinit$$
+80000000 80000000        0     1         __ospi0_cs0_noinit$$Base = .
+80000000 80000000        0     1         __ospi0_cs0_noinit$$Limit = .
+80000000 80000000        0     1 __ospi0_cs0_zero$$
+80000000 80000000        0     1         __ospi0_cs0_zero$$Base = .
+80000000 80000000        0     1         __ospi0_cs0_zero$$Limit = .
+80000000 80000000        0     1 .ospi0_cs0.endof
+80000000 80000000        0     1         __ddsc_OSPI0_CS0_END = .
+70000000 70000000        0     1 __ospi1_cs0_from_flash$$
+70000000 70000000        0     1         __ospi1_cs0_from_flash$$Base = .
+70000000 70000000        0     1         __ospi1_cs0_from_flash$$Load = LOADADDR ( __ospi1_cs0_from_flash$$ )
+70000000 70000000        0     1         __ospi1_cs0_from_flash$$Limit = .
+70000000 70000000        0     1 __ospi1_cs0_noinit_nocache$$
+70000000 70000000        0     1         __ospi1_cs0_noinit_nocache$$Base = .
+70000000 70000000        0     1         __ospi1_cs0_noinit_nocache$$Limit = .
+70000000 70000000        0     1 __ospi1_cs0_zero_nocache$$
+70000000 70000000        0     1         __ospi1_cs0_zero_nocache$$Base = .
+70000000 70000000        0     1         . = ALIGN ( 32 )
+70000000 70000000        0     1         __ospi1_cs0_zero_nocache$$Limit = .
+70000000 70000000        0     1 __ospi1_cs0_noinit$$
+70000000 70000000        0     1         __ospi1_cs0_noinit$$Base = .
+70000000 70000000        0     1         __ospi1_cs0_noinit$$Limit = .
+70000000 70000000        0     1 __ospi1_cs0_zero$$
+70000000 70000000        0     1         __ospi1_cs0_zero$$Base = .
+70000000 70000000        0     1         __ospi1_cs0_zero$$Limit = .
+70000000 70000000        0     1 .ospi1_cs0.endof
+70000000 70000000        0     1         __ddsc_OSPI1_CS0_END = .
+       0        0        0     1 __itcm_from_flash$$
+       0        0        0     1         __itcm_from_flash$$Base = .
+       0        0        0     1         __itcm_from_flash$$Load = LOADADDR ( __itcm_from_flash$$ )
+       0        0        0     1         __itcm_from_flash$$Limit = .
+       0        0        0     1 __itcm_noinit$$
+       0        0        0     1         __itcm_noinit$$Base = .
+       0        0        0     1         __itcm_noinit$$Limit = .
+       0        0        0     1 __itcm_zero$$
+       0        0        0     1         __itcm_zero$$Base = .
+       0        0        0     1         __itcm_zero$$Limit = .
+       0        0        0     1 .itcm.endof
+       0        0        0     1         __ddsc_ITCM_END = .
+20000000 20000000        0     1 __dtcm_from_flash$$
+20000000 20000000        0     1         __dtcm_from_flash$$Base = .
+20000000 20000000        0     1         __dtcm_from_flash$$Load = LOADADDR ( __dtcm_from_flash$$ )
+20000000 20000000        0     1         __dtcm_from_flash$$Limit = .
+20000000 20000000        0     1 __dtcm_noinit$$
+20000000 20000000        0     1         __dtcm_noinit$$Base = .
+20000000 20000000        0     1         __dtcm_noinit$$Limit = .
+20000000 20000000        0     1 __dtcm_zero$$
+20000000 20000000        0     1         __dtcm_zero$$Base = .
+20000000 20000000        0     1         __dtcm_zero$$Limit = .
+20000000 20000000        0     1 .dtcm.endof
+20000000 20000000        0     1         __ddsc_DTCM_END = .
+22000000  2000050       20     4 __ram_from_flash$$
+22000000  2000050        0     1         __ram_from_flash$$Base = .
+22000000  2000050        0     1         __ram_from_flash$$Load = LOADADDR ( __ram_from_flash$$ )
+22000000  2000050        4     4         ./src/coremark/core_portme.o:(.data.seed3_volatile)
+22000000  2000050        4     1                 seed3_volatile
+22000004  2000054        4     4         ./src/coremark/core_portme.o:(.data.seed4_volatile)
+22000004  2000054        4     1                 seed4_volatile
+22000008  2000058        4     4         ./src/coremark/core_portme.o:(.data.default_num_contexts)
+22000008  2000058        4     1                 default_num_contexts
+2200000c  200005c       10     4         ./src/hal_entry.o:(.data.__stdio)
+2200000c  200005c       10     1                 __stdio
+2200001c  200006c        4     4         ./ra_gen/hal_data.o:(.data.g_uart9_baud_setting)
+2200001c  200006c        4     1                 g_uart9_baud_setting
+22000020  2000070        0     1         __ram_from_flash$$Limit = .
+22000020 22000020        0     1 __ram_noinit_nocache$$
+22000020 22000020        0     1         __ram_noinit_nocache$$Base = .
+22000020 22000020        0     1         __ram_noinit_nocache$$Limit = .
+22000020 22000020        0     1 __ram_zero_nocache$$
+22000020 22000020        0     1         __ram_zero_nocache$$Base = .
+22000020 22000020        0     1         . = ALIGN ( 32 )
+22000020 22000020        0     1         __ram_zero_nocache$$Limit = .
+22000020 22000020     402c     8 __ram_noinit$$
+22000020 22000020        0     1         __ram_noinit$$Base = .
+22000020 22000020     4000     8         ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o:(.bss.g_main_stack)
+22000020 22000020     4000     1                 g_main_stack
+22004020 22004020       2c     4         ./ra/fsp/src/bsp/mcu/all/bsp_clocks.o:(.ram_noinit)
+22004020 22004020       2c     1                 g_clock_freq
+2200404c 2200404c        0     1         __ram_noinit$$Limit = .
+22004050 22004050       c4    16 __ram_zero$$
+22004050 22004050        0     1         __ram_zero$$Base = .
+22004050 22004050        4     4         ./src/coremark/core_portme.o:(.bss.seed1_volatile)
+22004050 22004050        4     1                 seed1_volatile
+22004054 22004054        4     4         ./src/coremark/core_portme.o:(.bss.seed2_volatile)
+22004054 22004054        4     1                 seed2_volatile
+22004058 22004058        4     4         ./src/coremark/core_portme.o:(.bss.seed5_volatile)
+22004058 22004058        4     1                 seed5_volatile
+2200405c 2200405c        4     4         ./src/coremark/core_portme.o:(.bss.Tick)
+2200405c 2200405c        4     1                 Tick
+22004060 22004060        8     4         ./ra_gen/common_data.o:(.bss.g_ioport_ctrl)
+22004060 22004060        8     1                 g_ioport_ctrl
+22004068 22004068       30     4         ./ra_gen/hal_data.o:(.bss.g_uart9_ctrl)
+22004068 22004068       30     1                 g_uart9_ctrl
+22004098 22004098       54     4         ./ra/fsp/src/bsp/mcu/all/bsp_group_irq.o:(.bss.g_bsp_group_irq_sources)
+22004098 22004098       54     1                 g_bsp_group_irq_sources
+220040ec 220040ec        4     4         ./ra/fsp/src/bsp/mcu/all/bsp_io.o:(.bss.g_protect_pfswe_counter)
+220040ec 220040ec        4     1                 g_protect_pfswe_counter
+220040f0 220040f0       10     4         ./ra/fsp/src/bsp/mcu/all/bsp_irq.o:(.bss.gp_renesas_isr_context)
+220040f0 220040f0       10     1                 gp_renesas_isr_context
+22004100 22004100        a     2         ./ra/fsp/src/bsp/mcu/all/bsp_register_protection.o:(.bss.g_protect_counters)
+22004100 22004100        a     1                 g_protect_counters
+2200410c 2200410c        4     4         ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o:(.bss.SystemCoreClock)
+2200410c 2200410c        4     1                 SystemCoreClock
+22004110 22004110        4    16         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_picolib_machine_arm_read_tp.S.o):(.bss)
+22004110 22004110        4     1                 __tls
+22004114 22004114        0     1         __ram_zero$$Limit = .
+22004114 22004114        0     1 __ram_tdata$$
+22004114 22004114        0     1         __ram_tdata$$Base = .
+22004114 22004114        0     1         __ram_tdata$$Load = LOADADDR ( __ram_tdata$$ )
+22004114 22004114        0     1         __ram_tdata$$Limit = .
+22004114 22004114        0     1 __ram_tbss$$
+22004114 22004114        0     1         __ram_tbss$$Base = .
+22004114 22004114        0     1         __ram_tbss$$Limit = .
+22004118 22004118        0     1 __ram_thread_stack$$
+22004118 22004118        0     1         __ram_thread_stack$$Base = .
+22004118 22004118        0     1         __ram_thread_stack$$Limit = .
+22006000 22006000        0     1 .ram.endof
+22006000 22006000        0     1         __ddsc_RAM_END = .
+22006000 22006000        0     1 .ram.flat_nsc
+22006000 22006000        0     1         __sau_ddsc_RAM_NSC = .
+ 2000070  2000070     58ea    16 __flash_readonly$$
+ 2000070  2000070        0     1         __flash_readonly$$Base = .
+ 2000070  2000070      48c     2         ./src/coremark/core_list_join.o:(.text.core_bench_list)
+ 2000070  2000070        0     1                 $t.4
+ 2000071  2000071      48c     1                 core_bench_list
+ 20004fc  20004fc      1c2     2         ./src/coremark/core_list_join.o:(.text.core_list_init)
+ 20004fc  20004fc        0     1                 $t.10
+ 20004fd  20004fd      1c2     1                 core_list_init
+ 20006c0  20006c0      6a0    16         ./src/coremark/core_main.o:(.text.coremain)
+ 20006c0  20006c0        0     1                 $t.1
+ 20006c1  20006c1      6a0     1                 coremain
+ 2000d50  2000d50        0     1                 $d.2
+ 2000d60  2000d60       2e     2         ./src/coremark/core_matrix.o:(.text.core_bench_matrix)
+ 2000d60  2000d60        0     1                 $t.0
+ 2000d61  2000d61       2e     1                 core_bench_matrix
+ 2000d90  2000d90      560    16         ./src/coremark/core_matrix.o:(.text.matrix_test)
+ 2000d90  2000d90        0     1                 $t.1
+ 2000d91  2000d91      560     1                 matrix_test
+ 20012e0  20012e0        0     1                 $d.2
+ 20012f0  20012f0       d6     2         ./src/coremark/core_matrix.o:(.text.core_init_matrix)
+ 20012f0  20012f0        0     1                 $t.11
+ 20012f1  20012f1       d6     1                 core_init_matrix
+ 20013c6  20013c6       50     2         ./src/coremark/core_portme.o:(.text.start_time)
+ 20013c6  20013c6        0     1                 $t.0
+ 20013c7  20013c7       50     1                 start_time
+ 2001416  2001416       16     2         ./src/coremark/core_portme.o:(.text.stop_time)
+ 2001416  2001416        0     1                 $t.1
+ 2001417  2001417       16     1                 stop_time
+ 200142c  200142c        c     2         ./src/coremark/core_portme.o:(.text.get_time)
+ 200142c  200142c        0     1                 $t.2
+ 200142d  200142d        c     1                 get_time
+ 2001438  2001438       20     8         ./src/coremark/core_portme.o:(.text.time_in_secs)
+ 2001438  2001438        0     1                 $t.3
+ 2001439  2001439       20     1                 time_in_secs
+ 2001450  2001450        0     1                 $d.4
+ 2001458  2001458        6     2         ./src/coremark/core_portme.o:(.text.portable_init)
+ 2001458  2001458        0     1                 $t.5
+ 2001459  2001459        6     1                 portable_init
+ 200145e  200145e        6     2         ./src/coremark/core_portme.o:(.text.portable_fini)
+ 200145e  200145e        0     1                 $t.6
+ 200145f  200145f        6     1                 portable_fini
+ 2001464  2001464       10     2         ./src/coremark/core_portme.o:(.text.SysTick_Handler)
+ 2001464  2001464        0     1                 $t.7
+ 2001465  2001465       10     1                 SysTick_Handler
+ 2001474  2001474       fa     2         ./src/coremark/core_state.o:(.text.core_bench_state)
+ 2001474  2001474        0     1                 $t.0
+ 2001475  2001475       fa     1                 core_bench_state
+ 2001570  2001570      13c     4         ./src/coremark/core_state.o:(.text.core_state_transition)
+ 2001570  2001570        0     1                 $t.1
+ 2001571  2001571      13c     1                 core_state_transition
+ 20015c4  20015c4        0     1                 $d.2
+ 20015cc  20015cc        0     1                 $t.3
+ 20016ac  20016ac       a0     2         ./src/coremark/core_state.o:(.text.core_init_state)
+ 20016ac  20016ac        0     1                 $t.4
+ 20016ad  20016ad       a0     1                 core_init_state
+ 200174c  200174c       1a     2         ./src/coremark/core_util.o:(.text.get_seed_32)
+ 200174c  200174c        0     1                 $t.0
+ 200174d  200174d       1a     1                 get_seed_32
+ 2001766  2001766       44     2         ./src/coremark/core_util.o:(.text.crcu16)
+ 2001766  2001766        0     1                 $t.2
+ 2001767  2001767       44     1                 crcu16
+ 20017aa  20017aa       80     2         ./src/coremark/core_util.o:(.text.crcu32)
+ 20017aa  20017aa        0     1                 $t.3
+ 20017ab  20017ab       80     1                 crcu32
+ 200182a  200182a       46     2         ./src/coremark/core_util.o:(.text.crc16)
+ 200182a  200182a        0     1                 $t.4
+ 200182b  200182b       46     1                 crc16
+ 2001870  2001870        4     2         ./src/coremark/core_util.o:(.text.check_data_types)
+ 2001870  2001870        0     1                 $t.5
+ 2001871  2001871        4     1                 check_data_types
+ 2001874  2001874       24     2         ./src/hal_entry.o:(.text.user_write)
+ 2001874  2001874        0     1                 $t.0
+ 2001875  2001875       24     1                 user_write
+ 2001898  2001898       da     2         ./src/hal_entry.o:(.text.hal_entry)
+ 2001898  2001898        0     1                 $t.1
+ 2001899  2001899       da     1                 hal_entry
+ 2001972  2001972       1a     2         ./src/hal_warmstart.o:(.text.R_BSP_WarmStart)
+ 2001972  2001972        0     1                 $t.0
+ 2001973  2001973       1a     1                 R_BSP_WarmStart
+ 200198c  200198c        c     2         ./ra_gen/main.o:(.text.main)
+ 200198c  200198c        0     1                 $t.0
+ 200198d  200198d        c     1                 main
+ 2001998  2001998      37e     2         ./ra/fsp/src/r_sci_b_uart/r_sci_b_uart.o:(.text.R_SCI_B_UART_Open)
+ 2001998  2001998        0     1                 $t.0
+ 2001999  2001999      37e     1                 R_SCI_B_UART_Open
+ 2001d16  2001d16       cc     2         ./ra/fsp/src/r_sci_b_uart/r_sci_b_uart.o:(.text.sci_b_uart_txi_isr)
+ 2001d16  2001d16        0     1                 $t.12
+ 2001d17  2001d17       cc     1                 sci_b_uart_txi_isr
+ 2001de2  2001de2       dc     2         ./ra/fsp/src/r_sci_b_uart/r_sci_b_uart.o:(.text.sci_b_uart_rxi_isr)
+ 2001de2  2001de2        0     1                 $t.13
+ 2001de3  2001de3       dc     1                 sci_b_uart_rxi_isr
+ 2001ebe  2001ebe       8a     2         ./ra/fsp/src/r_sci_b_uart/r_sci_b_uart.o:(.text.sci_b_uart_tei_isr)
+ 2001ebe  2001ebe        0     1                 $t.14
+ 2001ebf  2001ebf       8a     1                 sci_b_uart_tei_isr
+ 2001f48  2001f48       c6     2         ./ra/fsp/src/r_sci_b_uart/r_sci_b_uart.o:(.text.sci_b_uart_eri_isr)
+ 2001f48  2001f48        0     1                 $t.15
+ 2001f49  2001f49       c6     1                 sci_b_uart_eri_isr
+ 200200e  200200e       18     2         ./ra/fsp/src/r_ioport/r_ioport.o:(.text.R_IOPORT_Open)
+ 200200e  200200e        0     1                 $t.0
+ 200200f  200200f       18     1                 R_IOPORT_Open
+ 2002026  2002026       d8     2         ./ra/fsp/src/r_ioport/r_ioport.o:(.text.r_ioport_pins_config)
+ 2002026  2002026        0     1                 $t.13
+ 2002027  2002027       d8     1                 r_ioport_pins_config
+ 20020fe  20020fe       e8     2         ./ra/fsp/src/r_ioport/r_ioport.o:(.text.bsp_vbatt_init)
+ 20020fe  20020fe        0     1                 $t.14
+ 20020ff  20020ff       e8     1                 bsp_vbatt_init
+ 20021e8  20021e8       d2     4         ./ra/fsp/src/bsp/mcu/all/bsp_clocks.o:(.text.SystemCoreClockUpdate)
+ 20021e8  20021e8        0     1                 $t.2
+ 20021e9  20021e9       d2     1                 SystemCoreClockUpdate
+ 2002204  2002204        0     1                 $d.3
+ 2002208  2002208        0     1                 $t.4
+ 20022c0  20022c0      620    16         ./ra/fsp/src/bsp/mcu/all/bsp_clocks.o:(.text.bsp_clock_init)
+ 20022c0  20022c0        0     1                 $t.15
+ 20022c1  20022c1      620     1                 bsp_clock_init
+ 2002340  2002340        0     1                 $d.16
+ 2002344  2002344        0     1                 $t.17
+ 2002502  2002502        0     1                 $d.18
+ 2002506  2002506        0     1                 $t.19
+ 200258e  200258e        0     1                 $d.20
+ 2002592  2002592        0     1                 $t.21
+ 20028c0  20028c0        0     1                 $d.22
+ 20028e0  20028e0       2a     2         ./ra/fsp/src/bsp/mcu/all/bsp_clocks.o:(.text.R_BSP_Init_RTC)
+ 20028e0  20028e0        0     1                 $t.25
+ 20028e1  20028e1       2a     1                 R_BSP_Init_RTC
+ 200290a  200290a       7c     2         ./ra/fsp/src/bsp/mcu/all/bsp_delay.o:(.text.R_BSP_SoftwareDelay)
+ 200290a  200290a        0     1                 $t.0
+ 200290b  200290b       7c     1                 R_BSP_SoftwareDelay
+ 2002988  2002988        8     8         ./ra/fsp/src/bsp/mcu/all/bsp_delay.o:(.text.bsp_prv_software_delay_loop)
+ 2002988  2002988        0     1                 sw_delay_loop
+ 2002988  2002988        0     1                 $t.1
+ 2002989  2002989        8     1                 bsp_prv_software_delay_loop
+ 2002990  2002990       56     2         ./ra/fsp/src/bsp/mcu/all/bsp_group_irq.o:(.text.NMI_Handler)
+ 2002990  2002990        0     1                 $t.1
+ 2002991  2002991       56     1                 NMI_Handler
+ 20029e6  20029e6       2a     2         ./ra/fsp/src/bsp/mcu/all/bsp_irq.o:(.text.bsp_irq_cfg)
+ 20029e6  20029e6        0     1                 $t.0
+ 20029e7  20029e7       2a     1                 bsp_irq_cfg
+ 2002a10  2002a10       54     2         ./ra/fsp/src/bsp/mcu/all/bsp_register_protection.o:(.text.R_BSP_RegisterProtectEnable)
+ 2002a10  2002a10        0     1                 $t.0
+ 2002a11  2002a11       54     1                 R_BSP_RegisterProtectEnable
+ 2002a64  2002a64       4e     2         ./ra/fsp/src/bsp/mcu/all/bsp_register_protection.o:(.text.R_BSP_RegisterProtectDisable)
+ 2002a64  2002a64        0     1                 $t.1
+ 2002a65  2002a65       4e     1                 R_BSP_RegisterProtectDisable
+ 2002ab2  2002ab2        e     2         ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o:(.text.Reset_Handler)
+ 2002ab2  2002ab2        0     1                 $t.0
+ 2002ab3  2002ab3        e     1                 Reset_Handler
+ 2002ac0  2002ac0        4     2         ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o:(.text.Default_Handler)
+ 2002ac0  2002ac0        0     1                 $t.1
+ 2002ac1  2002ac1        4     1                 Default_Handler
+ 2002ac1  2002ac1        4     1                 HardFault_Handler
+ 2002ac1  2002ac1        4     1                 MemManage_Handler
+ 2002ac1  2002ac1        4     1                 BusFault_Handler
+ 2002ac1  2002ac1        4     1                 UsageFault_Handler
+ 2002ac1  2002ac1        4     1                 SecureFault_Handler
+ 2002ac1  2002ac1        4     1                 SVC_Handler
+ 2002ac1  2002ac1        4     1                 DebugMon_Handler
+ 2002ac1  2002ac1        4     1                 PendSV_Handler
+ 2002ac8  2002ac8      26e     8         ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o:(.text.SystemInit)
+ 2002ac8  2002ac8        0     1                 $t.0
+ 2002ac9  2002ac9      26e     1                 SystemInit
+ 2002ba8  2002ba8        0     1                 memset_64_loop_start_0
+ 2002bb0  2002bb0        0     1                 memset_64_loop_end_0
+ 2002bb8  2002bb8        0     1                 memset_64_loop_start_1
+ 2002bc0  2002bc0        0     1                 memset_64_loop_end_1
+ 2002d36  2002d36        2     2         ./ra/board/ra8t2_mck/board_init.o:(.text.bsp_init)
+ 2002d36  2002d36        0     1                 $t.0
+ 2002d37  2002d37        2     1                 bsp_init
+ 2002d38  2002d38       2c     4         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_picolib_inittls.c.o):(.text._init_tls)
+ 2002d38  2002d38        0     1                 $t.0
+ 2002d39  2002d39       2c     1                 _init_tls
+ 2002d54  2002d54        0     1                 $d.1
+ 2002d64  2002d64       14     4         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_picolib_machine_arm_tls.c.o):(.text._set_tls)
+ 2002d64  2002d64        0     1                 $t.0
+ 2002d65  2002d65       14     1                 _set_tls
+ 2002d70  2002d70        0     1                 $d.1
+ 2002d78  2002d78       2c     4         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_printf.c.o):(.text.printf)
+ 2002d78  2002d78        0     1                 $t.0
+ 2002d79  2002d79       2c     1                 printf
+ 2002da0  2002da0        0     1                 $d.1
+ 2002da4  2002da4        c     4         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_putchar.c.o):(.text.putchar)
+ 2002da4  2002da4        0     1                 $t.0
+ 2002da5  2002da5        c     1                 putchar
+ 2002dac  2002dac        0     1                 $d.1
+ 2002db0  2002db0       2c     2         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_fputc.c.o):(.text.fputc)
+ 2002db0  2002db0        0     1                 $t.0
+ 2002db1  2002db1       2c     1                 fputc
+ 2002db1  2002db1       2c     1                 putc
+ 2002ddc  2002ddc       4c     4         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_puts.c.o):(.text.puts)
+ 2002ddc  2002ddc        0     1                 $t.0
+ 2002ddd  2002ddd       4c     1                 puts
+ 2002e24  2002e24        0     1                 $d.1
+ 2002e28  2002e28      9e4     4         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_vfprintf.c.o):(.text.vfprintf)
+ 2002e28  2002e28        0     1                 $t.0
+ 2002e29  2002e29      9e4     1                 vfprintf
+ 2002e29  2002e29      9e4     1                 __d_vfprintf
+ 2002eaa  2002eaa        0     1                 $d.1
+ 2002eb4  2002eb4        0     1                 $t.2
+ 20030ca  20030ca        0     1                 $d.3
+ 20030d8  20030d8        0     1                 $t.4
+ 2003800  2003800        0     1                 $d.5
+ 200380c  200380c      164     4         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_vfprintf.c.o):(.text.skip_to_arg)
+ 200380c  200380c        0     1                 $t.6
+ 200380d  200380d      164     1                 skip_to_arg
+ 200396c  200396c        0     1                 $d.7
+ 2003970  2003970       4c     2         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_vfprintf.c.o):(.text.__ultoa_invert)
+ 2003970  2003970        0     1                 $t.8
+ 2003971  2003971       4c     1                 __ultoa_invert
+ 20039bc  20039bc        6     2         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_vfprintf.c.o):(.text.OUTLINED_FUNCTION_0)
+ 20039bc  20039bc        0     1                 $t.9
+ 20039bd  20039bd        6     1                 OUTLINED_FUNCTION_0
+ 20039c2  20039c2       12     2         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_vfprintf.c.o):(.text.OUTLINED_FUNCTION_1)
+ 20039c2  20039c2        0     1                 $t.10
+ 20039c3  20039c3       12     1                 OUTLINED_FUNCTION_1
+ 20039d4  20039d4        8     2         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_vfprintf.c.o):(.text.OUTLINED_FUNCTION_2)
+ 20039d4  20039d4        0     1                 $t.11
+ 20039d5  20039d5        8     1                 OUTLINED_FUNCTION_2
+ 20039dc  20039dc        8     2         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_vfprintf.c.o):(.text.OUTLINED_FUNCTION_3)
+ 20039dc  20039dc        0     1                 $t.12
+ 20039dd  20039dd        8     1                 OUTLINED_FUNCTION_3
+ 20039e4  20039e4        8     2         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_vfprintf.c.o):(.text.OUTLINED_FUNCTION_4)
+ 20039e4  20039e4        0     1                 $t.13
+ 20039e5  20039e5        8     1                 OUTLINED_FUNCTION_4
+ 20039ec  20039ec        8     2         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_vfprintf.c.o):(.text.OUTLINED_FUNCTION_5)
+ 20039ec  20039ec        0     1                 $t.14
+ 20039ed  20039ed        8     1                 OUTLINED_FUNCTION_5
+ 20039f4  20039f4      134     4         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_dtox_engine.c.o):(.text.__dtox_engine)
+ 20039f4  20039f4        0     1                 $t.0
+ 20039f5  20039f5      134     1                 __dtox_engine
+ 2003b24  2003b24        0     1                 $d.1
+ 2003b28  2003b28       1a     2         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_string_strnlen.c.o):(.text.strnlen)
+ 2003b28  2003b28        0     1                 $t.0
+ 2003b29  2003b29       1a     1                 strnlen
+ 2003b42  2003b42      44c     2         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_dtoa_ryu.c.o):(.text.__dtoa_engine)
+ 2003b42  2003b42        0     1                 $t.0
+ 2003b43  2003b43      44c     1                 __dtoa_engine
+ 2003f8e  2003f8e       12     2         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_dtoa_ryu.c.o):(.text.div10)
+ 2003f8e  2003f8e        0     1                 $t.1
+ 2003f8f  2003f8f       12     1                 div10
+ 2003fa0  2003fa0       20     4         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_dtoa_ryu.c.o):(.text.umulh)
+ 2003fa0  2003fa0        0     1                 $t.2
+ 2003fa1  2003fa1       20     1                 umulh
+ 2003fbc  2003fbc        0     1                 $d.3
+ 2003fc0  2003fc0      1be     2         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_dtoa_ryu.c.o):(.text.mulShiftAll64)
+ 2003fc0  2003fc0        0     1                 $t.4
+ 2003fc1  2003fc1      1be     1                 mulShiftAll64
+ 200417e  200417e       30     2         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_dtoa_ryu.c.o):(.text.decimalLength17)
+ 200417e  200417e        0     1                 $t.5
+ 200417f  200417f       30     1                 decimalLength17
+ 20041ae  20041ae       10     2         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_dtoa_ryu.c.o):(.text.OUTLINED_FUNCTION_0)
+ 20041ae  20041ae        0     1                 $t.6
+ 20041af  20041af       10     1                 OUTLINED_FUNCTION_0
+ 20041c0  20041c0        c     4         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_log10.c.o):(.text.__log10Pow2)
+ 20041c0  20041c0        0     1                 $t.0
+ 20041c1  20041c1        c     1                 __log10Pow2
+ 20041c8  20041c8        0     1                 $d.1
+ 20041cc  20041cc        c     4         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_log10.c.o):(.text.__log10Pow5)
+ 20041cc  20041cc        0     1                 $t.2
+ 20041cd  20041cd        c     1                 __log10Pow5
+ 20041d4  20041d4        0     1                 $d.3
+ 20041d8  20041d8       10     4         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_pow5bits.c.o):(.text.__pow5bits)
+ 20041d8  20041d8        0     1                 $t.0
+ 20041d9  20041d9       10     1                 __pow5bits
+ 20041e4  20041e4        0     1                 $d.1
+ 20041e8  20041e8       3c     4         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_table.c.o):(.text.__pow5Factor)
+ 20041e8  20041e8        0     1                 $t.0
+ 20041e9  20041e9       3c     1                 __pow5Factor
+ 200421c  200421c        0     1                 $d.1
+ 2004224  2004224       d8     4         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_table.c.o):(.text.__double_computePow5)
+ 2004224  2004224        0     1                 $t.2
+ 2004225  2004225       d8     1                 __double_computePow5
+ 20042f0  20042f0        0     1                 $d.3
+ 20042fc  20042fc       e4     4         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_table.c.o):(.text.__double_computeInvPow5)
+ 20042fc  20042fc        0     1                 $t.4
+ 20042fd  20042fd       e4     1                 __double_computeInvPow5
+ 20043d4  20043d4        0     1                 $d.5
+ 20043e0  20043e0       10     2         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_table.c.o):(.text.OUTLINED_FUNCTION_0)
+ 20043e0  20043e0        0     1                 $t.6
+ 20043e1  20043e1       10     1                 OUTLINED_FUNCTION_0
+ 20043f0  20043f0       10     2         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_table.c.o):(.text.OUTLINED_FUNCTION_1)
+ 20043f0  20043f0        0     1                 $t.7
+ 20043f1  20043f1       10     1                 OUTLINED_FUNCTION_1
+ 2004400  2004400       10     2         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_table.c.o):(.text.OUTLINED_FUNCTION_2)
+ 2004400  2004400        0     1                 $t.8
+ 2004401  2004401       10     1                 OUTLINED_FUNCTION_2
+ 2004410  2004410        e     2         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_table.c.o):(.text.OUTLINED_FUNCTION_3)
+ 2004410  2004410        0     1                 $t.9
+ 2004411  2004411        e     1                 OUTLINED_FUNCTION_3
+ 200441e  200441e       42     2         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_umul128.c.o):(.text.__umul128)
+ 200441e  200441e        0     1                 $t.0
+ 200441f  200441f       42     1                 __umul128
+ 2004460  2004460       36     2         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_umul128.c.o):(.text.__shiftright128)
+ 2004460  2004460        0     1                 $t.1
+ 2004461  2004461       36     1                 __shiftright128
+ 2004496  2004496        8     2         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(bzero.c.o):(.text.bzero)
+ 2004496  2004496        0     1                 $t.0
+ 2004497  2004497        8     1                 bzero
+ 2004497  2004497        8     1                 __aeabi_memclr4
+ 2004497  2004497        8     1                 __aeabi_memclr8
+ 2004497  2004497        8     1                 __aeabi_memclr
+ 200449e  200449e       14     2         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(memcpy.c.o):(.text.memcpy)
+ 200449e  200449e        0     1                 $t.0
+ 200449f  200449f       14     1                 memcpy
+ 200449f  200449f       14     1                 __aeabi_memcpy4
+ 200449f  200449f       14     1                 __aeabi_memcpy8
+ 200449f  200449f       14     1                 __aeabi_memcpy
+ 20044b2  20044b2        e     2         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(memset.c.o):(.text.memset)
+ 20044b2  20044b2        0     1                 $t.0
+ 20044b3  20044b3        e     1                 memset
+ 20044c0  20044c0       26     2         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libclang_rt.builtins.a(ashldi3.c.obj):(.text.__ashldi3)
+ 20044c0  20044c0        0     1                 $t.0
+ 20044c1  20044c1       26     1                 __ashldi3
+ 20044c1  20044c1       26     1                 __aeabi_llsl
+ 20044e6  20044e6       26     2         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libclang_rt.builtins.a(lshrdi3.c.obj):(.text.__lshrdi3)
+ 20044e6  20044e6        0     1                 $t.0
+ 20044e7  20044e7       26     1                 __lshrdi3
+ 20044e7  20044e7       26     1                 __aeabi_llsr
+ 200450c  200450c      286     2         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libclang_rt.builtins.a(udivmoddi4.c.obj):(.text.__udivmoddi4)
+ 200450c  200450c        0     1                 $t.0
+ 200450d  200450d      286     1                 __udivmoddi4
+ 2004794  2004794       14     4         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libclang_rt.builtins.a(aeabi_uldivmod.S.obj):(.text)
+ 2004794  2004794        0     1                 $t.0
+ 2004795  2004795       14     1                 __aeabi_uldivmod
+ 20047a8  20047a8      553     1         <internal>:(.rodata.str1.1)
+ 2004cfc  2004cfc        a     2         ./src/coremark/core_main.o:(.rodata.list_known_crc)
+ 2004cfc  2004cfc        a     1                 list_known_crc
+ 2004d06  2004d06        a     2         ./src/coremark/core_main.o:(.rodata.matrix_known_crc)
+ 2004d06  2004d06        a     1                 matrix_known_crc
+ 2004d10  2004d10        a     2         ./src/coremark/core_main.o:(.rodata.state_known_crc)
+ 2004d10  2004d10        a     1                 state_known_crc
+ 2004d1c  2004d1c       10     4         ./src/coremark/core_state.o:(.rodata.intpat)
+ 2004d1c  2004d1c       10     1                 intpat
+ 2004d2c  2004d2c       10     4         ./src/coremark/core_state.o:(.rodata.floatpat)
+ 2004d2c  2004d2c       10     1                 floatpat
+ 2004d3c  2004d3c       10     4         ./src/coremark/core_state.o:(.rodata.scipat)
+ 2004d3c  2004d3c       10     1                 scipat
+ 2004d4c  2004d4c       10     4         ./src/coremark/core_state.o:(.rodata.errpat)
+ 2004d4c  2004d4c       10     1                 errpat
+ 2004d5c  2004d5c       20     4         ./src/coremark/core_state.o:(.rodata..Lswitch.table.core_init_state)
+ 2004d5c  2004d5c       20     1                 .Lswitch.table.core_init_state
+ 2004d7c  2004d7c       20     4         <internal>:(.rodata.cst32)
+ 2004d9c  2004d9c       14     4         ./src/coremark/core_util.o:(.rodata..Lswitch.table.get_seed_32)
+ 2004d9c  2004d9c       14     1                 .Lswitch.table.get_seed_32
+ 2004db0  2004db0        4     4         ./src/hal_entry.o:(.rodata.stdin)
+ 2004db0  2004db0        4     1                 stdin
+ 2004db0  2004db0        4     1                 stdout
+ 2004db0  2004db0        4     1                 stderr
+ 2004db4  2004db4       14     4         ./ra_gen/hal_data.o:(.rodata.g_uart9_cfg_extend)
+ 2004db4  2004db4       14     1                 g_uart9_cfg_extend
+ 2004dc8  2004dc8       20     4         ./ra_gen/hal_data.o:(.rodata.g_uart9_cfg)
+ 2004dc8  2004dc8       20     1                 g_uart9_cfg
+ 2004de8  2004de8      570     4         ./ra_gen/pin_data.o:(.rodata.g_bsp_pin_cfg_data)
+ 2004de8  2004de8      570     1                 g_bsp_pin_cfg_data
+ 2005358  2005358        c     4         ./ra_gen/pin_data.o:(.rodata.g_bsp_pin_cfg)
+ 2005358  2005358        c     1                 g_bsp_pin_cfg
+ 2005364  2005364        8     2         ./ra_gen/vector_data.o:(.rodata.g_interrupt_event_link_select)
+ 2005364  2005364        8     1                 g_interrupt_event_link_select
+ 200536c  200536c        6     2         ./ra/fsp/src/r_ioport/r_ioport.o:(.rodata.g_vbatt_pins_input)
+ 200536c  200536c        6     1                 g_vbatt_pins_input
+ 2005374  2005374       20     4         ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o:(.rodata.nocache_list)
+ 2005374  2005374       20     1                 nocache_list
+ 2005394  2005394       18     4         ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o:(.rodata.g_init_info)
+ 2005394  2005394       18     1                 g_init_info
+ 20053ac  20053ac       84     4         ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o:(.rodata.zero_list)
+ 20053ac  20053ac       84     1                 zero_list
+ 2005430  2005430      190     4         ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o:(.rodata.copy_list)
+ 2005430  2005430      190     1                 copy_list
+ 20055c0  20055c0        a     2         ./ra/fsp/src/bsp/mcu/all/bsp_register_protection.o:(.rodata.g_prcr_masks)
+ 20055c0  20055c0        a     1                 g_prcr_masks
+ 20055d0  20055d0      33c     8         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_table.c.o):(.rodata)
+ 20055d0  20055d0       d0     1                 DOUBLE_POW5_SPLIT2
+ 20056a0  20056a0       d0     1                 DOUBLE_POW5_TABLE
+ 2005770  2005770       54     1                 POW5_OFFSETS
+ 20057c8  20057c8       f0     1                 DOUBLE_POW5_INV_SPLIT2
+ 20058b8  20058b8       54     1                 POW5_INV_OFFSETS
+ 200590c  200590c       4e     4         ./ra/fsp/src/bsp/mcu/all/bsp_common.o:(.version)
+ 200590c  200590c        4     1                 g_fsp_version
+ 2005910  2005910        6     1                 g_fsp_version_string
+ 2005916  2005916       44     1                 g_fsp_version_build_string
+ 200595a  200595a        0     1         __flash_readonly$$Limit = .
+ 200595a  200595a        0     1 __flash_preinit_array$$
+ 200595a  200595a        0     1         __preinit_array_start = .
+ 200595a  200595a        0     1         __preinit_array_end = .
+ 200595a  200595a        0     1 __flash_init_array$$
+ 200595a  200595a        0     1         __init_array_start = .
+ 200595a  200595a        0     1         __init_array_end = .
+ 200595a  200595a        0     1 __flash_fini_array$$
+ 200595a  200595a        0     1         __fini_array_start = .
+ 200595a  200595a        0     1         __fini_array_end = .
+ 200595a  200595a        0     1 __flash_arm.exidx$$
+ 200595a  200595a        0     1         __exidx_start = .
+ 200595a  200595a        0     1         __exidx_end = .
+ 2008000  2008000        0     1 .flash.endof
+ 2008000  2008000        0     1         __ddsc_FLASH_END = .
+ 2008000  2008000        0     1 .flash.flat_nsc
+ 2008000  2008000        0     1         __sau_ddsc_FLASH_NSC = .
+ 2c9f040  2c9f040        0     1 .option_setting_ofs0.startof
+ 2c9f040  2c9f040        0     1         __ddsc_OPTION_SETTING_OFS0_START = .
+ 2c9f040  2c9f040        4     4 __option_setting_ofs0_reg$$
+ 2c9f040  2c9f040        0     1         __option_setting_ofs0_reg$$Base = .
+ 2c9f040  2c9f040        4     4         ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o:(.option_setting_ofs0)
+ 2c9f040  2c9f040        4     1                 g_bsp_cfg_option_setting_ofs0
+ 2c9f044  2c9f044        0     1         __option_setting_ofs0_reg$$Limit = .
+ 2c9f044  2c9f044        0     1 .option_setting_ofs0.endof
+ 2c9f044  2c9f044        0     1         __ddsc_OPTION_SETTING_OFS0_END = .
+ 2c9f044  2c9f044        0     1 .option_setting_ofs2.startof
+ 2c9f044  2c9f044        0     1         __ddsc_OPTION_SETTING_OFS2_START = .
+ 2c9f044  2c9f044        4     4 __option_setting_ofs2_reg$$
+ 2c9f044  2c9f044        0     1         __option_setting_ofs2_reg$$Base = .
+ 2c9f044  2c9f044        4     4         ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o:(.option_setting_ofs2)
+ 2c9f044  2c9f044        4     1                 g_bsp_cfg_option_setting_ofs2
+ 2c9f048  2c9f048        0     1         __option_setting_ofs2_reg$$Limit = .
+ 2c9f048  2c9f048        0     1 .option_setting_ofs2.endof
+ 2c9f048  2c9f048        0     1         __ddsc_OPTION_SETTING_OFS2_END = .
+ 2c9f074  2c9f074        0     1 .option_setting_sas.startof
+ 2c9f074  2c9f074        0     1         __ddsc_OPTION_SETTING_SAS_START = .
+ 2c9f074  2c9f074        0     1 __option_setting_sas_reg$$
+ 2c9f074  2c9f074        0     1         __option_setting_sas_reg$$Base = .
+ 2c9f074  2c9f074        0     1         __option_setting_sas_reg$$Limit = .
+ 2c9f074  2c9f074        0     1 .option_setting_sas.endof
+ 2c9f074  2c9f074        0     1         __ddsc_OPTION_SETTING_SAS_END = .
+12c9f4c0 12c9f4c0        0     1 .option_setting_ofs1.startof
+12c9f4c0 12c9f4c0        0     1         __ddsc_OPTION_SETTING_OFS1_START = .
+12c9f4c0 12c9f4c0        0     1 __option_setting_ofs1_reg$$
+12c9f4c0 12c9f4c0        0     1         __option_setting_ofs1_reg$$Base = .
+12c9f4c0 12c9f4c0        0     1         __option_setting_ofs1_reg$$Limit = .
+12c9f4c0 12c9f4c0        0     1 .option_setting_ofs1.endof
+12c9f4c0 12c9f4c0        0     1         __ddsc_OPTION_SETTING_OFS1_END = .
+ 2c9f0c0  2c9f0c0        0     1 .option_setting_ofs1_sec.startof
+ 2c9f0c0  2c9f0c0        0     1         __ddsc_OPTION_SETTING_OFS1_SEC_START = .
+ 2c9f0c0  2c9f0c0        4     4 __option_setting_ofs1_sec_reg$$
+ 2c9f0c0  2c9f0c0        0     1         __option_setting_ofs1_sec_reg$$Base = .
+ 2c9f0c0  2c9f0c0        4     4         ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o:(.option_setting_ofs1_sec)
+ 2c9f0c0  2c9f0c0        4     1                 g_bsp_cfg_option_setting_ofs1_sec
+ 2c9f0c4  2c9f0c4        0     1         __option_setting_ofs1_sec_reg$$Limit = .
+ 2c9f0c4  2c9f0c4        0     1 .option_setting_ofs1_sec.endof
+ 2c9f0c4  2c9f0c4        0     1         __ddsc_OPTION_SETTING_OFS1_SEC_END = .
+ 2c9f120  2c9f120        0     1 .option_setting_ofs1_sel.startof
+ 2c9f120  2c9f120        0     1         __ddsc_OPTION_SETTING_OFS1_SEL_START = .
+ 2c9f120  2c9f120        4     4 __option_setting_ofs1_sel_reg$$
+ 2c9f120  2c9f120        0     1         __option_setting_ofs1_sel_reg$$Base = .
+ 2c9f120  2c9f120        4     4         ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o:(.option_setting_ofs1_sel)
+ 2c9f120  2c9f120        4     1                 g_bsp_cfg_option_setting_ofs1_sel
+ 2c9f124  2c9f124        0     1         __option_setting_ofs1_sel_reg$$Limit = .
+ 2c9f124  2c9f124        0     1 .option_setting_ofs1_sel.endof
+ 2c9f124  2c9f124        0     1         __ddsc_OPTION_SETTING_OFS1_SEL_END = .
+12c9f4c4 12c9f4c4        0     1 .option_setting_ofs3.startof
+12c9f4c4 12c9f4c4        0     1         __ddsc_OPTION_SETTING_OFS3_START = .
+12c9f4c4 12c9f4c4        0     1 __option_setting_ofs3_reg$$
+12c9f4c4 12c9f4c4        0     1         __option_setting_ofs3_reg$$Base = .
+12c9f4c4 12c9f4c4        0     1         __option_setting_ofs3_reg$$Limit = .
+12c9f4c4 12c9f4c4        0     1 .option_setting_ofs3.endof
+12c9f4c4 12c9f4c4        0     1         __ddsc_OPTION_SETTING_OFS3_END = .
+ 2c9f0c4  2c9f0c4        0     1 .option_setting_ofs3_sec.startof
+ 2c9f0c4  2c9f0c4        0     1         __ddsc_OPTION_SETTING_OFS3_SEC_START = .
+ 2c9f0c4  2c9f0c4        4     4 __option_setting_ofs3_sec_reg$$
+ 2c9f0c4  2c9f0c4        0     1         __option_setting_ofs3_sec_reg$$Base = .
+ 2c9f0c4  2c9f0c4        4     4         ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o:(.option_setting_ofs3_sec)
+ 2c9f0c4  2c9f0c4        4     1                 g_bsp_cfg_option_setting_ofs3_sec
+ 2c9f0c8  2c9f0c8        0     1         __option_setting_ofs3_sec_reg$$Limit = .
+ 2c9f0c8  2c9f0c8        0     1 .option_setting_ofs3_sec.endof
+ 2c9f0c8  2c9f0c8        0     1         __ddsc_OPTION_SETTING_OFS3_SEC_END = .
+ 2c9f124  2c9f124        0     1 .option_setting_ofs3_sel.startof
+ 2c9f124  2c9f124        0     1         __ddsc_OPTION_SETTING_OFS3_SEL_START = .
+ 2c9f124  2c9f124        4     4 __option_setting_ofs3_sel_reg$$
+ 2c9f124  2c9f124        0     1         __option_setting_ofs3_sel_reg$$Base = .
+ 2c9f124  2c9f124        4     4         ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o:(.option_setting_ofs3_sel)
+ 2c9f124  2c9f124        4     1                 g_bsp_cfg_option_setting_ofs3_sel
+ 2c9f128  2c9f128        0     1         __option_setting_ofs3_sel_reg$$Limit = .
+ 2c9f128  2c9f128        0     1 .option_setting_ofs3_sel.endof
+ 2c9f128  2c9f128        0     1         __ddsc_OPTION_SETTING_OFS3_SEL_END = .
+12c9f600 12c9f600        0     1 .option_setting_bps.startof
+12c9f600 12c9f600        0     1         __ddsc_OPTION_SETTING_BPS_START = .
+12c9f600 12c9f600        0     1 __option_setting_bps_reg$$
+12c9f600 12c9f600        0     1         __option_setting_bps_reg$$Base = .
+12c9f600 12c9f600        0     1         __option_setting_bps_reg$$Limit = .
+12c9f600 12c9f600        0     1 .option_setting_bps.endof
+12c9f600 12c9f600        0     1         __ddsc_OPTION_SETTING_BPS_END = .
+ 2c9f200  2c9f200        0     1 .option_setting_bps_sec.startof
+ 2c9f200  2c9f200        0     1         __ddsc_OPTION_SETTING_BPS_SEC_START = .
+ 2c9f200  2c9f200        0     1 __option_setting_bps_sec_reg$$
+ 2c9f200  2c9f200        0     1         __option_setting_bps_sec_reg$$Base = .
+ 2c9f200  2c9f200        0     1         __option_setting_bps_sec_reg$$Limit = .
+ 2c9f200  2c9f200        0     1 .option_setting_bps_sec.endof
+ 2c9f200  2c9f200        0     1         __ddsc_OPTION_SETTING_BPS_SEC_END = .
+ 2e07600  2e07600        0     1 .option_setting_otp_fsblctrl0.startof
+ 2e07600  2e07600        0     1         __ddsc_OPTION_SETTING_OTP_FSBLCTRL0_START = .
+ 2e07600  2e07600        0     1 __option_setting_otp_fsblctrl0_reg$$
+ 2e07600  2e07600        0     1         __option_setting_otp_fsblctrl0_reg$$Base = .
+ 2e07600  2e07600        0     1         __option_setting_otp_fsblctrl0_reg$$Limit = .
+ 2e07600  2e07600        0     1 .option_setting_otp_fsblctrl0.endof
+ 2e07600  2e07600        0     1         __ddsc_OPTION_SETTING_OTP_FSBLCTRL0_END = .
+ 2e07604  2e07604        0     1 .option_setting_otp_fsblctrl1.startof
+ 2e07604  2e07604        0     1         __ddsc_OPTION_SETTING_OTP_FSBLCTRL1_START = .
+ 2e07604  2e07604        0     1 __option_setting_otp_fsblctrl1_reg$$
+ 2e07604  2e07604        0     1         __option_setting_otp_fsblctrl1_reg$$Base = .
+ 2e07604  2e07604        0     1         __option_setting_otp_fsblctrl1_reg$$Limit = .
+ 2e07604  2e07604        0     1 .option_setting_otp_fsblctrl1.endof
+ 2e07604  2e07604        0     1         __ddsc_OPTION_SETTING_OTP_FSBLCTRL1_END = .
+ 2e07608  2e07608        0     1 .option_setting_otp_fsblctrl2.startof
+ 2e07608  2e07608        0     1         __ddsc_OPTION_SETTING_OTP_FSBLCTRL2_START = .
+ 2e07608  2e07608        0     1 __option_setting_otp_fsblctrl2_reg$$
+ 2e07608  2e07608        0     1         __option_setting_otp_fsblctrl2_reg$$Base = .
+ 2e07608  2e07608        0     1         __option_setting_otp_fsblctrl2_reg$$Limit = .
+ 2e07608  2e07608        0     1 .option_setting_otp_fsblctrl2.endof
+ 2e07608  2e07608        0     1         __ddsc_OPTION_SETTING_OTP_FSBLCTRL2_END = .
+ 2e07614  2e07614        0     1 .option_setting_otp_samr.startof
+ 2e07614  2e07614        0     1         __ddsc_OPTION_SETTING_OTP_SAMR_START = .
+ 2e07614  2e07614        0     1 __option_setting_otp_samr_reg$$
+ 2e07614  2e07614        0     1         __option_setting_otp_samr_reg$$Base = .
+ 2e07614  2e07614        0     1         __option_setting_otp_samr_reg$$Limit = .
+ 2e07614  2e07614        0     1 .option_setting_otp_samr.endof
+ 2e07614  2e07614        0     1         __ddsc_OPTION_SETTING_OTP_SAMR_END = .
+ 2e07620  2e07620        0     1 .option_setting_otp_sacc00.startof
+ 2e07620  2e07620        0     1         __ddsc_OPTION_SETTING_OTP_SACC00_START = .
+ 2e07620  2e07620        0     1 __option_setting_otp_sacc00_reg$$
+ 2e07620  2e07620        0     1         __option_setting_otp_sacc00_reg$$Base = .
+ 2e07620  2e07620        0     1         __option_setting_otp_sacc00_reg$$Limit = .
+ 2e07620  2e07620        0     1 .option_setting_otp_sacc00.endof
+ 2e07620  2e07620        0     1         __ddsc_OPTION_SETTING_OTP_SACC00_END = .
+ 2e07630  2e07630        0     1 .option_setting_otp_sacc10.startof
+ 2e07630  2e07630        0     1         __ddsc_OPTION_SETTING_OTP_SACC10_START = .
+ 2e07630  2e07630        0     1 __option_setting_otp_sacc10_reg$$
+ 2e07630  2e07630        0     1         __option_setting_otp_sacc10_reg$$Base = .
+ 2e07630  2e07630        0     1         __option_setting_otp_sacc10_reg$$Limit = .
+ 2e07630  2e07630        0     1 .option_setting_otp_sacc10.endof
+ 2e07630  2e07630        0     1         __ddsc_OPTION_SETTING_OTP_SACC10_END = .
+ 2e07640  2e07640        0     1 .option_setting_otp_sacc01.startof
+ 2e07640  2e07640        0     1         __ddsc_OPTION_SETTING_OTP_SACC01_START = .
+ 2e07640  2e07640        0     1 __option_setting_otp_sacc01_reg$$
+ 2e07640  2e07640        0     1         __option_setting_otp_sacc01_reg$$Base = .
+ 2e07640  2e07640        0     1         __option_setting_otp_sacc01_reg$$Limit = .
+ 2e07640  2e07640        0     1 .option_setting_otp_sacc01.endof
+ 2e07640  2e07640        0     1         __ddsc_OPTION_SETTING_OTP_SACC01_END = .
+ 2e07650  2e07650        0     1 .option_setting_otp_sacc11.startof
+ 2e07650  2e07650        0     1         __ddsc_OPTION_SETTING_OTP_SACC11_START = .
+ 2e07650  2e07650        0     1 __option_setting_otp_sacc11_reg$$
+ 2e07650  2e07650        0     1         __option_setting_otp_sacc11_reg$$Base = .
+ 2e07650  2e07650        0     1         __option_setting_otp_sacc11_reg$$Limit = .
+ 2e07650  2e07650        0     1 .option_setting_otp_sacc11.endof
+ 2e07650  2e07650        0     1         __ddsc_OPTION_SETTING_OTP_SACC11_END = .
+ 2e07660  2e07660        0     1 .option_setting_otp_sacc02.startof
+ 2e07660  2e07660        0     1         __ddsc_OPTION_SETTING_OTP_SACC02_START = .
+ 2e07660  2e07660        0     1 __option_setting_otp_sacc02_reg$$
+ 2e07660  2e07660        0     1         __option_setting_otp_sacc02_reg$$Base = .
+ 2e07660  2e07660        0     1         __option_setting_otp_sacc02_reg$$Limit = .
+ 2e07660  2e07660        0     1 .option_setting_otp_sacc02.endof
+ 2e07660  2e07660        0     1         __ddsc_OPTION_SETTING_OTP_SACC02_END = .
+ 2e07670  2e07670        0     1 .option_setting_otp_sacc12.startof
+ 2e07670  2e07670        0     1         __ddsc_OPTION_SETTING_OTP_SACC12_START = .
+ 2e07670  2e07670        0     1 __option_setting_otp_sacc12_reg$$
+ 2e07670  2e07670        0     1         __option_setting_otp_sacc12_reg$$Base = .
+ 2e07670  2e07670        0     1         __option_setting_otp_sacc12_reg$$Limit = .
+ 2e07670  2e07670        0     1 .option_setting_otp_sacc12.endof
+ 2e07670  2e07670        0     1         __ddsc_OPTION_SETTING_OTP_SACC12_END = .
+ 2e07680  2e07680        0     1 .option_setting_otp_sacc03.startof
+ 2e07680  2e07680        0     1         __ddsc_OPTION_SETTING_OTP_SACC03_START = .
+ 2e07680  2e07680        0     1 __option_setting_otp_sacc03_reg$$
+ 2e07680  2e07680        0     1         __option_setting_otp_sacc03_reg$$Base = .
+ 2e07680  2e07680        0     1         __option_setting_otp_sacc03_reg$$Limit = .
+ 2e07680  2e07680        0     1 .option_setting_otp_sacc03.endof
+ 2e07680  2e07680        0     1         __ddsc_OPTION_SETTING_OTP_SACC03_END = .
+ 2e07690  2e07690        0     1 .option_setting_otp_sacc13.startof
+ 2e07690  2e07690        0     1         __ddsc_OPTION_SETTING_OTP_SACC13_START = .
+ 2e07690  2e07690        0     1 __option_setting_otp_sacc13_reg$$
+ 2e07690  2e07690        0     1         __option_setting_otp_sacc13_reg$$Base = .
+ 2e07690  2e07690        0     1         __option_setting_otp_sacc13_reg$$Limit = .
+ 2e07690  2e07690        0     1 .option_setting_otp_sacc13.endof
+ 2e07690  2e07690        0     1         __ddsc_OPTION_SETTING_OTP_SACC13_END = .
+ 2e17700  2e17700        0     1 .option_setting_otp_pbps_sec.startof
+ 2e17700  2e17700        0     1         __ddsc_OPTION_SETTING_OTP_PBPS_SEC_START = .
+ 2e17700  2e17700        0     1 __option_setting_otp_pbps_sec_reg$$
+ 2e17700  2e17700        0     1         __option_setting_otp_pbps_sec_reg$$Base = .
+ 2e17700  2e17700        0     1         __option_setting_otp_pbps_sec_reg$$Limit = .
+ 2e17700  2e17700        0     1 .option_setting_otp_pbps_sec.endof
+ 2e17700  2e17700        0     1         __ddsc_OPTION_SETTING_OTP_PBPS_SEC_END = .
+12e17780 12e17780        0     1 .option_setting_otp_pbps.startof
+12e17780 12e17780        0     1         __ddsc_OPTION_SETTING_OTP_PBPS_START = .
+12e17780 12e17780        0     1 __option_setting_otp_pbps_reg$$
+12e17780 12e17780        0     1         __option_setting_otp_pbps_reg$$Base = .
+12e17780 12e17780        0     1         __option_setting_otp_pbps_reg$$Limit = .
+12e17780 12e17780        0     1 .option_setting_otp_pbps.endof
+12e17780 12e17780        0     1         __ddsc_OPTION_SETTING_OTP_PBPS_END = .
+ 2e17920  2e17920        0     1 .option_setting_otp_zhuk.startof
+ 2e17920  2e17920        0     1         __ddsc_OPTION_SETTING_OTP_ZHUK_START = .
+ 2e17920  2e17920        0     1 __option_setting_otp_zhuk_reg$$
+ 2e17920  2e17920        0     1         __option_setting_otp_zhuk_reg$$Base = .
+ 2e17920  2e17920        0     1         __option_setting_otp_zhuk_reg$$Limit = .
+ 2e17920  2e17920        0     1 .option_setting_otp_zhuk.endof
+ 2e17920  2e17920        0     1         __ddsc_OPTION_SETTING_OTP_ZHUK_END = .
+ 2e17920  2e17920        0     1 PROVIDE ( __tls_base = ADDR ( __ram_tdata$$ ) )
+ 2e17920  2e17920        0     1 PROVIDE ( __tdata_source = LOADADDR ( __ram_tdata$$ ) )
+ 2e17920  2e17920        0     1 PROVIDE ( __tdata_size = SIZEOF ( __ram_tdata$$ ) )
+ 2e17920  2e17920        0     1 PROVIDE ( __tbss_offset = ADDR ( __ram_tbss$$ ) - ADDR ( __ram_tdata$$ ) )
+ 2e17920  2e17920        0     1 PROVIDE ( __tbss_size = SIZEOF ( __ram_tbss$$ ) )
+ 2e17920  2e17920        0     1 PROVIDE ( __arm32_tls_tcb_offset = 8 )
+       0        0     594c     1 .debug_loclists
+       0        0     107e     1         ./src/coremark/core_list_join.o:(.debug_loclists)
+    107e     107e      446     1         ./src/coremark/core_main.o:(.debug_loclists)
+    14c4     14c4      96f     1         ./src/coremark/core_matrix.o:(.debug_loclists)
+    1e33     1e33       4d     1         ./src/coremark/core_portme.o:(.debug_loclists)
+    1e80     1e80      2cd     1         ./src/coremark/core_state.o:(.debug_loclists)
+    214d     214d      223     1         ./src/coremark/core_util.o:(.debug_loclists)
+    2370     2370       45     1         ./src/hal_entry.o:(.debug_loclists)
+    23b5     23b5       1e     1         ./src/hal_warmstart.o:(.debug_loclists)
+    23d3     23d3      960     1         ./ra/fsp/src/r_sci_b_uart/r_sci_b_uart.o:(.debug_loclists)
+    2d33     2d33      4c3     1         ./ra/fsp/src/r_ioport/r_ioport.o:(.debug_loclists)
+    31f6     31f6      411     1         ./ra/fsp/src/bsp/mcu/all/bsp_clocks.o:(.debug_loclists)
+    3607     3607       1d     1         ./ra/fsp/src/bsp/mcu/all/bsp_common.o:(.debug_loclists)
+    3624     3624      105     1         ./ra/fsp/src/bsp/mcu/all/bsp_delay.o:(.debug_loclists)
+    3729     3729       35     1         ./ra/fsp/src/bsp/mcu/all/bsp_group_irq.o:(.debug_loclists)
+    375e     375e       5c     1         ./ra/fsp/src/bsp/mcu/all/bsp_ipc.o:(.debug_loclists)
+    37ba     37ba       55     1         ./ra/fsp/src/bsp/mcu/all/bsp_register_protection.o:(.debug_loclists)
+    380f     380f       37     1         ./ra/fsp/src/bsp/mcu/all/bsp_sbrk.o:(.debug_loclists)
+    3846     3846       36     1         ./ra/fsp/src/bsp/mcu/all/bsp_sdram.o:(.debug_loclists)
+    387c     387c       cc     1         ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o:(.debug_loclists)
+    3948     3948       2a     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_picolib_inittls.c.o):(.debug_loclists)
+    3972     3972       2a     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_printf.c.o):(.debug_loclists)
+    399c     399c       2d     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_fputc.c.o):(.debug_loclists)
+    39c9     39c9       42     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_puts.c.o):(.debug_loclists)
+    3a0b     3a0b      c35     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_vfprintf.c.o):(.debug_loclists)
+    4640     4640      17a     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_dtox_engine.c.o):(.debug_loclists)
+    47ba     47ba       25     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_string_strnlen.c.o):(.debug_loclists)
+    47df     47df      be5     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_dtoa_ryu.c.o):(.debug_loclists)
+    53c4     53c4       34     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_log10.c.o):(.debug_loclists)
+    53f8     53f8       1e     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_pow5bits.c.o):(.debug_loclists)
+    5416     5416      214     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_table.c.o):(.debug_loclists)
+    562a     562a      24f     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_umul128.c.o):(.debug_loclists)
+    5879     5879       1b     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(bzero.c.o):(.debug_loclists)
+    5894     5894       7a     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(memcpy.c.o):(.debug_loclists)
+    590e     590e       3e     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(memset.c.o):(.debug_loclists)
+       0        0     39f5     1 .debug_abbrev
+       0        0      1eb     1         ./src/coremark/core_list_join.o:(.debug_abbrev)
+     1eb      1eb      189     1         ./src/coremark/core_main.o:(.debug_abbrev)
+     374      374      174     1         ./src/coremark/core_matrix.o:(.debug_abbrev)
+     4e8      4e8      1c9     1         ./src/coremark/core_portme.o:(.debug_abbrev)
+     6b1      6b1      146     1         ./src/coremark/core_state.o:(.debug_abbrev)
+     7f7      7f7      10a     1         ./src/coremark/core_util.o:(.debug_abbrev)
+     901      901      2fe     1         ./src/hal_entry.o:(.debug_abbrev)
+     bff      bff      106     1         ./src/hal_warmstart.o:(.debug_abbrev)
+     d05      d05      10d     1         ./ra_gen/common_data.o:(.debug_abbrev)
+     e12      e12      21d     1         ./ra_gen/hal_data.o:(.debug_abbrev)
+    102f     102f       3c     1         ./ra_gen/main.o:(.debug_abbrev)
+    106b     106b       e6     1         ./ra_gen/pin_data.o:(.debug_abbrev)
+    1151     1151       a8     1         ./ra_gen/vector_data.o:(.debug_abbrev)
+    11f9     11f9      3ec     1         ./ra/fsp/src/r_sci_b_uart/r_sci_b_uart.o:(.debug_abbrev)
+    15e5     15e5      31d     1         ./ra/fsp/src/r_ioport/r_ioport.o:(.debug_abbrev)
+    1902     1902       a2     1         ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o:(.debug_abbrev)
+    19a4     19a4      310     1         ./ra/fsp/src/bsp/mcu/all/bsp_clocks.o:(.debug_abbrev)
+    1cb4     1cb4      149     1         ./ra/fsp/src/bsp/mcu/all/bsp_common.o:(.debug_abbrev)
+    1dfd     1dfd       ad     1         ./ra/fsp/src/bsp/mcu/all/bsp_delay.o:(.debug_abbrev)
+    1eaa     1eaa      208     1         ./ra/fsp/src/bsp/mcu/all/bsp_group_irq.o:(.debug_abbrev)
+    20b2     20b2       44     1         ./ra/fsp/src/bsp/mcu/all/bsp_io.o:(.debug_abbrev)
+    20f6     20f6      1d3     1         ./ra/fsp/src/bsp/mcu/all/bsp_ipc.o:(.debug_abbrev)
+    22c9     22c9      17a     1         ./ra/fsp/src/bsp/mcu/all/bsp_irq.o:(.debug_abbrev)
+    2443     2443      216     1         ./ra/fsp/src/bsp/mcu/all/bsp_register_protection.o:(.debug_abbrev)
+    2659     2659       85     1         ./ra/fsp/src/bsp/mcu/all/bsp_sbrk.o:(.debug_abbrev)
+    26de     26de      1c4     1         ./ra/fsp/src/bsp/mcu/all/bsp_sdram.o:(.debug_abbrev)
+    28a2     28a2       a7     1         ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o:(.debug_abbrev)
+    2949     2949      29f     1         ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o:(.debug_abbrev)
+    2be8     2be8       43     1         ./ra/board/ra8t2_mck/board_init.o:(.debug_abbrev)
+    2c2b     2c2b       91     1         ./ra/board/ra8t2_mck/board_leds.o:(.debug_abbrev)
+    2cbc     2cbc       2e     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_errno_errno.c.o):(.debug_abbrev)
+    2cea     2cea       74     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_picolib_inittls.c.o):(.debug_abbrev)
+    2d5e     2d5e       62     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_picolib_machine_arm_tls.c.o):(.debug_abbrev)
+    2dc0     2dc0       21     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_picolib_machine_arm_read_tp.S.o):(.debug_abbrev)
+    2de1     2de1       b2     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_printf.c.o):(.debug_abbrev)
+    2e93     2e93       ab     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_putchar.c.o):(.debug_abbrev)
+    2f3e     2f3e       8e     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_fputc.c.o):(.debug_abbrev)
+    2fcc     2fcc       be     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_puts.c.o):(.debug_abbrev)
+    308a     308a      1d2     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_vfprintf.c.o):(.debug_abbrev)
+    325c     325c      10b     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_dtox_engine.c.o):(.debug_abbrev)
+    3367     3367       87     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_string_strnlen.c.o):(.debug_abbrev)
+    33ee     33ee      1f9     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_dtoa_ryu.c.o):(.debug_abbrev)
+    35e7     35e7       64     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_log10.c.o):(.debug_abbrev)
+    364b     364b       62     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_pow5bits.c.o):(.debug_abbrev)
+    36ad     36ad       f9     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_table.c.o):(.debug_abbrev)
+    37a6     37a6       96     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_umul128.c.o):(.debug_abbrev)
+    383c     383c       94     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(bzero.c.o):(.debug_abbrev)
+    38d0     38d0       a0     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(memcpy.c.o):(.debug_abbrev)
+    3970     3970       85     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(memset.c.o):(.debug_abbrev)
+       0        0    36458     1 .debug_info
+       0        0      960     1         ./src/coremark/core_list_join.o:(.debug_info)
+     960      960      5e1     1         ./src/coremark/core_main.o:(.debug_info)
+     f41      f41      6e2     1         ./src/coremark/core_matrix.o:(.debug_info)
+    1623     1623      5d8     1         ./src/coremark/core_portme.o:(.debug_info)
+    1bfb     1bfb      33d     1         ./src/coremark/core_state.o:(.debug_info)
+    1f38     1f38      334     1         ./src/coremark/core_util.o:(.debug_info)
+    226c     226c     241e     1         ./src/hal_entry.o:(.debug_info)
+    468a     468a      9e9     1         ./src/hal_warmstart.o:(.debug_info)
+    5073     5073      be2     1         ./ra_gen/common_data.o:(.debug_info)
+    5c55     5c55     2234     1         ./ra_gen/hal_data.o:(.debug_info)
+    7e89     7e89       37     1         ./ra_gen/main.o:(.debug_info)
+    7ec0     7ec0      49c     1         ./ra_gen/pin_data.o:(.debug_info)
+    835c     835c      903     1         ./ra_gen/vector_data.o:(.debug_info)
+    8c5f     8c5f     9ac2     1         ./ra/fsp/src/r_sci_b_uart/r_sci_b_uart.o:(.debug_info)
+   12721    12721     81c8     1         ./ra/fsp/src/r_ioport/r_ioport.o:(.debug_info)
+   1a8e9    1a8e9      20b     1         ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o:(.debug_info)
+   1aaf4    1aaf4     8232     1         ./ra/fsp/src/bsp/mcu/all/bsp_clocks.o:(.debug_info)
+   22d26    22d26      58a     1         ./ra/fsp/src/bsp/mcu/all/bsp_common.o:(.debug_info)
+   232b0    232b0      104     1         ./ra/fsp/src/bsp/mcu/all/bsp_delay.o:(.debug_info)
+   233b4    233b4     11c7     1         ./ra/fsp/src/bsp/mcu/all/bsp_group_irq.o:(.debug_info)
+   2457b    2457b       43     1         ./ra/fsp/src/bsp/mcu/all/bsp_io.o:(.debug_info)
+   245be    245be     1611     1         ./ra/fsp/src/bsp/mcu/all/bsp_ipc.o:(.debug_info)
+   25bcf    25bcf     15af     1         ./ra/fsp/src/bsp/mcu/all/bsp_irq.o:(.debug_info)
+   2717e    2717e     5306     1         ./ra/fsp/src/bsp/mcu/all/bsp_register_protection.o:(.debug_info)
+   2c484    2c484       90     1         ./ra/fsp/src/bsp/mcu/all/bsp_sbrk.o:(.debug_info)
+   2c514    2c514     6ae2     1         ./ra/fsp/src/bsp/mcu/all/bsp_sdram.o:(.debug_info)
+   32ff6    32ff6       a5     1         ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o:(.debug_info)
+   3309b    3309b     18b8     1         ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o:(.debug_info)
+   34953    34953       3b     1         ./ra/board/ra8t2_mck/board_init.o:(.debug_info)
+   3498e    3498e       88     1         ./ra/board/ra8t2_mck/board_leds.o:(.debug_info)
+   34a16    34a16       2e     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_errno_errno.c.o):(.debug_info)
+   34a44    34a44       64     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_picolib_inittls.c.o):(.debug_info)
+   34aa8    34aa8       60     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_picolib_machine_arm_tls.c.o):(.debug_info)
+   34b08    34b08      13d     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_picolib_machine_arm_read_tp.S.o):(.debug_info)
+   34c45    34c45       84     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_printf.c.o):(.debug_info)
+   34cc9    34cc9      101     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_putchar.c.o):(.debug_info)
+   34dca    34dca       f4     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_fputc.c.o):(.debug_info)
+   34ebe    34ebe      114     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_puts.c.o):(.debug_info)
+   34fd2    34fd2      492     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_vfprintf.c.o):(.debug_info)
+   35464    35464      19f     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_dtox_engine.c.o):(.debug_info)
+   35603    35603       6e     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_string_strnlen.c.o):(.debug_info)
+   35671    35671      7a2     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_dtoa_ryu.c.o):(.debug_info)
+   35e13    35e13       8b     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_log10.c.o):(.debug_info)
+   35e9e    35e9e       6e     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_pow5bits.c.o):(.debug_info)
+   35f0c    35f0c      25e     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_table.c.o):(.debug_info)
+   3616a    3616a      169     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_umul128.c.o):(.debug_info)
+   362d3    362d3       76     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(bzero.c.o):(.debug_info)
+   36349    36349       97     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(memcpy.c.o):(.debug_info)
+   363e0    363e0       78     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(memset.c.o):(.debug_info)
+       0        0      8f7     1 .debug_rnglists
+       0        0       da     1         ./src/coremark/core_list_join.o:(.debug_rnglists)
+      da       da       18     1         ./src/coremark/core_main.o:(.debug_rnglists)
+      f2       f2       80     1         ./src/coremark/core_matrix.o:(.debug_rnglists)
+     172      172       33     1         ./src/coremark/core_portme.o:(.debug_rnglists)
+     1a5      1a5       3b     1         ./src/coremark/core_state.o:(.debug_rnglists)
+     1e0      1e0       24     1         ./src/coremark/core_util.o:(.debug_rnglists)
+     204      204       18     1         ./src/hal_entry.o:(.debug_rnglists)
+     21c      21c      28b     1         ./ra/fsp/src/r_sci_b_uart/r_sci_b_uart.o:(.debug_rnglists)
+     4a7      4a7       95     1         ./ra/fsp/src/r_ioport/r_ioport.o:(.debug_rnglists)
+     53c      53c       aa     1         ./ra/fsp/src/bsp/mcu/all/bsp_clocks.o:(.debug_rnglists)
+     5e6      5e6       1a     1         ./ra/fsp/src/bsp/mcu/all/bsp_common.o:(.debug_rnglists)
+     600      600       17     1         ./ra/fsp/src/bsp/mcu/all/bsp_delay.o:(.debug_rnglists)
+     617      617       17     1         ./ra/fsp/src/bsp/mcu/all/bsp_group_irq.o:(.debug_rnglists)
+     62e      62e       20     1         ./ra/fsp/src/bsp/mcu/all/bsp_ipc.o:(.debug_rnglists)
+     64e      64e       24     1         ./ra/fsp/src/bsp/mcu/all/bsp_register_protection.o:(.debug_rnglists)
+     672      672       1b     1         ./ra/fsp/src/bsp/mcu/all/bsp_sdram.o:(.debug_rnglists)
+     68d      68d       17     1         ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o:(.debug_rnglists)
+     6a4      6a4       44     1         ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o:(.debug_rnglists)
+     6e8      6e8      141     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_vfprintf.c.o):(.debug_rnglists)
+     829      829       78     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_dtoa_ryu.c.o):(.debug_rnglists)
+     8a1      8a1       17     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_log10.c.o):(.debug_rnglists)
+     8b8      8b8       28     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_table.c.o):(.debug_rnglists)
+     8e0      8e0       17     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_umul128.c.o):(.debug_rnglists)
+       0        0    107a4     1 .debug_str_offsets
+       0        0      1c0     1         ./src/coremark/core_list_join.o:(.debug_str_offsets)
+     1c0      1c0      138     1         ./src/coremark/core_main.o:(.debug_str_offsets)
+     2f8      2f8       c4     1         ./src/coremark/core_matrix.o:(.debug_str_offsets)
+     3bc      3bc      200     1         ./src/coremark/core_portme.o:(.debug_str_offsets)
+     5bc      5bc       e0     1         ./src/coremark/core_state.o:(.debug_str_offsets)
+     69c      69c       80     1         ./src/coremark/core_util.o:(.debug_str_offsets)
+     71c      71c      f70     1         ./src/hal_entry.o:(.debug_str_offsets)
+    168c     168c      814     1         ./src/hal_warmstart.o:(.debug_str_offsets)
+    1ea0     1ea0      8b4     1         ./ra_gen/common_data.o:(.debug_str_offsets)
+    2754     2754      f88     1         ./ra_gen/hal_data.o:(.debug_str_offsets)
+    36dc     36dc       1c     1         ./ra_gen/main.o:(.debug_str_offsets)
+    36f8     36f8      428     1         ./ra_gen/pin_data.o:(.debug_str_offsets)
+    3b20     3b20      7fc     1         ./ra_gen/vector_data.o:(.debug_str_offsets)
+    431c     431c     2aa0     1         ./ra/fsp/src/r_sci_b_uart/r_sci_b_uart.o:(.debug_str_offsets)
+    6dbc     6dbc     2244     1         ./ra/fsp/src/r_ioport/r_ioport.o:(.debug_str_offsets)
+    9000     9000       ac     1         ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o:(.debug_str_offsets)
+    90ac     90ac     1b38     1         ./ra/fsp/src/bsp/mcu/all/bsp_clocks.o:(.debug_str_offsets)
+    abe4     abe4      45c     1         ./ra/fsp/src/bsp/mcu/all/bsp_common.o:(.debug_str_offsets)
+    b040     b040       74     1         ./ra/fsp/src/bsp/mcu/all/bsp_delay.o:(.debug_str_offsets)
+    b0b4     b0b4      7d4     1         ./ra/fsp/src/bsp/mcu/all/bsp_group_irq.o:(.debug_str_offsets)
+    b888     b888       24     1         ./ra/fsp/src/bsp/mcu/all/bsp_io.o:(.debug_str_offsets)
+    b8ac     b8ac      89c     1         ./ra/fsp/src/bsp/mcu/all/bsp_ipc.o:(.debug_str_offsets)
+    c148     c148      b84     1         ./ra/fsp/src/bsp/mcu/all/bsp_irq.o:(.debug_str_offsets)
+    cccc     cccc     1328     1         ./ra/fsp/src/bsp/mcu/all/bsp_register_protection.o:(.debug_str_offsets)
+    dff4     dff4       44     1         ./ra/fsp/src/bsp/mcu/all/bsp_sbrk.o:(.debug_str_offsets)
+    e038     e038     16fc     1         ./ra/fsp/src/bsp/mcu/all/bsp_sdram.o:(.debug_str_offsets)
+    f734     f734       3c     1         ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o:(.debug_str_offsets)
+    f770     f770      78c     1         ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o:(.debug_str_offsets)
+    fefc     fefc       1c     1         ./ra/board/ra8t2_mck/board_init.o:(.debug_str_offsets)
+    ff18     ff18       3c     1         ./ra/board/ra8t2_mck/board_leds.o:(.debug_str_offsets)
+    ff54     ff54       1c     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_errno_errno.c.o):(.debug_str_offsets)
+    ff70     ff70       30     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_picolib_inittls.c.o):(.debug_str_offsets)
+    ffa0     ffa0       30     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_picolib_machine_arm_tls.c.o):(.debug_str_offsets)
+    ffd0     ffd0       3c     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_printf.c.o):(.debug_str_offsets)
+   1000c    1000c       64     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_putchar.c.o):(.debug_str_offsets)
+   10070    10070       64     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_fputc.c.o):(.debug_str_offsets)
+   100d4    100d4       6c     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_puts.c.o):(.debug_str_offsets)
+   10140    10140      184     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_vfprintf.c.o):(.debug_str_offsets)
+   102c4    102c4       a0     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_dtox_engine.c.o):(.debug_str_offsets)
+   10364    10364       30     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_string_strnlen.c.o):(.debug_str_offsets)
+   10394    10394      1c0     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_dtoa_ryu.c.o):(.debug_str_offsets)
+   10554    10554       38     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_log10.c.o):(.debug_str_offsets)
+   1058c    1058c       34     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_pow5bits.c.o):(.debug_str_offsets)
+   105c0    105c0       a4     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_table.c.o):(.debug_str_offsets)
+   10664    10664       9c     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_umul128.c.o):(.debug_str_offsets)
+   10700    10700       30     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(bzero.c.o):(.debug_str_offsets)
+   10730    10730       3c     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(memcpy.c.o):(.debug_str_offsets)
+   1076c    1076c       38     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(memset.c.o):(.debug_str_offsets)
+       0        0    106dd     1 .debug_str
+       0        0    106dd     1         <internal>:(.debug_str)
+       0        0      888     1 .debug_addr
+       0        0       6c     1         ./src/coremark/core_list_join.o:(.debug_addr)
+      6c       6c       90     1         ./src/coremark/core_main.o:(.debug_addr)
+      fc       fc       50     1         ./src/coremark/core_matrix.o:(.debug_addr)
+     14c      14c       44     1         ./src/coremark/core_portme.o:(.debug_addr)
+     190      190       7c     1         ./src/coremark/core_state.o:(.debug_addr)
+     20c      20c       4c     1         ./src/coremark/core_util.o:(.debug_addr)
+     258      258       3c     1         ./src/hal_entry.o:(.debug_addr)
+     294      294       10     1         ./src/hal_warmstart.o:(.debug_addr)
+     2a4      2a4       14     1         ./ra_gen/common_data.o:(.debug_addr)
+     2b8      2b8       20     1         ./ra_gen/hal_data.o:(.debug_addr)
+     2d8      2d8        c     1         ./ra_gen/main.o:(.debug_addr)
+     2e4      2e4       10     1         ./ra_gen/pin_data.o:(.debug_addr)
+     2f4      2f4       10     1         ./ra_gen/vector_data.o:(.debug_addr)
+     304      304      104     1         ./ra/fsp/src/r_sci_b_uart/r_sci_b_uart.o:(.debug_addr)
+     408      408       88     1         ./ra/fsp/src/r_ioport/r_ioport.o:(.debug_addr)
+     490      490       30     1         ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o:(.debug_addr)
+     4c0      4c0       bc     1         ./ra/fsp/src/bsp/mcu/all/bsp_clocks.o:(.debug_addr)
+     57c      57c       20     1         ./ra/fsp/src/bsp/mcu/all/bsp_common.o:(.debug_addr)
+     59c      59c       20     1         ./ra/fsp/src/bsp/mcu/all/bsp_delay.o:(.debug_addr)
+     5bc      5bc       1c     1         ./ra/fsp/src/bsp/mcu/all/bsp_group_irq.o:(.debug_addr)
+     5d8      5d8        c     1         ./ra/fsp/src/bsp/mcu/all/bsp_io.o:(.debug_addr)
+     5e4      5e4       24     1         ./ra/fsp/src/bsp/mcu/all/bsp_ipc.o:(.debug_addr)
+     608      608       18     1         ./ra/fsp/src/bsp/mcu/all/bsp_irq.o:(.debug_addr)
+     620      620       2c     1         ./ra/fsp/src/bsp/mcu/all/bsp_register_protection.o:(.debug_addr)
+     64c      64c       10     1         ./ra/fsp/src/bsp/mcu/all/bsp_sbrk.o:(.debug_addr)
+     65c      65c       14     1         ./ra/fsp/src/bsp/mcu/all/bsp_sdram.o:(.debug_addr)
+     670      670       1c     1         ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o:(.debug_addr)
+     68c      68c       3c     1         ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o:(.debug_addr)
+     6c8      6c8        c     1         ./ra/board/ra8t2_mck/board_init.o:(.debug_addr)
+     6d4      6d4       10     1         ./ra/board/ra8t2_mck/board_leds.o:(.debug_addr)
+     6e4      6e4        c     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_picolib_inittls.c.o):(.debug_addr)
+     6f0      6f0        c     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_picolib_machine_arm_tls.c.o):(.debug_addr)
+     6fc      6fc        c     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_printf.c.o):(.debug_addr)
+     708      708       10     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_putchar.c.o):(.debug_addr)
+     718      718        c     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_fputc.c.o):(.debug_addr)
+     724      724       10     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_puts.c.o):(.debug_addr)
+     734      734       48     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_vfprintf.c.o):(.debug_addr)
+     77c      77c       1c     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_dtox_engine.c.o):(.debug_addr)
+     798      798        c     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_string_strnlen.c.o):(.debug_addr)
+     7a4      7a4       58     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_dtoa_ryu.c.o):(.debug_addr)
+     7fc      7fc       10     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_log10.c.o):(.debug_addr)
+     80c      80c        c     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_pow5bits.c.o):(.debug_addr)
+     818      818       38     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_table.c.o):(.debug_addr)
+     850      850       10     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_umul128.c.o):(.debug_addr)
+     860      860       10     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(bzero.c.o):(.debug_addr)
+     870      870        c     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(memcpy.c.o):(.debug_addr)
+     87c      87c        c     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(memset.c.o):(.debug_addr)
+       0        0       29     1 .comment
+       0        0       29     1         <internal>:(.comment)
+       0        0       50     1 .ARM.attributes
+       0        0       50     1         ./src/coremark/core_list_join.o:(.ARM.attributes)
+       0        0     1328     4 .debug_frame
+       0        0      160     4         ./src/coremark/core_list_join.o:(.debug_frame)
+     160      160       68     4         ./src/coremark/core_main.o:(.debug_frame)
+     1c8      1c8      1c4     4         ./src/coremark/core_matrix.o:(.debug_frame)
+     38c      38c       84     4         ./src/coremark/core_portme.o:(.debug_frame)
+     410      410       94     4         ./src/coremark/core_state.o:(.debug_frame)
+     4a4      4a4       a4     4         ./src/coremark/core_util.o:(.debug_frame)
+     548      548       40     4         ./src/hal_entry.o:(.debug_frame)
+     588      588       24     4         ./src/hal_warmstart.o:(.debug_frame)
+     5ac      5ac       24     4         ./ra_gen/common_data.o:(.debug_frame)
+     5d0      5d0       24     4         ./ra_gen/hal_data.o:(.debug_frame)
+     5f4      5f4       30     4         ./ra_gen/main.o:(.debug_frame)
+     624      624      1a0     4         ./ra/fsp/src/r_sci_b_uart/r_sci_b_uart.o:(.debug_frame)
+     7c4      7c4      18c     4         ./ra/fsp/src/r_ioport/r_ioport.o:(.debug_frame)
+     950      950      168     4         ./ra/fsp/src/bsp/mcu/all/bsp_clocks.o:(.debug_frame)
+     ab8      ab8       44     4         ./ra/fsp/src/bsp/mcu/all/bsp_common.o:(.debug_frame)
+     afc      afc       34     4         ./ra/fsp/src/bsp/mcu/all/bsp_delay.o:(.debug_frame)
+     b30      b30       48     4         ./ra/fsp/src/bsp/mcu/all/bsp_group_irq.o:(.debug_frame)
+     b78      b78       70     4         ./ra/fsp/src/bsp/mcu/all/bsp_ipc.o:(.debug_frame)
+     be8      be8       30     4         ./ra/fsp/src/bsp/mcu/all/bsp_irq.o:(.debug_frame)
+     c18      c18       44     4         ./ra/fsp/src/bsp/mcu/all/bsp_register_protection.o:(.debug_frame)
+     c5c      c5c       30     4         ./ra/fsp/src/bsp/mcu/all/bsp_sbrk.o:(.debug_frame)
+     c8c      c8c       68     4         ./ra/fsp/src/bsp/mcu/all/bsp_sdram.o:(.debug_frame)
+     cf4      cf4       40     4         ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o:(.debug_frame)
+     d34      d34       4c     4         ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o:(.debug_frame)
+     d80      d80       24     4         ./ra/board/ra8t2_mck/board_init.o:(.debug_frame)
+     da4      da4       34     4         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_picolib_inittls.c.o):(.debug_frame)
+     dd8      dd8       24     4         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_picolib_machine_arm_tls.c.o):(.debug_frame)
+     dfc      dfc       24     4         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_picolib_machine_arm_read_tp.S.o):(.debug_frame)
+     e20      e20       38     4         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_printf.c.o):(.debug_frame)
+     e58      e58       24     4         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_putchar.c.o):(.debug_frame)
+     e7c      e7c       34     4         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_fputc.c.o):(.debug_frame)
+     eb0      eb0       38     4         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_puts.c.o):(.debug_frame)
+     ee8      ee8       f0     4         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_vfprintf.c.o):(.debug_frame)
+     fd8      fd8       40     4         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_dtox_engine.c.o):(.debug_frame)
+    1018     1018       34     4         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_string_strnlen.c.o):(.debug_frame)
+    104c     104c       d8     4         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_dtoa_ryu.c.o):(.debug_frame)
+    1124     1124       34     4         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_log10.c.o):(.debug_frame)
+    1158     1158       24     4         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_pow5bits.c.o):(.debug_frame)
+    117c     117c       d0     4         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_table.c.o):(.debug_frame)
+    124c     124c       60     4         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_umul128.c.o):(.debug_frame)
+    12ac     12ac       24     4         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(bzero.c.o):(.debug_frame)
+    12d0     12d0       34     4         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(memcpy.c.o):(.debug_frame)
+    1304     1304       24     4         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(memset.c.o):(.debug_frame)
+       0        0     6b26     1 .debug_line
+       0        0      a73     1         ./src/coremark/core_list_join.o:(.debug_line)
+     a73      a73      51a     1         ./src/coremark/core_main.o:(.debug_line)
+     f8d      f8d      6d7     1         ./src/coremark/core_matrix.o:(.debug_line)
+    1664     1664      163     1         ./src/coremark/core_portme.o:(.debug_line)
+    17c7     17c7      2c9     1         ./src/coremark/core_state.o:(.debug_line)
+    1a90     1a90      207     1         ./src/coremark/core_util.o:(.debug_line)
+    1c97     1c97      104     1         ./src/hal_entry.o:(.debug_line)
+    1d9b     1d9b      119     1         ./src/hal_warmstart.o:(.debug_line)
+    1eb4     1eb4       f8     1         ./ra_gen/common_data.o:(.debug_line)
+    1fac     1fac      14f     1         ./ra_gen/hal_data.o:(.debug_line)
+    20fb     20fb       71     1         ./ra_gen/main.o:(.debug_line)
+    216c     216c       bc     1         ./ra_gen/pin_data.o:(.debug_line)
+    2228     2228       9f     1         ./ra_gen/vector_data.o:(.debug_line)
+    22c7     22c7      d0e     1         ./ra/fsp/src/r_sci_b_uart/r_sci_b_uart.o:(.debug_line)
+    2fd5     2fd5      5be     1         ./ra/fsp/src/r_ioport/r_ioport.o:(.debug_line)
+    3593     3593       a7     1         ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o:(.debug_line)
+    363a     363a      99f     1         ./ra/fsp/src/bsp/mcu/all/bsp_clocks.o:(.debug_line)
+    3fd9     3fd9      105     1         ./ra/fsp/src/bsp/mcu/all/bsp_common.o:(.debug_line)
+    40de     40de      148     1         ./ra/fsp/src/bsp/mcu/all/bsp_delay.o:(.debug_line)
+    4226     4226      151     1         ./ra/fsp/src/bsp/mcu/all/bsp_group_irq.o:(.debug_line)
+    4377     4377       8e     1         ./ra/fsp/src/bsp/mcu/all/bsp_io.o:(.debug_line)
+    4405     4405      1b0     1         ./ra/fsp/src/bsp/mcu/all/bsp_ipc.o:(.debug_line)
+    45b5     45b5       fe     1         ./ra/fsp/src/bsp/mcu/all/bsp_irq.o:(.debug_line)
+    46b3     46b3      128     1         ./ra/fsp/src/bsp/mcu/all/bsp_register_protection.o:(.debug_line)
+    47db     47db      10f     1         ./ra/fsp/src/bsp/mcu/all/bsp_sbrk.o:(.debug_line)
+    48ea     48ea      1eb     1         ./ra/fsp/src/bsp/mcu/all/bsp_sdram.o:(.debug_line)
+    4ad5     4ad5       b9     1         ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o:(.debug_line)
+    4b8e     4b8e      2a5     1         ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o:(.debug_line)
+    4e33     4e33       6e     1         ./ra/board/ra8t2_mck/board_init.o:(.debug_line)
+    4ea1     4ea1       a7     1         ./ra/board/ra8t2_mck/board_leds.o:(.debug_line)
+    4f48     4f48       43     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_errno_errno.c.o):(.debug_line)
+    4f8b     4f8b       a2     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_picolib_inittls.c.o):(.debug_line)
+    502d     502d       ad     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_picolib_machine_arm_tls.c.o):(.debug_line)
+    50da     50da       45     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_picolib_machine_arm_read_tp.S.o):(.debug_line)
+    511f     511f       8a     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_printf.c.o):(.debug_line)
+    51a9     51a9       a6     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_putchar.c.o):(.debug_line)
+    524f     524f       c2     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_fputc.c.o):(.debug_line)
+    5311     5311       dc     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_puts.c.o):(.debug_line)
+    53ed     53ed      9a5     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_vfprintf.c.o):(.debug_line)
+    5d92     5d92      1a5     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_dtox_engine.c.o):(.debug_line)
+    5f37     5f37       91     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_string_strnlen.c.o):(.debug_line)
+    5fc8     5fc8      577     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_dtoa_ryu.c.o):(.debug_line)
+    653f     653f       b3     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_log10.c.o):(.debug_line)
+    65f2     65f2       99     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_pow5bits.c.o):(.debug_line)
+    668b     668b      1ed     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_table.c.o):(.debug_line)
+    6878     6878       d8     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_umul128.c.o):(.debug_line)
+    6950     6950       a1     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(bzero.c.o):(.debug_line)
+    69f1     69f1       9f     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(memcpy.c.o):(.debug_line)
+    6a90     6a90       96     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(memset.c.o):(.debug_line)
+       0        0     15f2     1 .debug_line_str
+       0        0     15f2     1         <internal>:(.debug_line_str)
+       0        0       20     1 .debug_aranges
+       0        0       20     1         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_picolib_machine_arm_read_tp.S.o):(.debug_aranges)
+       0        0     2bb0     4 .symtab
+       0        0     2bb0     4         <internal>:(.symtab)
+       0        0     113f     1 .shstrtab
+       0        0     113f     1         <internal>:(.shstrtab)
+       0        0     36c6     1 .strtab
+       0        0     36c6     1         <internal>:(.strtab)
+
+Cross Reference Table
+
+Symbol                                            File
+core_bench_state                                  ./src/coremark/core_state.o
+                                                  ./src/coremark/core_list_join.o
+core_bench_matrix                                 ./src/coremark/core_matrix.o
+                                                  ./src/coremark/core_list_join.o
+crcu16                                            ./src/coremark/core_util.o
+                                                  ./src/coremark/core_list_join.o
+                                                  ./src/coremark/core_main.o
+core_bench_list                                   ./src/coremark/core_list_join.o
+                                                  ./src/coremark/core_main.o
+crc16                                             ./src/coremark/core_util.o
+                                                  ./src/coremark/core_list_join.o
+                                                  ./src/coremark/core_main.o
+                                                  ./src/coremark/core_matrix.o
+core_list_init                                    ./src/coremark/core_list_join.o
+                                                  ./src/coremark/core_main.o
+coremain                                          ./src/coremark/core_main.o
+                                                  ./src/hal_entry.o
+portable_init                                     ./src/coremark/core_portme.o
+                                                  ./src/coremark/core_main.o
+get_seed_32                                       ./src/coremark/core_util.o
+                                                  ./src/coremark/core_main.o
+core_init_matrix                                  ./src/coremark/core_matrix.o
+                                                  ./src/coremark/core_main.o
+core_init_state                                   ./src/coremark/core_state.o
+                                                  ./src/coremark/core_main.o
+stop_time                                         ./src/coremark/core_portme.o
+                                                  ./src/coremark/core_main.o
+get_time                                          ./src/coremark/core_portme.o
+                                                  ./src/coremark/core_main.o
+time_in_secs                                      ./src/coremark/core_portme.o
+                                                  ./src/coremark/core_main.o
+start_time                                        ./src/coremark/core_portme.o
+                                                  ./src/coremark/core_main.o
+default_num_contexts                              ./src/coremark/core_portme.o
+                                                  ./src/coremark/core_main.o
+puts                                              C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_puts.c.o)
+                                                  ./src/coremark/core_main.o
+                                                  ./src/hal_entry.o
+printf                                            C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_printf.c.o)
+                                                  ./src/coremark/core_main.o
+                                                  ./src/hal_entry.o
+check_data_types                                  ./src/coremark/core_util.o
+                                                  ./src/coremark/core_main.o
+putchar                                           C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_putchar.c.o)
+                                                  ./src/coremark/core_main.o
+portable_fini                                     ./src/coremark/core_portme.o
+                                                  ./src/coremark/core_main.o
+matrix_test                                       ./src/coremark/core_matrix.o
+Tick                                              ./src/coremark/core_portme.o
+SystemCoreClock                                   ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o
+                                                  ./src/coremark/core_portme.o
+                                                  ./src/hal_entry.o
+                                                  ./ra/fsp/src/bsp/mcu/all/bsp_clocks.o
+                                                  ./ra/fsp/src/bsp/mcu/all/bsp_delay.o
+SysTick_Handler                                   ./src/coremark/core_portme.o
+                                                  ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o
+seed1_volatile                                    ./src/coremark/core_portme.o
+                                                  ./src/coremark/core_util.o
+seed2_volatile                                    ./src/coremark/core_portme.o
+                                                  ./src/coremark/core_util.o
+seed3_volatile                                    ./src/coremark/core_portme.o
+                                                  ./src/coremark/core_util.o
+seed4_volatile                                    ./src/coremark/core_portme.o
+                                                  ./src/coremark/core_util.o
+seed5_volatile                                    ./src/coremark/core_portme.o
+                                                  ./src/coremark/core_util.o
+core_state_transition                             ./src/coremark/core_state.o
+crcu32                                            ./src/coremark/core_util.o
+                                                  ./src/coremark/core_state.o
+__aeabi_memclr                                    C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(bzero.c.o)
+                                                  ./src/coremark/core_state.o
+                                                  C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_picolib_inittls.c.o)
+user_write                                        ./src/hal_entry.o
+g_uart9_ctrl                                      ./ra_gen/hal_data.o
+                                                  ./src/hal_entry.o
+hal_entry                                         ./src/hal_entry.o
+                                                  ./ra_gen/main.o
+g_uart9_cfg                                       ./ra_gen/hal_data.o
+                                                  ./src/hal_entry.o
+R_SCI_B_UART_Open                                 ./ra/fsp/src/r_sci_b_uart/r_sci_b_uart.o
+                                                  ./src/hal_entry.o
+R_BSP_SoftwareDelay                               ./ra/fsp/src/bsp/mcu/all/bsp_delay.o
+                                                  ./src/hal_entry.o
+                                                  ./ra/fsp/src/r_sci_b_uart/r_sci_b_uart.o
+                                                  ./ra/fsp/src/r_ioport/r_ioport.o
+                                                  ./ra/fsp/src/bsp/mcu/all/bsp_clocks.o
+stdin                                             ./src/hal_entry.o
+stdout                                            ./src/hal_entry.o
+                                                  C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_printf.c.o)
+                                                  C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_putchar.c.o)
+                                                  C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_puts.c.o)
+stderr                                            ./src/hal_entry.o
+R_BSP_WarmStart                                   ./src/hal_warmstart.o
+                                                  ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o
+g_ioport_ctrl                                     ./ra_gen/common_data.o
+                                                  ./src/hal_warmstart.o
+g_bsp_pin_cfg                                     ./ra_gen/pin_data.o
+                                                  ./src/hal_warmstart.o
+                                                  ./ra_gen/common_data.o
+R_IOPORT_Open                                     ./ra/fsp/src/r_ioport/r_ioport.o
+                                                  ./src/hal_warmstart.o
+g_uart9_baud_setting                              ./ra_gen/hal_data.o
+g_uart9_cfg_extend                                ./ra_gen/hal_data.o
+main                                              ./ra_gen/main.o
+                                                  ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o
+g_bsp_pin_cfg_data                                ./ra_gen/pin_data.o
+g_vector_table                                    ./ra_gen/vector_data.o
+sci_b_uart_rxi_isr                                ./ra/fsp/src/r_sci_b_uart/r_sci_b_uart.o
+                                                  ./ra_gen/vector_data.o
+sci_b_uart_txi_isr                                ./ra/fsp/src/r_sci_b_uart/r_sci_b_uart.o
+                                                  ./ra_gen/vector_data.o
+sci_b_uart_tei_isr                                ./ra/fsp/src/r_sci_b_uart/r_sci_b_uart.o
+                                                  ./ra_gen/vector_data.o
+sci_b_uart_eri_isr                                ./ra/fsp/src/r_sci_b_uart/r_sci_b_uart.o
+                                                  ./ra_gen/vector_data.o
+g_interrupt_event_link_select                     ./ra_gen/vector_data.o
+                                                  ./ra/fsp/src/bsp/mcu/all/bsp_irq.o
+gp_renesas_isr_context                            ./ra/fsp/src/bsp/mcu/all/bsp_irq.o
+                                                  ./ra/fsp/src/r_sci_b_uart/r_sci_b_uart.o
+__aeabi_memcpy                                    C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(memcpy.c.o)
+                                                  ./ra/fsp/src/r_sci_b_uart/r_sci_b_uart.o
+                                                  C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_picolib_inittls.c.o)
+g_protect_pfswe_counter                           ./ra/fsp/src/bsp/mcu/all/bsp_io.o
+                                                  ./ra/fsp/src/r_ioport/r_ioport.o
+R_BSP_RegisterProtectDisable                      ./ra/fsp/src/bsp/mcu/all/bsp_register_protection.o
+                                                  ./ra/fsp/src/r_ioport/r_ioport.o
+                                                  ./ra/fsp/src/bsp/mcu/all/bsp_clocks.o
+                                                  ./ra/fsp/src/bsp/mcu/all/bsp_sdram.o
+                                                  ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o
+R_BSP_RegisterProtectEnable                       ./ra/fsp/src/bsp/mcu/all/bsp_register_protection.o
+                                                  ./ra/fsp/src/r_ioport/r_ioport.o
+                                                  ./ra/fsp/src/bsp/mcu/all/bsp_clocks.o
+                                                  ./ra/fsp/src/bsp/mcu/all/bsp_sdram.o
+                                                  ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o
+__sdram_noinit_nocache$$Base                      fsp_gen.lld:417
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__sdram_zero_nocache$$Limit                       fsp_gen.lld:429
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ospi0_cs0_noinit_nocache$$Base                  fsp_gen.lld:467
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ospi0_cs0_zero_nocache$$Limit                   fsp_gen.lld:479
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ospi1_cs0_noinit_nocache$$Base                  fsp_gen.lld:517
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ospi1_cs0_zero_nocache$$Limit                   fsp_gen.lld:529
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ram_noinit_nocache$$Base                        fsp_gen.lld:635
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ram_zero_nocache$$Limit                         fsp_gen.lld:647
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+g_init_info                                       ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+                                                  ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o
+__sdram_zero_nocache$$Base                        fsp_gen.lld:425
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__sdram_zero$$Base                                fsp_gen.lld:442
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__sdram_zero$$Limit                               fsp_gen.lld:445
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ospi0_cs0_zero_nocache$$Base                    fsp_gen.lld:475
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ospi0_cs0_zero$$Base                            fsp_gen.lld:492
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ospi0_cs0_zero$$Limit                           fsp_gen.lld:495
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ospi1_cs0_zero_nocache$$Base                    fsp_gen.lld:525
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ospi1_cs0_zero$$Base                            fsp_gen.lld:542
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ospi1_cs0_zero$$Limit                           fsp_gen.lld:545
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__itcm_zero$$Base                                 fsp_gen.lld:575
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__itcm_zero$$Limit                                fsp_gen.lld:578
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__dtcm_zero$$Base                                 fsp_gen.lld:608
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__dtcm_zero$$Limit                                fsp_gen.lld:611
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ram_zero_nocache$$Base                          fsp_gen.lld:643
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ram_zero$$Base                                  fsp_gen.lld:663
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ram_zero$$Limit                                 fsp_gen.lld:667
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ram_tbss$$Base                                  fsp_gen.lld:681
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ram_tbss$$Limit                                 fsp_gen.lld:686
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__sdram_from_ospi0_cs1$$Base                      fsp_gen.lld:61
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__sdram_from_ospi0_cs1$$Limit                     fsp_gen.lld:66
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__sdram_from_ospi0_cs1$$Load                      fsp_gen.lld:61
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__sdram_from_ospi1_cs1$$Base                      fsp_gen.lld:192
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__sdram_from_ospi1_cs1$$Limit                     fsp_gen.lld:197
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__sdram_from_ospi1_cs1$$Load                      fsp_gen.lld:192
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__sdram_from_data_flash$$Base                     fsp_gen.lld:292
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__sdram_from_data_flash$$Limit                    fsp_gen.lld:297
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__sdram_from_data_flash$$Load                     fsp_gen.lld:292
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__sdram_from_flash$$Base                          fsp_gen.lld:407
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__sdram_from_flash$$Limit                         fsp_gen.lld:412
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__sdram_from_flash$$Load                          fsp_gen.lld:407
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ospi0_cs0_from_ospi0_cs1$$Base                  fsp_gen.lld:78
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ospi0_cs0_from_ospi0_cs1$$Limit                 fsp_gen.lld:83
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ospi0_cs0_from_ospi0_cs1$$Load                  fsp_gen.lld:78
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ospi0_cs0_from_ospi1_cs1$$Base                  fsp_gen.lld:204
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ospi0_cs0_from_ospi1_cs1$$Limit                 fsp_gen.lld:209
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ospi0_cs0_from_ospi1_cs1$$Load                  fsp_gen.lld:204
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ospi0_cs0_from_data_flash$$Base                 fsp_gen.lld:304
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ospi0_cs0_from_data_flash$$Limit                fsp_gen.lld:309
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ospi0_cs0_from_data_flash$$Load                 fsp_gen.lld:304
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ospi0_cs0_from_flash$$Base                      fsp_gen.lld:457
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ospi0_cs0_from_flash$$Limit                     fsp_gen.lld:462
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ospi0_cs0_from_flash$$Load                      fsp_gen.lld:457
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ospi1_cs0_from_ospi0_cs1$$Base                  fsp_gen.lld:95
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ospi1_cs0_from_ospi0_cs1$$Limit                 fsp_gen.lld:100
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ospi1_cs0_from_ospi0_cs1$$Load                  fsp_gen.lld:95
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ospi1_cs0_from_ospi1_cs1$$Base                  fsp_gen.lld:216
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ospi1_cs0_from_ospi1_cs1$$Limit                 fsp_gen.lld:221
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ospi1_cs0_from_ospi1_cs1$$Load                  fsp_gen.lld:216
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ospi1_cs0_from_data_flash$$Base                 fsp_gen.lld:316
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ospi1_cs0_from_data_flash$$Limit                fsp_gen.lld:321
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ospi1_cs0_from_data_flash$$Load                 fsp_gen.lld:316
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ospi1_cs0_from_flash$$Base                      fsp_gen.lld:507
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ospi1_cs0_from_flash$$Limit                     fsp_gen.lld:512
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ospi1_cs0_from_flash$$Load                      fsp_gen.lld:507
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__itcm_from_ospi0_cs1$$Base                       fsp_gen.lld:112
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__itcm_from_ospi0_cs1$$Limit                      fsp_gen.lld:117
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__itcm_from_ospi0_cs1$$Load                       fsp_gen.lld:112
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__itcm_from_ospi1_cs1$$Base                       fsp_gen.lld:228
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__itcm_from_ospi1_cs1$$Limit                      fsp_gen.lld:233
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__itcm_from_ospi1_cs1$$Load                       fsp_gen.lld:228
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__itcm_from_data_flash$$Base                      fsp_gen.lld:328
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__itcm_from_data_flash$$Limit                     fsp_gen.lld:333
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__itcm_from_data_flash$$Load                      fsp_gen.lld:328
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__itcm_from_flash$$Base                           fsp_gen.lld:557
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__itcm_from_flash$$Limit                          fsp_gen.lld:562
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__itcm_from_flash$$Load                           fsp_gen.lld:557
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__dtcm_from_ospi0_cs1$$Base                       fsp_gen.lld:129
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__dtcm_from_ospi0_cs1$$Limit                      fsp_gen.lld:134
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__dtcm_from_ospi0_cs1$$Load                       fsp_gen.lld:129
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__dtcm_from_ospi1_cs1$$Base                       fsp_gen.lld:240
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__dtcm_from_ospi1_cs1$$Limit                      fsp_gen.lld:245
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__dtcm_from_ospi1_cs1$$Load                       fsp_gen.lld:240
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__dtcm_from_data_flash$$Base                      fsp_gen.lld:340
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__dtcm_from_data_flash$$Limit                     fsp_gen.lld:345
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__dtcm_from_data_flash$$Load                      fsp_gen.lld:340
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__dtcm_from_flash$$Base                           fsp_gen.lld:590
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__dtcm_from_flash$$Limit                          fsp_gen.lld:595
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__dtcm_from_flash$$Load                           fsp_gen.lld:590
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ram_from_ospi0_cs1$$Base                        fsp_gen.lld:152
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ram_from_ospi0_cs1$$Limit                       fsp_gen.lld:157
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ram_from_ospi0_cs1$$Load                        fsp_gen.lld:152
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ram_from_ospi1_cs1$$Base                        fsp_gen.lld:252
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ram_from_ospi1_cs1$$Limit                       fsp_gen.lld:257
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ram_from_ospi1_cs1$$Load                        fsp_gen.lld:252
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ram_from_data_flash$$Base                       fsp_gen.lld:352
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ram_from_data_flash$$Limit                      fsp_gen.lld:357
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ram_from_data_flash$$Load                       fsp_gen.lld:352
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ram_from_flash$$Base                            fsp_gen.lld:623
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ram_from_flash$$Limit                           fsp_gen.lld:630
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ram_from_flash$$Load                            fsp_gen.lld:623
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ram_tdata$$Base                                 fsp_gen.lld:672
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ram_tdata$$Limit                                fsp_gen.lld:676
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+__ram_tdata$$Load                                 fsp_gen.lld:672
+                                                  ./ra/fsp/src/bsp/mcu/ra8t2/bsp_linker.o
+SystemCoreClockUpdate                             ./ra/fsp/src/bsp/mcu/all/bsp_clocks.o
+                                                  ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o
+bsp_clock_init                                    ./ra/fsp/src/bsp/mcu/all/bsp_clocks.o
+                                                  ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o
+R_BSP_Init_RTC                                    ./ra/fsp/src/bsp/mcu/all/bsp_clocks.o
+                                                  ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o
+bsp_init                                          ./ra/board/ra8t2_mck/board_init.o
+                                                  ./ra/fsp/src/bsp/mcu/all/bsp_common.o
+                                                  ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o
+bsp_prv_software_delay_loop                       ./ra/fsp/src/bsp/mcu/all/bsp_delay.o
+g_bsp_group_irq_sources                           ./ra/fsp/src/bsp/mcu/all/bsp_group_irq.o
+NMI_Handler                                       ./ra/fsp/src/bsp/mcu/all/bsp_group_irq.o
+                                                  ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o
+bsp_irq_cfg                                       ./ra/fsp/src/bsp/mcu/all/bsp_irq.o
+                                                  ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o
+g_protect_counters                                ./ra/fsp/src/bsp/mcu/all/bsp_register_protection.o
+Reset_Handler                                     ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o
+SystemInit                                        ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o
+                                                  ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o
+Default_Handler                                   ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o
+g_main_stack                                      ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o
+                                                  ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o
+__Vectors                                         ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o
+                                                  ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o
+HardFault_Handler                                 ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o
+MemManage_Handler                                 ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o
+BusFault_Handler                                  ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o
+UsageFault_Handler                                ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o
+SecureFault_Handler                               ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o
+SVC_Handler                                       ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o
+DebugMon_Handler                                  ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o
+PendSV_Handler                                    ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/startup.o
+__aeabi_memclr4                                   C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(bzero.c.o)
+                                                  ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o
+__aeabi_memcpy4                                   C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(memcpy.c.o)
+                                                  ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o
+__tls_base                                        fsp_gen.lld:1284
+                                                  ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o
+_init_tls                                         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_picolib_inittls.c.o)
+                                                  ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o
+_set_tls                                          C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_picolib_machine_arm_tls.c.o)
+                                                  ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o
+__init_array_end                                  fsp_gen.lld:752
+                                                  ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o
+__init_array_start                                fsp_gen.lld:749
+                                                  ./ra/fsp/src/bsp/cmsis/Device/RENESAS/Source/system.o
+__tdata_source                                    fsp_gen.lld:1285
+                                                  C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_picolib_inittls.c.o)
+__tdata_size                                      fsp_gen.lld:1286
+                                                  C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_picolib_inittls.c.o)
+__tbss_offset                                     fsp_gen.lld:1287
+                                                  C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_picolib_inittls.c.o)
+__tbss_size                                       fsp_gen.lld:1288
+                                                  C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_picolib_inittls.c.o)
+__arm32_tls_tcb_offset                            fsp_gen.lld:1289
+                                                  C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_picolib_machine_arm_tls.c.o)
+__tls                                             C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_picolib_machine_arm_read_tp.S.o)
+                                                  C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_picolib_machine_arm_tls.c.o)
+vfprintf                                          C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_vfprintf.c.o)
+                                                  C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_printf.c.o)
+fputc                                             C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_fputc.c.o)
+                                                  C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_putchar.c.o)
+putc                                              C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_fputc.c.o)
+__dtox_engine                                     C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_dtox_engine.c.o)
+                                                  C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_vfprintf.c.o)
+__dtoa_engine                                     C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_dtoa_ryu.c.o)
+                                                  C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_vfprintf.c.o)
+strnlen                                           C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_string_strnlen.c.o)
+                                                  C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_vfprintf.c.o)
+__d_vfprintf                                      C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_vfprintf.c.o)
+__log10Pow2                                       C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_log10.c.o)
+                                                  C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_dtoa_ryu.c.o)
+__pow5bits                                        C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_pow5bits.c.o)
+                                                  C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_dtoa_ryu.c.o)
+                                                  C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_table.c.o)
+__double_computeInvPow5                           C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_table.c.o)
+                                                  C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_dtoa_ryu.c.o)
+__pow5Factor                                      C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_table.c.o)
+                                                  C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_dtoa_ryu.c.o)
+__log10Pow5                                       C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_log10.c.o)
+                                                  C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_dtoa_ryu.c.o)
+__double_computePow5                              C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_table.c.o)
+                                                  C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_dtoa_ryu.c.o)
+__umul128                                         C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_umul128.c.o)
+                                                  C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_dtoa_ryu.c.o)
+                                                  C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_table.c.o)
+__shiftright128                                   C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_umul128.c.o)
+                                                  C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_dtoa_ryu.c.o)
+                                                  C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(libc_tinystdio_ryu_table.c.o)
+bzero                                             C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(bzero.c.o)
+memset                                            C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(memset.c.o)
+                                                  C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(bzero.c.o)
+__aeabi_memclr8                                   C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(bzero.c.o)
+memcpy                                            C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(memcpy.c.o)
+__aeabi_memcpy8                                   C:\Program Files (x86)\LLVM\LLVM-ET-Arm-18.1.3-Windows-x86_64\bin\..\lib\clang-runtimes/arm-none-eabi/armv8.1m.main_hard_fpdp_nomve_exn_rtti\lib\libc.a(memcpy.c.o)
