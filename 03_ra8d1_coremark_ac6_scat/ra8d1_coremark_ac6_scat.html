@@ -1,0 +1,438 @@
+<!DOCTYPE html><html><head>
+      <title>ra8d1_coremark_ac6_scat</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\jerry\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.22\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script>
+    </head>
+    <body for="html-export">
+      <div class="crossnote markdown-preview  ">
+      
+<h1>三、RA8D1 CoreMark测试GCC vs AC6和分散加载浅析</h1>
+
+<div class="md-toc">
+<div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#一-概述" class="md-toc-link">
+            <p>一、概述</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#二-测试环境" class="md-toc-link">
+            <p>二、测试环境</p>
+
+          </a></div><details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#三-gcc-跑分结果" class="md-toc-link"><p>三、GCC 跑分结果</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#31-测试配置与结果" class="md-toc-link">
+            <p>3.1 测试配置与结果</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#32-gcc-结果分析" class="md-toc-link">
+            <p>3.2 GCC 结果分析</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#四-ac6-跑分结果" class="md-toc-link"><p>四、AC6 跑分结果</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#41-测试配置与结果" class="md-toc-link">
+            <p>4.1 测试配置与结果</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#42-ac6-结果分析" class="md-toc-link">
+            <p>4.2 AC6 结果分析</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#五-gcc-vs-ac6-对比汇总" class="md-toc-link">
+            <p>五、GCC vs AC6 对比汇总</p>
+
+          </a></div><details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#六-ac6-优化等级与-lto-详解" class="md-toc-link"><p>六、AC6 优化等级与 LTO 详解</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#61--ofast-vs--omax" class="md-toc-link">
+            <p>6.1 -Ofast vs -Omax</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#62-什么是-ltolink-time-optimization" class="md-toc-link">
+            <p>6.2 什么是 LTO（Link Time Optimization）</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#63-lto-对-scatter-filetcm-放置的限制" class="md-toc-link"><p>6.3 LTO 对 Scatter File（TCM 放置）的限制</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#具体表现" class="md-toc-link">
+            <p>具体表现</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#arm-官方建议" class="md-toc-link">
+            <p>Arm 官方建议</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#64-如何规避-lto-限制" class="md-toc-link">
+            <p>6.4 如何规避 LTO 限制</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#65-本次测试中的体现" class="md-toc-link">
+            <p>6.5 本次测试中的体现</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#七-总结" class="md-toc-link">
+            <p>七、总结</p>
+
+          </a></div>
+</div>
+<h1 id="一-概述">一、概述 </h1>
+<ul>
+<li>RA8D1 搭载 Cortex-M85 内核，主频 480MHz</li>
+<li>使用 GCC(13.3.1) 和 AC6(Clang 20.0.0git) 两种工具链编译 CoreMark</li>
+<li>测试不同优化等级、内存布局（Cache+SRAM、TCM）对跑分的影响</li>
+</ul>
+<h1 id="二-测试环境">二、测试环境 </h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">项目</th>
+<th style="text-align:left">参数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">芯片</td>
+<td style="text-align:left">RA8D1</td>
+</tr>
+<tr>
+<td style="text-align:left">内核</td>
+<td style="text-align:left">Cortex-M85</td>
+</tr>
+<tr>
+<td style="text-align:left">主频</td>
+<td style="text-align:left">480MHz</td>
+</tr>
+<tr>
+<td style="text-align:left">GCC 版本</td>
+<td style="text-align:left">13.3.1 20240614</td>
+</tr>
+<tr>
+<td style="text-align:left">AC6 版本</td>
+<td style="text-align:left">Clang 20.0.0git</td>
+</tr>
+<tr>
+<td style="text-align:left">CoreMark Size</td>
+<td style="text-align:left">666 (2K)</td>
+</tr>
+<tr>
+<td style="text-align:left">Iterations</td>
+<td style="text-align:left">80000</td>
+</tr>
+</tbody>
+</table>
+<h1 id="三-gcc-跑分结果">三、GCC 跑分结果 </h1>
+<h2 id="31-测试配置与结果">3.1 测试配置与结果 </h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">编号</th>
+<th style="text-align:left">配置</th>
+<th style="text-align:left">Iterations/Sec</th>
+<th style="text-align:left">CoreMark/MHz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">-Ofast + fsp.ld（默认链接）</td>
+<td style="text-align:left">2286.37</td>
+<td style="text-align:left"><strong>4.76</strong></td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:left">-Ofast + fsp.ld + stack 放 DTCM</td>
+<td style="text-align:left">2343.57</td>
+<td style="text-align:left"><strong>4.88</strong></td>
+</tr>
+<tr>
+<td style="text-align:left">3</td>
+<td style="text-align:left">-Ofast + fsp_tcm.ld（TCM链接）</td>
+<td style="text-align:left">2341.30</td>
+<td style="text-align:left"><strong>4.88</strong></td>
+</tr>
+<tr>
+<td style="text-align:left">4</td>
+<td style="text-align:left">-Ofast + fsp_tcm.ld + stack 放 DTCM</td>
+<td style="text-align:left">2341.37</td>
+<td style="text-align:left"><strong>4.88</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="32-gcc-结果分析">3.2 GCC 结果分析 </h2>
+<ul>
+<li><strong>默认链接脚本</strong>：4.76 CoreMark/MHz，基线成绩</li>
+<li><strong>Stack 放入 DTCM</strong>：提升到 4.88 CoreMark/MHz，提升约 2.5%</li>
+<li><strong>TCM 链接脚本</strong>：与 stack 放 DTCM 效果接近，约 4.88 CoreMark/MHz</li>
+<li>GCC 下 TCM 带来的收益有限，说明代码主要已在 Cache 中命中</li>
+</ul>
+<h1 id="四-ac6-跑分结果">四、AC6 跑分结果 </h1>
+<ul>
+<li><a href="./prj/ra8d1_coremark_ac6/">./prj/ra8d1_coremark_ac6/</a></li>
+<li><a href="./prj/ra8d1_coremark_gcc/">./prj/ra8d1_coremark_gcc/</a></li>
+</ul>
+<h2 id="41-测试配置与结果">4.1 测试配置与结果 </h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">编号</th>
+<th style="text-align:left">配置</th>
+<th style="text-align:left">Iterations/Sec</th>
+<th style="text-align:left">CoreMark/MHz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">-Ofast + stack 放 DTCM</td>
+<td style="text-align:left">2688.35</td>
+<td style="text-align:left"><strong>5.60</strong></td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:left">-Ofast + stack 放 DTCM + fsp_tcm.scat</td>
+<td style="text-align:left">2683.30</td>
+<td style="text-align:left"><strong>5.59</strong></td>
+</tr>
+<tr>
+<td style="text-align:left">3</td>
+<td style="text-align:left">-Omax + fsp_tcm.scat</td>
+<td style="text-align:left">2780.77</td>
+<td style="text-align:left"><strong>5.79</strong></td>
+</tr>
+<tr>
+<td style="text-align:left">4</td>
+<td style="text-align:left">-Omax + fsp.scat（默认链接）</td>
+<td style="text-align:left">2780.77</td>
+<td style="text-align:left"><strong>5.79</strong></td>
+</tr>
+<tr>
+<td style="text-align:left">5</td>
+<td style="text-align:left">-Omax + stack 放 DTCM</td>
+<td style="text-align:left">2974.97</td>
+<td style="text-align:left"><strong>6.20</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="42-ac6-结果分析">4.2 AC6 结果分析 </h2>
+<ul>
+<li><strong>-Ofast 基线</strong>：5.60 CoreMark/MHz，已明显高于 GCC 的 4.88</li>
+<li><strong>-Omax（开启 LTO）</strong>：5.79 CoreMark/MHz，比 -Ofast 提升约 3.4%</li>
+<li><strong>-Omax + stack 放 DTCM</strong>：<strong>6.20 CoreMark/MHz</strong>，最高成绩</li>
+<li>AC6 整体比 GCC 高约 27%（5.60 vs 4.76 基线对比）</li>
+</ul>
+<h1 id="五-gcc-vs-ac6-对比汇总">五、GCC vs AC6 对比汇总 </h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">对比维度</th>
+<th style="text-align:left">GCC (-Ofast)</th>
+<th style="text-align:left">AC6 (-Ofast)</th>
+<th style="text-align:left">AC6 (-Omax)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">基线（默认链接）</td>
+<td style="text-align:left">4.76</td>
+<td style="text-align:left">5.60</td>
+<td style="text-align:left">5.79</td>
+</tr>
+<tr>
+<td style="text-align:left">Stack 放 DTCM</td>
+<td style="text-align:left">4.88</td>
+<td style="text-align:left">5.60</td>
+<td style="text-align:left"><strong>6.20</strong></td>
+</tr>
+<tr>
+<td style="text-align:left">TCM 链接脚本</td>
+<td style="text-align:left">4.88</td>
+<td style="text-align:left">5.59</td>
+<td style="text-align:left">5.79</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>最高成绩</strong></td>
+<td style="text-align:left"><strong>4.88</strong></td>
+<td style="text-align:left"><strong>5.60</strong></td>
+<td style="text-align:left"><strong>6.20</strong></td>
+</tr>
+</tbody>
+</table>
+<p><img src="./images/1.png" alt=""></p>
+<h1 id="六-ac6-优化等级与-lto-详解">六、AC6 优化等级与 LTO 详解 </h1>
+<h2 id="61--ofast-vs--omax">6.1 -Ofast vs -Omax </h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">优化等级</th>
+<th style="text-align:left">LTO</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>-Ofast</strong></td>
+<td style="text-align:left">不启用</td>
+<td style="text-align:left">激进优化，但不做跨模块链接时优化。允许浮点重结合等可能违反标准合规的变换</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>-Omax</strong></td>
+<td style="text-align:left"><strong>默认启用</strong></td>
+<td style="text-align:left">最大优化，等价于 <code>-O3 -flto</code>。启用所有优化包括跨模块内联、死代码消除和链接时优化</td>
+</tr>
+</tbody>
+</table>
+<h2 id="62-什么是-ltolink-time-optimization">6.2 什么是 LTO（Link Time Optimization） </h2>
+<p>LTO 是一种<strong>跨模块的过程间优化</strong>，在链接阶段而非编译阶段执行：</p>
+<ol>
+<li><strong>编译阶段</strong>：armclang 使用 <code>-flto</code> 时生成 <strong>bitcode</strong>（字节码）文件，而非标准 ELF 对象文件。Bitcode 包含源代码的中间表示（IR）和模块依赖信息</li>
+<li><strong>链接阶段</strong>：armlink 处理 bitcode 文件，提取模块依赖信息，传递给 llvm-lto 工具</li>
+<li><strong>优化阶段</strong>：链接时优化器分析所有模块，移除未使用函数/数据，执行跨模块内联，生成优化后的 ELF 对象</li>
+<li><strong>最终链接</strong>：优化后的对象与其他 ELF 对象和预编译库链接，生成最终可执行文件</li>
+</ol>
+<ul>
+<li>
+<p><a href="https://developer.arm.com/documentation/100748/0624/Writing-Optimized-Code/Optimizing-across-modules-with-Link-Time-Optimization/Restrictions-with-Link-Time-Optimization">https://developer.arm.com/documentation/100748/0624/Writing-Optimized-Code/Optimizing-across-modules-with-Link-Time-Optimization/Restrictions-with-Link-Time-Optimization</a></p>
+</li>
+<li>
+<p><a href="https://developer.arm.com/documentation/100748/0624/Writing-Optimized-Code/Optimizing-across-modules-with-Link-Time-Optimization">https://developer.arm.com/documentation/100748/0624/Writing-Optimized-Code/Optimizing-across-modules-with-Link-Time-Optimization</a></p>
+</li>
+<li>
+<p><a href="./doc/arm_compiler_reference_guide_101754_0624_02_en.pdf">Arm® Compiler for Embedded Version 6.24 Reference Guide</a></p>
+</li>
+<li>
+<p><a href="./doc/arm_compiler_user_guide_100748_0624_02_en.pdf">Arm® Compiler for Embedded Version 6.24 User Guide</a></p>
+</li>
+</ul>
+<h2 id="63-lto-对-scatter-filetcm-放置的限制">6.3 LTO 对 Scatter File（TCM 放置）的限制 </h2>
+<p>LTO 的核心问题是<strong>原始对象文件边界被打破</strong>：</p>
+<ul>
+<li><strong>对象合并</strong>：LTO 将所有 bitcode 合并为 <code>lto-llvm-xxxxx.o</code> 这样的单一对象，原始 <code>.o</code> 文件不再独立存在</li>
+<li><strong>Section 属性丢失</strong>：<code>__attribute__((section(".dtcm")))</code> 指定的段属性在 bitcode 合并过程中可能被合并或重命名</li>
+<li><strong>Scatter 文件匹配失败</strong>：scatter 文件中基于对象名的模式（如 <code>version.o (+RO)</code>）将无法匹配，产生 <strong>L6314W</strong> 警告</li>
+</ul>
+<h3 id="具体表现">具体表现 </h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">问题</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">对象名引用失效</td>
+<td style="text-align:left">scatter 文件中无法使用 <code>xxx.o</code> 显式引用对象，因为代码已被合并到 <code>lto-llvm-xxxxx.o</code></td>
+</tr>
+<tr>
+<td style="text-align:left">Section 属性可能被合并</td>
+<td style="text-align:left">命名段可能无法在 bitcode 合并过程中保留</td>
+</tr>
+<tr>
+<td style="text-align:left">RAM 函数放置异常</td>
+<td style="text-align:left">通过 scatter 文件放入 RAM 的函数可能被内联到 Flash 函数中，破坏原有放置</td>
+</tr>
+</tbody>
+</table>
+<h3 id="arm-官方建议">Arm 官方建议 </h3>
+<blockquote>
+<p>"Scatter-loading of LTO objects is supported but it's recommended for code and data that <strong>doesn't have a strict placement requirement</strong>."<br>
+— Arm Employee, Arm Community</p>
+</blockquote>
+<h2 id="64-如何规避-lto-限制">6.4 如何规避 LTO 限制 </h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">方法</th>
+<th style="text-align:left">操作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>换用 -Ofast</strong></td>
+<td style="text-align:left">不使用 -Omax，避免 LTO，scatter 文件正常工作</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>部分文件禁用 LTO</strong></td>
+<td style="text-align:left">对需要严格放置的文件编译时加 <code>-fno-lto</code>，其余文件保持 <code>-flto</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>链接器禁用 LTO</strong></td>
+<td style="text-align:left">使用 <code>--no_lto</code> 参数</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>使用段名而非对象名</strong></td>
+<td style="text-align:left">scatter 文件中使用 <code>*(.dtcm)</code> 而非 <code>xxx.o (.dtcm)</code>（不保证可靠）</td>
+</tr>
+</tbody>
+</table>
+<h2 id="65-本次测试中的体现">6.5 本次测试中的体现 </h2>
+<ul>
+<li>配置 3（-Omax + fsp_tcm.scat）与配置 4（-Omax + fsp.scat）成绩相同（2780.77），说明 <strong>LTO 开启后 scatter 文件的 TCM 放置可能未生效</strong></li>
+<li>配置 5（-Omax + stack 放 DTCM）达到最高 2974.97，说明通过 <code>__attribute__((section()))</code> 直接指定 stack 位置的方式在 LTO 下仍然有效</li>
+<li>若需要 scatter 文件精确控制 TCM 放置，建议使用 <code>-Ofast</code> 而非 <code>-Omax</code></li>
+</ul>
+<h1 id="七-总结">七、总结 </h1>
+<ul>
+<li><strong>AC6 优于 GCC</strong>：AC6 基线成绩比 GCC 高约 27%，编译器优化能力更强</li>
+<li><strong>-Omax 最快但有代价</strong>：LTO 带来额外 3-6% 性能提升，但限制了 scatter 文件的 TCM 精确放置</li>
+<li><strong>TCM 收益</strong>：Stack 放入 DTCM 在两种工具链下都有正向收益，AC6 下提升更明显</li>
+<li><strong>最佳实践</strong>：追求极致性能用 AC6 -Omax + stack 放 DTCM（6.20 CoreMark/MHz）；需要精确内存布局用 AC6 -Ofast</li>
+</ul>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

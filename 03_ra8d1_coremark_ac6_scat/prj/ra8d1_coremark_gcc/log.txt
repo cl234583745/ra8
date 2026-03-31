@@ -1,0 +1,176 @@
+1\ fast+fsp.ld  = 2286.367534
+2\ fast+fsp.ld+stack_memblock[] __attribute__((section(".dtcm_noinit")))  = 2343.566909
+3\ fast+fsp_tcm.ld   =2341.303521
+4\ fast+fsp_tcm.ld+stack_memblock[] __attribute__((section(".dtcm_noinit")))  = 2341.372044
+
+
+[17:08:57.481]收←◆
+Toolchain ver:13.3.1 20240614
+SystemCoreClock: 480000000 Hz
+date:Mar 30 2026
+time:17:08:10
+file:../src/hal_entry.c
+func:hal_entry,line:169
+hello world!
+MPU supports 8 regions
+Region 0: 0x68000000-0x67FFFFE0, AttrIndex=0
+Region 1: 0x80000000-0x7FFFFFE0, AttrIndex=0
+Region 2: 0x220001E0-0x220001C0, AttrIndex=0
+Region 3: Disabled
+Region 4: Disabled
+Region 5: Disabled
+Region 6: Disabled
+Region 7: Disabled
+start coremain!
+
+[17:09:32.510]收←◆2K performance run parameters for coremark.
+CoreMark Size    : 666
+Total ticks      : 34990
+Total time (secs): 34.990000
+Iterations/Sec   : 2286.367534
+Iterations       : 80000
+Compiler version : GCC13.3.1 20240614
+Compiler flags   : Please put compiler flags here (e.g. -ofast)
+Memory location  : STACK
+seedcrc          : 0xe9f5
+[0]crclist       : 0xe714
+[0]crcmatrix     : 0x1fd7
+[0]crcstate      : 0x8e3a
+[0]crcfinal      : 0xcc42
+Correct operation validated. See README.md for run and reporting rules.
+CoreMark 1.0 : 2286.367534 / GCC13.3.1 20240614 Please put compiler flags here (e.g. -ofast) / STACK
+terminated coremain!
+running!
+
+
+
+
+[17:11:52.602]收←◆
+Toolchain ver:13.3.1 20240614
+SystemCoreClock: 480000000 Hz
+date:Mar 30 2026
+time:17:10:58
+file:../src/hal_entry.c
+func:hal_entry,line:169
+hello world!
+MPU supports 8 regions
+Region 0: 0x68000000-0x67FFFFE0, AttrIndex=0
+Region 1: 0x80000000-0x7FFFFFE0, AttrIndex=0
+Region 2: 0x220001E0-0x220001C0, AttrIndex=0
+Region 3: Disabled
+Region 4: Disabled
+Region 5: Disabled
+Region 6: Disabled
+Region 7: Disabled
+start coremain!
+
+[17:12:26.777]收←◆2K performance run parameters for coremark.
+CoreMark Size    : 666
+Total ticks      : 34136
+Total time (secs): 34.136000
+Iterations/Sec   : 2343.566909
+Iterations       : 80000
+Compiler version : GCC13.3.1 20240614
+Compiler flags   : Please put compiler flags here (e.g. -ofast)
+Memory location  : STACK
+seedcrc          : 0xe9f5
+[0]crclist       : 0xe714
+[0]crcmatrix     : 0x1fd7
+[0]crcstate      : 0x8e3a
+[0]crcfinal      : 0xcc42
+Correct operation validated. See README.md for run and reporting rules.
+CoreMark 1.0 : 2343.566909 / GCC13.3.1 20240614 Please put compiler flags here (e.g. -ofast) / STACK
+terminated coremain!
+running!
+
+
+
+
+[17:15:08.827]收←◆
+Toolchain ver:13.3.1 20240614
+SystemCoreClock: 480000000 Hz
+date:Mar 30 2026
+time:17:13:31
+file:../src/hal_entry.c
+func:hal_entry,line:169
+hello world!
+MPU supports 8 regions
+Region 0: 0x68000000-0x67FFFFE0, AttrIndex=0
+Region 1: 0x80000000-0x7FFFFFE0, AttrIndex=0
+Region 2: 0x220001E0-0x220001C0, AttrIndex=0
+Region 3: Disabled
+Region 4: Disabled
+Region 5: Disabled
+Region 6: Disabled
+Region 7: Disabled
+start coremain!
+
+[17:15:43.034]收←◆2K performance run parameters for coremark.
+CoreMark Size    : 666
+Total ticks      : 34169
+Total time (secs): 34.169000
+Iterations/Sec   : 2341.303521
+Iterations       : 80000
+Compiler version : GCC13.3.1 20240614
+Compiler flags   : Please put compiler flags here (e.g. -ofast)
+Memory location  : STACK
+seedcrc          : 0xe9f5
+[0]crclist       : 0xe714
+[0]crcmatrix     : 0x1fd7
+[0]crcstate      : 0x8e3a
+[0]crcfinal      : 0xcc42
+Correct operation validated. See README.md for run and reporting rules.
+CoreMark 1.0 : 2341.303521 / GCC13.3.1 20240614 Please put compiler flags here (e.g. -ofast) / STACK
+terminated coremain!
+running!
+
+
+
+[17:16:35.316]收←◆
+Toolchain ver:13.3.1 20240614
+SystemCoreClock: 480000000 Hz
+date:Mar 30 2026
+time:17:13:31
+file:../src/hal_entry.c
+func:hal_entry,line:169
+hello world!
+MPU supports 8 regions
+Region 0: 0x68000000-0x67FFFFE0, AttrIndex=0
+Region 1: 0x80000000-0x7FFFFFE0, AttrIndex=0
+Region 2: 0x220001E0-0x220001C0, AttrIndex=0
+Region 3: Disabled
+Region 4: Disabled
+Region 5: Disabled
+Region 6: Disabled
+Region 7: Disabled
+start coremain!
+
+[17:17:09.522]收←◆2K performance run parameters for coremark.
+CoreMark Size    : 666
+Total ticks      : 34168
+Total time (secs): 34.168000
+Iterations/Sec   : 2341.372044
+Iterations       : 80000
+Compiler version : GCC13.3.1 20240614
+Compiler flags   : Please put compiler flags here (e.g. -ofast)
+Memory location  : STACK
+seedcrc          : 0xe9f5
+[0]crclist       : 0xe714
+[0]crcmatrix     : 0x1fd7
+[0]crcstate      : 0x8e3a
+[0]crcfinal      : 0xcc42
+Correct operation validated. See README.md for run and reporting rules.
+CoreMark 1.0 : 2341.372044 / GCC13.3.1 20240614 Please put compiler flags here (e.g. -ofast) / STACK
+terminated coremain!
+running!
+
+
+
+
+
+
+
+
+
+
+

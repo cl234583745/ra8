@@ -1,0 +1,225 @@
+/*
+* Copyright (c) 2020 - 2026 Renesas Electronics Corporation and/or its affiliates
+*
+* SPDX-License-Identifier: BSD-3-Clause
+*/
+
+#include "hal_data.h"
+
+extern bsp_leds_t g_bsp_leds;
+
+
+/*
+    R_SCI_B_UART_Open(&g_uart9_ctrl, &g_uart9_cfg);
+    printf("\nToolchain ver:%s\n", __VERSION__);
+    printf("date:%s\ntime:%s\nfile:%s\nfunc:%s,line:%d\nhello world!\n", __DATE__, __TIME__, __FILE__, __FUNCTION__, __LINE__);
+ */
+#define PRINTF  1   //only need change g_uart9_ctrl, uartcallback=NULL
+#if PRINTF
+#include <stdio.h>
+static void USR_SCI_UART_Write (uart_ctrl_t * const p_api_ctrl, uint8_t const * const p_src, uint32_t const bytes);
+static void USR_SCI_UART_Write (uart_ctrl_t * const p_api_ctrl, uint8_t const * const p_src, uint32_t const bytes)
+{
+    uint32_t i;
+#if defined(R_SCI_B_UART_CFG_H_)  //RA6T2 RA8T2
+    sci_b_uart_instance_ctrl_t * p_ctrl = (sci_b_uart_instance_ctrl_t *) p_api_ctrl;
+#else
+    sci_uart_instance_ctrl_t * p_ctrl = (sci_uart_instance_ctrl_t *) p_api_ctrl;
+#endif//#if defined(R_SCI_B_UART_CFG_H_)
+    uint8_t *data  = (uint8_t *)p_src;
+    for(i = 0; i < bytes; i++)
+    {
+#if defined(R_SCI_B_UART_CFG_H_)  //RA6T2 RA8T2
+        p_ctrl->p_reg->TDR_b.TDAT = *data;
+        while(p_ctrl->p_reg->CSR_b.TDRE == 0);
+#else
+
+#if defined(_RENESAS_RA_)  //RA excluded RA6T2 RA8T2
+        p_ctrl->p_reg->TDR_b.TDR = *data;
+        while(p_ctrl->p_reg->SSR_b.TDRE == 0);
+#elif defined(_RENESAS_RZN_) || defined(_RENESAS_RZT_) //RZN RZT
+        p_ctrl->p_reg->TDR_b.TDAT = *data;
+        while(p_ctrl->p_reg->CSR_b.TDRE == 0);
+#endif//#if defined(_RENESAS_RA_)
+#endif//#if defined(R_SCI_B_UART_CFG_H_)
+        data++;
+    }
+}
+#if defined __GNUC__ && !defined __clang__  //e2+gcc
+int _write(int fd, char *pBuffer, int size);
+int _write(int fd, char *pBuffer, int size)
+{
+    (void)fd;
+    USR_SCI_UART_Write(&g_uart9_ctrl, (uint8_t *)pBuffer, (uint32_t)size);
+
+    return size;
+}
+#elif defined(__llvm__) && defined(__clang__) && !defined(__ARMCC_VERSION) //e2+llvm, exclude Keil
+int user_write(char ptr, FILE* file)
+{
+    (void)(file);
+    USR_SCI_UART_Write(&g_uart9_ctrl, (uint8_t * const)(&ptr), 1U);
+    return 0;
+}
+/* Redirect sdtio as per https://github.com/picolibc/picolibc/blob/main/doc/os.md */
+static FILE __stdio = FDEV_SETUP_STREAM(user_write, NULL, NULL, _FDEV_SETUP_WRITE);
+FILE *const stdin = &__stdio;
+__strong_reference(stdin, stdout);
+__strong_reference(stdin, stderr);
+
+#elif defined __ICCARM__    //iar
+#include <yfuns.h>
+#if __VER__ < 8000000
+  _STD_BEGIN
+#endif
+  #pragma module_name = "?__write"
+size_t __write(int handle, const unsigned char * buffer, size_t size)
+{
+      USR_SCI_UART_Write(&g_uart9_ctrl, (uint8_t *)buffer, (uint32_t)size);
+}
+#if __VER__ < 8000000
+  _STD_END
+#endif
+#else   //keil
+int fputc(int ch, FILE *f)
+{
+    (void)f;
+    USR_SCI_UART_Write(&g_uart9_ctrl, (uint8_t *)&ch, 1);
+
+    return ch;
+}
+#endif//#if defined __GNUC__ && !defined __clang__
+#endif//#if PRINTF
+
+  void check_mpu_configuration(void) {
+      uint32_t type = MPU->TYPE;
+      uint32_t region_count = (type & MPU_TYPE_DREGION_Msk) >> MPU_TYPE_DREGION_Pos;
+
+      printf("MPU supports %u regions\n", (unsigned int)region_count);
+
+      for (uint32_t i = 0; i < region_count; i++) {
+          MPU->RNR = i;
+          uint32_t rbar = MPU->RBAR;
+          uint32_t rlar = MPU->RLAR;
+
+          if (rlar & MPU_RLAR_EN_Msk) {
+              uint32_t base = rbar & MPU_RBAR_BASE_Msk;
+              uint32_t limit = rlar & MPU_RLAR_LIMIT_Msk;
+              uint32_t attr_index = (rlar & MPU_RLAR_AttrIndx_Msk) >> MPU_RLAR_AttrIndx_Pos;
+
+              printf("Region %u: 0x%08X-0x%08X, AttrIndex=%u\n",
+                     (unsigned int)i, base, limit, (unsigned int)attr_index);
+          } else {
+              printf("Region %u: Disabled\n", (unsigned int)i);
+          }
+      }
+  }
+
+
+
+/*******************************************************************************************************************//**
+ * @brief  Blinky example application
+ *
+ * Blinks all leds at a rate of 1 second using the software delay function provided by the BSP.
+ *
+ **********************************************************************************************************************/
+void hal_entry (void)
+{
+#if BSP_TZ_SECURE_BUILD
+
+    /* Enter non-secure code */
+    R_BSP_NonSecureEnter();
+#endif
+
+    /* Define the units to be used with the software delay function */
+    const bsp_delay_units_t bsp_delay_units = BSP_DELAY_UNITS_MILLISECONDS;
+
+    /* Set the blink frequency (must be <= bsp_delay_units / 2) */
+    const uint32_t freq_in_hz = 1;
+
+    /* Calculate the delay in terms of bsp_delay_units */
+    const uint32_t delay = bsp_delay_units / (freq_in_hz * 2);
+
+    /* LED type structure */
+    bsp_leds_t leds = g_bsp_leds;
+
+    /* Wake up 2nd core if this is first core and we are inside a multicore project. */
+#if (0 == _RA_CORE) && (1 == BSP_MULTICORE_PROJECT) && !BSP_TZ_NONSECURE_BUILD
+    R_BSP_SecondaryCoreStart();
+#endif
+
+    /* If this board has no LEDs then trap here */
+    if (0 == leds.led_count)
+    {
+        while (1)
+        {
+            ;                          // There are no LEDs on this board
+        }
+    }
+
+    /* Holds level to set for pins */
+    bsp_io_level_t pin_level = BSP_IO_LEVEL_LOW;
+
+
+    SysTick_Config(SystemCoreClock / 1000);
+
+    R_SCI_B_UART_Open(&g_uart9_ctrl, &g_uart9_cfg);
+    printf("\nToolchain ver:%s\n", __VERSION__);
+    printf("SystemCoreClock: %d Hz\n", SystemCoreClock);
+    printf("date:%s\ntime:%s\nfile:%s\nfunc:%s,line:%d\nhello world!\n", __DATE__, __TIME__, __FILE__, __FUNCTION__, __LINE__);
+
+
+
+    check_mpu_configuration();
+
+
+    printf("start coremain!\n");
+
+    coremain();
+    printf("terminated coremain!\n");
+
+    printf("running!\n");
+
+
+
+    while (1)
+    {
+        /* Enable access to the PFS registers. If using r_ioport module then register protection is automatically
+         * handled. This code uses BSP IO functions to show how it is used.
+         */
+        R_BSP_PinAccessEnable();
+
+#if BSP_NUMBER_OF_CORES == 1
+
+        /* Update all board LEDs */
+        for (uint32_t i = 0; i < leds.led_count; i++)
+        {
+            /* Get pin to toggle */
+            uint32_t pin = leds.p_leds[i];
+
+            /* Write to this pin */
+            R_BSP_PinWrite((bsp_io_port_pin_t) pin, pin_level);
+        }
+#else
+
+        /* Update LED that is at the index of this core. */
+        R_BSP_PinWrite((bsp_io_port_pin_t) leds.p_leds[_RA_CORE], pin_level);
+#endif
+
+        /* Protect PFS registers */
+        R_BSP_PinAccessDisable();
+
+        /* Toggle level for next write */
+        if (BSP_IO_LEVEL_LOW == pin_level)
+        {
+            pin_level = BSP_IO_LEVEL_HIGH;
+        }
+        else
+        {
+            pin_level = BSP_IO_LEVEL_LOW;
+        }
+
+        /* Delay */
+        R_BSP_SoftwareDelay(delay, bsp_delay_units);
+    }
+}

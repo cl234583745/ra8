@@ -1,0 +1,235 @@
+1、fast+stack_memblock[] __attribute__((section(".bss.dtcm")))  =2688.352712
+2、fast+stack_memblock[] __attribute__((section(".bss.dtcm"))) +fsp_tcm.scat = 2683.303146
+3、max+fsp_tcm.scat  =2780.770969
+4、max+fsp.scat  =2780.770969
+5、max+stack_memblock[] __attribute__((section(".bss.dtcm")))  = 2974.973039
+
+
+
+[16:52:16.134]收←◆
+Toolchain ver:Clang 20.0.0git
+SystemCoreClock: 480000000 Hz
+date:Mar 30 2026
+time:16:52:04
+file:src/hal_entry.c
+func:hal_entry,line:169
+hello world!
+MPU supports 8 regions
+Region 0: 0x68000000-0x67FFFFE0, AttrIndex=0
+Region 1: 0x80000000-0x7FFFFFE0, AttrIndex=0
+Region 2: 0x22000020-0x22000000, AttrIndex=0
+Region 3: Disabled
+Region 4: Disabled
+Region 5: Disabled
+Region 6: Disabled
+Region 7: Disabled
+start coremain!
+
+[16:52:45.930]收←◆2K performance run parameters for coremark.
+CoreMark Size    : 666
+Total ticks      : 29758
+Total time (secs): 29.758000
+Iterations/Sec   : 2688.352712
+Iterations       : 80000
+Compiler version : GCCClang 20.0.0git
+Compiler flags   : Please put compiler flags here (e.g. -ofast)
+Memory location  : STACK
+seedcrc          : 0xe9f5
+[0]crclist       : 0xe714
+[0]crcmatrix     : 0x1fd7
+[0]crcstate      : 0x8e3a
+[0]crcfinal      : 0xcc42
+Correct operation validated. See README.md for run and reporting rules.
+CoreMark 1.0 : 2688.352712 / GCCClang 20.0.0git Please put compiler flags here (e.g. -ofast) / STACK
+terminated coremain!
+running!
+
+[16:55:01.314]收←◆
+Toolchain ver:Clang 20.0.0git
+SystemCoreClock: 480000000 Hz
+date:Mar 30 2026
+time:16:54:26
+file:src/hal_entry.c
+func:hal_entry,line:169
+hello world!
+MPU supports 8 regions
+Region 0: 0x68000000-0x67FFFFE0, AttrIndex=0
+Region 1: 0x80000000-0x7FFFFFE0, AttrIndex=0
+Region 2: 0x22000020-0x22000000, AttrIndex=0
+Region 3: Disabled
+Region 4: Disabled
+Region 5: Disabled
+Region 6: Disabled
+Region 7: Disabled
+start coremain!
+
+[16:55:31.165]收←◆2K performance run parameters for coremark.
+CoreMark Size    : 666
+Total ticks      : 29814
+Total time (secs): 29.814000
+Iterations/Sec   : 2683.303146
+Iterations       : 80000
+Compiler version : GCCClang 20.0.0git
+Compiler flags   : Please put compiler flags here (e.g. -ofast)
+Memory location  : STACK
+seedcrc          : 0xe9f5
+[0]crclist       : 0xe714
+[0]crcmatrix     : 0x1fd7
+[0]crcstate      : 0x8e3a
+[0]crcfinal      : 0xcc42
+Correct operation validated. See README.md for run and reporting rules.
+CoreMark 1.0 : 2683.303146 / GCCClang 20.0.0git Please put compiler flags here (e.g. -ofast) / STACK
+terminated coremain!
+running!
+
+[16:56:32.465]收←◆
+Toolchain ver:Clang 20.0.0git
+SystemCoreClock: 480000000 Hz
+date:Mar 30 2026
+time:16:56:18
+file:src/hal_entry.c
+func:hal_entry,line:169
+hello world!
+MPU supports 8 regions
+Region 0: 0x68000000-0x67FFFFE0, AttrIndex=0
+Region 1: 0x80000000-0x7FFFFFE0, AttrIndex=0
+Region 2: 0x22000020-0x22000000, AttrIndex=0
+Region 3: Disabled
+Region 4: Disabled
+Region 5: Disabled
+Region 6: Disabled
+Region 7: Disabled
+start coremain!
+
+[16:57:02.316]收←◆2K performance run parameters for coremark.
+CoreMark Size    : 666
+Total ticks      : 29813
+Total time (secs): 29.813000
+Iterations/Sec   : 2683.393151
+Iterations       : 80000
+Compiler version : GCCClang 20.0.0git
+Compiler flags   : Please put compiler flags here (e.g. -ofast)
+Memory location  : STACK
+seedcrc          : 0xe9f5
+[0]crclist       : 0xe714
+[0]crcmatrix     : 0x1fd7
+[0]crcstate      : 0x8e3a
+[0]crcfinal      : 0xcc42
+Correct operation validated. See README.md for run and reporting rules.
+CoreMark 1.0 : 2683.393151 / GCCClang 20.0.0git Please put compiler flags here (e.g. -ofast) / STACK
+terminated coremain!
+running!
+
+[16:58:46.948]收←◆
+Toolchain ver:Clang 20.0.0git
+SystemCoreClock: 480000000 Hz
+date:Mar 30 2026
+time:16:58:07
+file:src/hal_entry.c
+func:hal_entry,line:169
+hello world!
+MPU supports 8 regions
+Region 0: 0x68000000-0x67FFFFE0, AttrIndex=0
+Region 1: 0x80000000-0x7FFFFFE0, AttrIndex=0
+Region 2: 0x22000020-0x22000000, AttrIndex=0
+Region 3: Disabled
+Region 4: Disabled
+Region 5: Disabled
+Region 6: Disabled
+Region 7: Disabled
+start coremain!
+
+[16:59:15.755]收←◆2K performance run parameters for coremark.
+CoreMark Size    : 666
+Total ticks      : 28769
+Total time (secs): 28.769000
+Iterations/Sec   : 2780.770969
+Iterations       : 80000
+Compiler version : GCCClang 20.0.0git
+Compiler flags   : Please put compiler flags here (e.g. -ofast)
+Memory location  : STACK
+seedcrc          : 0xe9f5
+[0]crclist       : 0xe714
+[0]crcmatrix     : 0x1fd7
+[0]crcstate      : 0x8e3a
+[0]crcfinal      : 0xcc42
+Correct operation validated. See README.md for run and reporting rules.
+CoreMark 1.0 : 2780.770969 / GCCClang 20.0.0git Please put compiler flags here (e.g. -ofast) / STACK
+terminated coremain!
+running!
+
+[17:00:15.324]收←◆
+Toolchain ver:Clang 20.0.0git
+SystemCoreClock: 480000000 Hz
+date:Mar 30 2026
+time:16:59:52
+file:src/hal_entry.c
+func:hal_entry,line:169
+hello world!
+MPU supports 8 regions
+Region 0: 0x68000000-0x67FFFFE0, AttrIndex=0
+Region 1: 0x80000000-0x7FFFFFE0, AttrIndex=0
+Region 2: 0x22000020-0x22000000, AttrIndex=0
+Region 3: Disabled
+Region 4: Disabled
+Region 5: Disabled
+Region 6: Disabled
+Region 7: Disabled
+start coremain!
+
+[17:00:44.131]收←◆2K performance run parameters for coremark.
+CoreMark Size    : 666
+Total ticks      : 28769
+Total time (secs): 28.769000
+Iterations/Sec   : 2780.770969
+Iterations       : 80000
+Compiler version : GCCClang 20.0.0git
+Compiler flags   : Please put compiler flags here (e.g. -ofast)
+Memory location  : STACK
+seedcrc          : 0xe9f5
+[0]crclist       : 0xe714
+[0]crcmatrix     : 0x1fd7
+[0]crcstate      : 0x8e3a
+[0]crcfinal      : 0xcc42
+Correct operation validated. See README.md for run and reporting rules.
+CoreMark 1.0 : 2780.770969 / GCCClang 20.0.0git Please put compiler flags here (e.g. -ofast) / STACK
+terminated coremain!
+running!
+
+[17:01:37.633]收←◆
+Toolchain ver:Clang 20.0.0git
+SystemCoreClock: 480000000 Hz
+date:Mar 30 2026
+time:17:01:11
+file:src/hal_entry.c
+func:hal_entry,line:169
+hello world!
+MPU supports 8 regions
+Region 0: 0x68000000-0x67FFFFE0, AttrIndex=0
+Region 1: 0x80000000-0x7FFFFFE0, AttrIndex=0
+Region 2: 0x22000020-0x22000000, AttrIndex=0
+Region 3: Disabled
+Region 4: Disabled
+Region 5: Disabled
+Region 6: Disabled
+Region 7: Disabled
+start coremain!
+
+[17:02:04.562]收←◆2K performance run parameters for coremark.
+CoreMark Size    : 666
+Total ticks      : 26891
+Total time (secs): 26.891000
+Iterations/Sec   : 2974.973039
+Iterations       : 80000
+Compiler version : GCCClang 20.0.0git
+Compiler flags   : Please put compiler flags here (e.g. -ofast)
+Memory location  : STACK
+seedcrc          : 0xe9f5
+[0]crclist       : 0xe714
+[0]crcmatrix     : 0x1fd7
+[0]crcstate      : 0x8e3a
+[0]crcfinal      : 0xcc42
+Correct operation validated. See README.md for run and reporting rules.
+CoreMark 1.0 : 2974.973039 / GCCClang 20.0.0git Please put compiler flags here (e.g. -ofast) / STACK
+terminated coremain!
+running!
