@@ -1,0 +1,24 @@
+ra8p1 titan borad
+uart8---daplink
+
+
+1、full-speed
+//#define CONFIG_USB_HS
+
+PS G:\e2s_workspace\ra8p1_cherryusb\CherryUSB\tools\test_srcipts> .\test_cdc_speed.py
+test cdc out speed
+cdc out speed 6.073954 MB/s
+test cdc in speed
+cdc in speed 6.312565 MB/s
+
+
+
+1、high-speed
+#define CONFIG_USB_HS
+
+PS G:\e2s_workspace\ra8p1_cherryusb\CherryUSB\tools\test_srcipts> .\test_cdc_speed.py
+test cdc out speed
+cdc out speed 6.073870 MB/s
+test cdc in speed
+cdc in speed 6.256247 MB/s
+PS G:\e2s_workspace\ra8p1_cherryusb\CherryUSB\tools\test_srcipts>
