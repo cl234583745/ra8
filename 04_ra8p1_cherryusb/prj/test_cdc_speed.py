@@ -1,4 +1,5 @@
 import serial
+import sys
 import time
 try:
     from serial.tools.list_ports import comports
@@ -6,7 +7,7 @@ except ImportError:
     raise serial.serialutil.SerialException
 
 
-test_comx = 'COM14'
+test_comx = sys.argv[1] if len(sys.argv) > 1 else 'COM14'
 test_baudrate = 2000000
 test_maxsize = 10*1024*1024
 

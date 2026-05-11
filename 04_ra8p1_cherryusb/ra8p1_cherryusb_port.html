@@ -1,0 +1,372 @@
+<!DOCTYPE html><html><head>
+      <title>ra8p1_cherryusb_port</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\jerry.chen\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.25\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-details{margin:0;padding:0;border:none}.markdown-preview .md-toc summary.md-toc-link-wrapper{cursor:pointer;list-style-position:outside}.markdown-preview .md-toc summary.md-toc-link-wrapper::marker{font-size:.85em}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='0']{margin-left:12px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='1']{margin-left:28px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='2']{margin-left:44px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='3']{margin-left:60px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='4']{margin-left:76px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='5']{margin-left:80px}.markdown-preview a.tag,.markdown-preview a.tag:active,.markdown-preview a.tag:link,.markdown-preview a.tag:visited,.markdown-preview span.tag{display:inline-block;background-color:var(--vscode-badge-background,rgba(127,127,127,.18));color:var(--vscode-badge-foreground,currentColor);border-radius:2em;font-size:.85em;font-weight:500;padding:.05em .55em;line-height:1.5;white-space:nowrap;text-decoration:none;text-shadow:none;box-shadow:none;transition:background-color .12s ease,opacity .12s ease}.markdown-preview a.tag{cursor:pointer}.markdown-preview a.tag:focus,.markdown-preview a.tag:hover{background-color:var(--vscode-badge-background,rgba(127,127,127,.32));color:var(--vscode-badge-foreground,currentColor);opacity:.85;text-decoration:none;outline:0}.markdown-preview .wikilink-embed-content{border-left:3px solid var(--vscode-textBlockQuote-border,rgba(128,128,128,.3));background:var(--vscode-textBlockQuote-background,rgba(128,128,128,.05));margin:.5em 0;padding:.5em .75em;border-radius:0 3px 3px 0}.markdown-preview .wikilink-embed-content.wikilink-embed-error{border-left-color:var(--vscode-errorForeground,#cf222e);color:var(--vscode-errorForeground,#cf222e);font-style:italic;opacity:.8}.markdown-preview .wikilink-embed-content h1:first-child,.markdown-preview .wikilink-embed-content h2:first-child,.markdown-preview .wikilink-embed-content h3:first-child,.markdown-preview .wikilink-embed-content h4:first-child,.markdown-preview .wikilink-embed-content h5:first-child,.markdown-preview .wikilink-embed-content h6:first-child{margin-top:.25em}.markdown-preview .wikilink-embed-content .wikilink-embed-content{margin:.25em 0;padding:.25em .5em}.markdown-preview .block-id{display:none}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-details{margin:0;padding:0;border:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='0']{padding-left:0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='1']{padding-left:16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='2']{padding-left:32px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='3']{padding-left:48px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='4']{padding-left:64px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='5']{padding-left:80px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script>
+    </head>
+    <body for="html-export">
+      <div class="crossnote markdown-preview  ">
+      
+<h1>四、RA8P1移植CherryUSB尝鲜</h1>
+<div class="md-toc">
+<div class="md-toc-link-wrapper" data-level="0">
+  <a href="#一-背景" class="md-toc-link">一、背景</a>
+</div>
+<div class="md-toc-link-wrapper" data-level="0">
+  <a href="#二-心理曲线变化" class="md-toc-link">二、心理曲线变化</a>
+</div>
+<details open="" class="md-toc-details">
+<summary class="md-toc-link-wrapper" data-level="0">
+  <a href="#三-cherryusb-文件选择与编译" class="md-toc-link">三、CherryUSB 文件选择与编译</a>
+</summary>
+<div class="md-toc-link-wrapper" data-level="1">
+  <a href="#31-需要编译的源文件" class="md-toc-link">3.1 需要编译的源文件</a>
+</div>
+<div class="md-toc-link-wrapper" data-level="1">
+  <a href="#32-排除方法" class="md-toc-link">3.2 排除方法</a>
+</div>
+<div class="md-toc-link-wrapper" data-level="1">
+  <a href="#33-usb_configh-关键配置" class="md-toc-link">3.3 usb_config.h 关键配置</a>
+</div>
+</details>
+<details open="" class="md-toc-details">
+<summary class="md-toc-link-wrapper" data-level="0">
+  <a href="#四-测试代码" class="md-toc-link">四、测试代码</a>
+</summary>
+<div class="md-toc-link-wrapper" data-level="1">
+  <a href="#41-设备端" class="md-toc-link">4.1 设备端</a>
+</div>
+<div class="md-toc-link-wrapper" data-level="1">
+  <a href="#42-上位机测试脚本" class="md-toc-link">4.2 上位机测试脚本</a>
+</div>
+</details>
+<details open="" class="md-toc-details">
+<summary class="md-toc-link-wrapper" data-level="0">
+  <a href="#五-titan-board-特殊说明" class="md-toc-link">五、Titan Board 特殊说明</a>
+</summary>
+<div class="md-toc-link-wrapper" data-level="1">
+  <a href="#51-调试接口" class="md-toc-link">5.1 调试接口</a>
+</div>
+<div class="md-toc-link-wrapper" data-level="1">
+  <a href="#52-uart-调试口" class="md-toc-link">5.2 UART 调试口</a>
+</div>
+<div class="md-toc-link-wrapper" data-level="1">
+  <a href="#53-usb-fshs-引脚切换" class="md-toc-link">5.3 USB FS/HS 引脚切换</a>
+</div>
+</details>
+<details open="" class="md-toc-details">
+<summary class="md-toc-link-wrapper" data-level="0">
+  <a href="#六-性能测试结果" class="md-toc-link">六、性能测试结果</a>
+</summary>
+<div class="md-toc-link-wrapper" data-level="1">
+  <a href="#61-full-speed" class="md-toc-link">6.1 Full-Speed</a>
+</div>
+<div class="md-toc-link-wrapper" data-level="1">
+  <a href="#62-high-speed" class="md-toc-link">6.2 High-Speed</a>
+</div>
+<div class="md-toc-link-wrapper" data-level="1">
+  <a href="#63-结果分析" class="md-toc-link">6.3 结果分析</a>
+</div>
+</details>
+<details open="" class="md-toc-details">
+<summary class="md-toc-link-wrapper" data-level="0">
+  <a href="#七-对比-rzn2l-与初步分析" class="md-toc-link">七、对比 RZN2L 与初步分析</a>
+</summary>
+<div class="md-toc-link-wrapper" data-level="1">
+  <a href="#71-与-rzn2l-cherryusb-对比" class="md-toc-link">7.1 与 RZN2L CherryUSB 对比</a>
+</div>
+<div class="md-toc-link-wrapper" data-level="1">
+  <a href="#72-结论" class="md-toc-link">7.2 结论</a>
+</div>
+</details>
+</div>
+<h1 id="一-背景">一、背景 </h1>
+<ul>
+<li>CherryUSB 在 commit <a href="https://github.com/cherry-embedded/CherryUSB/commit/faf9360">faf9360</a> 正式支持 Renesas RA 系列</li>
+<li>硬件：RT-Thread RA8P1 Titan Board（Cortex-M85，480MHz）</li>
+<li>软件：e2studio + GCC（arm-none-eabi-gcc）</li>
+<li>之前做过 RZN2L 移植 CherryUSB 和瑞萨 USB IP 性能对比，这次继续相关测试</li>
+</ul>
+<h1 id="二-心理曲线变化">二、心理曲线变化 </h1>
+<p>整个移植过程的心情波动如下：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">阶段</th>
+<th style="text-align:left">心理状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">CherryUSB 已支持 RA</td>
+<td style="text-align:left">"cherryusb已支持了，直接拿来用就行" → 轻松</td>
+</tr>
+<tr>
+<td style="text-align:left">发现 hal_renesas</td>
+<td style="text-align:left">"原来 cherryusb使用的hal_renesas 是 forked from zephyrproject-rtos/hal_renesas，官方在 Zephyr 验证过的"</td>
+</tr>
+<tr>
+<td style="text-align:left">回想 RZN2L 移植</td>
+<td style="text-align:left">"当时完全不知道 hal_renesas，不是做了很多无用功么？"</td>
+</tr>
+<tr>
+<td style="text-align:left">查看 hal_renesas 支持情况</td>
+<td style="text-align:left">"支持 RA，但 RZN 的 USB 暂未支持" → "还好，没有白做，主要怪自己没发现 hal_renesas"</td>
+</tr>
+<tr>
+<td style="text-align:left">高速性能对比 RZN2L</td>
+<td style="text-align:left">"RA8P1 高速性能低于 RZN2L..." → 些许失落</td>
+</tr>
+<tr>
+<td style="text-align:left">初步分析原因</td>
+<td style="text-align:left">"可能与 16bit/32bit 有关，暂未优化" → "似乎又有一点安慰，没有白做"</td>
+</tr>
+</tbody>
+</table>
+<h1 id="三-cherryusb-文件选择与编译">三、CherryUSB 文件选择与编译 </h1>
+<h2 id="31-需要编译的源文件">3.1 需要编译的源文件 </h2>
+<p>先用笨办法，将整个 CherryUSB 文件夹加入 e2studio 工程（方便后续直接替换），然后排除不需要的文件。实际需要编译的只有：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">分类</th>
+<th style="text-align:left">文件</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Core</strong></td>
+<td style="text-align:left"><code>core/usbd_core.c</code></td>
+<td style="text-align:left">USB 设备核心栈</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Class</strong></td>
+<td style="text-align:left"><code>class/cdc/usbd_cdc_acm.c</code></td>
+<td style="text-align:left">CDC ACM 类驱动</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Port</strong></td>
+<td style="text-align:left"><code>port/renesas/device/usb_dc_rensas.c</code></td>
+<td style="text-align:left">RA USB DCD 驱动</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Port</strong></td>
+<td style="text-align:left"><code>port/renesas/device/r_usb_device.c</code></td>
+<td style="text-align:left">Renesas FSP USB 设备 HAL</td>
+</tr>
+</tbody>
+</table>
+<p>对应的包含路径需要添加：</p>
+<ul>
+<li><code>CherryUSB</code></li>
+<li><code>CherryUSB/common</code></li>
+<li><code>CherryUSB/core</code></li>
+<li><code>CherryUSB/port/renesas</code></li>
+<li><code>CherryUSB/port/renesas/device</code></li>
+</ul>
+<h2 id="32-排除方法">3.2 排除方法 </h2>
+<p>e2studio 的多选排除编译功能不太好用（不支持 Shift/Ctrl 多选后批量 Exclude from build）。推荐逐个文件右键 → <strong>Resource Configuration → Exclude from build</strong>。或者直接在 <code>.cproject</code> 中手动编辑排除规则。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">排除类别</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">全部排除再逐个添加</td>
+<td style="text-align:left">整个 CherryUSB 文件夹 Exclude，再对上述 4 个 .c 文件取消 Exclude</td>
+</tr>
+<tr>
+<td style="text-align:left">保留 demo</td>
+<td style="text-align:left"><code>demo/</code> 目录是模板参考，不需要编译</td>
+</tr>
+<tr>
+<td style="text-align:left">osal</td>
+<td style="text-align:left">当前只做 Device 模式，osal 文件不需要（CherryUSB 设备栈不依赖 OSAL）</td>
+</tr>
+</tbody>
+</table>
+<h2 id="33-usb_configh-关键配置">3.3 usb_config.h 关键配置 </h2>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">CONFIG_USB_HS</span>                          <span class="token comment">/* 高速模式 */</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">CONFIG_USBDEV_ADVANCE_DESC</span>             <span class="token comment">/* 使用高级描述符回调 */</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">CONFIG_USBDEV_REQUEST_BUFFER_LEN</span> <span class="token expression"><span class="token number">512</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">CONFIG_USBDEV_MAX_BUS</span> <span class="token expression"><span class="token number">2</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">CONFIG_USBHOST_MAX_BUS</span> <span class="token expression"><span class="token number">0</span>               </span><span class="token comment">/* 仅设备模式 */</span></span>
+</code></pre><p>通过注释/取消注释 <code>CONFIG_USB_HS</code> 切换 Full-Speed / High-Speed。</p>
+<h1 id="四-测试代码">四、测试代码 </h1>
+<h2 id="41-设备端">4.1 设备端 </h2>
+<ul>
+<li><code>src/examples/cdc_acm_descriptor.c</code> — USB 描述符（VID 0x0483, PID 0x5720）</li>
+<li><code>src/examples/cdc_acm_example.c</code> — CDC ACM 端点处理与初始化</li>
+<li><code>src/hal_entry.c</code> — 主入口，通过 <code>R_IOPORT_PinWrite(IO_PORT_04_PIN_13)</code> 切换 FS/HS</li>
+</ul>
+<p>FS/HS 切换逻辑：</p>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifndef</span> <span class="token expression">CONFIG_USB_HS</span></span>
+    <span class="token function">R_IOPORT_PinWrite</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>IOPORT_CFG_CTRL<span class="token punctuation">,</span> BSP_IO_PORT_04_PIN_13<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// FS</span>
+    <span class="token function">cdc_acm_init</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> R_USB_FS0_BASE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">else</span></span>
+    <span class="token function">R_IOPORT_PinWrite</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>IOPORT_CFG_CTRL<span class="token punctuation">,</span> BSP_IO_PORT_04_PIN_13<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// HS</span>
+    <span class="token function">cdc_acm_init</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> R_USB_HS0_BASE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
+</code></pre><h2 id="42-上位机测试脚本">4.2 上位机测试脚本 </h2>
+<p><code>test_cdc_speed.py</code> 增加了命令行参数，不带参数使用默认 COM，带参数使用指定 COM：</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>test_comx <span class="token operator">=</span> sys<span class="token punctuation">.</span>argv<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token keyword keyword-if">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>sys<span class="token punctuation">.</span>argv<span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">1</span> <span class="token keyword keyword-else">else</span> <span class="token string">'COM14'</span>
+</code></pre><p>用法：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>python test_cdc_speed.py           # 默认 COM14
+python test_cdc_speed.py COM10     # 指定 COM10
+</code></pre><h1 id="五-titan-board-特殊说明">五、Titan Board 特殊说明 </h1>
+<h2 id="51-调试接口">5.1 调试接口 </h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">特性</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">调试器</td>
+<td style="text-align:left">DAPLink（CMSIS-DAP），无法直接在 e2studio 调试和下载</td>
+</tr>
+<tr>
+<td style="text-align:left">替代方案</td>
+<td style="text-align:left">移植 RT-Thread Studio 的 pyocd，编写 <code>pyocd_flash.bat</code> ，运行bat脚本即下载固件</td>
+</tr>
+<tr>
+<td style="text-align:left">进阶</td>
+<td style="text-align:left">也可将 DAPLink 烧录为 JLinkOB，使用 JLink 调试</td>
+</tr>
+</tbody>
+</table>
+<p>pyocd 烧录命令：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>pyocd flash --target=R7KA8P1KF --erase=auto --frequency=1000000 ra8p1_cherryusb.elf
+</code></pre><h2 id="52-uart-调试口">5.2 UART 调试口 </h2>
+<p>Titan Board 的调试串口连接的是 <strong>UART8</strong>，与官方开发板不同。</p>
+<h2 id="53-usb-fshs-引脚切换">5.3 USB FS/HS 引脚切换 </h2>
+<p>RA8P1 的 USB 全速和高速使用不同的引脚，官方板使用 2 个 USB 端口（Type-C 各一）。Titan Board 通过 <strong>GPIO 4_13</strong> 控制模拟开关切换：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">模式</th>
+<th style="text-align:left">GPIO 4_13</th>
+<th style="text-align:left">USB 基址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Full-Speed</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left"><code>R_USB_FS0_BASE</code></td>
+</tr>
+<tr>
+<td style="text-align:left">High-Speed</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left"><code>R_USB_HS0_BASE</code></td>
+</tr>
+</tbody>
+</table>
+<p>软件中通过宏 <code>CONFIG_USB_HS</code> 配合切换。</p>
+<h1 id="六-性能测试结果">六、性能测试结果 </h1>
+<h2 id="61-full-speed">6.1 Full-Speed </h2>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>test cdc out speed
+cdc out speed 6.073954 MB/s
+test cdc in speed
+cdc in speed 6.312565 MB/s
+</code></pre><h2 id="62-high-speed">6.2 High-Speed </h2>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>test cdc out speed
+cdc out speed 6.073870 MB/s
+test cdc in speed
+cdc in speed 6.256247 MB/s
+</code></pre><h2 id="63-结果分析">6.3 结果分析 </h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">模式</th>
+<th style="text-align:left">OUT (Host→Device)</th>
+<th style="text-align:left">IN (Device→Host)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Full-Speed</td>
+<td style="text-align:left">6.07 MB/s</td>
+<td style="text-align:left">6.31 MB/s</td>
+</tr>
+<tr>
+<td style="text-align:left">High-Speed</td>
+<td style="text-align:left">6.07 MB/s</td>
+<td style="text-align:left">6.26 MB/s</td>
+</tr>
+</tbody>
+</table>
+<p>FS 和 HS 测速结果几乎一致，说明当前高速模式未发挥应有带宽。</p>
+<h1 id="七-对比-rzn2l-与初步分析">七、对比 RZN2L 与初步分析 </h1>
+<h2 id="71-与-rzn2l-cherryusb-对比">7.1 与 RZN2L CherryUSB 对比 </h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">项目</th>
+<th style="text-align:left">RA8P1</th>
+<th style="text-align:left">RZN2L</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">内核</td>
+<td style="text-align:left">Cortex-M85 (480MHz)</td>
+<td style="text-align:left">Cortex-R52 (400MHz)</td>
+</tr>
+<tr>
+<td style="text-align:left">USB HS 性能</td>
+<td style="text-align:left">~6 MB/s</td>
+<td style="text-align:left">更高（具体数值见 RZN2L 报告）</td>
+</tr>
+<tr>
+<td style="text-align:left">USB IP</td>
+<td style="text-align:left">Renesas RA USB</td>
+<td style="text-align:left">Renesas RZN USB</td>
+</tr>
+</tbody>
+</table>
+<p>RA8P1 高速性能低于 RZN2L CherryUSB，初步调查可能与 <strong>USB IP 数据路径位宽</strong>有关：</p>
+<ul>
+<li>RZN2L 可能使用 32bit 数据路径</li>
+<li>RA8P1 可能使用 16bit 数据路径</li>
+</ul>
+<p>暂未做进一步的优化测试。</p>
+<h2 id="72-结论">7.2 结论 </h2>
+<p>仅代表当前提交 <a href="https://github.com/cherry-embedded/CherryUSB/commit/faf9360">faf9360</a> 和当前测试条件下的结果。RA8P1 CherryUSB 高速性能低于 RZN2L 虽然令人意外，但也说明 RZN2L 的移植工作并非没有价值。</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
