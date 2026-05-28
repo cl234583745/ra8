@@ -1,0 +1,51 @@
+[INFO] date:May 27 2026
+time:14:08:21
+file:../src/hal_entry.c
+func:hal_entry,line:31
+hello world!
+[INFO] Built with Renesas Advanced Flexible Software Package version 6.4.0
+[INFO] ===== TrustZone Security Monitor =====
+[INFO] DLM  @ 0x40204038 = 0x00000004  -> OEM_PL1
+
+[INFO] CFSAMONA     @ 0x40204030 = 0x00FF8000
+[INFO]   -> Secure blocks: 511  |  Secure size: 16352 KB
+[INFO]   -> Boundary exceeds flash end -> entire flash is Non-Secure
+[INFO] SFSAMON      @ 0x4020403C = 0x00FF8000
+[INFO]   -> Secure blocks: 511  |  Secure size: 16352 KB
+[INFO]   -> Boundary exceeds flash end -> entire flash is Non-Secure
+
+[INFO] SRAMSABAR0   @ 0x40008400 = 0x001FE000
+[INFO]   -> NS region starts at block 255  |  offset: 2040 KB
+[INFO]   -> Boundary at max -> all SRAM is Non-Secure
+[INFO] SRAMSABAR1   @ 0x40008404 = 0x001FE000
+[INFO]   -> NS region starts at block 255  |  offset: 2040 KB
+[INFO]   -> Boundary at max -> all SRAM is Non-Secure
+[INFO] SRAMSABAR2   @ 0x40008408 = 0x001FE000
+[INFO]   -> NS region starts at block 255  |  offset: 2040 KB
+[INFO]   -> Boundary at max -> all SRAM is Non-Secure
+[INFO] SRAMSABAR3   @ 0x4000840C = 0x001FE000
+[INFO]   -> NS region starts at block 255  |  offset: 2040 KB
+[INFO]   -> Boundary at max -> all SRAM is Non-Secure
+
+[INFO] TCMSABARC    @ 0x40008508 = 0x0007E000
+[INFO]   -> NS region starts at block  63  |  offset: 504 KB
+[WARN]   *** WARNING: TCM partition is active ***
+[INFO] TCMSABARS    @ 0x4000850C = 0x0007E000
+[INFO]   -> NS region starts at block  63  |  offset: 504 KB
+[WARN]   *** WARNING: TCM partition is active ***
+
+[INFO] ----- SAU Regions -----
+[INFO] SAU_CTRL = 0x00000000  DISABLED
+[INFO] SAU_TYPE = 0x00000008  (regions: 8)
+[INFO]   SAU[0] DIS: 0x00000000 - 0x0000001F  
+[INFO]   SAU[1] DIS: 0x00000000 - 0x0000001F  
+[INFO]   SAU[2] DIS: 0x00000000 - 0x0000001F  
+[INFO]   SAU[3] DIS: 0x00000000 - 0x0000001F  
+[INFO]   SAU[4] DIS: 0x00000000 - 0x0000001F  
+
+[INFO] >>>> No active TZ partition -> device is fully Non-Secure. <<<<
+[INFO] ========================================
+[INFO] ra8p1 titan running
+[INFO] ra8p1 titan running
+
+

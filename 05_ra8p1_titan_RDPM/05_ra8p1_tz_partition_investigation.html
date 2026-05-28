@@ -1,0 +1,539 @@
+<!DOCTYPE html><html><head>
+      <title>05_ra8p1_tz_partition_investigation</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\jerry\.codearts-doer-for-coding\extensions\shd101wyy.markdown-preview-enhanced-0.8.21\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script>
+    </head>
+    <body for="html-export">
+      <div class="crossnote markdown-preview  ">
+      
+<h1>五、RA8P1 TrustZone分区引发的烧录问题深度调查</h1>
+
+<div class="md-toc">
+<div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#一-背景" class="md-toc-link">
+            <p>一、背景</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#二-调查进展" class="md-toc-link">
+            <p>二、调查进展</p>
+
+          </a></div><details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#三-问题现象" class="md-toc-link"><p>三、问题现象</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#31-e2studio-调试后-rt-thread-studio-无法下载" class="md-toc-link">
+            <p>3.1 e2studio 调试后 RT-Thread Studio 无法下载</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#32-rfp-也报错" class="md-toc-link">
+            <p>3.2 RFP 也报错</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#33-已知的临时解决方案" class="md-toc-link">
+            <p>3.3 已知的临时解决方案</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#四-调查过程" class="md-toc-link"><p>四、调查过程</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#41-第一步发现-settzboundaries-开关" class="md-toc-link">
+            <p>4.1 第一步：发现 setTZBoundaries 开关</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#42-第二步rdpm-工具验证" class="md-toc-link">
+            <p>4.2 第二步：RDPM 工具验证</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#43-第三步豁然开朗hex-文件大小" class="md-toc-link">
+            <p>4.3 第三步：豁然开朗——hex 文件大小</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#44-第四步寄存器级验证" class="md-toc-link">
+            <p>4.4 第四步：寄存器级验证</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#45-第五步深挖分区存储机制" class="md-toc-link">
+            <p>4.5 第五步：深挖分区存储机制</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#五-形成诊断工具" class="md-toc-link"><p>五、形成诊断工具</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#51-使用方法" class="md-toc-link">
+            <p>5.1 使用方法</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#52-正常状态输出无分区" class="md-toc-link">
+            <p>5.2 正常状态输出（无分区）</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#53-异常状态输出32kb-secure-分区" class="md-toc-link">
+            <p>5.3 异常状态输出（32KB Secure 分区）</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#54-源代码" class="md-toc-link">
+            <p>5.4 源代码</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#六-相关资料" class="md-toc-link">
+            <p>六、相关资料</p>
+
+          </a></div><details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#七-总结" class="md-toc-link"><p>七、总结</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#71-根因流程图" class="md-toc-link">
+            <p>7.1 根因流程图</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#72-验证证据" class="md-toc-link">
+            <p>7.2 验证证据</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#73-最终结论" class="md-toc-link">
+            <p>7.3 最终结论</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+</div>
+<h1 id="一-背景">一、背景 </h1>
+<p>RA8P1 Titan Board（Cortex-M85，1GHz）<strong>在使用 e2studio 调试下载后再去下载 RT-Thread 的任何工程都会失败</strong>，Renesas Flash Programmer（RFP）也一样报错。这个问题严重影响了开发效率，本文记录了从发现问题到定位根因再到形成诊断工具的完整调查过程。</p>
+<h1 id="二-调查进展">二、调查进展 </h1>
+<p>整个调查过程的逐步推进如下：</p>
+<table>
+<thead>
+<tr>
+<th>步骤</th>
+<th>发现</th>
+<th>进展</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第 1 步</td>
+<td>用 RFP init 能临时恢复，但不知道根本原因</td>
+<td>现象确认，原因未知</td>
+</tr>
+<tr>
+<td>第 2 步</td>
+<td>发现 <code>setTZBoundaries</code> 开关，关闭后问题消失</td>
+<td>锁定关联因素</td>
+</tr>
+<tr>
+<td>第 3 步</td>
+<td>使用 RDPM 设置同样 32KB 分区后 RFP 同样失败</td>
+<td>确认是分区配置本身导致的问题</td>
+</tr>
+<tr>
+<td>第 4 步</td>
+<td>hex 文件 52.4KB 远大于 32KB Secure 分区，RFP 报 Command:13, Response:D2</td>
+<td>找到直接原因：写入超边界</td>
+</tr>
+<tr>
+<td>第 5 步</td>
+<td>JLink 读取 CFSAMONA 从 <code>0x00FF8000</code> 变为 <code>0x00008000</code></td>
+<td>寄存器级验证根因</td>
+</tr>
+<tr>
+<td>第 6 步</td>
+<td>查阅 FSP 文档确认分区存储在专用非易失性区域，仅启动模式可读写</td>
+<td>理解持久化机制</td>
+</tr>
+<tr>
+<td>第 7 步</td>
+<td>编写 <code>bsp_tz_monitor.c</code>，启动时打印状态警告开发者</td>
+<td>形成诊断工具固化经验</td>
+</tr>
+</tbody>
+</table>
+<h1 id="三-问题现象">三、问题现象 </h1>
+<h2 id="31-e2studio-调试后-rt-thread-studio-无法下载">3.1 e2studio 调试后 RT-Thread Studio 无法下载 </h2>
+<p>使用 e2studio 调试下载 RT-Thread 工程后，再用 RT-Thread Studio 下载任何工程都会失败：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>****** Error: Timeout while calculating CRC, RAMCode did not respond in time!
+Timeout while calculating CRC, RAMCode did not respond in time!
+Timeout while calculating CRC, RAMCode did not respond in time!
+Verification failed @ address 0x02000000
+Error while programming flash: Verify failed.
+</code></pre><p><img src="images/rtthread_failed.png" alt="rtthread_failed"></p>
+<h2 id="32-rfp-也报错">3.2 RFP 也报错 </h2>
+<p>用瑞萨官方 RFP 软件下载同样失败：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>Error(E1000008): An address error occurred in the device. (Command: 13, Response: D2)
+Operation failed.
+</code></pre><p><img src="images/rfp_failed.png" alt="rfp_failed"></p>
+<h2 id="33-已知的临时解决方案">3.3 已知的临时解决方案 </h2>
+<p>根据 <a href="https://rt-thread-studio.github.io/sdk-bsp-ra8p1-titan-board/latest/faq/FAQ_page/README_zh.html#q5">RT-Thread Titan 开发板 FAQ</a> 的说明——用 RFP 执行 Initialize Target（擦除芯片）可以恢复。但这只是治标不治本，我们需要知道问题产生的根源。</p>
+<h1 id="四-调查过程">四、调查过程 </h1>
+<h2 id="41-第一步发现-settzboundaries-开关">4.1 第一步：发现 setTZBoundaries 开关 </h2>
+<p>在调查 e2studio 的 Debug Configurations 时，发现有一个 <strong>TrustZone boundary</strong> 相关的配置选项：</p>
+<p><img src="images/debug_config.png" alt="debug_config"></p>
+<p>对应的 <code>.launch</code> 文件中有这样一个属性：</p>
+<pre data-role="codeBlock" data-info="xml" class="language-xml xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>booleanAttribute</span> <span class="token attr-name">key</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>com.renesas.hardwaredebug.arm.jlink.setTZBoundaries<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span><span class="token punctuation">/&gt;</span></span>
+</code></pre><p>将其改为 <code>false</code> 后，问题不再出现，一切恢复正常。</p>
+<p><img src="images/setTZBoundaries.png" alt="setTZBoundaries"></p>
+<p>这说明问题与 TrustZone 边界配置有直接关系。</p>
+<h2 id="42-第二步rdpm-工具验证">4.2 第二步：RDPM 工具验证 </h2>
+<p>e2studio 中还有一个 <strong>Run → Renesas Device Partition Manager(RDPM)</strong> 工具：</p>
+<p><img src="images/RDPM1.png" alt="RDPM1"></p>
+<p>RDPM 可以手动设置 Secure/Non-Secure 分区大小：</p>
+<p><img src="images/RDPM2.png" alt="RDPM2"></p>
+<p>使用 RDPM 设置 32KB Code MRAM Secure 分区后的日志给了我们重要启发：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>Connecting...
+	Loading library				: SUCCESSFUL!
+	Establishing connection			: SUCCESSFUL!
+	Checking the device type		: SUCCESSFUL!
+CONNECTED.
+
+Programming secure/non-secure memory partitions with the following settings...
+	-	Code MRAM Secure	(kB)	: 32
+SUCCESSFUL!
+
+Disconnecting...
+DISCONNECTED.
+</code></pre><p>设置完成后，RFP 再次报同样的 <code>Error(E1000008)</code> 错误。这说明 <strong>RDPM 与 setTZBoundaries=true 最终达到的效果是一样的</strong>——都配置了 32KB 的 Secure 分区。</p>
+<h2 id="43-第三步豁然开朗hex-文件大小">4.3 第三步：豁然开朗——hex 文件大小 </h2>
+<p>回头看我们的 RT-Thread hex 文件：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>Writing data to the target device
+  [Code MRAM 1] 0x02000000 - 0x0200D19F     size : 52.4 K
+</code></pre><p><strong>52.4KB 远大于 32KB 的 Secure 分区！</strong></p>
+<p>RDPM 日志说 "Code MRAM Secure: 32KB"，即 flash 前 32KB 被标记为 Secure 区域。我们的 hex 要从 <code>0x02000000</code> 写到 <code>0x0200D19F</code>，但 <code>0x02008000</code> 之后属于 Non-Secure 区域。RFP 以 Non-Secure 权限连接设备，试图写 Secure 区域之外的地址时，硬件 TrustZone Filter（TZF）直接拦截，报地址错误：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>Error(E1000008): An address error occurred in the device. (Command: 13, Response: D2)
+</code></pre><blockquote>
+<p><strong>Command 13</strong> 是 RFP 的写入命令，<strong>Response D2</strong> 表示 TZ 安全违规。</p>
+</blockquote>
+<h2 id="44-第四步寄存器级验证">4.4 第四步：寄存器级验证 </h2>
+<p>为了从硬件层面验证，我们通过 JLink Commander 读取了相关的 TrustZone 状态寄存器。</p>
+<p><strong>关键寄存器：CFSAMONA（Code Flash Security Attribution Monitor）</strong></p>
+<table>
+<thead>
+<tr>
+<th>条件</th>
+<th>寄存器值</th>
+<th>解码</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>setTZBoundaries=false</code></td>
+<td><code>0x00FF8000</code></td>
+<td>CFS2=511 blocks</td>
+<td>边界超出 flash 末尾 → 全部 Non-Secure</td>
+</tr>
+<tr>
+<td><code>setTZBoundaries=true</code></td>
+<td><code>0x00008000</code></td>
+<td>CFS2=1 block</td>
+<td><strong>32KB Secure + 剩余 Non-Secure</strong></td>
+</tr>
+</tbody>
+</table>
+<p>完整的三组寄存器总结：</p>
+<table>
+<thead>
+<tr>
+<th>寄存器</th>
+<th>地址</th>
+<th>属性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CFSAMONA.CFS2</code></td>
+<td><code>0x40204030</code> [23:15]</td>
+<td>只读监视器</td>
+<td>Code flash Secure 块数（每块 32KB）</td>
+</tr>
+<tr>
+<td><code>SFSAMON.SFS</code></td>
+<td><code>0x4020403C</code> [23:15]</td>
+<td>只读监视器</td>
+<td>SiP flash Secure 块数</td>
+</tr>
+<tr>
+<td><code>DLMMON</code></td>
+<td><code>0x40204038</code> [3:0]</td>
+<td>只读监视器</td>
+<td>DLM 生命周期状态</td>
+</tr>
+<tr>
+<td><code>SRAMSABAR0-3</code></td>
+<td><code>0x40008400-0x4000840C</code> [20:13]</td>
+<td>读写</td>
+<td>SRAM 安全边界</td>
+</tr>
+<tr>
+<td><code>TCMSABARC/S</code></td>
+<td><code>0x40008508/0x4000850C</code> [18:13]</td>
+<td>读写</td>
+<td>TCM 安全边界</td>
+</tr>
+</tbody>
+</table>
+<h2 id="45-第五步深挖分区存储机制">4.5 第五步：深挖分区存储机制 </h2>
+<p>进一步研究发现，RA8P1 的 TrustZone 分区信息并非存储在普通的代码 flash 或 OFS（选项设置内存）区域，而是存储在 <strong>专用的非易失性存储区域</strong>，只能通过 SCI/USB 启动模式命令进行读写。RDPM 和 e2studio 的调试器固件会自动将 MD 引脚拉低进入启动模式来完成分区编程。</p>
+<table>
+<thead>
+<tr>
+<th>存储位置</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>❌ 代码 flash (<code>0x02000000</code>+)</td>
+<td>不存储分区信息</td>
+</tr>
+<tr>
+<td>❌ OFS 区域 (<code>0x02C9F040</code>+)</td>
+<td>存储 WDT、ECC、LVD 等选项，不存储分区</td>
+</tr>
+<tr>
+<td>✅ 专用非易失性存储</td>
+<td>仅可通过启动模式命令读写，内存不可见</td>
+</tr>
+<tr>
+<td>✅ CFSAMONA 寄存器</td>
+<td>启动时硬件自动加载分区信息至此只读监视器</td>
+</tr>
+</tbody>
+</table>
+<p>这就是为何断电后问题依然存在——分区信息存储在非易失性介质中，JLink 常规 <code>mem32</code> 无法直接读取分区存储区，但可以通过 CFSAMONA 寄存器间接观察分区效果。</p>
+<h1 id="五-形成诊断工具">五、形成诊断工具 </h1>
+<p>基于以上调查，我们编写了 <code>bsp_tz_monitor.c</code> 诊断模块，在芯片初始化阶段调用 <code>bsp_tz_monitor_print()</code> 即可打印所有 TrustZone 相关寄存器的状态。如果检测到分区配置，会给出明确的警告和修复指引。</p>
+<h2 id="51-使用方法">5.1 使用方法 </h2>
+<p>在 <code>hal_entry()</code> 中调用：</p>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">"bsp_tz_monitor.h"</span></span>
+
+<span class="token keyword keyword-void">void</span> <span class="token function">hal_entry</span><span class="token punctuation">(</span><span class="token keyword keyword-void">void</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// 初始化代码...</span>
+    <span class="token function">bsp_tz_monitor_print</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment">// 打印 TZ 状态</span>
+    <span class="token comment">// 应用代码...</span>
+<span class="token punctuation">}</span>
+</code></pre><h2 id="52-正常状态输出无分区">5.2 正常状态输出（无分区） </h2>
+<p><img src="images/log_compare.png" alt="log_compare"></p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>===== TrustZone Security Monitor =====
+DLM  @ 0x40204038 = 0x00000004  -&gt; OEM_PL1
+
+CFSAMONA     @ 0x40204030 = 0x00FF8000
+  -&gt; Secure blocks: 511  |  Secure size: 16352 KB
+  -&gt; Boundary exceeds flash end -&gt; entire flash is Non-Secure
+...
+
+&gt;&gt;&gt;&gt; No active TZ partition -&gt; device is fully Non-Secure. &lt;&lt;&lt;&lt;
+========================================
+</code></pre><p>完整日志见 <a href="1.log"><code>1.log</code></a></p>
+<h2 id="53-异常状态输出32kb-secure-分区">5.3 异常状态输出（32KB Secure 分区） </h2>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>===== TrustZone Security Monitor =====
+DLM  @ 0x40204038 = 0x00000004  -&gt; OEM_PL1
+
+CFSAMONA     @ 0x40204030 = 0x00008000
+  -&gt; Secure blocks:   1  |  Secure size: 32 KB
+  -&gt; Secure: 0x02000000 - 0x02007FFF  (32 KB)
+  -&gt; Non-Secure alias: 0x12008000 - 0x12107FFF
+  *** WARNING: CFSAMONA has 32 KB Secure region active! ***
+
+&gt;&gt;&gt;&gt; WARNING: Hardware TZ partition detected! &lt;&lt;&lt;&lt;
+&gt;&gt;&gt;&gt; Fix methods: &lt;&lt;&lt;&lt;
+&gt;&gt;&gt;&gt;  1. RFP: connect -&gt; Initialize Target (erase chip) &lt;&lt;&lt;&lt;
+&gt;&gt;&gt;&gt;  2. RFP CLI: -fo boundary 0,0,0,0,0 (reset all) &lt;&lt;&lt;&lt;
+&gt;&gt;&gt;&gt;  3. e2studio: Run -&gt; Renesas Device Partition Manager &lt;&lt;&lt;&lt;
+&gt;&gt;&gt;&gt;  4. e2studio Debug Config -&gt; setTZBoundaries=false &lt;&lt;&lt;&lt;
+========================================
+</code></pre><p>完整日志见 <a href="2.log"><code>2.log</code></a></p>
+<h2 id="54-源代码">5.4 源代码 </h2>
+<ul>
+<li><code>src/bsp_tz_monitor.h</code> — 函数声明</li>
+<li><code>src/bsp_tz_monitor.c</code> — 寄存器读取、解码、打印实现</li>
+</ul>
+<h1 id="六-相关资料">六、相关资料 </h1>
+<table>
+<thead>
+<tr>
+<th>资料</th>
+<th>来源</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R7KA8P1KF_core0.h</td>
+<td>FSP CMSIS 设备头文件</td>
+<td>寄存器定义和地址映射</td>
+</tr>
+<tr>
+<td>core_cm85.h</td>
+<td>CMSIS 6</td>
+<td>Cortex-M85 核心寄存器定义（SAU 等）</td>
+</tr>
+<tr>
+<td>bsp_security.c</td>
+<td>FSP BSP</td>
+<td><code>R_BSP_SecurityInit()</code> SAU/IDAU 初始化逻辑</td>
+</tr>
+<tr>
+<td>bsp_feature.h</td>
+<td>FSP BSP RA8P1</td>
+<td><code>BSP_FEATURE_TZ_HAS_DLM=1</code>、<code>__SAUREGION_PRESENT=1</code></td>
+</tr>
+<tr>
+<td><a href="http://rfp-cli.md">rfp-cli.md</a></td>
+<td>RFP 文档</td>
+<td><code>-fo boundary</code> 命令说明</td>
+</tr>
+<tr>
+<td>english.xml</td>
+<td>e2studio 插件</td>
+<td><code>IDS_RA_BOUNDARY_PROGRAM_SUCCESSFUL</code> 等提示</td>
+</tr>
+<tr>
+<td>RA8_CM85_dual.grp</td>
+<td>e2studio MCU 文件</td>
+<td><code>TrustZoneTypeSettings=2</code>、<code>AuthAp=2</code>、<code>MemAp=1</code></td>
+</tr>
+<tr>
+<td>RA8P1_Extra.mbl</td>
+<td>e2studio MCU 文件</td>
+<td>选项设置内存（OFS）地址 <code>0x02C9F040</code></td>
+</tr>
+<tr>
+<td>FSP 用户手册</td>
+<td>RASC 文档</td>
+<td>DLM 设备分区存储在非易失性内存中，通过启动模式编程</td>
+</tr>
+<tr>
+<td>Renesas Device Partition Manager.pdf</td>
+<td>e2帮助</td>
+<td>见doc文件夹</td>
+</tr>
+<tr>
+<td>device-lifecycle-mgmt-ra8.pdf</td>
+<td>官网</td>
+<td>见doc文件夹</td>
+</tr>
+</tbody>
+</table>
+<h1 id="七-总结">七、总结 </h1>
+<h2 id="71-根因流程图">7.1 根因流程图 </h2>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>e2studio Debug 启动
+        │
+        ▼
+setTZBoundaries=true（默认）
+        │
+        ├──→ DLA 认证（CoreSight 调试 mailbox）
+        ├──→ 驱动 MD 引脚进入 SCI 启动模式
+        └──→ 写入 32KB Secure 分区到专用非易失性存储
+                 │
+                 ▼
+         芯片重新上电
+                 │
+                 ▼
+         硬件从非易失性存储加载分区 → IDAU 配置
+                 │
+                 ├──→ CFSAMONA = 0x00008000（32KB Secure）
+                 └──→ flash 前 32KB 标记为 Secure
+                          │
+                          ▼
+                 RFP 以 Non-Secure 连接
+                          │
+                          ├──→ 试图写 0x02000000 - 0x0200D19F（52.4KB）
+                          ├──→ 超过 0x02008000 边界 → TZF 拦截
+                          └──→ Error(E1000008) Command:13 Response:D2
+</code></pre><h2 id="72-验证证据">7.2 验证证据 </h2>
+<table>
+<thead>
+<tr>
+<th>证据</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CFSAMONA</code> 从 <code>0x00FF8000</code> → <code>0x00008000</code></td>
+<td>32KB Secure 分区被激活</td>
+</tr>
+<tr>
+<td><code>SRAMSABAR0-3</code> 不变</td>
+<td>仅 Code flash 分区被修改，SRAM 不受影响</td>
+</tr>
+<tr>
+<td><code>DLMMON = 0x04</code> 不变</td>
+<td>DLM 生命周期状态未改变，仍处于 OEM_PL1</td>
+</tr>
+<tr>
+<td>RDPM 设置相同大小后 RFP 同样失败</td>
+<td>确认是分区本身而不是 e2studio 特定问题</td>
+</tr>
+<tr>
+<td>hex 大小 52.4KB &gt; 32KB</td>
+<td>写入超边界导致 TZ 违规</td>
+</tr>
+<tr>
+<td><code>-fo boundary</code> 可恢复</td>
+<td>通过启动模式重写分区配置为全 Non-Secure</td>
+</tr>
+</tbody>
+</table>
+<h2 id="73-最终结论">7.3 最终结论 </h2>
+<p><strong>RA8P1（以及所有支持 DLM 的 RA 设备）的 TrustZone 分区信息存储在专用的非易失性存储区域中</strong>，通过 SCI/USB 启动模式命令进行编程。一旦激活，硬件 IDAU 在启动时自动加载分区配置，将 flash 划分为 Secure 和 Non-Secure 区域。</p>
+<p>默认情况下，e2studio 的 <code>setTZBoundaries=true</code> 会在调试连接时自动写入 32KB Secure 分区。后续烧录工具（RT-Thread Studio、RFP）以 Non-Secure 权限连接设备，当烧录的固件超过 Secure 分区边界时，TrustZone Filter 直接拦截写入操作。</p>
+<p><strong>推荐做法：</strong></p>
+<ul>
+<li>非 TrustZone 项目：在 <code>.launch</code> 文件中设置 <code>setTZBoundaries=false</code></li>
+<li>使用 <code>bsp_tz_monitor_print()</code> 在启动时检测分区状态，提前发现潜在问题</li>
+<li>遇到无法烧录时，使用 RFP Initialize Target 或 <code>-fo boundary 0,0,0,0,0</code> 恢复</li>
+</ul>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
