@@ -1,0 +1,99 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        // ============================================================
+        // 方案 D: 跳过 option bytes（默认推荐，模拟 e2studio 行为）
+        // - YAML: RA8P1_Series.yaml (原始 pack, Config 只读)
+        // - 烧录: preLaunchTask 调用 flash.cmd，--skip-section 跳过 6 个 option 段
+        // - 调试: flashingEnabled = false，不再重复烧录
+        // - 重启: flash.cmd 失败时自动跳过，不影响调试
+        // ============================================================
+        {
+            "type": "probe-rs-debug",
+            "request": "launch",
+            "name": "probe-rs Debug (skip OFS)",
+            "preLaunchTask": "Flash (skip option bytes)",
+            "cwd": "${workspaceFolder}",
+            "chip": "R7KA8P1KF",
+            "chipDescriptionPath": "D:\\Program Files\\probe-rs-tools-x86_64-pc-windows-msvc\\renesas_ra\\RA8P1_Series.yaml",
+            "runtimeExecutable": "D:\\Program Files\\probe-rs-tools-x86_64-pc-windows-msvc\\probe-rs.exe",
+            "runtimeArgs": ["dap-server"],
+            "connectUnderReset": false,
+            "wireProtocol": "Swd",
+            "flashingConfig": {
+                "flashingEnabled": false
+            },
+            "coreConfigs": [
+                {
+                    "coreIndex": 0,
+                    "programBinary": "${workspaceFolder}/build/Debug/ra8p1_titan_rtt_CM.elf"
+                }
+            ],
+            "speed": 1000
+        },
+        // ============================================================
+        // 方案 A: 写入 option bytes (Config 区域可写)
+        // - YAML: RA8P1_Series_writable.yaml (Config 改为 !Nvm)
+        // - 烧录: 由 probe-rs-debug 自动处理, flashingEnabled = true
+        // - 无需 flash.cmd / preLaunchTask
+        // - 每次调试都会写入 option bytes (值来自 RASC 配置，安全)
+        // ============================================================
+        {
+            "type": "probe-rs-debug",
+            "request": "launch",
+            "name": "probe-rs Debug (write OFS)",
+            "cwd": "${workspaceFolder}",
+            "chip": "R7KA8P1KF",
+            "chipDescriptionPath": "D:\\Program Files\\probe-rs-tools-x86_64-pc-windows-msvc\\renesas_ra\\RA8P1_Series_writable.yaml",
+            "runtimeExecutable": "D:\\Program Files\\probe-rs-tools-x86_64-pc-windows-msvc\\probe-rs.exe",
+            "runtimeArgs": ["dap-server"],
+            "connectUnderReset": false,
+            "wireProtocol": "Swd",
+            "flashingConfig": {
+                "flashingEnabled": true,
+                "haltAfterReset": true
+            },
+            "coreConfigs": [
+                {
+                    "coreIndex": 0,
+                    "programBinary": "${workspaceFolder}/build/Debug/ra8p1_titan_rtt_CM.elf"
+                }
+            ],
+            "speed": 1000
+        },
+        // ============================================================
+        // cortex-debug 备选 (通过 JLink GDB Server)
+        // ============================================================
+        {
+            "name": "Cortex Debug (JLink)",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/build/Debug/ra8p1_titan_rtt_CM.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "jlink",
+            "interface": "swd",
+            "device": "R7KA8P1KF_CPU0",
+            "runToEntryPoint": "main"
+        },
+        // ============================================================
+        // cortex-debug (通过 pyOCD GDB Server, 适合 DAPLink)
+        // cortex-debug 1.12.1 initMatch 已手动补丁: 支持 "listening" 输出
+        // 见 %USERPROFILE%\.vscode\extensions\marus25.cortex-debug-1.12.1\dist\debugadapter.js
+        // ============================================================
+        {
+            "name": "Cortex Debug (pyOCD)",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/build/Debug/ra8p1_titan_rtt_CM.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "pyocd",
+            "serverpath": "D:\\Program Files\\Python313\\Scripts\\pyocd.exe",
+            "device": "R7KA8P1KF",
+            "targetId": "R7KA8P1KF",
+            "cmsisPack": "D:\\Program Files\\pyocd\\packs\\Renesas.RA_DFP.6.1.0.pack",
+            "interface": "swd",
+            "noLoad": true,
+            "runToEntryPoint": "main"
+        }
+    ]
+}

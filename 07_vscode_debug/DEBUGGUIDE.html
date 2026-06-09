@@ -1,0 +1,813 @@
+<!DOCTYPE html><html><head>
+      <title>DEBUGGUIDE</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\jerry\.codearts-doer-for-coding\extensions\shd101wyy.markdown-preview-enhanced-0.8.21\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      <script type="text/javascript" src="file:///c:\Users\jerry\.codearts-doer-for-coding\extensions\shd101wyy.markdown-preview-enhanced-0.8.21\crossnote\dependencies\mermaid\mermaid.min.js" charset="UTF-8"></script>
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script>
+    </head>
+    <body for="html-export">
+      <div class="crossnote markdown-preview  ">
+      
+<h1>七、vscode四种调试方案完全指南</h1>
+
+<div class="md-toc">
+<div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#一-项目概述" class="md-toc-link">
+            <p>一、项目概述</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#二-项目目录架构" class="md-toc-link">
+            <p>二、项目目录架构</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#三-四种调试方案对比" class="md-toc-link">
+            <p>三、四种调试方案对比</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#三-方案-a--probe-rs-skip-ofs" class="md-toc-link">
+            <p>三、方案 A — probe-rs (skip OFS)</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#四-方案-b--probe-rs-write-ofs" class="md-toc-link">
+            <p>四、方案 B — probe-rs (write OFS)</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#五-方案-c--cortex-debug-jlink" class="md-toc-link">
+            <p>五、方案 C — Cortex Debug (JLink)</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#六-方案-d--cortex-debug-pyocd" class="md-toc-link">
+            <p>六、方案 D — Cortex Debug (pyOCD)</p>
+
+          </a></div><details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#七-烧录命令详解附加" class="md-toc-link"><p>七、烧录命令详解(附加)</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#probe-rs-烧录" class="md-toc-link">
+            <p>probe-rs 烧录</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#pyocd-烧录" class="md-toc-link">
+            <p>pyOCD 烧录</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#jlink-烧录" class="md-toc-link">
+            <p>JLink 烧录</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#烧录方式汇总" class="md-toc-link">
+            <p>烧录方式汇总</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#八-故障排除" class="md-toc-link">
+            <p>八、故障排除</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#九-参考资料" class="md-toc-link">
+            <p>九、参考资料</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#十-总结" class="md-toc-link">
+            <p>十、总结</p>
+
+          </a></div>
+</div>
+<h1 id="一-项目概述">一、项目概述 </h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">硬件</td>
+<td style="text-align:left">Renesas RA8P1，ARM Cortex-M85 2Ghz，rtthread titan board</td>
+</tr>
+<tr>
+<td style="text-align:left">工具链</td>
+<td style="text-align:left">Arm GNU Toolchain 13.3.Rel1 (<code>D:\Program Files\GCC\arm-gnu-toolchain-13.3.rel1-mingw-w64-i686-arm-none-eabi\bin</code>)</td>
+</tr>
+<tr>
+<td style="text-align:left">构建</td>
+<td style="text-align:left">RASC-CMake</td>
+</tr>
+<tr>
+<td style="text-align:left">IDE</td>
+<td style="text-align:left">vscode</td>
+</tr>
+<tr>
+<td style="text-align:left">调试扩展</td>
+<td style="text-align:left"><code>probe-rs-debug</code> + <code>cortex-debug</code> 1.12.1</td>
+</tr>
+</tbody>
+</table>
+<p><img src="images/vscode%204%20debug.png" alt="VS Code 四种调试方案"></p>
+<h1 id="二-项目目录架构">二、项目目录架构 </h1>
+<pre>ra8p1_titan_rtt_CM/
+├── src/                  # 用户代码（hal_entry.c, log.c, syscall.c ...）
+├── ra/                   # Renesas FSP HAL 驱动（arm/ + fsp/）
+├── ra_gen/               # RASC 生成代码（hal_data, pin_data, vector_data, main）
+├── ra_cfg/               # FSP 配置头文件（fsp_cfg/）
+├── cmake/                # CMake 构建脚本（gcc.cmake, GeneratedSrc.cmake ...）
+├── script/               # 辅助脚本
+├── build/                # 构建输出目录
+├── .vscode/              # VS Code 调试与构建配置
+│   ├── <span style="color:#e06c75;font-weight:bold">launch.json       # 核心修改文件：4 个调试配置入口</span>
+│   ├── <span style="color:#e06c75;font-weight:bold">tasks.json        # 核心修改文件：构建与烧录 Task 定义</span>
+│   ├── settings.json     # 原始文件：工作区默认设置
+│   ├── <span style="color:#e06c75;font-weight:bold">c_cpp_properties.json  # 核心修改文件：IntelliSense 路径</span>
+│   ├── cmake-kits.json   # 原始文件：CMake Kit 定义
+│   ├── <span style="color:#61c264;font-weight:bold">pyocd_wrapper.py  # 新增文件：pyOCD stderr→stdout 包装器</span>
+│   └── <span style="color:#61c264;font-weight:bold">pyocd_server.cmd  # 新增文件：pyOCD 批处理包装器</span>
+├── CMakeLists.txt        # 顶层 CMake 构建定义
+├── Config.cmake          # 工具链路径与编译标志
+├── compile_commands.json # CMake 生成的编译命令索引（供 clangd / IntelliSense 使用）
+├── <span style="color:#e06c75;font-weight:bold">flash.cmd             # 核心修改文件：probe-rs 烧录脚本（跳过 Option Bytes）</span>
+├── DEBUGGUIDE.md         # 本调试指南
+└── README.md             # 原工程说明</pre>
+<p><strong>构建流程</strong>：CMake + MinGW Makefiles → Arm GNU Toolchain (arm-none-eabi-gcc) → <code>.elf</code></p>
+<p><strong>构建命令</strong>：</p>
+<pre data-role="codeBlock" data-info="batch" class="language-batch batch"><code><span class="token comment">:: 配置（首次 / 修改 CMakeLists.txt 后）</span>
+<span class="token command"><span class="token keyword keyword-cmake">cmake</span> <span class="token parameter attr-name">-G</span> <span class="token string">"MinGW Makefiles"</span> <span class="token parameter attr-name">-S</span> . <span class="token parameter attr-name">-B</span> build\Debug -DCMAKE_BUILD_TYPE=Debug</span>
+
+<span class="token comment">:: 编译</span>
+<span class="token command"><span class="token keyword keyword-cmake">cmake</span> <span class="token parameter attr-name">--build</span> build\Debug <span class="token parameter attr-name">-j</span></span>
+
+<span class="token comment">:: 清理</span>
+<span class="token command"><span class="token keyword keyword-cmake">cmake</span> <span class="token parameter attr-name">--build</span> build\Debug <span class="token parameter attr-name">--target</span> clean</span>
+
+<span class="token comment">:: 全清（删除构建目录重新配置）</span>
+<span class="token command"><span class="token keyword keyword-rmdir">rmdir</span> <span class="token parameter attr-name">/s</span> <span class="token parameter attr-name">/q</span> build\Debug</span>
+<span class="token command"><span class="token keyword keyword-cmake">cmake</span> <span class="token parameter attr-name">-G</span> <span class="token string">"MinGW Makefiles"</span> <span class="token parameter attr-name">-S</span> . <span class="token parameter attr-name">-B</span> build\Debug -DCMAKE_BUILD_TYPE=Debug</span>
+
+<span class="token comment">:: 一步到位：配置 + 编译（VS Code Task "Configure Project" + "Build Project"）</span>
+</code></pre><p><strong>调试架构</strong>：四种方案共用同一 <code>.elf</code>，区别在于 GDB Server（probe-rs dap-server / JLinkGDBServerCL / pyOCD gdbserver）和 Option Bytes 处理策略。</p>
+<p><strong>F5 行为说明</strong>：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">方案</th>
+<th style="text-align:left">F5下载？</th>
+<th style="text-align:left">下载机制</th>
+<th style="text-align:left">日志显示在哪？</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>skip OFS</strong></td>
+<td style="text-align:left">✅ <strong>是</strong></td>
+<td style="text-align:left">preLaunchTask → <code>flash.cmd</code>（probe-rs download + <code>--skip-section</code>）</td>
+<td style="text-align:left"><strong>终端 (Terminal)</strong> 面板，Task 输出</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>write OFS</strong></td>
+<td style="text-align:left">✅ <strong>是</strong></td>
+<td style="text-align:left"><code>flashingEnabled: true</code>，probe-rs 自动烧录</td>
+<td style="text-align:left">probe-rs 输出（Debug Console / 终端）</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Cortex JLink</strong></td>
+<td style="text-align:left">✅ <strong>是</strong></td>
+<td style="text-align:left">GDB 启动后将 ELF 传给 JLinkGDBServerCL，JLink 自动擦除+烧录+校验</td>
+<td style="text-align:left"><strong>Debug Console</strong>（见实测日志 <code>Downloading... Erasing... Programming... Verifying...</code>）</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Cortex pyOCD</strong></td>
+<td style="text-align:left">✅ <strong>是</strong></td>
+<td style="text-align:left">GDB 启动后将 ELF 传给 pyOCD gdbserver，pyOCD 自动烧录（<code>noLoad: true</code> <strong>不阻止</strong>此过程）</td>
+<td style="text-align:left"><strong>Debug Console</strong>（见实测日志 <code>Erasing... Programming...</code>）</td>
+</tr>
+</tbody>
+</table>
+<p>所有方案 F5 都会自动下载固件到芯片，区别在于下载机制和 Option Bytes 处理策略。</p>
+<p><strong>FSP 配置</strong>：通过 RASC (RA Smart Configurator) 修改 <code>configuration.xml</code>，重新生成 <code>ra_gen/</code> 和 <code>cmake/</code>。</p>
+<p><img src="images/rasc%20create%20prj.png" alt="RASC 创建项目"></p>
+<h1 id="三-四种调试方案对比">三、四种调试方案对比 </h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">特性</th>
+<th style="text-align:left">方案 A: probe-rs (skip OFS)</th>
+<th style="text-align:left">方案 B: probe-rs (write OFS)</th>
+<th style="text-align:left">方案 C: Cortex JLink</th>
+<th style="text-align:left">方案 D: Cortex pyOCD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>调试器</strong></td>
+<td style="text-align:left"><strong>JLink / DAPLink</strong></td>
+<td style="text-align:left"><strong>JLink / DAPLink</strong></td>
+<td style="text-align:left"><strong>JLink 仅</strong></td>
+<td style="text-align:left"><strong>DAPLink 仅</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Option Bytes</strong></td>
+<td style="text-align:left"><strong>跳过</strong>（参考 e2studio，见下方说明）</td>
+<td style="text-align:left"><strong>写入</strong>（YAML Config 改为 Nvm）</td>
+<td style="text-align:left"><strong>写入</strong>（JLink 无 YAML 检查，GDB 发什么写什么）</td>
+<td style="text-align:left"><strong>写入</strong>（pyOCD 无 YAML 检查，GDB 发什么写什么）</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>烧录方式</strong></td>
+<td style="text-align:left"><strong>F5 自动</strong>: preLaunchTask → <code>flash.cmd</code></td>
+<td style="text-align:left"><strong>F5 自动</strong>: <code>flashingEnabled: true</code></td>
+<td style="text-align:left"><strong>F5 自动</strong>: GDB → JLinkGDBServerCL 自动烧录</td>
+<td style="text-align:left"><strong>F5 自动</strong>: GDB → pyOCD gdbserver 自动烧录（<code>noLoad</code> 无效）</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>推荐场景</strong></td>
+<td style="text-align:left"><strong>日常开发 ★★★</strong></td>
+<td style="text-align:left"><strong>首次烧录新板</strong></td>
+<td style="text-align:left">JLink 用户</td>
+<td style="text-align:left">DAPLink 备用</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Option Bytes 跳过原理</strong>：</p>
+<p>probe-rs 的芯片描述 <strong>YAML</strong> 定义了 Flash Config 区域，而 GNU LD 链接脚本也定义同名段（<code>__option_setting_ofs*</code>）。两者设计角度不同：LD 负责在 ELF 中生成 OFS 内容，YAML 告诉 probe-rs 如何烧录这些段。e2studio 的调试器（如 Renesas Flash Programmer）默认<strong>不擦除 Config 区域</strong>，保留 RASC 一次性写入的值。</p>
+<p>关键区别在于 <strong>probe-rs 的 YAML 软件访问控制</strong>：默认 YAML 将 Config 标记为 <code>!ReadOnly</code>，probe-rs 在软件层面检查到这个标记就<strong>拒绝写入</strong>，直接报错。JLink 和 pyOCD 没有这个 YAML 检查层，收到 GDB 发来的地址就直接写，所以不报错、不跳过。</p>
+<p>因此四种方案的实际行为：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">方案</th>
+<th style="text-align:left">是否写 OFS？</th>
+<th style="text-align:left">不报错原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>A (skip OFS)</strong></td>
+<td style="text-align:left"><strong>不写</strong>（<code>--skip-section</code> 显式跳过）</td>
+<td style="text-align:left">不写当然不报错</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>B (write OFS)</strong></td>
+<td style="text-align:left"><strong>写</strong>（YAML 改为 <code>!Nvm</code>，解除限制）</td>
+<td style="text-align:left">YAML 允许写入</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>C (JLink)</strong></td>
+<td style="text-align:left"><strong>写</strong></td>
+<td style="text-align:left">无 YAML 检查层</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>D (pyOCD)</strong></td>
+<td style="text-align:left"><strong>写</strong></td>
+<td style="text-align:left">无 YAML 检查层</td>
+</tr>
+</tbody>
+</table>
+<p>JLink/pyOCD 的行为等价于 probe-rs 方案 B（write OFS），每次 F5 都写入 OFS。因为 RASC 生成的 OFS 值是正确的，所以不会出问题。但若 OFS 配置不当（如安全位被覆盖），风险是一样的。<strong>方案 A（skip OFS）是唯一彻底不碰 Config 区域的方案，这就是它作为默认推荐的原因。</strong></p>
+</blockquote>
+<h1 id="三-方案-a--probe-rs-skip-ofs">三、方案 A — probe-rs (skip OFS) </h1>
+<p><strong>概述</strong>：推荐日常使用。probe-rs 内置 dap-server 作为 GDB Server，flashingEnabled: false 将烧录委托给 preLaunchTask（flash.cmd），通过 --skip-section 跳过 6 个 Option Bytes 段。</p>
+<p><strong>架构流程</strong>：</p>
+<div class="mermaid">sequenceDiagram
+    participant U as 用户
+    participant VS as VS Code
+    participant T as preLaunchTask
+    participant P as probe-rs dap-server
+    participant G as ARM GDB
+    participant M as RA8P1 Target
+
+    U-&gt;&gt;VS: F5 启动调试
+    VS-&gt;&gt;T: 执行 "Flash (skip option bytes)"
+    T-&gt;&gt;M: probe-rs download --skip-section ...
+    Note over T: 跳过 6 个 option 段
+    T--&gt;&gt;VS: Flash OK（或失败跳过）
+    VS-&gt;&gt;P: 启动 probe-rs dap-server
+    P--&gt;&gt;VS: Server Ready
+    VS-&gt;&gt;G: 启动 GDB，target extended-remote
+    G-&gt;&gt;P: 连接 GDB Server
+    P-&gt;&gt;M: SWD 连接
+    G-&gt;&gt;M: 加载符号 / 设置断点
+    G-&gt;&gt;M: run / continue
+    Note over M: 程序运行
+    U-&gt;&gt;VS: 断点触发
+    VS--&gt;&gt;U: 停在断点处
+</div><p><strong>配置关键点</strong>：</p>
+<pre data-role="codeBlock" data-info="jsonc" class="language-jsonc jsonc"><code>{
+    "type": "probe-rs-debug",
+    "chip": "R7KA8P1KF",
+    "chipDescriptionPath": "...\\RA8P1_Series.yaml",    // 必须用原始（只读）YAML
+    "runtimeExecutable": "...\\probe-rs.exe",
+    "runtimeArgs": ["dap-server"],
+    "flashingConfig": {
+        "flashingEnabled": false                         // 烧录由 preLaunchTask 完成
+    },
+    "preLaunchTask": "Flash (skip option bytes)"
+}
+</code></pre><p>核心要点：</p>
+<ul>
+<li><strong><code>chipDescriptionPath</code></strong> → 必须用 <strong><code>RA8P1_Series.yaml</code></strong>（Config 区域 <code>!ReadOnly</code>），不可用 <code>_writable.yaml</code></li>
+<li><strong><code>flashingEnabled: false</code></strong> → 烧录由 <code>flash.cmd</code> 独立完成</li>
+<li><strong><code>flash.cmd</code></strong> → 设计为"失败则跳过"，不影响调试流程</li>
+</ul>
+<p><strong>YAML 文件差异</strong>：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">文件</th>
+<th style="text-align:left">Config 区域</th>
+<th style="text-align:left">用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong><code>RA8P1_Series.yaml</code></strong></td>
+<td style="text-align:left"><code>!ReadOnly</code>，probe-rs 不会写入</td>
+<td style="text-align:left"><strong>方案 A（skip OFS）</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong><code>RA8P1_Series_writable.yaml</code></strong></td>
+<td style="text-align:left"><code>!Nvm</code>，probe-rs 可以写入</td>
+<td style="text-align:left"><strong>方案 B（write OFS）</strong></td>
+</tr>
+</tbody>
+</table>
+<h1 id="四-方案-b--probe-rs-write-ofs">四、方案 B — probe-rs (write OFS) </h1>
+<p><strong>概述</strong>：首次烧录新板或需要修改 Option Bytes 时使用。probe-rs 自动完成烧录（含 Config 区域），无需 preLaunchTask。</p>
+<p><strong>架构流程</strong>：</p>
+<div class="mermaid">sequenceDiagram
+    participant U as 用户
+    participant VS as VS Code
+    participant P as probe-rs dap-server
+    participant G as ARM GDB
+    participant M as RA8P1 Target
+
+    U-&gt;&gt;VS: F5 启动调试
+    VS-&gt;&gt;P: 启动 probe-rs dap-server + auto flash
+    P-&gt;&gt;M: 烧录 .elf（含 Config 区域）
+    M--&gt;&gt;P: Flash OK
+    P-&gt;&gt;M: halt after reset
+    P--&gt;&gt;VS: Server Ready + halted
+    VS-&gt;&gt;G: 启动 GDB，target extended-remote
+    G-&gt;&gt;P: 连接
+    Note over M: 调试中...
+</div><p><strong>配置关键点</strong>：</p>
+<pre data-role="codeBlock" data-info="jsonc" class="language-jsonc jsonc"><code>{
+    "type": "probe-rs-debug",
+    "chip": "R7KA8P1KF",
+    "chipDescriptionPath": "...\\RA8P1_Series_writable.yaml",  // 必须用可写 YAML
+    "runtimeExecutable": "...\\probe-rs.exe",
+    "runtimeArgs": ["dap-server"],
+    "flashingConfig": {
+        "flashingEnabled": true,
+        "haltAfterReset": true
+    }
+}
+</code></pre><p>核心要点：</p>
+<ul>
+<li><strong><code>chipDescriptionPath</code></strong> → 必须用 <strong><code>RA8P1_Series_writable.yaml</code></strong>（Config <code>!Nvm</code>）</li>
+<li><strong><code>flashingEnabled: true</code></strong> → probe-rs 自动烧录（含 Option Bytes）</li>
+<li>首次烧录新板时推荐</li>
+</ul>
+<h1 id="五-方案-c--cortex-debug-jlink">五、方案 C — Cortex Debug (JLink) </h1>
+<p><strong>概述</strong>：传统 cortex-debug + JLink GDB Server 方案，调试速度快、功能成熟。</p>
+<p><strong>架构流程</strong>：</p>
+<div class="mermaid">sequenceDiagram
+    participant U as 用户
+    participant VS as VS Code
+    participant J as JLinkGDBServerCL
+    participant G as ARM GDB
+    participant M as RA8P1 Target
+
+    U-&gt;&gt;VS: F5 启动调试
+    VS-&gt;&gt;J: 启动 JLinkGDBServerCL
+    Note over J: -singlerun -if swd -device R7KA8P1KF_CPU0
+    J--&gt;&gt;VS: Waiting for GDB connection
+    VS-&gt;&gt;G: 启动 GDB，target extended-remote :X
+    G-&gt;&gt;J: 连接
+    G-&gt;&gt;M: 自动烧录 ELF
+    Note over M: Downloading... Erasing...&lt;br/&gt;Programming... Verifying...
+    Note over M: 调试中...
+</div><p><strong>配置关键点</strong>：</p>
+<pre data-role="codeBlock" data-info="jsonc" class="language-jsonc jsonc"><code>{
+    "name": "Cortex Debug (JLink)",
+    "type": "cortex-debug",
+    "servertype": "jlink",
+    "interface": "swd",
+    "device": "R7KA8P1KF_CPU0",      // 必须带 _CPU0 后缀
+    "runToEntryPoint": "main"
+}
+</code></pre><p>核心要点：</p>
+<ul>
+<li><strong><code>device: "R7KA8P1KF_CPU0"</code></strong> → 必须带 <strong><code>_CPU0</code></strong> 后缀（JLink GDB Server 要求）</li>
+<li>F5 时 GDB 自动将 ELF 传给 JLinkGDBServerCL 完成烧录（+校验），日志见 Debug Console</li>
+<li>JLink <strong>无 YAML 检查</strong>，会写入 Option Bytes（等价于 probe-rs 方案 B）</li>
+<li>无需 <code>chipDescriptionPath</code></li>
+</ul>
+<h1 id="六-方案-d--cortex-debug-pyocd">六、方案 D — Cortex Debug (pyOCD) </h1>
+<p><strong>概述</strong>：cortex-debug + pyOCD GDB Server，适配 DAPLink。pyOCD 从 CMSIS Pack 读取芯片信息，无需 YAML 描述文件。</p>
+<p><strong>注意</strong>：实测 <code>noLoad: true</code> <strong>不阻止</strong> pyOCD gdbserver 烧录。F5 时 GDB 会将 ELF 传给 pyOCD，pyOCD 自动完成擦除+编程（见 Debug Console 日志 <code>Erasing... Programming...</code>）。但 <code>noLoad</code> 可能影响 cortex-debug 是否发送 GDB <code>load</code> 命令，不同版本行为可能不同。如需真正跳过烧录（保护 Option Bytes），建议改用方案 A（skip OFS）。</p>
+<p><strong>架构流程</strong>：</p>
+<div class="mermaid">sequenceDiagram
+    participant U as 用户
+    participant VS as VS Code
+    participant P as pyOCD gdbserver
+    participant G as ARM GDB
+    participant M as RA8P1 Target
+
+    U-&gt;&gt;VS: F5 启动调试
+    VS-&gt;&gt;P: 启动 pyocd gdbserver
+    P-&gt;&gt;P: 加载 CMSIS Pack
+    P-&gt;&gt;M: 连接
+    P--&gt;&gt;VS: GDB server listening（stderr）
+    Note over VS: initMatch 匹配 → Server Ready
+    VS-&gt;&gt;G: 启动 GDB
+    G-&gt;&gt;P: 连接
+    P-&gt;&gt;M: auto flash（实测 `noLoad: true` 不阻止）
+    P--&gt;&gt;VS: Erasing... Programming...
+    Note over M: 调试中...
+</div><p><strong>配置关键点</strong>：</p>
+<pre data-role="codeBlock" data-info="jsonc" class="language-jsonc jsonc"><code>{
+    "name": "Cortex Debug (pyOCD)",
+    "type": "cortex-debug",
+    "servertype": "pyocd",
+    "serverpath": "D:\\Program Files\\Python313\\Scripts\\pyocd.exe",
+    "device": "R7KA8P1KF",              // 不带 _CPU0
+    "targetId": "R7KA8P1KF",            // 传给 --target
+    "cmsisPack": "D:\\Program Files\\pyocd\\packs\\Renesas.RA_DFP.6.1.0.pack",
+    "noLoad": true                       // 仅调试不烧录（实测无效，pyOCD 仍会烧录）
+}
+</code></pre><p>核心要点：</p>
+<ul>
+<li><strong><code>device</code></strong> / <strong><code>targetId</code></strong> → 用 <strong><code>R7KA8P1KF</code></strong>（不带 <code>_CPU0</code>）</li>
+<li><strong><code>cmsisPack</code></strong> → 指向本地 <code>.pack</code>，pyOCD 自动转为 <code>--pack &lt;path&gt;</code></li>
+<li>pyOCD <strong>无 YAML 检查</strong>，会写入 Option Bytes（等价于 probe-rs 方案 B）</li>
+<li><strong><code>noLoad: true</code></strong> → 实测无法阻止 pyOCD 烧录，若要保护 Option Bytes 请用方案 A</li>
+</ul>
+<p><strong>cortex-debug 补丁说明</strong>：</p>
+<p>cortex-debug 1.12.1 的 <code>PyOCDServerController.initMatch</code> 硬编码为正则 <code>/GDB server started (at|on) port/</code>，但 pyOCD 0.44.1 实际输出 <code>GDB server **listening** on port 50000</code>（输出到 stderr）。已手动补丁：</p>
+<pre data-role="codeBlock" data-info="diff" class="language-diff diff"><code><span class="token deleted-sign deleted"><span class="token prefix deleted">-</span><span class="token line"> initMatch(){return/GDB server started (at|on) port/}
+</span></span><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span><span class="token line"> initMatch(){return/GDB server (started (at|on) port|listening on port)/}
+</span></span></code></pre><p>补丁位置：<code>%USERPROFILE%\.vscode\extensions\marus25.cortex-debug-1.12.1\dist\debugadapter.js</code></p>
+<p>该补丁在更新 cortex-debug 扩展后需重新应用。</p>
+<p>备用方案（补丁丢失时）：</p>
+<ul>
+<li>使用 <code>.vscode\pyocd_server.cmd</code>（批处理包装器，添加 <code>--pack</code> 参数）</li>
+</ul>
+<h1 id="七-烧录命令详解附加">七、烧录命令详解(附加) </h1>
+<h2 id="probe-rs-烧录">probe-rs 烧录 </h2>
+<p>方案 A（跳过 Option Bytes，封装在 <code>flash.cmd</code>）：</p>
+<pre data-role="codeBlock" data-info="batch" class="language-batch batch"><code><span class="token command"><span class="token keyword keyword-probe">probe</span>-rs download <span class="token operator">^</span>
+  <span class="token parameter attr-name">--chip</span> R7KA8P1KF <span class="token operator">^</span>
+  <span class="token parameter attr-name">--chip-description-path</span> <span class="token string">"D:\Program Files\probe-rs-tools-x86_64-pc-windows-msvc\renesas_ra\RA8P1_Series.yaml"</span> <span class="token operator">^</span>
+  <span class="token parameter attr-name">--protocol</span> swd <span class="token parameter attr-name">--speed</span> <span class="token number">1000</span> <span class="token parameter attr-name">--allow-erase-all</span> <span class="token operator">^</span>
+  <span class="token parameter attr-name">--skip-section</span> <span class="token string">"__option_setting_ofs0_reg$$"</span> <span class="token operator">^</span>
+  <span class="token parameter attr-name">--skip-section</span> <span class="token string">"__option_setting_ofs2_reg$$"</span> <span class="token operator">^</span>
+  <span class="token parameter attr-name">--skip-section</span> <span class="token string">"__option_setting_ofs1_sec_reg$$"</span> <span class="token operator">^</span>
+  <span class="token parameter attr-name">--skip-section</span> <span class="token string">"__option_setting_ofs1_sel_reg$$"</span> <span class="token operator">^</span>
+  <span class="token parameter attr-name">--skip-section</span> <span class="token string">"__option_setting_ofs3_sec_reg$$"</span> <span class="token operator">^</span>
+  <span class="token parameter attr-name">--skip-section</span> <span class="token string">"__option_setting_ofs3_sel_reg$$"</span> <span class="token operator">^</span>
+  build\Debug\ra8p1_titan_rtt_CM.elf</span>
+</code></pre><p>要点：<strong><code>RA8P1_Series.yaml</code></strong>（只读）+ <strong>6 个 <code>--skip-section</code></strong></p>
+<p>6 个 Option Bytes 段：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">段落名称</th>
+<th style="text-align:left">对应寄存器</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>__option_setting_ofs0_reg$$</code></td>
+<td style="text-align:left">OFS0</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>__option_setting_ofs2_reg$$</code></td>
+<td style="text-align:left">OFS2</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>__option_setting_ofs1_sec_reg$$</code></td>
+<td style="text-align:left">OFS1 Security</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>__option_setting_ofs1_sel_reg$$</code></td>
+<td style="text-align:left">OFS1 Select</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>__option_setting_ofs3_sec_reg$$</code></td>
+<td style="text-align:left">OFS3 Security</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>__option_setting_ofs3_sel_reg$$</code></td>
+<td style="text-align:left">OFS3 Select</td>
+</tr>
+</tbody>
+</table>
+<p>方案 B（写入 Option Bytes）：</p>
+<pre data-role="codeBlock" data-info="batch" class="language-batch batch"><code><span class="token command"><span class="token keyword keyword-probe">probe</span>-rs download <span class="token operator">^</span>
+  <span class="token parameter attr-name">--chip</span> R7KA8P1KF <span class="token operator">^</span>
+  <span class="token parameter attr-name">--chip-description-path</span> <span class="token string">"D:\Program Files\probe-rs-tools-x86_64-pc-windows-msvc\renesas_ra\RA8P1_Series_writable.yaml"</span> <span class="token operator">^</span>
+  <span class="token parameter attr-name">--protocol</span> swd <span class="token parameter attr-name">--speed</span> <span class="token number">1000</span> <span class="token parameter attr-name">--allow-erase-all</span> <span class="token operator">^</span>
+  build\Debug\ra8p1_titan_rtt_CM.elf</span>
+</code></pre><p>要点：<strong><code>RA8P1_Series_writable.yaml</code></strong>（可写） + <strong>无 <code>--skip-section</code></strong>（烧录完整 Flash 含 Config）</p>
+<p>其他命令：</p>
+<pre data-role="codeBlock" data-info="batch" class="language-batch batch"><code><span class="token comment">:: 仅擦除</span>
+<span class="token command"><span class="token keyword keyword-probe">probe</span>-rs erase <span class="token parameter attr-name">--chip</span> R7KA8P1KF <span class="token parameter attr-name">--chip-description-path</span> RA8P1_Series.yaml <span class="token parameter attr-name">--protocol</span> swd <span class="token parameter attr-name">--allow-erase-all</span></span>
+<span class="token comment">:: 列出调试器</span>
+<span class="token command"><span class="token keyword keyword-probe">probe</span>-rs list</span>
+</code></pre><h2 id="pyocd-烧录">pyOCD 烧录 </h2>
+<pre data-role="codeBlock" data-info="batch" class="language-batch batch"><code><span class="token command"><span class="token keyword keyword-pyocd">pyocd</span> flash <span class="token operator">^</span>
+  <span class="token parameter attr-name">--target</span> R7KA8P1KF <span class="token operator">^</span>
+  <span class="token parameter attr-name">--pack</span> <span class="token string">"D:\Program Files\pyocd\packs\Renesas.RA_DFP.6.1.0.pack"</span> <span class="token operator">^</span>
+  <span class="token parameter attr-name">--frequency</span> <span class="token number">1000000</span> <span class="token parameter attr-name">--erase</span> auto <span class="token operator">^</span>
+  build\Debug\ra8p1_titan_rtt_CM.elf</span>
+</code></pre><p>注意事项：</p>
+<ul>
+<li>pyOCD 0.44.1 可能尝试烧录 Option Bytes，Config 区域写保护时失败，可使用 <code>--skip</code> 跳过</li>
+<li><code>--pack</code> 指定本地 Pack，避免从网络下载（国内约 1760 个描述符易超时；<code>launch.json</code> 中 <code>cmsisPack</code> 已等效于 <code>--pack</code>）</li>
+</ul>
+<h2 id="jlink-烧录">JLink 烧录 </h2>
+<pre data-role="codeBlock" data-info="batch" class="language-batch batch"><code>"C:\Program Files\SEGGER\JLink_V858\JLinkExe.exe" -device R7KA8P1KF -if SWD -speed 1000 -autoconnect 1 -CommanderScript flash.jlink
+</code></pre><p>交互式：</p>
+<pre data-role="codeBlock" data-info="batch" class="language-batch batch"><code>"C:\Program Files\SEGGER\JLink_V858\JLinkExe.exe"
+  &gt; device R7KA8P1KF
+  &gt; if SWD
+  &gt; speed 1000
+  &gt; loadfile build\Debug\ra8p1_titan_rtt_CM.elf
+  &gt; r
+  &gt; g
+  &gt; exit
+</code></pre><h2 id="烧录方式汇总">烧录方式汇总 </h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">烧录方式</th>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">跳过 OFS</th>
+<th style="text-align:left">速度</th>
+<th style="text-align:left">适用调试方案</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">probe-rs download (skip)</td>
+<td style="text-align:left"><strong><code>flash.cmd</code></strong></td>
+<td style="text-align:left"><strong>是</strong></td>
+<td style="text-align:left"><strong>快</strong></td>
+<td style="text-align:left"><strong>方案 A (skip OFS)</strong></td>
+</tr>
+<tr>
+<td style="text-align:left">probe-rs download (all)</td>
+<td style="text-align:left">命令行</td>
+<td style="text-align:left">否</td>
+<td style="text-align:left">快</td>
+<td style="text-align:left"><strong>方案 B (write OFS)</strong></td>
+</tr>
+<tr>
+<td style="text-align:left">pyOCD flash (CLI)</td>
+<td style="text-align:left"><code>pyocd flash ...</code></td>
+<td style="text-align:left">需 <code>--skip</code></td>
+<td style="text-align:left">中</td>
+<td style="text-align:left">pyOCD 手动烧录</td>
+</tr>
+<tr>
+<td style="text-align:left">pyOCD debug (F5)</td>
+<td style="text-align:left">cortex-debug + <code>noLoad: true</code></td>
+<td style="text-align:left"><strong>会烧录</strong>（实测 <code>noLoad</code> 无效）</td>
+<td style="text-align:left">—</td>
+<td style="text-align:left">pyOCD F5 调试时会自动烧录</td>
+</tr>
+<tr>
+<td style="text-align:left">JLinkExe</td>
+<td style="text-align:left"><code>JLinkExe ...</code></td>
+<td style="text-align:left">N/A</td>
+<td style="text-align:left">快</td>
+<td style="text-align:left">方案 C (JLink)</td>
+</tr>
+</tbody>
+</table>
+<h1 id="八-故障排除">八、故障排除 </h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">问题</th>
+<th style="text-align:left">原因</th>
+<th style="text-align:left">解决</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>probe-rs timeout</strong></td>
+<td style="text-align:left">调试器被前一会话占用</td>
+<td style="text-align:left">断开 USB 重连，重启 VS Code</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>flash.cmd failed</strong></td>
+<td style="text-align:left">probe-rs 忙或 YAML 路径错误</td>
+<td style="text-align:left">检查 <strong><code>chipDescriptionPath</code></strong> 和调试器连接</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>The chip description does not contain "Config"</strong></td>
+<td style="text-align:left">YAML 文件错误</td>
+<td style="text-align:left">确认使用<strong>正确的 YAML</strong>（只读 vs 可写）</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>pyOCD Timeout (no match)</strong></td>
+<td style="text-align:left">initMatch 不匹配</td>
+<td style="text-align:left">检查<strong>补丁</strong>，或使用 wrapper</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>pyOCD FlashAlgoException</strong></td>
+<td style="text-align:left">pyOCD 版本过旧</td>
+<td style="text-align:left">使用 pip 安装的 <strong>0.44.1+</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>pyOCD pack index download timeout</strong></td>
+<td style="text-align:left">国内网络慢</td>
+<td style="text-align:left">使用 <strong><code>cmsisPack</code></strong> 直接指定本地 .pack 文件</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>JLink Could not connect</strong></td>
+<td style="text-align:left">驱动未安装或 USB 异常</td>
+<td style="text-align:left">重新安装 JLink 驱动</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>JLink Unknown device</strong></td>
+<td style="text-align:left">名称错误</td>
+<td style="text-align:left">确认 <strong><code>_CPU0</code></strong> 后缀</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>断点不触发</strong></td>
+<td style="text-align:left">调试器未 halt</td>
+<td style="text-align:left">检查 <strong><code>haltAfterReset</code></strong> 或手动 monitor halt</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>ELF 文件找不到</strong></td>
+<td style="text-align:left">未编译</td>
+<td style="text-align:left">先执行 CMake Build</td>
+</tr>
+</tbody>
+</table>
+<h1 id="九-参考资料">九、参考资料 </h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">工具 / 资料</th>
+<th style="text-align:left">链接 / 说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>probe-rs</strong></td>
+<td style="text-align:left"><a href="https://github.com/probe-rs/probe-rs">https://github.com/probe-rs/probe-rs</a> — 嵌入式调试工具，内置 GDB server</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>probe-rs 文档 (Flash)</strong></td>
+<td style="text-align:left"><a href="https://probe.rs/docs/tools/flash/">https://probe.rs/docs/tools/flash/</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>pyOCD</strong></td>
+<td style="text-align:left"><a href="https://github.com/pyocd/pyOCD">https://github.com/pyocd/pyOCD</a> — CMSIS-DAP 调试器</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>pyOCD 文档</strong></td>
+<td style="text-align:left"><a href="https://pyocd.io/docs/">https://pyocd.io/docs/</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>cortex-debug</strong></td>
+<td style="text-align:left"><a href="https://github.com/Marus/cortex-debug">https://github.com/Marus/cortex-debug</a> — VS Code 扩展</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>JLink (SEGGER)</strong></td>
+<td style="text-align:left"><a href="https://www.segger.com/products/debug-probes/j-link/">https://www.segger.com/products/debug-probes/j-link/</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Renesas RA DFP Pack</strong></td>
+<td style="text-align:left"><code>Renesas.RA_DFP.6.1.0.pack</code> — 本地路径 <code>D:\Program Files\pyocd\packs\</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Arm GNU Toolchain</strong></td>
+<td style="text-align:left"><a href="https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads">Arm GNU Toolchain 13.3.Rel1</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>RA8P1 (R7KA8P1KF) 数据手册</strong></td>
+<td style="text-align:left">Renesas 官网文档</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>RT-Thread Titan Board</strong></td>
+<td style="text-align:left"><a href="https://github.com/RT-Thread-Studio/sdk-bsp-ra8p1-titan-board">GitHub SDK BSP</a> / <a href="https://github.com/RT-Thread/rt-thread/tree/master/bsp/renesas/ra8p1-titan-board">RT-Thread 主线 BSP</a> — 本工程使用的 RA8P1 测试开发板</td>
+</tr>
+</tbody>
+</table>
+<h1 id="十-总结">十、总结 </h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">优先级</th>
+<th style="text-align:left">方案</th>
+<th style="text-align:left">调试器</th>
+<th style="text-align:left">场景</th>
+<th style="text-align:left">核心要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>★★★</strong></td>
+<td style="text-align:left"><strong>probe-rs (skip OFS)</strong></td>
+<td style="text-align:left">JLink / DAPLink</td>
+<td style="text-align:left"><strong>日常调试</strong></td>
+<td style="text-align:left"><strong>只读 YAML + flash.cmd + 6 个 --skip-section</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>★★☆</strong></td>
+<td style="text-align:left"><strong>probe-rs (write OFS)</strong></td>
+<td style="text-align:left">JLink / DAPLink</td>
+<td style="text-align:left"><strong>首次烧录 / 改 OFS</strong></td>
+<td style="text-align:left"><strong>可写 YAML + flashingEnabled: true</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>★★☆</strong></td>
+<td style="text-align:left"><strong>Cortex JLink</strong></td>
+<td style="text-align:left">JLink 仅</td>
+<td style="text-align:left">传统调试</td>
+<td style="text-align:left"><strong>device 加 _CPU0</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>★☆☆</strong></td>
+<td style="text-align:left"><strong>Cortex pyOCD</strong></td>
+<td style="text-align:left">DAPLink 仅</td>
+<td style="text-align:left">DAPLink 备用</td>
+<td style="text-align:left"><strong>cmsisPack + noLoad（实测无效，仍会烧录）</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>工具链</strong>：Arm GNU Toolchain 13.3.Rel1 @ <code>D:\Program Files\GCC\arm-gnu-toolchain-13.3.rel1-mingw-w64-i686-arm-none-eabi\bin</code>（通过 <code>ARM_GCC_TOOLCHAIN_PATH</code> 指定；旧 README 示例的 <code>C:\12_2_mpacbti_rel1\bin</code> 本机未安装）</p>
+
+      </div>
+      
+      
+    
+    
+    <script type="module">
+// TODO: If ZenUML gets integrated into mermaid in the future,
+//      we can remove the following lines.
+
+
+var MERMAID_CONFIG = ({"startOnLoad":false});
+if (typeof MERMAID_CONFIG !== 'undefined') {
+  MERMAID_CONFIG.startOnLoad = false
+  MERMAID_CONFIG.cloneCssStyles = false
+  MERMAID_CONFIG.theme = "default"
+}
+
+mermaid.initialize(MERMAID_CONFIG || {})
+if (typeof(window['Reveal']) !== 'undefined') {
+  function mermaidRevealHelper(event) {
+    var currentSlide = event.currentSlide
+    var diagrams = currentSlide.querySelectorAll('div.mermaid')
+    for (var i = 0; i < diagrams.length; i++) {
+      var diagram = diagrams[i]
+      if (!diagram.hasAttribute('data-processed')) {
+        mermaid.init(null, diagram, ()=> {
+          Reveal.slide(event.indexh, event.indexv)
+        })
+      }
+    }
+  }
+  Reveal.addEventListener('slidetransitionend', mermaidRevealHelper)
+  Reveal.addEventListener('ready', mermaidRevealHelper)
+  await mermaid.run({
+    nodes: document.querySelectorAll('div.mermaid')
+  })
+} else {
+  await mermaid.run({
+    nodes: document.querySelectorAll('div.mermaid')
+  })
+}
+</script>
+    
+    
+    
+  
+    </body></html>
