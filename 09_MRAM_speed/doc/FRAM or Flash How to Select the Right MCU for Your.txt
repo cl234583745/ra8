@@ -1,0 +1,123 @@
+=== PAGE 1 ===
+Technical Article
+FRAM or Flash: How to Select the Right MCU for Your 
+Application
+Caleb Overbay
+When choosing a microcontroller (MCU) to use in your application, you will have to decide between using a 
+device with flash or ferroelectric random access memory (FRAM). You might be wondering what FRAM is and 
+if it’s a worthwhile feature. FRAM offers several advantages over traditional memory technologies such as flash, 
+including faster write speeds, unified memory, low energy writes and there is no need for pre-erasing. These 
+advantages directly translate into real function-level benefits in low-power applications.
+Consider an application that requires firmware updates in the field such as over-the-air (OTA) updating. Let’s 
+say that you need to transfer a 4kB firmware image into memory via Serial Peripheral Interface (SPI) and are 
+debating between using flash or an FRAM-based device. A quick experiment using the same SPI settings for 
+both an FRAM and flash device shows the immediate benefit FRAM has over flash in this application. Table 1 
+details the devices used as master, slave, the SPI clock rate and the total amount of data transmitted in this 
+application.
+Table 1. Application Hardware and SPI Setup
+Master
+Flash Slave
+FRAM Slave
+Serial Clock
+Total Data Receiver/
+Transmitter
+MSP430FR4133
+MSP430F5529
+MSP430FR5969
+1MHz
+4,096 bytes
+The time saved using FRAM is apparent in Figure 1 below. Imagine being able to update your firmware 16x 
+faster! This is one of the fundamental values FRAM provides over flash in this application. Notice how the FRAM 
+write time is roughly the same as the SPI transfer time for the flash use case. This is no coincidence. In fact, the 
+majority of time spent “programming” FRAM in this application is actually spent transferring the data over SPI. 
+Overall, you can write FRAM at speeds much greater than 1 MBps and 100x the write speed of flash.
+www.ti.com
+SSZTA32 – JUNE 2017
+Submit Document Feedback
+FRAM or Flash: How to Select the Right MCU for Your Application
+1
+Copyright © 2023 Texas Instruments Incorporated
+
+=== PAGE 2 ===
+Figure 1. 4-kB Firmware Update Speed
+You can also see that a large portion of the time consumed on the flash device is spent erasing the old firmware, 
+whereas FRAM doesn’t require this pre-erase. By eliminating the memory erase time, you also eliminate the 
+energy bottleneck associated with flash technology. For comparison, check out the energy consumed during the 
+flash and FRAM updates in Figure 2.
+www.ti.com
+2
+FRAM or Flash: How to Select the Right MCU for Your Application
+SSZTA32 – JUNE 2017
+Submit Document Feedback
+Copyright © 2023 Texas Instruments Incorporated
+
+=== PAGE 3 ===
+Figure 2. 4-kB Firmware Update Energy Consumption
+Here is another example of FRAM’s superiority over flash. Measured one of TI’s LaunchPad™ development kits, 
+the FRAM device consumed 21x less energy than the flash device when updating 4 kB of memory. This type of 
+energy savings can increase an application’s battery life drastically and doesn’t just benefit OTA applications, but 
+remote sensing and data-logging applications as well.
+One of the greatest benefits FRAM provides in this application is unseen and often overlooked. To program a “1” 
+in flash, you first need to perform an erase. The smallest amount of memory that can be erased when using flash 
+is called a segment, and on an MSP430™ MCU, a segment is 512 bytes. Figure 3 shows a similar application 
+where you only want to update 1.25 kB of the firmware instead of all 4 kB.
+www.ti.com
+SSZTA32 – JUNE 2017
+Submit Document Feedback
+FRAM or Flash: How to Select the Right MCU for Your Application
+3
+Copyright © 2023 Texas Instruments Incorporated
+
+=== PAGE 4 ===
+Figure 3. Partial Segment Firmware Update
+From the viewpoint of FRAM, this application is almost no different than updating the entire firmware. 
+Conversely, this is no trivial task for flash due to segment boundaries. Figure 3 shows how the firmware update 
+splits segment No. 4 in half. To program this segment, it must first be erased entirely. So how do you keep the 
+rest of the code in the segment intact? You’d have to copy the segment into RAM, combine it with the new 
+update and then program it back into flash. This requires a significant amount of RAM, increases time and adds 
+complexity to the update process that would be completely eliminated when using FRAM.
+In conclusion, FRAM technology offers benefits for a variety of applications. The fast write speeds, unified 
+memory, high endurance and low energy consumption are setting a new standard for MCU memory and 
+enabling innovative solutions worldwide. You can quickly evaluate or start rapidly prototyping an FRAM-based 
+solution using one of the MSP430 MCU FRAM-based LaunchPad development kits. These kits offer everything 
+necessary to get started developing for under $20, and are available through distributors and the TI store.
+Additional Resources
+•
+Explore all of the benefits of FRAM technology.
+•
+Download these application reports:
+–
+Over-the-Air (OTA) Update with the MSP430FR57xx
+–
+FRAM FAQs
+–
+MSP430 FRAM Quality and Reliability
+www.ti.com
+4
+FRAM or Flash: How to Select the Right MCU for Your Application
+SSZTA32 – JUNE 2017
+Submit Document Feedback
+Copyright © 2023 Texas Instruments Incorporated
+
+=== PAGE 5 ===
+IMPORTANT NOTICE AND DISCLAIMER
+TI PROVIDES TECHNICAL AND RELIABILITY DATA (INCLUDING DATA SHEETS), DESIGN RESOURCES (INCLUDING REFERENCE 
+DESIGNS), APPLICATION OR OTHER DESIGN ADVICE, WEB TOOLS, SAFETY INFORMATION, AND OTHER RESOURCES “AS IS” 
+AND WITH ALL FAULTS, AND DISCLAIMS ALL WARRANTIES, EXPRESS AND IMPLIED, INCLUDING WITHOUT LIMITATION ANY 
+IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT OF THIRD 
+PARTY INTELLECTUAL PROPERTY RIGHTS.
+These resources are intended for skilled developers designing with TI products. You are solely responsible for (1) selecting the appropriate 
+TI products for your application, (2) designing, validating and testing your application, and (3) ensuring your application meets applicable 
+standards, and any other safety, security, regulatory or other requirements.
+These resources are subject to change without notice. TI grants you permission to use these resources only for development of an 
+application that uses the TI products described in the resource. Other reproduction and display of these resources is prohibited. No license 
+is granted to any other TI intellectual property right or to any third party intellectual property right. TI disclaims responsibility for, and you 
+will fully indemnify TI and its representatives against, any claims, damages, costs, losses, and liabilities arising out of your use of these 
+resources.
+TI’s products are provided subject to TI’s Terms of Sale or other applicable terms available either on ti.com or provided in conjunction with 
+such TI products. TI’s provision of these resources does not expand or otherwise alter TI’s applicable warranties or warranty disclaimers for 
+TI products.
+TI objects to and rejects any additional or different terms you may have proposed. IMPORTANT NOTICE
+Mailing Address: Texas Instruments, Post Office Box 655303, Dallas, Texas 75265
+Copyright © 2023, Texas Instruments Incorporated
+

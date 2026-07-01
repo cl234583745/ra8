@@ -1,0 +1,548 @@
+<!DOCTYPE html><html><head>
+      <title>RA8P1_MRAM_Test_Summary</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\jerry\.codearts-doer-for-coding\extensions\shd101wyy.markdown-preview-enhanced-0.8.21\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script>
+    </head>
+    <body for="html-export">
+      <div class="crossnote markdown-preview  ">
+      
+<h1>九、RA8P1 MRAM速度测试和各种Flash技术对比</h1>
+
+<div class="md-toc">
+<div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#一-背景" class="md-toc-link">
+            <p>一、背景</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#二-测试环境配置" class="md-toc-link">
+            <p>二、测试环境配置</p>
+
+          </a></div><details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#三-写入速度测试" class="md-toc-link"><p>三、写入速度测试</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#31-时序公式手册-70161-table-70121" class="md-toc-link">
+            <p>3.1 时序公式（手册 §70.16.1 Table 70.121）</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#32-实测结果" class="md-toc-link">
+            <p>3.2 实测结果</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#33-读取速度" class="md-toc-link">
+            <p>3.3 读取速度</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#34-测试代码结构" class="md-toc-link">
+            <p>3.4 测试代码结构</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#四-dcache-兼容性问题" class="md-toc-link"><p>四、DCache 兼容性问题</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#41-症状" class="md-toc-link">
+            <p>4.1 症状</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#42-根因分析" class="md-toc-link">
+            <p>4.2 根因分析</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#44-驱动的缺失" class="md-toc-link">
+            <p>4.4 驱动的缺失</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#45-临时解决" class="md-toc-link">
+            <p>4.5 临时解决</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#五-嵌入式非易失存储技术对比" class="md-toc-link">
+            <p>五、嵌入式非易失存储技术对比</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#六-待解决问题" class="md-toc-link">
+            <p>六、待解决问题</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#七-总结" class="md-toc-link">
+            <p>七、总结</p>
+
+          </a></div>
+</div>
+<h1 id="一-背景">一、背景 </h1>
+<ul>
+<li>Renesas RA8P1 是首款搭载 Cortex-M85 内核的 MCU，主频可达 1 GHz。其片内集成了 <strong>Code MRAM</strong>（磁阻随机存取存储器）作为非易失存储介质，替代传统的嵌入式闪存（eFlash）。</li>
+<li>本文档记录了对 RA8P1 Code MRAM 写入/读取性能的实际测试结果、与 DCache 的兼容性问题，以及系统总线数据路径分析。</li>
+<li>扩展对比eFlash（NOR）、MRAM（STT-MRAM）、RRAM、PCM（PRAM）、FRAM（FeRAM）</li>
+</ul>
+<h1 id="二-测试环境配置">二、测试环境配置 </h1>
+<ul>
+<li>时钟配置</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>时钟域</th>
+<th>频率</th>
+<th>来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPU（内核）</td>
+<td>1 GHz</td>
+<td>PLL1P ÷ 1</td>
+</tr>
+<tr>
+<td>MRICLK（MRAM 总线时钟）</td>
+<td>250 MHz</td>
+<td>PLL1P ÷ 4</td>
+</tr>
+<tr>
+<td>MRPCLK（MRAM 外设时钟）</td>
+<td>125 MHz</td>
+<td>PLL1P ÷ 8</td>
+</tr>
+</tbody>
+</table>
+<p>来源：<code>ra_gen/bsp_clock_cfg.h</code></p>
+<ul>
+<li>MRAM 硬件规格</li>
+</ul>
+<p>来源：RA8P1 用户手册 R01UH1064EJ0110 §60</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Code MRAM 容量</td>
+<td>最大 1 MB（地址 <code>0x0208_0000</code>）</td>
+</tr>
+<tr>
+<td>编程数据缓冲区</td>
+<td>32 字节</td>
+</tr>
+<tr>
+<td>写入触发条件</td>
+<td>缓冲区满（32 B）或 MRCFLR.MRCFL 强制刷新</td>
+</tr>
+<tr>
+<td>总线接口</td>
+<td>MRC0BI（Code MRAM Bus Interface）</td>
+</tr>
+<tr>
+<td>额外 MRAM</td>
+<td>MRE0BI，只读接口</td>
+</tr>
+<tr>
+<td>最大总线频率</td>
+<td>500 MHz（MRICLK）</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>计时方法</li>
+</ul>
+<p>DWT 循环计数器（<code>DWT-&gt;CYCCNT</code>）在主频 1 GHz 下以 CPU 周期计数，1 周期 = 1 ns。计数器为 32 位，约每 4.3 秒回绕一次（2³² ns）。所有测试均在回绕时间内完成，无需处理溢出。</p>
+<h1 id="三-写入速度测试">三、写入速度测试 </h1>
+<h2 id="31-时序公式手册-70161-table-70121">3.1 时序公式（手册 §70.16.1 Table 70.121） </h2>
+<ul>
+<li>Normal 模式：<code>tPMC(Typ) = 137.8/FMRICLK + 6.452 µs</code>（每 32 B）</li>
+<li>High-speed 模式：<code>tPMC(Typ) = 137.8/FMRICLK + 4.452 µs</code>（每 32 B）</li>
+</ul>
+<p>High-speed 模式由 FSP 驱动 <code>r_mram.c:907</code> 中设置 <code>MRPSC.MHSPEN = 1</code> 启用。</p>
+<p>MRICLK = 250 MHz 时理论值：<strong>~5.0 µs/32 B → ~6.4 MB/s</strong></p>
+<h2 id="32-实测结果">3.2 实测结果 </h2>
+<table>
+<thead>
+<tr>
+<th>数据模式</th>
+<th>写入速度（MB/s）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>递增（种子）</td>
+<td>6.07</td>
+<td>混合比特翻转（约 50%），最慢</td>
+</tr>
+<tr>
+<td>全 0xFF（擦除态→写入）</td>
+<td>8.19</td>
+<td>翻转最少，最快</td>
+</tr>
+<tr>
+<td>全 0x00（上一轮后）</td>
+<td>7.08</td>
+<td>介于之间</td>
+</tr>
+</tbody>
+</table>
+<p>速度差异的根本原因：MRAM 写入时间与<strong>比特翻转方向</strong>相关。0→1 翻转最快，1→0 次之，混合方向最慢。手册的 Typ 值（~6.4 MB/s）假定 50% 比特翻转。</p>
+<h2 id="33-读取速度">3.3 读取速度 </h2>
+<table>
+<thead>
+<tr>
+<th>操作</th>
+<th>512 KB 耗时</th>
+<th>等效带宽</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>memcpy（MRAM → SRAM）</td>
+<td>~18.9 ms</td>
+<td>~26.4 MB/s</td>
+</tr>
+<tr>
+<td>CRC-32 查表</td>
+<td>~35.7 ms</td>
+<td>~14.3 MB/s</td>
+</tr>
+</tbody>
+</table>
+<p>读取速度固定，与数据内容无关。读取期间 DCache 关闭，实测为纯 MRAM 访问速度。</p>
+<h2 id="34-测试代码结构">3.4 测试代码结构 </h2>
+<p>文件：<code>src/mram_test.c</code></p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>hal_entry()
+  └─ mram_auto_test()
+       ├─ 读取种子（0x020FF000）
+       ├─ 可选：关闭 DCache
+       ├─ 构建 CRC-32 表
+       ├─ test_pattern("incremental", fill_inc, seed)     ← 写 + 读 + CRC
+       ├─ test_pattern("all-0xFF",    fill_const, 0xFF)
+       ├─ test_pattern("all-0x00",    fill_const, 0x00)
+       ├─ 种子 +1 写回 MRAM（关中断保护）
+       └─ 可选：恢复 DCache
+</code></pre><ul>
+<li>计时：DWT 周期计数器（1 GHz 下 1 周期 = 1 ns）</li>
+<li>块大小：1 KB（512 次写操作 = 512 KB 总写量）</li>
+<li>验证：CRC-32 查表，写入前计算源 CRC，读取后对比</li>
+</ul>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>00&gt; ===== MRAM Write/Read Test =====
+00&gt; FW: 512 KB @ 0x02080000, Chunk: 1024 B, Seed: 0x23
+00&gt; 
+00&gt; --- Pattern: incremental (seed) ---
+00&gt;   Write 1KB: 158 us = 6329 KB/s (6.180 MB/s)
+00&gt;   Write all: 82047 us = 6240 KB/s (6.093 MB/s)
+00&gt;   Read: 18947 us = 27022 KB/s (26.388 MB/s)
+00&gt;   CRC: 35681 us, check: PASS
+00&gt; 
+00&gt; --- Pattern: all-0xFF ---
+00&gt;   Write 1KB: 115 us = 8695 KB/s (8.491 MB/s)
+00&gt;   Write all: 61067 us = 8384 KB/s (8.187 MB/s)
+00&gt;   Read: 18947 us = 27022 KB/s (26.388 MB/s)
+00&gt;   CRC: 35680 us, check: PASS
+00&gt; 
+00&gt; --- Pattern: all-0x00 ---
+00&gt;   Write 1KB: 135 us = 7407 KB/s (7.233 MB/s)
+00&gt;   Write all: 70601 us = 7252 KB/s (7.082 MB/s)
+00&gt;   Read: 18947 us = 27022 KB/s (26.388 MB/s)
+00&gt;   CRC: 35681 us, check: PASS
+00&gt; 
+00&gt; ===== Done =====
+</code></pre><h1 id="四-dcache-兼容性问题">四、DCache 兼容性问题 </h1>
+<h2 id="41-症状">4.1 症状 </h2>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>R_MRAM_Write() → FSP_ERR_IN_USE（错误码 8）于 r_mram.c:317
+</code></pre><p>错误条件为 <code>R_MRMS-&gt;MRCPS &amp; (ABUFFULL | PRGBSYC)</code> 在上一次写入后未清零。</p>
+<h2 id="42-根因分析">4.2 根因分析 </h2>
+<p>MRAM 的写入机制与传统 Flash 不同：它通过<strong>内存映射 AXI store</strong>（<code>*dest = *src</code>）将数据送入 32 字节编程数据缓冲区，然后在 P/E（Program/Erase）模式下写入存储单元。<strong>数据必须在 P/E 模式窗口内通过 AXI 总线到达 MRAM 控制器</strong>。</p>
+<p>RA8P1 总线系统包含四级缓存（Figure 15.1, §15）：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>CPU 核 → [D-Cache] → CPU0MAXIBI → [C-Cache] → [S-Cache] → 总线矩阵 → MRC0BI → MRAM
+</code></pre><ul>
+<li><strong>D-Cache（ARM L1 Data Cache, 16 KB）</strong>: 在 CPU 核内部，Cortex-M85 标配</li>
+<li><strong>C-Cache（Code-bus Cache, 16 KB）</strong>: Renesas 自定义 IP，仅缓存代码总线</li>
+<li><strong>S-Cache（System-bus Cache, 16 KB）</strong>: Renesas 自定义 IP，缓存系统总线</li>
+</ul>
+<p>三种状态的对比（§15 Figure 15.1, §2.16, §60.4）：</p>
+<table>
+<thead>
+<tr>
+<th>DCache 状态</th>
+<th>AXI 写事务</th>
+<th>MRAM 编程结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>关闭</strong></td>
+<td>store 直达总线矩阵 → MRC0BI → MRAM 缓冲区</td>
+<td>✅ 正常写入</td>
+</tr>
+<tr>
+<td><strong>开启 + Write-Back（默认）</strong></td>
+<td>store 被 D-Cache 吸收，不发总线</td>
+<td>❌ Error 8</td>
+</tr>
+<tr>
+<td><strong>开启 + FORCEWT=1</strong></td>
+<td>store 经 Write-Through 走总线，但 write buffer 可能延迟/合并 AXI 事务</td>
+<td>⚠️ 可能失败</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>注意：<code>BSP_CFG_DCACHE_FORCE_WRITETHROUGH</code>（<code>MEMSYSCTL-&gt;MSCR.FORCEWT</code>，§63.2.4）默认 = 1，强制 D-Cache 使用 Write-Through 策略。但 Write-Through 仍经过 write buffer，连续字节 store 可能被合并延迟，无法保证在 P/E 模式窗口内到达 MRAM 控制器。</p>
+</blockquote>
+<h2 id="44-驱动的缺失">4.4 驱动的缺失 </h2>
+<table>
+<thead>
+<tr>
+<th>文件</th>
+<th>是否有 DCache 处理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>r_mram.c</code>（FSP 驱动）</td>
+<td>❌ 无。未调用任何 <code>CleanDCache</code> / <code>InvalidateDCache</code></td>
+</tr>
+<tr>
+<td><code>mram_ep.c</code>（官方示例）</td>
+<td>❌ 无。仅 <code>__disable_irq()</code> / <code>__enable_irq()</code></td>
+</tr>
+<tr>
+<td><code>mram_test.c</code>（本测试）</td>
+<td>✅ 测试前后关闭/恢复 DCache</td>
+</tr>
+</tbody>
+</table>
+<p>来源：FSP v5.9 <code>ra/fsp/src/r_mram/r_mram.c</code> 全文检索 "cache" 无匹配。</p>
+<h2 id="45-临时解决">4.5 临时解决 </h2>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token function">SCB_CleanInvalidateDCache</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">SCB_DisableDCache</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// ... MRAM 写入操作 ...</span>
+<span class="token function">SCB_EnableDCache</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h1 id="五-嵌入式非易失存储技术对比">五、嵌入式非易失存储技术对比 </h1>
+<p>下表对比 MCU 片内嵌入式非易失存储技术。数据来源：RA8P1 手册 R01UH1064EJ0110、Renesas ISSCC 2024 STT-MRAM 论文、英飞凌 TC4xx RRAM 白皮书、意法半导体 Stellar P6 PCM 资料、JEDEC 标准。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>eFlash（NOR）</th>
+<th>MRAM（STT-MRAM）</th>
+<th>RRAM</th>
+<th>PCM（PRAM）</th>
+<th>FRAM（FeRAM）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>存储原理</strong></td>
+<td>浮栅电荷存储</td>
+<td>磁阻隧道结（MTJ）</td>
+<td>电阻态转变（氧空位）</td>
+<td>硫系化合物相变（晶态/非晶态）</td>
+<td>铁电体极化（PZT 膜）</td>
+</tr>
+<tr>
+<td><strong>MCU 代表产品</strong></td>
+<td>传统 MCU（40 nm+）</td>
+<td>RA8P1/T2/M2/D2（Renesas 22 nm）<br>S32K5（NXP 16 nm FinFET）</td>
+<td>AURIX TC4x（英飞凌 28 nm）<br>nRF54L15（Nordic 22 nm ULL）</td>
+<td>Stellar P6（ST 28 nm FD-SOI）<br>STM32V8</td>
+<td>MSP430 FRAM 系列（TI）、Ramtron</td>
+</tr>
+<tr>
+<td><strong>写入方式</strong></td>
+<td>页擦除→页编程（FCU）</td>
+<td>AXI store（<code>*addr=data</code>）</td>
+<td>位写入（无需擦除）</td>
+<td>位覆写</td>
+<td>位写入（无需擦除）</td>
+</tr>
+<tr>
+<td><strong>典型写速度</strong></td>
+<td>~0.1 MB/s</td>
+<td>~6 MB/s（实测）</td>
+<td>未公开（注①）<br>Nordic 实测：65 μs/word（单次），22 μs/word（顺序）</td>
+<td>未公开（注①）</td>
+<td><strong>125 ns/word</strong>（16 MB/s @ 8 MHz，注②）</td>
+</tr>
+<tr>
+<td><strong>读速度</strong></td>
+<td>受 Wait State 限制</td>
+<td>~26 MB/s（实测）</td>
+<td>未公开</td>
+<td>快于 eFlash</td>
+<td>SRAM 同等速度（系统时钟）</td>
+</tr>
+<tr>
+<td><strong>耐久度（次）</strong></td>
+<td>10K~100K</td>
+<td>100K~1M</td>
+<td>100K~1M</td>
+<td>10K~100K（+）</td>
+<td>10<sup>12~10</sup>15（几乎无限）</td>
+</tr>
+<tr>
+<td><strong>写入前擦除</strong></td>
+<td>需要</td>
+<td><strong>不需要</strong></td>
+<td><strong>不需要</strong></td>
+<td><strong>不需要</strong></td>
+<td><strong>不需要</strong></td>
+</tr>
+<tr>
+<td><strong>比特覆写</strong></td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><strong>数据保持</strong></td>
+<td>20 年 @ 85°C</td>
+<td>10 年 @ 125°C</td>
+<td>10 年 @ 85°C</td>
+<td>10+ 年 @ 125°C</td>
+<td>10+ 年 @ 85°C</td>
+</tr>
+<tr>
+<td><strong>最小制程</strong></td>
+<td>40 nm（受限）</td>
+<td>22 nm / 16 nm FinFET</td>
+<td>28 nm</td>
+<td>28 nm FD-SOI</td>
+<td>130 nm~500 nm（密度受限）</td>
+</tr>
+<tr>
+<td><strong>存储密度</strong></td>
+<td>高</td>
+<td>中/高</td>
+<td>中</td>
+<td>中（单元面积最小，注③）</td>
+<td><strong>低</strong>（通常 ≤16 Mb）</td>
+</tr>
+<tr>
+<td><strong>代表产品/官方资料</strong></td>
+<td>—</td>
+<td><a href="renesas.cn/zh/products/ra8p1">Renesas RA8P1</a><br><a href="nxp.com.cn/products/S32K5">NXP S32K5</a> <br><a href="nxp.com.cn/company/about-nxp/newsroom/NW-NXP-AND-TSMC-DELIVER-FIRST16NM-FINFET-MRAM">16纳米FinFET嵌入式MRAM</a></td>
+<td><a href="https://www.infineon.com/technology-news/2022/infatv202211-031">Infineon 新闻稿</a>（明确 RRAM）<br><a href="https://www.infineon.com/assets/row/public/documents/10/156/infineon-tc4x-overview-productpresentation-en.pdf">产品概览 PDF</a>（"RRAM-NVM"）<br><a href="https://www.nordicsemi.com/Products/nRF54L15">Nordic nRF54L15</a>（TSMC 22ULL eReRAM）</td>
+<td><a href="https://www.st.com.cn/zh/automotive-microcontrollers/stellar-p-motion-control.html">ST Stellar P6</a><br><a href="st.com.cn/content/st_com/zh/campaigns/stm32v8-high-performance-cortex-m85-mcu-z11.html">STM32V8</a></td>
+<td><a href="https://www.ti.com.cn/lit/pdf/SLASEE5">MSP430FR2422 数据手册</a>（tWRITE）<br><a href="https://www.ti.com/lit/an/slaa498b/slaa498b.pdf">SLAA498B 写速度应用报告</a>（125 ns/word）</td>
+</tr>
+<tr>
+<td><strong>是否需要 DCache 特殊处理</strong></td>
+<td>否（FCU 写）</td>
+<td><strong>是</strong></td>
+<td>待评估</td>
+<td>待评估</td>
+<td>否（CPU 本地总线）</td>
+</tr>
+<tr>
+<td><strong>核心优势</strong></td>
+<td>技术成熟、成本低</td>
+<td>无需擦除、密度与速度均衡、适合代码存储</td>
+<td>结构最简单、可扩展至先进制程、位写入</td>
+<td>单元面积最小（注③）、耐温最高（165°C）</td>
+<td>写入最快（125 ns/word，同 SRAM）、耐久度几乎无限（10^15+）</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>注①：RRAM（Infineon TC4x）和 PCM（ST Stellar P6/STM32V8）官方文档<strong>未公开明确写入时序</strong>（µs/byte）。Infineon 仅声明"RRAM 使用与 eFlash 相同的软件接口，功能行为一致"；ST 仅描述"fast read/write speeds with single-bit alterability"。两家的详细数据手册需 NDA 或注册访问，这与 Renesas 在 RA8P1 手册中明确给出 <code>tPMC</code> 时序公式形成鲜明对比。</p>
+<p>Nordic nRF54L15 的 RRAM 写入速度通过第三方分析（Argenox）获得：单次写入 65 μs/word，顺序地址写入 22 μs/word（比 nRF52 Flash 的 41 μs/word 快约 50%）。Nordic 官方数据手册仅标注"non-volatile memory (RRAM)"，未提供详细时序参数。</p>
+<p>注②：FRAM 写入速度来自 TI 官方应用报告 SLAA498B（Maximizing Write Speed on the MSP430 FRAM）Table 1：<strong>125 ns/word</strong>（16 bit word）。FRAM 控制器在 8 MHz 以下是零等待（1 周期/word），超过 8 MHz 需插入等待周期（NWAITSx）。FRAM 本质是"与 SRAM 速度相同的 NVM"——写入速度受限于 CPU/总线频率，而非 FRAM 存储单元本身。耐久度 10^15 次、无需擦除、位写入。</p>
+<p>注③：ST 官方博客（2026-01-29，STM32V8 发布）声明其 PCM 单元面积为 MRAM 和 RRAM 的一半——"our PCM allows us to halve the memory footprint compared to MRAM and RRAM, thus offering the smallest non-volatile memory cells in an MCU"。</p>
+<p><strong>FRAM 与 TI OptiFlash 的区别</strong>：FRAM 是新型 NVM <strong>介质</strong>（铁电体存储），直接替代 eFlash/RAM 作为 MCU 片内统一存储器。TI OptiFlash 是<strong>外置 NOR Flash + 硬件加速器</strong>的组合方案（包括 RL2 缓存控制器、Flash 线性控制器 FLC、和执行加速器 RAT），并非新型 NVM 介质。两者是不同层面的技术：FRAM 改变存储介质本身，OptiFlash 改变访问架构。</p>
+</blockquote>
+<h1 id="六-待解决问题">六、待解决问题 </h1>
+<ol>
+<li>
+<p><strong>MPU 方案</strong>：通过 <code>ARM_MPU_SetRegion()</code> 将 MRAM 标记为 Non-cacheable（无需关 DCache）</p>
+<ul>
+<li>第一次尝试：调用 <code>ARM_MPU_Disable()</code> 后触发 HardFault —— 原因：禁用 MPU 时会丢弃所有 BSP 预设的 MPU 区域，导致系统关键内存属性丢失</li>
+<li>第二次尝试：不调用 <code>ARM_MPU_Disable()</code>，仅执行 <code>ARM_MPU_SetRegion()</code> 后仍崩溃 —— 根因可能为：MRAM 的旧 DCache 行缓存了 Write-Back 数据，SetRegion 后属性变更但脏行未失效</li>
+<li>待测试修复：<code>ARM_MPU_SetRegion()</code> 前增加 <code>SCB_InvalidateDCache_by_Addr()</code> 清理 MRAM 范围内的缓存行（代码已写，未验证）</li>
+</ul>
+</li>
+<li>
+<p><strong>读性能优化</strong>：利用 MRAM Prefetch Buffer（MRCPFB）、Memory-to-Memory DMA 加速读取</p>
+</li>
+<li>
+<p><strong>S-Cache 影响</strong>：S-Cache（System-bus Cache, 16 KB）默认未启用（R_BSP_FlashCacheEnable() 仅启用 C-Cache）。若启用并设为 Write-Through 模式，需评估其对 MRAM 写入的影响</p>
+</li>
+<li>
+<p><strong>CPU1（Cortex-M33）</strong>：架构与 CPU0 相同（Figure 15.1），同样存在 D-Cache → CPU0MAXIBI → C-Cache → S-Cache → 总线矩阵 → MRC0BI 路径，预计 D-Cache 对 MRAM 写入的影响与 CPU0 一致，待实测确认</p>
+</li>
+</ol>
+<h1 id="七-总结">七、总结 </h1>
+<ol>
+<li>
+<p>RA8P1 Code MRAM 实测 AXI 写入速度 6.07~8.19 MB/s，符合手册公式理论值（~6.4 MB/s Typ，50% 翻转）；读取速度 ~26.4 MB/s。</p>
+</li>
+<li>
+<p>D-Cache 开启时 MRAM P/E 模式写入会失败（Error 8），根本原因在于 store 被缓存吸收无法在 P/E 窗口内到达 MRAM 控制器。当前可靠方案：写入前关 DCache（<code>SCB_DisableDCache()</code>），写入后恢复。FSP 驱动及官方示例均未处理此问题，属于系统集成层面的文档与设计空白。</p>
+</li>
+<li>
+<p>行业全景——各主要厂商的新型 NVM 路线：</p>
+<ul>
+<li><strong>MRAM</strong>：Renesas（RA8P1/T2/M2/D2，22 nm）、NXP（S32K5，16 nm FinFET）</li>
+<li><strong>RRAM</strong>：Infineon（AURIX TC4x，28 nm）、Nordic（nRF54L15，TSMC 22ULL eReRAM）</li>
+<li><strong>PCM</strong>：ST（Stellar P6 28 nm FD-SOI、STM32V8 18 nm FD-SOI）</li>
+<li><strong>FRAM</strong>：TI（MSP430 系列，密度受限，主攻低功耗计量/RFID）</li>
+<li><strong>外置 Flash + 加速器</strong>：TI OptiFlash（非新型 NVM 介质）</li>
+<li><strong>代工厂支撑</strong>：TSMC 提供 22 nm/16 nm MRAM、28 nm/6 nm RRAM；GlobalFoundries 提供 22FDX eMRAM（Auto Grade 1，150°C，500K 次耐久）</li>
+<li><strong>国产动态</strong>：目前国产MCU尚无量产集成新型NVM的产品，但国产RRAM已取得突破——<strong>新忆科技</strong>（清华孵化，55 nm→22 nm RRAM，累计出货超2000万颗，良率&gt;99%）、<strong>昕原半导体</strong>（28 nm RRAM量产线）、<strong>合肥睿科微</strong>（兆易创新合资，ISSCC 2026发表55 nm RRAM存算一体芯片，3D堆叠）。<strong>中芯国际</strong>40 nm RRAM已量产。国产MCU厂商正在与代工厂评估28~16 nm节点的RRAM/MRAM方案。<br>
+新型NVM（无需擦除、按位覆写）正在各细分领域加速替代传统 eFlash。</li>
+</ul>
+</li>
+<li>
+<p>官方文档写速度对比（按 32 B 归一化）：</p>
+<ul>
+<li><strong>FRAM（TI MSP430）</strong>: 2 µs/32 B = <strong>~16 MB/s</strong>（125 ns/16 bit word，@8 MHz，SLAA498B）</li>
+<li><strong>MRAM（Renesas RA8P1）</strong>: 4.7 µs/32 B = <strong>~6.4 MB/s</strong>（tPMC high-speed 公式，R01UH1064 §70.16.1）</li>
+<li><strong>RRAM（Nordic nRF54L15）</strong>: 176 µs/32 B = <strong>~0.18 MB/s</strong>（22 µs/32 bit word 顺序写入，nRF54L15 v1.0 §11.16.1）</li>
+<li><strong>PCM（ST 18 nm ePCM）</strong>: 85 µs/32 B = <strong>~0.38 MB/s</strong>（~3 Mbps，ST 白皮书 "18nm FD-SOI and ePCM"）</li>
+</ul>
+</li>
+</ol>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

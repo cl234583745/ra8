@@ -1,0 +1,392 @@
+=== PAGE 1 ===
+What is FRAM?
+FRAM, an acronym for ferroelectric random access memory,  
+is a non-volatile memory that can hold data even after it is  
+powered off. In spite of the name, FRAM is a ferroelectric memory 
+and is not affected by magnetic fields as there is no ferrous 
+material (iron) in the chip. Ferroelectric materials switch polarity 
+in an electric field, but are not affected by magnetic fields. 
+What are FRAM’s key advantages over Flash/EEPROM?
+	
+1.	Speed. FRAM has fast write times. Beyond all the other 
+operations, the actual write time to an FRAM memory 
+cell is less than 50ns. That is up to 1000x faster than 
+Flash/EEPROM. Additionally, unlike EEPROM where you 
+must have two steps to write data: a write command,  
+followed by a read/verify command; FRAM’s write 
+memory function happens in the same process as read 
+memory. There is only one memory access command, 
+one step for either reading or writing. So in effect, all the 
+time associated with an EEPROM write transaction is 
+eliminated in an FRAM-based smart IC.
+	
+2.	Low Power. Writes to the FRAM cell occur at low volt-
+age and very little current is needed to change the data. 
+With Flash, high voltages are needed. FRAM uses very 
+low power – 1.5v compared to 10-14v for Flash. FRAM’s 
+low voltage translates into low power usage and enables 
+more functionality at faster transactions speeds.
+	
+3.	Data Reliability. Because only a small amount of energy 
+is required, all the necessary power for FRAM is front-
+loaded at the beginning of data write. This avoids  
+“data-tearing,” a partial write of the data which occurs 
+when Flash based MCUs are removed from the power 
+source during a write cycle. Further, FRAM experiences 
+100 Trillion read/write cycles or greater – far exceeding 
+Flash or EEPROM write cycles.
+	
+4.	Unified memory means it’s the only technology to elimi-
+nate boundaries between variable and constant data, 
+which simplifies data handling, in-system programming 
+and firmware image 
+ 
+How does FRAM perform at high temperatures?
+FRAM is a very robust and reliable memory technology,  
+even at high temperatures. FRAM retains its data for more  
+than 10 years at 85 degrees C, or 100 years at 25C. This far  
+exceeds the requirements for most applications and  
+FRAM FAQs
+represents the robust data retention of FRAM. FRAM is also 
+used in several automotive applications and has been qualified 
+to withstand the extremely harsh conditions.
+Does FRAM lose data after a read?
+No. FRAM is a nonvolatile storage memory that retains its  
+data even after the power is turned off. However, similar to  
+commonly used DRAM (Dynamic Random Access Memory) 
+found in personal computers, workstations, and non-handheld 
+game-consoles, FRAM requires a memory restore after each 
+read. A memory restore is done because FRAM memory cells 
+require each bit accessed to be re-written in a refresh function. 
+Because FRAM has a nearly inexhaustible write endurance 
+(1015 write/read cycles), this is not a practical concern. 
+Does new embedded FRAM memory technology raise 
+security concerns?
+FRAM is already used in financial smartcard applications, 
+transit payment, and set-top boxes. Compared to existing 
+EEPROM technologies, FRAM is more resistant to data  
+corruption via electric fields and radiation. The extremely fast 
+write times and the small 130 nanometer (nm) process node 
+make it difficult for attackers to physically or electronically  
+detect and monitor the internal data on the device. Furthermore, 
+FRAM’s lower power consumption (and the fact that its read 
+and write power consumption is identical) arguably make it a 
+more difficult target to attack using differential power  
+analysis techniques. Read more.
+Are FRAM devices affected by magnetic fields?
+A common misconception is that ferroelectric crystals contain 
+iron or are ferromagnetic or have similar properties. The term 
+“ferroelectric” refers to similarity of the graph of charge plotted 
+as a function of voltage (Figure below) to the hysteresis loop 
+(BH curve) of ferromagnetic materials. Ferroelectric materials 
+are not affected by magnetic fields.
+
+=== PAGE 2 ===
+2  | FRAM FAQs	
+Texas Instruments
+How large of an electric field can an FRAM  
+device withstand?
+The FRAM memory cell operates by applying a switched  
+voltage to sense and restore the data state. The ferroelectric 
+film PZT is about 70nm thick. If the device is placed in a  
+50 kV field at 1 cm, it is not possible to produce more than  
+1V across the ferroelectric film. As a practical matter,  
+FRAM devices are impervious to external electric fields.
+Is FRAM affected by radiation or soft errors?
+Volatile memories, DRAM and SRAM, use a capacitor to 
+store charge or a simple latch to store state. These cells can 
+be easily upset by alpha particles, cosmic rays, heavy ions, 
+gamma, x-rays, etc. which cause bits to flip to an opposite 
+state. This is called a soft error, since a subsequent write will 
+be retained. The rate at which this occurs is called the Soft 
+Error Rate (SER) of the device. Because the FRAM cell stores 
+the state as a PZT film polarization, an alpha hit is very  
+unlikely to cause the polarization to change a given cell’s 
+state and the FRAM terrestrial SER is not even measurable.
+	
+This ‘radiation resistant’ characteristic of FRAM makes it  
+attractive for use in several emerging medical applications.
+What is TI’s focus in FRAM?
+While TI is currently producing standalone FRAM memory 
+devices, our internal focus is on
+•	 Embedded FRAM (as a 2 mask adder to digital process 
+flow). We have successfully designed arrays up to 32Mb. 
+•	 FRAM as a true NVRAM technology to replace cache 
+SRAM, DRAM, and Flash/EEPROM 
+•	 Supporting 1.5V operation for low power applications 
+While FRAM does provide unparalleled flexibility and benefits 
+to customers, initial implementations and designs are  
+optimized for targeted applications. It is important to  
+emphasize that FRAM technology can support both high 
+performance and low power applications; however, our 
+current FRAM array designs are optimized for low power 
+operation. Some items to consider with our initial FRAM 
+designs are:
+•	 They are best suited for devices operating below 25 MHz. 
+However, as with all technology evolutions, we expect to 
+design higher performance FRAM memory arrays in the 
+future that support devices operating at much higher  
+clock speeds. 
+•	 As stated above, we expect that several of our initial  
+FRAM memory devices will use 2T-2C configuration  
+(2 cells are used for each bit of data). This ‘redundant’ 
+methodology results in the crossover point where FRAM 
+arrays are smaller than equivalent Flash memory in  
+memories lower than 64KB – 128KB (depending on  
+design requirements). Again we expect that this  
+crossover point will increase in 1T-1C operation and in 
+future process technology shrinks. 
+•	 TI is also currently not targeting its embedded FRAM  
+products for automotive applications, but with increased 
+reliability and robustness of the memory signals, this  
+should be possible very soon. 
+Are F-RAM and FeRAM the same as FRAM?
+Yes. F-RAM, FeRAM and FRAM are synonymous. Texas  
+Instruments has chosen to use the acronym “FRAM”.
+Are there commercially available FRAM products in  
+the market?
+FRAM is commercially proven in the semiconductor market 
+with more than 150 million units sold by Ramtron (now  
+Cypress) alone. Their F-RAM memory products have become  
+a very popular choice in high quality industries such as  
+automotive.
+	
+TI’s MSP430FR57xx  family of devices have been available 
+in production quantities since March of 2012. On June 1, 2014 
+TI launched the MSP430FR59xx and MSP430FR58xx families 
+adding 34 devices to the MSP430™ FRAM family. 
+Can I solder FRAM microcontrollers under the same  
+conditions used for Flash memory based device?
+Yes, our newest generation of devices can survive the same 
+soldering and reflow conditions as any Flash part. Data  
+retention on older FRAM memory, however, cannot be  
+guaranteed when exceeding the specified maximum storage 
+temperature (150˚C).
+	
+For soldering during board manufacturing it is required to 
+follow the current JEDEC J-STD-020 specification with peak 
+reflow temperatures not higher than classified on the device 
+label on the shipping boxes or reels.
+	
+If hand soldering is required for application prototyping of 
+MSP430FR57xx devices, peak temperature must not exceed 
+250°C for a total of 5 minutes on any single device.
+	
+Only with MSP430FR57xx devices, programming of with 
+user application code should be performed post reflow/ 
+hand soldering.
+	
+Factory programmed information such as calibration values 
+are designed to withstand the temperatures normally reached 
+in the current JEDEC J-STD-020 specification.
+Can I program FRAM microcontrollers prior to reflow  
+soldering and under the same conditions as used for  
+Flash memory based device?
+The MSP430FR58xx and MSP430FR59xx family of devices, 
+and all FRAM-based MSP430 products released in 2014 or 
+later will support application programming of devices prior to 
+reflow. For the FR57xx family only, application programming is 
+recommended post reflow. 
+
+=== PAGE 3 ===
+	
+Consult the product datasheet for device specific  
+information on soldering recommendations. Also the FRAM 
+Quality and Reliability Guide provides more information on 
+soldering guidelines.
+Will code that’s been written on other MSP430 devices be 
+compatible with the new MSP430 devices with FRAM?
+Yes! C code written for flash-based MSP430 devices can be 
+used with the MSP430FR5xxx devices with FRAM. Since 
+FRAM uses many of the same peripherals found on other 
+MSP430 devices, the transition is very simple. We recommend 
+reading the Migration Guides found in the product folder for 
+more comprehensive information.www.ti.com/product/ 
+msp430fr5969.
+Is developing on FRAM completely different from  
+working with a Flash-based MCU?
+Not at all. The FRAM technology is completely transparent 
+when it comes to writing code. The development environment 
+is consistent and familiar. While programming and code  
+development is identical to developing on a flash-based 
+MSP430, the performance benefits are staggering, especially 
+when the need is for in-system programming. In fact, FRAM  
+improves on some traditional problems with data handling in 
+flash. Unified memory eliminates boundaries between variable 
+and constant data, which simplifies data handling, in-system 
+programming and firmware image backup. Not only that, 
+developers can write to FRAM at the bit level, further increasing 
+programming flexibility.
+Will my code and project port over from a Flash MSP430  
+to an FRAM MSP430?
+Yes, the FRAM devices are completely code compatible with 
+the other Flash memory based MSP430 MCUs. They are not, 
+however, pin compatible replacements. The FR5xx family has 
+incorporated some new peripherals including a flexible  
+clocking system and power management module. More details 
+are published in the Migrating from the MSP430F2xx Family to 
+the MSP430FR57xx Family (Rev. A).
+	
+© 2014 Texas Instruments Incorporated
+SLAT151
+TI Worldwide Technical Support
+Internet
+TI Semiconductor Product Information Center Home Page
+support.ti.com
+TI E2E™ Community Home Page
+e2e.ti.com
+Product Information Centers
+Americas	
+Phone	
++1(512) 434-1560
+Brazil	
+Phone	
+0800-891-2616
+Mexico	
+Phone	
+0800-670-7544
+	
+Fax	
++1(972) 927-6377
+	
+Internet/Email	
+support.ti.com/sc/pic/americas.htm
+Europe, Middle East, and Africa
+Phone
+	
+European Free Call	
+00800-ASK-TEXAS 
+	
+	
+(00800 275 83927)
+	
+International	
++49 (0) 8161 80 2121
+	
+Russian Support	
++7 (4) 95 98 10 701
+	
+Note: The European Free Call (Toll Free) number is not active in all ­countries.  
+If you have technical difficulty calling the free call number, please use the 
+­international number above.
+Fax	
++(49) (0) 8161 80 2045
+Internet	
+www.ti.com/asktexas
+Direct Email	
+asktexas@ti.com
+Japan
+Phone	
+Domestic	
+0120-92-3326
+Fax	
+International	
++81-3-3344-5317
+	
+Domestic	
+0120-81-0036
+Internet/Email	
+International	
+support.ti.com/sc/pic/japan.htm
+	
+Domestic	
+www.tij.co.jp/pic
+Asia
+Phone
+	
+International	
++91-80-41381665
+	
+Domestic	
+Toll-Free Number
+	
+	
+Note: Toll-free numbers do not support 
+mobile and IP phones.
+	
+	
+Australia	
+1-800-999-084
+	
+	
+China	
+800-820-8682
+	
+	
+Hong Kong	
+800-96-5941
+	
+	
+India	
+1-800-425-7888
+	
+	
+Indonesia	
+001-803-8861-1006
+	
+	
+Korea	
+080-551-2804
+	
+	
+Malaysia	
+1-800-80-3973
+	
+	
+New Zealand	
+0800-446-934
+	
+	
+Philippines	
+1-800-765-7404
+	
+	
+Singapore	
+800-886-1028
+	
+	
+Taiwan	
+0800-006800
+	
+	
+Thailand	
+001-800-886-0010
+Fax	
++8621-23073686
+Email	
+tiasia@ti.com or ti-china@ti.com
+Internet	
+support.ti.com/sc/pic/asia.htm
+B090712
+Important Notice: The products and services of Texas Instruments 
+Incorporated and its subsidiaries described herein are sold subject to TI’s 
+standard terms and conditions of sale. Customers are advised to obtain 
+the most current and complete information about TI products and services 
+before placing orders. TI assumes no liability for applications assistance, 
+customer’s applications or product designs, software performance, or 
+infringement of patents. The publication of information regarding any 
+other company’s products or services does not constitute TI’s approval, 
+warranty or endorsement thereof.
+The platform bar and E2E are trademarks of Texas Instruments.
+All other trademarks are the property of their respective owners.
+
+=== PAGE 4 ===
+IMPORTANT NOTICE AND DISCLAIMER
+TI PROVIDES TECHNICAL AND RELIABILITY DATA (INCLUDING DATASHEETS), DESIGN RESOURCES (INCLUDING REFERENCE 
+DESIGNS), APPLICATION OR OTHER DESIGN ADVICE, WEB TOOLS, SAFETY INFORMATION, AND OTHER RESOURCES “AS IS” 
+AND WITH ALL FAULTS, AND DISCLAIMS ALL WARRANTIES, EXPRESS AND IMPLIED, INCLUDING WITHOUT LIMITATION ANY 
+IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT OF THIRD 
+PARTY INTELLECTUAL PROPERTY RIGHTS.
+These resources are intended for skilled developers designing with TI products. You are solely responsible for (1) selecting the appropriate 
+TI products for your application, (2) designing, validating and testing your application, and (3) ensuring your application meets applicable 
+standards, and any other safety, security, or other requirements. These resources are subject to change without notice. TI grants you 
+permission to use these resources only for development of an application that uses the TI products described in the resource. Other 
+reproduction and display of these resources is prohibited. No license is granted to any other TI intellectual property right or to any third 
+party intellectual property right. TI disclaims responsibility for, and you will fully indemnify TI and its representatives against, any claims, 
+damages, costs, losses, and liabilities arising out of your use of these resources.
+TI’s products are provided subject to TI’s Terms of Sale (www.ti.com/legal/termsofsale.html) or other applicable terms available either on 
+ti.com or provided in conjunction with such TI products. TI’s provision of these resources does not expand or otherwise alter TI’s applicable 
+warranties or warranty disclaimers for TI products.
+Mailing Address: Texas Instruments, Post Office Box 655303, Dallas, Texas 75265
+Copyright © 2020, Texas Instruments Incorporated
+

@@ -1,0 +1,82 @@
+
+www.ti.com
+Technical Article
+Reduce the Volatility of the IoT with MSP FRAM MCUs
+
+
+William Cooper
+The expansion of the Internet of Things (IoT) is expected to drive billions of newly connected devices by 2020.
+One of the primary reasons for connecting these devices is to create more intelligent and automated systems
+through the processing of data. Any opportunity for these devices to collect more data offers an opportunity to
+make smarter decisions and improve the overall system.
+This is where our microcontrollers with FRAM can add value beyond other solutions in the industry. FRAM, a
+form of non-volatile RAM, enables faster data storage and nearly unlimited endurance compared to other non-
+volatile memory technologies. This means that sensing systems can apply mathematical and logical operations
+to make decisions based on more data in a given period of time. Not only that, the high write endurance equates
+to extended device longevity as data can continue to be written for many years without degrading the memory.
+What’s more, these advantages for sensor-based systems can be combined to enable system state retention in
+the event of synchronous or asynchronous power loss for those applications involving regular battery changes or
+energy harvesting.
+Over the past couple of weeks we have showcased the unique values of our microcontroller series with
+integrated FRAM in a blog series focused on some unique applications:
+•   How FRAM and CTPL could change stadium lighting
+•   How FRAM is contributing to portable weather stations
+•   How FRAM MCUs can achieve higher performance
+•   How FRAM can help you find your car forever
+
+
+
+
+
+
+
+
+
+
+SSZTCE2 – JULY 2015                                                            Reduce the Volatility of the IoT with MSP FRAM MCUs1
+Submit Document Feedback
+                                            Copyright © 2023 Texas Instruments Incorporated
+
+                                                                                                                       www.ti.com
+Intrigued?
+Over the past year, TI has released more than 100 device variants in our ultra-low-power FRAM microcontroller
+family. This portfolio contains offerings from 4-128 KB FRAM and integrated features from ADCs to LCD
+controllers. Beyond the MCUs themselves, LaunchPad development kits, software and TI Design reference
+designs are available to make getting started easy! Learn more at www.ti.com/fram.
+
+
+
+
+
+
+2     Reduce the Volatility of the IoT with MSP FRAM MCUs                                                     SSZTCE2 – JULY 2015
+                                                                                                          Submit Document Feedback
+                                            Copyright © 2023 Texas Instruments Incorporated
+
+                                                  IMPORTANT NOTICE AND DISCLAIMER
+
+TI PROVIDES TECHNICAL AND RELIABILITY DATA (INCLUDING DATA SHEETS), DESIGN RESOURCES (INCLUDING REFERENCE
+DESIGNS), APPLICATION OR OTHER DESIGN ADVICE, WEB TOOLS, SAFETY INFORMATION, AND OTHER RESOURCES “AS IS”
+AND WITH ALL FAULTS, AND DISCLAIMS ALL WARRANTIES, EXPRESS AND IMPLIED, INCLUDING WITHOUT LIMITATION ANY
+IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT OF THIRD
+PARTY INTELLECTUAL PROPERTY RIGHTS.
+
+These resources are intended for skilled developers designing with TI products. You are solely responsible for (1) selecting the appropriate
+TI products for your application, (2) designing, validating and testing your application, and (3) ensuring your application meets applicable
+standards, and any other safety, security, regulatory or other requirements.
+
+These resources are subject to change without notice. TI grants you permission to use these resources only for development of an
+application that uses the TI products described in the resource. Other reproduction and display of these resources is prohibited. No license
+is granted to any other TI intellectual property right or to any third party intellectual property right. TI disclaims responsibility for, and you
+will fully indemnify TI and its representatives against, any claims, damages, costs, losses, and liabilities arising out of your use of these
+resources.
+
+TI’s products are provided subject to TI’s Terms of Sale or other applicable terms available either on ti.com or provided in conjunction with
+such TI products. TI’s provision of these resources does not expand or otherwise alter TI’s applicable warranties or warranty disclaimers for
+TI products.
+
+TI objects to and rejects any additional or different terms you may have proposed. IMPORTANT NOTICE
+
+                                     Mailing Address: Texas Instruments, Post Office Box 655303, Dallas, Texas 75265
+                                                          Copyright © 2023, Texas Instruments Incorporated
+

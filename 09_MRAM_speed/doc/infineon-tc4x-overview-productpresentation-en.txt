@@ -1,0 +1,772 @@
+
+AURIX™ TC4x Overview
+Non-NDA
+
+ATV MC
+                                                                         1
+
+Infineon’s MCU Portfolio
+
+
+
+                                                                                                                                          MOTIX™
+
+                                                                                                                                   Cortex M0/M3 ASIL-B
+                                                                                                                                   Up to 256kB Flash
+                                                                                                      Auto PSOC™                   Motor Control SoC
+                                                                                                                                                                                                                                                                      AURIX™ TC4x
+
+                                                                                                  Cortex M0+ ASIL-B
+                                                             PSOC™ Multitouch                                                                                                                                                                                    Up to 6x Tricore ASIL-D
+                                                                                                  Up to 384kB Flash
+                                                                                                                                                                                                                                                                 Up to 24MB NVM
+                                                           MCU integrated Touch                   CapSense / Magsense
+                                                                                                                                                                                                                                                                 PPU,CSRM,Lockstep,PCIe,RE
+         Automotive                                        Controller SoC
+                                                           Touchscreen, Slider, Touchpad                                                                                                                                      TRAVEO™ T2G
+                                                                                                    Auto PSOC™ HV
+                                                                                                                                                                                                                                                                     AURIX™ TC3x
+                                                           Wet-finger tracking
+                                                                                                                                                                                                                           Dual Cortex M4 / M7 ASIL-B
+                                                                                                  Cortex M0+ ASIL-C
+                                                                                                                                                                                                                                                                Up to 6x Tricore ASIL-D
+                                                                                                                                                                                                                           Up to 16MB Flash
+                                                                                                  Up to 384kB Flash
+                                                                                                                                                                                                                                                                Up to 16MB Flash
+                                                                                                                                                                                                                           HSM, GPU (Cluster)
+                                                            PSOC™ Fingerprint                     Up to 42V tolerant MCU
+                                                                                                                                                                                                                                                                HSM,GETH,Lockstep,CAN FD
+
+                                                           MCU integrated Touch
+                                                           Controller SoC                                                                                                                                                                                            AURIX™ TC2x
+                                                                                                             XMC1000                                     FM3                                XMC4000                                XMC7000
+                                                           Capacitive fingerprint solution
+                                                                                                 • CPU up to 48MHz and 200KB Flash          • CPU up to 144MHz and 1MB           • CPU up to 144 MHz and 2MB              • Dual Cortex®-M7 and M0+              Up to 3x Tricore ASIL-D
+                                                           Support multi surface usage
+                                                                                                 • CORDIC Math co-processor                 Flash                                Flash                                    • Up to 350 MHz and 8MB Flash          Up to 8MB Flash
+                                                           solution
+                                                                                                 • CCU8 timer                               • Basic Motor Control                • Motor and power control                • Motor and power control              HSM,ETH,Lockstep,CAN FD
+
+
+                                                                                                                                                                                                FM4
+
+                                                                                                                                                                                 •  CPU up to 200MHz and 2MB
+                                                                                                                                                                                 Flash
+            Industrial                                                                                                                                                           •  High Performance Motor Control
+
+
+                                                                   PSOC™ 3                                  PSOC™ 4                                  PSOC™ 5                                PSOC™ 6
+
+                                                        • CPU up to 67 MHz and 64 KB Flash      • CPU up to 48MHz and 384KB Flash           • CPU up to 80MHz and 256KB
+                                                                                                                                                                                 • Dual Cortex®-M4 and M0+, up to
+                                                        • High performance analog               • Industry leading CAPSENSE™ and            Flash                                150 MHz and 2MB Flash
+                                                        • Programmable logic integration        mixed signal functionality                  • High-precision analog
+                                                                                                                                                                                 • Ultra-low-power with hardware
+                                                                                                                                            • Programmable logic integration     based security
+
+
+                                                                   PSOC™ 1                                     FM0+
+
+                                                        • CPU up to 24Mhz and 32KB Flash        • CPU up to 40MHz and 128KB Flash
+                                                        • CAPSENSE™ and application             • Entry level USB
+                                                        specific mixed signal functionality
+
+
+          Consumer
+
+
+                                                                                                               ®           ®                              ®          ®                           ®          ®                           ®          ®
+                                                                    8-bit/SoC                    32-bit Arm       Cortex    -M0/M0+         32-bit Arm      Cortex     -M3         32-bit Arm      Cortex     -M4        32-bit Arm       Cortex    -M7               32-bit TriCore™
+
+
+
+                                                                                                                                                                                                                                                                                              2
+
+PSOC™, TRAVEO™ & AURIX™ Family Overview
+
+
+Successfully covering the entire range of auto applications
+
+
+
+   Smart Sensors                   Driver Information                              Body & Connectivity                               Chassis & Safety               Powertrain & xEV                        ADAS                         New E/E
+                                    (e.g., Instrument
+                                   Cluster and HUD)
+                                           & HMI
+
+
+
+
+
+                                                                                                                                                   AURIX™ Next Generation
+
+                                                                                                                                                                                                                        AURIX™ TC4x
+
+                                                                                                                                                                                                                                    ™
+                                                                                                                                                                                                            ‒   Up to 6x Tricore      1.8 500MHz
+                                                TRAVEO™ T2G
+                                                                                                                                                                                                            ‒   ISO26262 ASIL-D
+                                              ®         ®
+                                     ‒   Arm    Cortex    M4/M7 based
+                                                                                                                                                                                                            ‒   ISO 21434 certification
+                                     ‒   ISO26262 ASIL-B
+                                                                                                                                                                                                            ‒   Up to 24MB NVM
+                                     ‒   Low Power                                                                         AURIX™
+                                                                                                                                                                                                            ‒   PPU, CSRM, Routing engine
+                                     ‒   Up to 16MB flash, HSM
+                                                                                                                              TC4x
+                                     ‒   GPU TVII-C (Cluster)
+                                     ‒   AEC-Q100 Grade 1 (Ta 125°C)
+                                                                                                                                                                                                   AURIX™
+                                                                                                                                                      AURIX™ TC3x
+                                                                                                                                                                                                      TC3x
+                                                                        TRAVEO™
+                                       TM                                                                                                ‒   Up to 6x Tricore™ 1.6 300MHz
+                       AUTO PSOC
+                                                                       TRAVEO™
+                                                                             T2G
+                                                                                                                                         ‒   ISO26262 ASIL-D
+             ®         ®
+    ‒   Arm    Cortex     M0, M0+ or M23
+                                                                             T2G                                                         ‒   Up to 16MB Flash
+        lockstep based low power architecture
+                                                                                                                                         ‒   HSM, GETH
+    ‒   ISO26262 ASIL B-D
+                                                                                                                                         ‒   AEC-Q100 Grade 0 (Ta 150°C)
+    ‒   ISO21434 “off the shelf” support
+    ‒   AEC-Q100 Grade 1 (Ta 125°C)
+    ‒   Analog integration (16/20-bit ΔΣ ADC,                                          AUTO                                                                         AUTO
+                     ®
+        CapSense      , MagSense™, High Voltage)                                    PSOC™                                                                           PSOC™
+
+
+
+
+
+                                                                                                                                                                                                                                                           3
+
+What does the future car need?
+
+
+
+  Headroom                           ‒    OEMs and Tier 1's need performance headroom
+                                          to build the smart car of the future
+  to grow
+
+
+                                     ‒    More performance needed for highly efficient
+  High Performance
+                                          e-mobility and autonomous driving
+  with AI
+                                     ‒    AI is further enabling this transformation
+
+
+                                     ‒    The E/E architecture is changing to reduce
+  New E/E
+                                          complexity
+  architecture
+                                     ‒    Resulting in adoption of zone-based architectures
+
+
+                                     ‒    The future car is fully connected, always online and
+  Fully connected
+                                          therefore needs outstanding communication and
+  and secured
+                                          security features
+      Performance
+
+                                     ‒    Technology is changing fast, the market must
+  Fast Time
+                                          respond faster than ever before, while R&D
+  to Market
+                                          resources are limited
+
+
+                                                                                                                                                                                                 4
+
+The AURIX™ TC4x meets these future needs and more, providing
+
+the industries most extensive major upgrade path for auto MCUs
+
+
+
+                                                                         Headroom                         ‒    Feature rich to offer applications headroom to grow
+                                                                                                          ‒    Scalable family HW and SW concept for platform reuse
+                                                                         to grow
+
+
+                                                                                                          ‒    More processing power from TriCore™v1.8 with
+                                                                         High Performance
+                                                                                                               virtualization support and new AURIX™ Accelerator Suite
+                                                                         with AI
+                                                                                                          ‒    Parallel Processing Unit (PPU) for affordable AI
+
+
+                                                                                                          ‒    Optimized devices for Zone and Domain control,
+                                                                         New E/E
+                                                                                                          ‒    Optimized devices for complex sensor and actuator
+                                                                         architecture
+                                                                                                               control
+
+                                                                                                          ‒    Enhanced connectivity, new high-speed interfaces
+                                                                         Fully connected                  ‒    Data Routing Engine for efficient communication
+                                                                                                          ‒    Cutting edge security features to protect with future post
+                                                                         and secured
+                                                                                                               quantum cryptography            ISO/SAE 21434 certified
+
+                                                                                                          ‒    Seamless "Ease of Use" tool chain and software offering
+         Whilst ensuring
+                                                                         Fast Time
+                                                                                                          ‒    Model based design for reduced R&D effort
+          dependability                                                  to Market
+                                                                                                          ‒    Early development support based on virtual prototyping
+
+
+                                                                                                                                                                                         5
+
+AURIX™ TC4x
+                                               The start of a new era…
+
+
+                         Automotive market is facing two simultaneous, fast paced, paradigm shifts:
+
+                               ›E/E architecture innovation has brought new requirements to
+                                 microcontrollers
+                                   ›  More ASIL-D performance
+                                   ›  Increased security & connectivity
+                                   ›  New SW development methods
+
+                               ›Trend toward Electrification further accelerates
+                                   ›  Emissions legislations towards Zero Emission
+                                   ›  Major OEM with clear focus on Battery Electric Vehicle
+                                   ›  Hybrid vehicles are also in focus.
+
+                                                                                                    6
+
+AURIX™ “Dependability” a long-term value proposition
+
+More than 1 billion TriCore™ shipped at benchmarking quality
+
+
+
+                              Scalable
+                                                                                              › Best in class AURIX™ family concept further improved and
+                                                                                                 continued with the AURIX TC4x family
+                                            Trusted  development
+                                            partners
+                                                                                              › Dependability is more than a set of technical features and
+                                                                                                 system properties
+
+                                                    Safe and Secure
+                                                                                              › Robustness of an architecture has a strong fundament in
+                                                                                                 product and engineering quality
+
+                                                                                              › Constant innovation in safety and security technologies is
+                                                    Robust                                       important for highly dependable MCU families
+
+                                                                                              › Technical and commercial scalability is a key advantage in
+                                                                                                 dynamic markets
+                                            Ultimate Real-time
+                                            Performance
+                                                                                              › Continuous quality improvement to 0.22 ppm in 2022
+
+                         Long-term commitment &
+                         Supply Security
+
+
+                                                                                                                                                                                                 7
+
+We are innovating 28 nm Automotive together with TSMC
+Introduction of RRAM-NVM based on 10 years of experience
+
+
+
+
+                                            ›  We are safeguarding capacity in 28nm by partnering on
+                                               next generation NVM technology with the leading foundry
+                                               TSMC
+                                            ›  AURIX™ TC4x is the first product family in Automotive to
+                                               integrate RRAM-NVM
+                                            ›  RRAM-NVM is less complex than eFlash, uses same SW
+                                               interfaces with identical functional behavior and doesn’t
+                                               need to be refreshed
+                                            ›  This innovation paves our way to future shrinks in µC
+
+                                                                                                    8
+
+AURIX™ TC4x comprehensive portfolio tailored serving major
+market trends in our focus applications
+
+
+
+
+
+Electrification                Zone Controllers & ADAS        Radar                         VMO / Chassis
+  ›  Inverter                    ›  Next generation zone        › Radar cascading             ›  Vehicle Motion Domain
+                                    controllers in Domain                                        Controller
+  ›  Power Conversion
+                                 ›  Companion MCUs for                                        ›  Braking / Steering
+  ›  Battery Management
+                                    Central car computer
+     System
+
+                                                                                                                        9
+
+AURIX™ TC3x to TC4x synergies enable a smooth migration
+
+within and between the product families
+
+
+
+
+
+
+
+
+               Speed of                                        SW & HW                                    Safety concept
+                                                                                                                                                                Dependability
+          Development                                       compatibility                                       synergies
+
+                                                                                                   ›    AURIX™ TC4x safety concept                    ›    AURIX™ TC3x is ultimate
+  ›    Strong architecture                          ›    Binary compatibility
+                                                                                                        built on proven TC3x                               benchmark in robustness
+       similarities                                      between TC1.8 & TC1.62
+                                                                                                   ›    New/ enhanced safety                          ›    Functional availability and
+  ›    Evolution of TC3x                            ›    Integration of new TC 1.8
+                                                                                                                                                           component reliability
+                                                                                                        PPU, DMA, Comms, Security
+       peripherals enables high                          instructions
+                                                                                                                                                      ›    Trusted partner and long-term
+       degree of re-use                                                                            ›    Strong reuse:
+                                                    ›    High degree of pin
+                                                                                                                                                           commitment
+  ›    Proven eco-system                                 compatibility between                          TriCore™ lockstep,
+                                                                                                                                                      ›    Holistic architecture based on
+       including SW & tooling                            TC3x & TC4x packages                           eNVM/SRAM diagnosis,
+                                                                                                                                                           deep application know-how
+                                                                                                        supply & clock monitoring
+
+
+
+                                                                                                                                                                                                        10
+
+AURIX™ TC4x defines the next controller standard for safe &
+
+secure ECUs with strong networking capabilities
+
+
+
+
+
+
+
+
+
+
+     Higher Performance                                   Safety and Security                           Freedom From Interference                                   Rich connectivity
+
+
+  New 500MHz TriCore™ 1.8                             AURIX™ meets ISO26262-2018                         Hardware isolation at core and                     Up to 2x 5GBit Ethernet incl.
+                                                        ASIL D safety standard                              peripheral level                                    Bridge
+  PPU: Private scalar core + 256bit
+                                                                                                                                                               Accelerated MACsec support
+   wide vector unit with up to 48
+                                                       CSRM: high-performance security                    TriCore™ 1.8 with up to eight
+                                                                                                                                                                by HW accelerator in CSS and
+   GOPS
+                                                        module with private CPU,                            VMs per core (incl. Hypervisor)
+                                                                                                                                                                application SW driver
+                                                        memories and crypto accelerators
+  SPU3: High-performance radar
+                                                                                                           Ultra-fast context switching
+                                                                                                                                                               4x10/100MBit Ethernet
+   processing sub-system
+                                                       CSS: Distributed crypto and hash                                                                        supporting 10Base-T1S standard
+                                                        engines for secure CAN/Ethernet
+                                                                                                           Enhanced memory protection
+  A/D Converter sub-system with
+                                                                                                                                                               Up to 2x 8GBit/s PCIe 3.0 1x lane
+                                                        communication                                       for cores and virtual machines
+   integrated DSPs
+                                                                                                                                                               Up to 20x CAN-FD
+  Data Routing Engine for CAN –
+                                                       Security according to ISO 21434
+                                                                                                           Fine-granular access protection
+   Ethernet - Mem communication
+                                                        standard planned                                                                                       CAN-XL
+                                                                                                            to peripherals
+
+  Improved Timers, HR-PWM
+                                                       SAFE AI compliant                                  Isolated DMA protection
+
+
+                                                                                                                                                                                                        11
+
+AURIX™ TC4x Architecture
+
+
+
+Enhancements compared to AURIX™ TC3x
+
+
+
+
+                                                                                                                                                                                  CSRM
+Performance ASIL-D                                                                                 Radar Cluster
+
+                                                                                                                                                                                  New high performance Security Modules
+                                                                                                      4x Performance
+Enhanced TriCore™
+                                                                                                                                               Radar Cluster
+                                                                                                                                                                                  with QM support
+                                                                                                      800MSamples/s
+With up to 6CPUs @
+
+                                                                                                      Radar DMA
+                                                                                                                                               CSI-2    RIF
+500MHz
+                                                                        NVM                                                                                     R
+                                                         NVM                                          CSI-2 Interface                                                            CSS
+                                                                                                                                                                A
+                                                                       Bank B
+                                                        Bank A
+                                                                        2MB                                                                                     M                 Dedicated communication security
+                                                          2MB                                                                                      SPU
+
+                                                                                                                                                    3.0
+                                                                                                                                                                                  satellites
+Bigger Tightly Coupled                                    Core + Checker Core
+
+                                                                                                                   local P_NVM
+SRAM for increased
+                                                               TC 1.8P
+                                                                                                                                                   PPU
+                                                                CPU0
+performance
+                                                                                                                      CSRM                                                        New Programmable HW Accelerator -
+                                                                  FPU                                                                           Scalar Core
+                                                                 PSPR                                                 TC18
+                                                                                                                                                                                  PPU
+                                                                PCACHE                                                                          Vector DSP
+                                                                 DSPR
+                                                                                                   Distr.                                                                         SIMD Vector DSP + Scalar Core for
+                                                                DCACHE                                             local SRAM
+                                                                                                                                          STU (DMA)         CSM
+Full AB-Swap Support                                                                               LMU
+                                                                 dLMU
+                                                                                                                                                                                  Modelling and Precise Control – ASIL D
+
+
+                                                               System Resource Interconnect
+                                                                                                                                                                                   New high-speed comm Interfaces:
+                                                               without bridges
+Debug and Trace
+                                                                                                                                                                                   • PCIe 3.0
+Safe and the secure in field
+                                                                             SBGT
+                                                                                                                                                                                   • 100Mb- 5 Gbps Ethernet
+
+
+xSPI                                                                                                                                                                               New 10 Mbit Ethernet and CAN-XL
+
+External Memory Interface
+                                                                                                                                                                                   New communication routing
+
+                                                                 System Peripheral Bus                                                            CPB                              accelerator:
+
+
+                                                                                                                                                                                   • DRE- Data Routing Engine
+
+ADC                                                                                                                                               ADC
+
+Dedicated DSPs
+                                                                                                                                                                                   New eGTM timers and High Resolution
+
+Enhanced ADCs
+                                                                                                                                                                                   PWM with low latency interconnect
+
+                                                                                                                                                                                   (LLI)
+                                                                                                                                                          LLI
+
+
+
+                                                                                                                                                                                                                                          12
+
+TC4x provides virtualization enhancement to allow efficient
+isolation and separation
+
+
+                 New and improved TriCore™ with Hypervisor Mode
+
+                › TriCore™ Hypervisor (HV)
+                     – New execution mode, with new instructions
+
+                › Memory Protection Unit (MPU) with 2 levels
+                           nd
+                                                                                                                                                            New features
+                     – 2       level only for Hypervisor mode
+                                                                                                                                                         enable isolation
+                › Virtual Machines (VMs)
+                                                                                                                                                          and separation
+                     – Upto 8 per TriCore™, thereof 7 VM for customer
+                         usage (1 VM is hypervisor)
+                     – Assign peripheral resources with fine granularity
+
+                › Extended interrupt scheme
+                     – Now includes direct routing of interrupt to VM
+
+                                                                                                                                                                                                        13
+
+Multiple applications can be executed in isolation using Virtual
+
+Machines, Hypervisor SW and the AURIX™ TC4x Hypervisor
+
+
+                                  Freedom from interference                               Freedom from interference
+                                                                                                                                                       AURIX™ TC4x TriCore
+
+                     Application A                                     Application B                                     Third                         Each core supports up to 8
+
+                                                                                                                                                       virtual machines
+                          (Virtual                                          (Virtual                                     Party
+
+                      Machine 1)                                        Machine 2)
+                                                                                                                          App
+
+                                                                                                                            ...
+                                                                                                                                                      Access Protection Unit
+
+                                                                                                                                                      (APU)
+
+                                                                                                                                                      Provides isolation features at the
+    Hypervisor
+                                              Inter virtual machine communication
+                                                                                                                                                      peripherals
+          SW
+                                                     (shared memory + interrupt)
+
+                                                                                                                                                       Virtual Machines
+
+    AURIX™                                                      Core 0                                            Core 1            ...
+                                                                                                                                                       With complete AUTOSAR stack
+       TC4x
+                                                                     Peripherals
+                                                                                                                                                       & assignment of own peripherals
+
+
+             Sensors                  Comm I/F
+                                                                  Sensors                   Comm I/F                Comm I/F
+                                                                                                                                                       Hypervisor SW
+                       Actuators
+                                                                            Actuators
+                                                                                                                                                       Via partners
+                                                         E/E Network
+
+                                                                                                                                                                                                        14
+
+As E/E architecture evolves, the need to minimize latency, and to
+facilitate diverse use cases and communication protocols increases
+
+                                                                                                     Further needs met by an enhanced security cluster
+
+                                                                                                                    Minimize latency & maximize throughput for “In Vehicle
+                                                                                                                    Network” (IVN) communication: between Zones, end-nodes
+                                                                                                                    and with central vehicle computers – Get ready for Ethernet!
+
+                                                                                                                    Enable SOTA use cases, which require secured and safe
+                                                                                                                    distribution of SW updates from cloud or within IVN
+
+                                                                                                                    Serve increased security communication protocols,
+                                                                                                                    authentication of >50% and encryption of >15-20% of all IVN
+                                                                                                                    messages
+
+                                                                                                                    Increasing number of security use cases to be covered
+                                                                                                                    Secured key-storage, key management, secured updates,
+                                                                                                                    connection to external service providers, Secured boot &
+                                                                                                                    onboard communication, device attestation, Runtime
+                                                                                                                    manipulation detection, feature activation and furthermore
+
+                                                                                                                                                                                                        15
+
+AURIX™ TC4x Cybersecurity Management System is certified by
+TÜV SGS according to ISO/SAE 21434
+
+                                                                                                        The certification includes:
+
+                                                                                                        ›    Cyber Security Management Continuous Cyber
+                                                                                                             Security Activities (e.g. Monitoring, risk
+                                                                                                             assessment, vulnerability analysis)
+                                                                                                        ›    Risk Assessment Methods (e.g. Threat
+                                                                                                             identification)
+                                                                                                        ›    Concept Phase (e.g. Cyber security goals)
+                                                                                                        ›    Product Development Phase (e.g. Integration
+                                                                                                             and verification)
+                                                                                                        ›    Post Development Phase (e.g. Cyber security
+                                                                                                             incident response)
+
+                                                                                                          Infineon’s position as a trusted partner in automotive
+                                                                                                               security has been proven by an external party
+
+                                                                                                                                                                                                        16
+
+Parallel Processing Unit (PPU) enables affordable artificial intelligence
+
+use cases
+
+
+                                                                                                                                                                 PPU accelerator
+                                                              Automotive AI Use Cases
+
+       Artificial Intelligence
+                                                                                                                                                                 SIMD vector DSP Co-
+                                                                           Domain/Zone Control
+        & Neural Networks
+                                                                                                                                                                 processor
+                                                                    › Modelling
+                                                                    › Model Predictive Control
+                                                                    › IDPS & other security methods
+
+
+                                                                                      ADAS
+
+                                                                   › Object classification
+                                                                   › Advanced Radar Signal
+                                                                                                                                          › Data processing of linear algebra (e.g.
+                                                                     Processing
+                                                                                                                                            matrix operations) and signal processing
+                                                                   › Sensor Fusion
+Optimize Automotive Use Cases                                                                                                               (e.g. filtering, convolutions)
+› Cost Reduction                                                                                                                          › Ultra fast control loop implementation
+                                                                              xEV Applications
+› Innovation                                                                                                                              › Implemented in low-latency cluster with
+                                                                                                                                            mixed signal peripherals
+› Improve Performance                                              › Predictive Control
+› Accelerate Time to Market                                        › Virtual Sensing
+                                                                   › Advance State of Health (SoH) and
+                                                                     State of Charge (SoC) algorithms
+
+
+                                                                                                                                                                                                        17
+
+                TM
+AURIX                  TC4x Parallel Processing Unit (PPU): a scalable SIMD
+
+Vector DSP & scalar core with a dedicated SW-tool-chain
+
+
+
+                                                                                                                                             SW-Ecosystem
+
+                                                            PPU
+                                                                                                                         Compiler
+                                                                                                                                                                                                     1
+
+                                      32b                        128b~256b
+                                                                                                                                                 Auto code
+                                    Scalar                      Vector DSP
+                                                                                                                                                generation
+                                                                                                                                                                                                     2
+    TriCore
+                                           D$       Vector Memory (32KB-128KB)                                                               including library
+                                    I$
+  TriCore
+TriCo1r.e8
+      1.8
+    1.8
+                                 Cluster Components
+                                   Streaming Transfer            Cluster Shared Memory
+                                        Unit (STU)                (CSM) – 64KB-256KB
+                                                                                                                                              MLI          xNN
+                                                                                                                                                                                                     3
+                                                                                                                                             library       SDK
+
+
+
+              › Execution 3x faster than competitor solutions, enabling Neural network based algorithms and
+
+                                                                     High-speed-control implementations
+
+  › Unique SW Ecosystem: Model-based development, connected with latest Machine-learning-tools like Tensor-
+
+                                                        flow is enabling easy usage and fast time-to market
+
+
+                                                                                                                                                                                                        18
+
+Getting started with AURIX TC4x is facilitated by new SDKs and
+
+VP as well as by re-using proven tooling from last generations
+
+
+  Last generation re-use plus                                                                                                      Enabling development with new IP
+
+  support of new computing IP                                                                                                      plus increased safety support
+
+  ‒ TriCore compiler:                                                                                                             ‒ PPU libraries and auto code generation:
+
+       ‒ TASKING, Hightec, WindRiver,                                                                                                  ‒ Synopsys, TASKING
+
+          GHS
+                                                                                                                                  ‒ AURIX TC4x hardware support package
+                                                                Compiler                              Software
+  ‒ PPU compiler:                                                                                                                      ‒ MATLAB / Simulink
+                                                                      and                        development
+       ‒ Synopsys, TASKING, Hightec
+                                                                                                                                  ‒ Safety software package (in discussion)
+                                                               debugger                                    kits
+  ‒ Debugger and test tools:                                                                                                           ‒ Startup tests and failure checks recommended
+
+       ‒ iSYSTEM, Lauterbach, PLS,                                                                                                        in safety manual
+
+          Synopsys                                                                                                                ‒ Optional CDSP software toolchain
+                                                                                                                                       ‒ Synopsys
+
+
+                                                                                                                                   Increased MCAL offering and
+  Enablement of pre-
+
+                                                                                                                                   AUTOSAR providers incl. hypervisor
+  silicon development
+                                                                  Virtual                           MCAL and
+                                                                                                                                  ‒ Proprietary MCAL with ISO26262:2018  compliance
+  ‒ Provider: Synopsys
+                                                               prototype                            AUTOSAR                          for IPs incl. new COM Ips (PCIe, DRE, 10BaseT1s)
+  ‒    Modelling of key AURIX TC4x
+                                                                                                                                  ‒ Hypervisor implementation
+       HW features
+                                                                                                                                        ‒ EB, ETAS, Opensynergy, SysGo, Greenhills
+  ‒ Full debug and analysis support
+                                                                                                                                  ‒ SW stack integration providers:
+  ‒ Interfaces to Simulink, SABER,                                                                                                      ‒ Vector, Elektrobit, Siemens, ETAS
+
+     CANoe, etc.
+                                                                                                                                  ‒ Security SW: Vector, ESCRYPT, ISS, EB
+
+                                                                                                                                                                                                        19
+
+AURIX™ & TRAVEO ™ microcontroller & OPTIREG™
+teaming up for functional safety in automotive applications
+
+
+
+
+             Brains
+                                                                                                                                                                                                                        Brawn
+
+
+
+                                                                                                                                                   Artificial Intelligence
+
+                                                                                                                    Electric
+      Safety/ ADAS
+                                                                                                                 drive train
+                                                                                                                                                                                                                Chassis
+     Conventional
+                                                                                                                     Body
+                                     Engine
+       powertrain                                                                                                                                                                                          PMIC       SBC
+                                   management
+                                                                                                                                                                                                                                                                             20
+
+21
+
