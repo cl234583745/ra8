@@ -175,7 +175,7 @@ SCB_EnableDCache();
 | **存储原理** | 浮栅电荷存储 | 磁阻隧道结（MTJ） | 电阻态转变（氧空位） | 硫系化合物相变（晶态/非晶态） | 铁电体极化（PZT 膜） |
 | **MCU 代表产品** | 传统 MCU（40 nm+） | RA8P1/T2/M2/D2（Renesas 22 nm）<br>S32K5（NXP 16 nm FinFET） | AURIX TC4x（英飞凌 28 nm）<br>nRF54L15（Nordic 22 nm ULL） | Stellar P6（ST 28 nm FD-SOI）<br>STM32V8 | MSP430 FRAM 系列（TI）、Ramtron |
 | **写入方式** | 页擦除→页编程（FCU） | AXI store（`*addr=data`） | 位写入（无需擦除） | 位覆写 | 位写入（无需擦除） |
-| **典型写速度** | ~0.1 MB/s | ~6 MB/s（实测） | 未公开（注①）<br>Nordic 实测：65 μs/word（单次），22 μs/word（顺序） | 未公开（注①） | **125 ns/word**（16 MB/s @ 8 MHz，注②） |
+| **典型写速度** | ~0.1 MB/s | ~6 MB/s（实测） | ~0.18 MB/s（Nordic nRF54L15，注①） | ~0.38 MB/s（ST 18nm ePCM，注①） | **~16 MB/s**（125 ns/word @ 8 MHz，TI MSP430，注②） |
 | **读速度** | 受 Wait State 限制 | ~26 MB/s（实测） | 未公开 | 快于 eFlash | SRAM 同等速度（系统时钟） |
 | **耐久度（次）** | 10K~100K | 100K~1M | 100K~1M | 10K~100K（+） | 10^12~10^15（几乎无限） |
 | **写入前擦除** | 需要 | **不需要** | **不需要** | **不需要** | **不需要** |
@@ -187,9 +187,9 @@ SCB_EnableDCache();
 | **是否需要 DCache 特殊处理** | 否（FCU 写） | **是** | 待评估 | 待评估 | 否（CPU 本地总线） |
 | **核心优势** | 技术成熟、成本低 | 无需擦除、密度与速度均衡、适合代码存储 | 结构最简单、可扩展至先进制程、位写入 | 单元面积最小（注③）、耐温最高（165°C） | 写入最快（125 ns/word，同 SRAM）、耐久度几乎无限（10^15+） |
 
-> 注①：RRAM（Infineon TC4x）和 PCM（ST Stellar P6/STM32V8）官方文档**未公开明确写入时序**（µs/byte）。Infineon 仅声明"RRAM 使用与 eFlash 相同的软件接口，功能行为一致"；ST 仅描述"fast read/write speeds with single-bit alterability"。两家的详细数据手册需 NDA 或注册访问，这与 Renesas 在 RA8P1 手册中明确给出 `tPMC` 时序公式形成鲜明对比。
-> 
-> Nordic nRF54L15 的 RRAM 写入速度通过第三方分析（Argenox）获得：单次写入 65 μs/word，顺序地址写入 22 μs/word（比 nRF52 Flash 的 41 μs/word 快约 50%）。Nordic 官方数据手册仅标注"non-volatile memory (RRAM)"，未提供详细时序参数。
+> 注①：RRAM 写入速度来自 Nordic nRF54L15 第三方分析（Argenox）：顺序地址写入 22 μs/32 bit word → ~0.18 MB/s（nRF54L15 v1.0 §11.16.1）。Infineon TC4x 的 RRAM 官方文档未公开明确写入时序，仅声明"RRAM 使用与 eFlash 相同的软件接口，功能行为一致"。
+>
+> PCM 写入速度来自 ST 白皮书 "18nm FD-SOI and ePCM"：~3 Mbps → ~0.38 MB/s（85 μs/32 B）。ST Stellar P6/STM32V8 官方数据手册需 NDA 或注册访问，仅描述"fast read/write speeds with single-bit alterability"。
 >
 > 注②：FRAM 写入速度来自 TI 官方应用报告 SLAA498B（Maximizing Write Speed on the MSP430 FRAM）Table 1：**125 ns/word**（16 bit word）。FRAM 控制器在 8 MHz 以下是零等待（1 周期/word），超过 8 MHz 需插入等待周期（NWAITSx）。FRAM 本质是"与 SRAM 速度相同的 NVM"——写入速度受限于 CPU/总线频率，而非 FRAM 存储单元本身。耐久度 10^15 次、无需擦除、位写入。
 >

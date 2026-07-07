@@ -390,9 +390,9 @@
 <td><strong>典型写速度</strong></td>
 <td>~0.1 MB/s</td>
 <td>~6 MB/s（实测）</td>
-<td>未公开（注①）<br>Nordic 实测：65 μs/word（单次），22 μs/word（顺序）</td>
-<td>未公开（注①）</td>
-<td><strong>125 ns/word</strong>（16 MB/s @ 8 MHz，注②）</td>
+<td>~0.18 MB/s（Nordic nRF54L15，注①）</td>
+<td>~0.38 MB/s（ST 18nm ePCM，注①）</td>
+<td><strong>~16 MB/s</strong>（125 ns/word @ 8 MHz，TI MSP430，注②）</td>
 </tr>
 <tr>
 <td><strong>读速度</strong></td>
@@ -477,8 +477,8 @@
 </tbody>
 </table>
 <blockquote>
-<p>注①：RRAM（Infineon TC4x）和 PCM（ST Stellar P6/STM32V8）官方文档<strong>未公开明确写入时序</strong>（µs/byte）。Infineon 仅声明"RRAM 使用与 eFlash 相同的软件接口，功能行为一致"；ST 仅描述"fast read/write speeds with single-bit alterability"。两家的详细数据手册需 NDA 或注册访问，这与 Renesas 在 RA8P1 手册中明确给出 <code>tPMC</code> 时序公式形成鲜明对比。</p>
-<p>Nordic nRF54L15 的 RRAM 写入速度通过第三方分析（Argenox）获得：单次写入 65 μs/word，顺序地址写入 22 μs/word（比 nRF52 Flash 的 41 μs/word 快约 50%）。Nordic 官方数据手册仅标注"non-volatile memory (RRAM)"，未提供详细时序参数。</p>
+<p>注①：RRAM 写入速度来自 Nordic nRF54L15 第三方分析（Argenox）：顺序地址写入 22 μs/32 bit word → ~0.18 MB/s（nRF54L15 v1.0 §11.16.1）。Infineon TC4x 的 RRAM 官方文档未公开明确写入时序，仅声明"RRAM 使用与 eFlash 相同的软件接口，功能行为一致"。</p>
+<p>PCM 写入速度来自 ST 白皮书 "18nm FD-SOI and ePCM"：~3 Mbps → ~0.38 MB/s（85 μs/32 B）。ST Stellar P6/STM32V8 官方数据手册需 NDA 或注册访问，仅描述"fast read/write speeds with single-bit alterability"。</p>
 <p>注②：FRAM 写入速度来自 TI 官方应用报告 SLAA498B（Maximizing Write Speed on the MSP430 FRAM）Table 1：<strong>125 ns/word</strong>（16 bit word）。FRAM 控制器在 8 MHz 以下是零等待（1 周期/word），超过 8 MHz 需插入等待周期（NWAITSx）。FRAM 本质是"与 SRAM 速度相同的 NVM"——写入速度受限于 CPU/总线频率，而非 FRAM 存储单元本身。耐久度 10^15 次、无需擦除、位写入。</p>
 <p>注③：ST 官方博客（2026-01-29，STM32V8 发布）声明其 PCM 单元面积为 MRAM 和 RRAM 的一半——"our PCM allows us to halve the memory footprint compared to MRAM and RRAM, thus offering the smallest non-volatile memory cells in an MCU"。</p>
 <p><strong>FRAM 与 TI OptiFlash 的区别</strong>：FRAM 是新型 NVM <strong>介质</strong>（铁电体存储），直接替代 eFlash/RAM 作为 MCU 片内统一存储器。TI OptiFlash 是<strong>外置 NOR Flash + 硬件加速器</strong>的组合方案（包括 RL2 缓存控制器、Flash 线性控制器 FLC、和执行加速器 RAT），并非新型 NVM 介质。两者是不同层面的技术：FRAM 改变存储介质本身，OptiFlash 改变访问架构。</p>
