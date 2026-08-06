@@ -1,0 +1,498 @@
+<!DOCTYPE html><html><head>
+      <title>ra8p1_spi_slave_dma&amp;dtc_recv_volatile</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\jerry\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.30\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      <script type="text/javascript" src="file:///c:\Users\jerry\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.30\crossnote\dependencies\mermaid\mermaid.min.js" charset="UTF-8"></script>
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-details{margin:0;padding:0;border:none}.markdown-preview .md-toc summary.md-toc-link-wrapper{cursor:pointer;list-style-position:outside}.markdown-preview .md-toc summary.md-toc-link-wrapper::marker{font-size:.85em}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='0']{margin-left:12px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='1']{margin-left:28px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='2']{margin-left:44px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='3']{margin-left:60px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='4']{margin-left:76px}.markdown-preview .md-toc .md-toc-link-wrapper[data-level='5']{margin-left:80px}.markdown-preview a.tag,.markdown-preview a.tag:active,.markdown-preview a.tag:link,.markdown-preview a.tag:visited,.markdown-preview span.tag:not(.token){display:inline-block;background-color:var(--vscode-badge-background,rgba(127,127,127,.18));color:var(--vscode-badge-foreground,currentColor);border-radius:2em;font-size:.85em;font-weight:500;padding:.05em .55em;line-height:1.5;white-space:nowrap;text-decoration:none;text-shadow:none;box-shadow:none;transition:background-color .12s ease,opacity .12s ease}.markdown-preview a.tag{cursor:pointer}.markdown-preview a.tag:focus,.markdown-preview a.tag:hover{background-color:var(--vscode-badge-background,rgba(127,127,127,.32));color:var(--vscode-badge-foreground,currentColor);opacity:.85;text-decoration:none;outline:0}.markdown-preview .wikilink-embed-content{border-left:3px solid var(--vscode-textBlockQuote-border,rgba(128,128,128,.3));background:var(--vscode-textBlockQuote-background,rgba(128,128,128,.05));margin:.5em 0;padding:.5em .75em;border-radius:0 3px 3px 0}.markdown-preview .wikilink-embed-content.wikilink-embed-error{border-left-color:var(--vscode-errorForeground,#cf222e);color:var(--vscode-errorForeground,#cf222e);font-style:italic;opacity:.8}.markdown-preview .wikilink-embed-content h1:first-child,.markdown-preview .wikilink-embed-content h2:first-child,.markdown-preview .wikilink-embed-content h3:first-child,.markdown-preview .wikilink-embed-content h4:first-child,.markdown-preview .wikilink-embed-content h5:first-child,.markdown-preview .wikilink-embed-content h6:first-child{margin-top:.25em}.markdown-preview .wikilink-embed-content .wikilink-embed-content{margin:.25em 0;padding:.25em .5em}.markdown-preview .block-id{display:none}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:var(--vscode-scrollbarSlider-background,rgba(150,150,150,.66));border:4px solid var(--vscode-scrollbarSlider-background,rgba(150,150,150,.66));background-clip:content-box}.scrollbar-style::-webkit-scrollbar-thumb:hover{background-color:var(--vscode-scrollbarSlider-hoverBackground,rgba(120,120,120,.66))}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:var(--vscode-scrollbarSlider-background,rgba(150,150,150,.66));border:4px solid var(--vscode-scrollbarSlider-background,rgba(150,150,150,.66));background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb:hover{background-color:var(--vscode-scrollbarSlider-hoverBackground,rgba(120,120,120,.66))}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-details{margin:0;padding:0;border:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='0']{padding-left:0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='1']{padding-left:16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='2']{padding-left:32px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='3']{padding-left:48px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='4']{padding-left:64px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper[data-level='5']{padding-left:80px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. -->
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script>
+    </head>
+    <body for="html-export">
+      <div class="crossnote markdown-preview  ">
+      
+<h1>十二、RA8P1 SPI SLAVE DMA接收不定长</h1>
+<div class="md-toc">
+<div class="md-toc-link-wrapper" data-level="0">
+  <a href="#一-概述" class="md-toc-link">一、概述</a>
+</div>
+<details open="" class="md-toc-details">
+<summary class="md-toc-link-wrapper" data-level="0">
+  <a href="#二-ra8x2-uart-dtcdma接收不定长与ra6m5基本一样" class="md-toc-link">二、ra8x2 uart dtc/dma接收不定长（与ra6m5基本一样）</a>
+</summary>
+<details open="" class="md-toc-details">
+<summary class="md-toc-link-wrapper" data-level="1">
+  <a href="#21-ra8x2-uart-dtc接收不定长" class="md-toc-link">2.1 ra8x2 uart dtc接收不定长</a>
+</summary>
+<div class="md-toc-link-wrapper" data-level="2">
+  <a href="#211-fsp配置" class="md-toc-link">2.1.1 fsp配置</a>
+</div>
+<div class="md-toc-link-wrapper" data-level="2">
+  <a href="#212-源码" class="md-toc-link">2.1.2 源码</a>
+</div>
+</details>
+<details open="" class="md-toc-details">
+<summary class="md-toc-link-wrapper" data-level="1">
+  <a href="#22-ra8x2-uart-dma接收不定长" class="md-toc-link">2.2 ra8x2 uart dma接收不定长</a>
+</summary>
+<div class="md-toc-link-wrapper" data-level="2">
+  <a href="#221-fsp配置" class="md-toc-link">2.2.1 fsp配置</a>
+</div>
+<div class="md-toc-link-wrapper" data-level="2">
+  <a href="#222-dma-api封装" class="md-toc-link">2.2.2 dma api封装</a>
+</div>
+<div class="md-toc-link-wrapper" data-level="2">
+  <a href="#223-源码" class="md-toc-link">2.2.3 源码</a>
+</div>
+</details>
+</details>
+<details open="" class="md-toc-details">
+<summary class="md-toc-link-wrapper" data-level="0">
+  <a href="#三-ra8x2-spi-slave-dtcdma接收不定长" class="md-toc-link">三、ra8x2 spi slave dtc/dma接收不定长</a>
+</summary>
+<div class="md-toc-link-wrapper" data-level="1">
+  <a href="#31-与uart的本质区别" class="md-toc-link">3.1 与uart的本质区别</a>
+</div>
+<details open="" class="md-toc-details">
+<summary class="md-toc-link-wrapper" data-level="1">
+  <a href="#32-spi-slave-dtc接收不定长" class="md-toc-link">3.2 spi slave dtc接收不定长</a>
+</summary>
+<div class="md-toc-link-wrapper" data-level="2">
+  <a href="#321-fsp配置" class="md-toc-link">3.2.1 fsp配置</a>
+</div>
+<div class="md-toc-link-wrapper" data-level="2">
+  <a href="#322-源码" class="md-toc-link">3.2.2 源码</a>
+</div>
+<div class="md-toc-link-wrapper" data-level="2">
+  <a href="#323-日志" class="md-toc-link">3.2.3 日志</a>
+</div>
+</details>
+<details open="" class="md-toc-details">
+<summary class="md-toc-link-wrapper" data-level="1">
+  <a href="#33-spi-slave-dma接收不定长" class="md-toc-link">3.3 spi slave dma接收不定长</a>
+</summary>
+<div class="md-toc-link-wrapper" data-level="2">
+  <a href="#331-fsp配置" class="md-toc-link">3.3.1 fsp配置</a>
+</div>
+<div class="md-toc-link-wrapper" data-level="2">
+  <a href="#332-源码" class="md-toc-link">3.3.2 源码</a>
+</div>
+<div class="md-toc-link-wrapper" data-level="2">
+  <a href="#333-日志" class="md-toc-link">3.3.3 日志</a>
+</div>
+</details>
+</details>
+<div class="md-toc-link-wrapper" data-level="0">
+  <a href="#四-总结" class="md-toc-link">四、总结</a>
+</div>
+</div>
+<h1 id="一-概述">一、概述 </h1>
+<ul>
+<li><a href="https://mp.weixin.qq.com/s?__biz=MzkxNDQyMTU4Mg==&amp;mid=2247485323&amp;idx=1&amp;sn=186d5310a5278e09916adde1e5c81097&amp;chksm=c16fe5aaf6186cbc85d37bd69deeec93a80045fe80acfdbadaef983378973ac80499fae4b546&amp;token=924418606&amp;lang=zh_CN#rd">十一、从0开始卷出一个新项目之瑞萨RA6M5串口DMA接收不定长</a></li>
+<li>上一篇文章讲了串口uart的dma接收不定长，本文讲spi slave的dtc/dma接收不定长</li>
+<li>关键原理：都是通过gpt定时器和elc来硬件检测"空闲"，思路和stm32的空闲中断类似，但瑞萨没有现成的api，需要自己封装</li>
+<li>但是：uart和spi本质上有区别：
+<ul>
+<li>uart是异步通信，全双工，接收方只要知道波特率就能收到任意长度的数据</li>
+<li>spi是同步通信，伪全双工，spi master必须指定长度（时钟由master产生，slave无法决定）</li>
+<li>所以spi master发送不定长数据时，slave在"半双工使用场景"下（只收不发），就存在dtc/dma接收不定长的问题——这是本文重点讨论的</li>
+</ul>
+</li>
+<li>本文会先简单对比ra8x2 uart的dtc/dma接收不定长（和ra6m5基本一样），再重点讲spi slave的dtc/dma接收不定长</li>
+</ul>
+<h1 id="二-ra8x2-uart-dtcdma接收不定长与ra6m5基本一样">二、ra8x2 uart dtc/dma接收不定长（与ra6m5基本一样） </h1>
+<ul>
+<li>ra8x2的uart接收不定长和ra6m5的实现思路基本一样，都是通过rx full事件经elc触发gpt单次定时，gpt溢出即认为空闲</li>
+<li>但有一个微小差别：uart的ip不同，ra6m5是R_SCI，ra8x2是R_SCI_B（多一个B）</li>
+<li>R_SCI和R_SCI_B的寄存器名称有差异，比如使能接收/发送的控制寄存器，R_SCI是SCR，R_SCI_B是CCR0，配置步骤要对应改一下</li>
+</ul>
+<h2 id="21-ra8x2-uart-dtc接收不定长">2.1 ra8x2 uart dtc接收不定长 </h2>
+<h3 id="211-fsp配置">2.1.1 fsp配置 </h3>
+<p><img src="./images/uart_dtc_fsp_gpt_mode.png" alt=""></p>
+<p><img src="./images/uart_dtc_fsp_gpt_start_source.png" alt=""></p>
+<p><img src="./images/uart_dtc_fsp_gpt_clearsource.png" alt=""></p>
+<h3 id="212-源码">2.1.2 源码 </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>void hal_entry(void)
+{
+    /* TODO: add your own code here */
+    uint8_t test[] = "Test ra8p1 uart dtc recv volatile string\n";
+    g_uart0.p_api-&gt;open(g_uart0.p_ctrl, g_uart0.p_cfg);
+    R_SCI_B_UART_Write(g_uart0.p_ctrl, test, strlen(test));
+
+    g_timer0.p_api-&gt;open(g_timer0.p_ctrl, g_timer0.p_cfg);
+    g_timer0.p_api-&gt;enable(g_timer0.p_ctrl);
+    //g_timer0.p_api-&gt;start(g_timer0.p_ctrl);
+
+    g_elc.p_api-&gt;open(g_elc.p_ctrl, g_elc.p_cfg);
+    g_elc.p_api-&gt;enable(g_elc.p_ctrl);
+
+    R_SCI_B_UART_Read(g_uart0.p_ctrl, (uint8_t *)uart0_dtc_rx_data, RX_MAX);
+
+    while(1)
+
+}
+void g_timer0CB(timer_callback_args_t *p_args)
+{
+    if(p_args-&gt;event == TIMER_EVENT_CYCLE_END)
+    {
+        transfer_properties_t p_properties;
+        g_transfer1.p_api-&gt;infoGet(g_transfer1.p_ctrl, &amp;p_properties);
+
+        R_SCI_B_UART_Write(g_uart0.p_ctrl, (uint8_t *)(uart0_dtc_rx_data), RX_MAX - p_properties.transfer_length_remaining);
+
+        R_SCI_B_UART_Read(g_uart0.p_ctrl, (uint8_t *)(uart0_dtc_rx_data), RX_MAX);
+    }
+}
+</code></pre><h2 id="22-ra8x2-uart-dma接收不定长">2.2 ra8x2 uart dma接收不定长 </h2>
+<h3 id="221-fsp配置">2.2.1 fsp配置 </h3>
+<p><img src="./images/uart_dma_fsp_gpt_mode.png" alt=""></p>
+<p><img src="./images/uart_dma_fsp_gpt_start_source.png" alt=""></p>
+<p><img src="./images/uart_dma_fsp_gpt_clearsource.png" alt=""></p>
+<p><img src="./images/uart_dma_fsp_stacks.png" alt=""></p>
+<p><img src="./images/uart_dma_fsp_tx.png" alt=""></p>
+<p><img src="./images/uart_dma_fsp_rx.png" alt=""></p>
+<h3 id="222-dma-api封装">2.2.2 dma api封装 </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>fsp_err_t R_SCI_B_UART_Write_DMA (uart_ctrl_t * const p_api_ctrl, uint8_t const * const p_src, uint16_t const bytes)
+{
+    fsp_err_t err = FSP_SUCCESS;
+
+    sci_b_uart_instance_ctrl_t * p_ctrl = (sci_b_uart_instance_ctrl_t *) p_api_ctrl;
+
+    //Before initiating DMA transfer, must be clear it first.
+    R_ICU-&gt;IELSR[SCI0_TXI_IRQn] = 0U;
+
+    p_ctrl-&gt;p_reg-&gt;CCR0 &amp;= (uint32_t) ~(R_SCI_B0_CCR0_TIE_Msk | R_SCI_B0_CCR0_TEIE_Msk);
+    /* Disable transmission */
+    p_ctrl-&gt;p_reg-&gt;CCR0 &amp;= (uint32_t) ~(R_SCI_B0_CCR0_TE_Msk);
+
+    //dma config
+    g_transfer0_dma_uart0_tx.p_cfg-&gt;p_info-&gt;p_src = (void*)&amp;p_src[0];
+    g_transfer0_dma_uart0_tx.p_cfg-&gt;p_info-&gt;p_dest = (void*)&amp;R_SCI_B0-&gt;TDR;
+    g_transfer0_dma_uart0_tx.p_cfg-&gt;p_info-&gt;length = bytes;
+
+    err = g_transfer0_dma_uart0_tx.p_api-&gt;reconfigure(g_transfer0_dma_uart0_tx.p_ctrl, g_transfer0_dma_uart0_tx.p_cfg-&gt;p_info);
+
+    /* Set TE and TIE bits simultaneously by single instruction to enable TIE interrupt.
+     * See "Serial Data Transmission in Asynchronous Mode" in the SCI section of the relevant
+     * hardware manual. */
+    p_ctrl-&gt;p_reg-&gt;CCR0 |= (uint32_t) (R_SCI_B0_CCR0_TE_Msk | R_SCI_B0_CCR0_TIE_Msk);
+
+    return err;
+
+}
+
+fsp_err_t R_SCI_B_UART_Read_DMA (uart_ctrl_t * const p_api_ctrl, uint8_t const * const p_dest, uint16_t const bytes)
+{
+    fsp_err_t err = FSP_SUCCESS;
+
+    sci_b_uart_instance_ctrl_t * p_ctrl = (sci_b_uart_instance_ctrl_t *) p_api_ctrl;
+
+    //Before initiating DMA transfer, must be clear it first.
+    R_ICU-&gt;IELSR[SCI0_RXI_IRQn] = 0U;
+
+    p_ctrl-&gt;p_reg-&gt;CCR0 &amp;= (uint32_t) ~(R_SCI_B0_CCR0_RE_Msk | R_SCI_B0_CCR0_RIE_Msk);
+
+    //dma config
+    g_transfer1_dma_uart0_rx.p_cfg-&gt;p_info-&gt;p_src = (void*)&amp;R_SCI_B0-&gt;RDR;
+    g_transfer1_dma_uart0_rx.p_cfg-&gt;p_info-&gt;p_dest = (void*)&amp;p_dest[0];
+    g_transfer1_dma_uart0_rx.p_cfg-&gt;p_info-&gt;length = bytes;
+
+    err = g_transfer1_dma_uart0_rx.p_api-&gt;reconfigure(g_transfer1_dma_uart0_rx.p_ctrl, g_transfer1_dma_uart0_rx.p_cfg-&gt;p_info);
+
+    p_ctrl-&gt;p_reg-&gt;CCR0 |= (uint32_t) (R_SCI_B0_CCR0_RE_Msk | R_SCI_B0_CCR0_RIE_Msk);
+
+    return err;
+
+}
+</code></pre><h3 id="223-源码">2.2.3 源码 </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>void hal_entry(void)
+{
+    /* TODO: add your own code here */
+    uint8_t test0[] = "helloworld\n";
+    g_uart0.p_api-&gt;open(g_uart0.p_ctrl, g_uart0.p_cfg);
+    R_SCI_B_UART_Write(g_uart0.p_ctrl, test0, strlen(test0));
+    R_BSP_SoftwareDelay(1, BSP_DELAY_UNITS_SECONDS);
+
+    g_timer0.p_api-&gt;open(g_timer0.p_ctrl, g_timer0.p_cfg);
+    g_timer0.p_api-&gt;enable(g_timer0.p_ctrl);
+    //g_timer0.p_api-&gt;start(g_timer0.p_ctrl);
+
+    g_elc.p_api-&gt;open(g_elc.p_ctrl, g_elc.p_cfg);
+    g_elc.p_api-&gt;enable(g_elc.p_ctrl);
+
+    g_transfer0_dma_uart0_tx.p_api-&gt;open(g_transfer0_dma_uart0_tx.p_ctrl, g_transfer0_dma_uart0_tx.p_cfg);
+    g_transfer0_dma_uart0_tx.p_api-&gt;enable(g_transfer0_dma_uart0_tx.p_ctrl);
+
+    g_transfer1_dma_uart0_rx.p_api-&gt;open(g_transfer1_dma_uart0_rx.p_ctrl, g_transfer1_dma_uart0_rx.p_cfg);
+    g_transfer1_dma_uart0_rx.p_api-&gt;enable(g_transfer1_dma_uart0_rx.p_ctrl);
+
+    uint8_t test1[] = "Test ra8p1 uart dma recv volatile string\n";
+    R_SCI_B_UART_Write_DMA(g_uart0.p_ctrl, test1, strlen(test1));
+    R_SCI_B_UART_Read_DMA(g_uart0.p_ctrl, uart0_dma_rx_data, RX_MAX);
+
+    while(1)
+
+}
+
+void g_timer0CB(timer_callback_args_t *p_args)
+{
+    if(p_args-&gt;event == TIMER_EVENT_CYCLE_END)
+    {
+        transfer_properties_t p_info;
+
+        R_DMAC_InfoGet(g_transfer1_dma_uart0_rx.p_ctrl, &amp;p_info);
+
+        R_SCI_B_UART_Write_DMA(g_uart0.p_ctrl, uart0_dma_rx_data, (uint16_t)(RX_MAX - p_info.transfer_length_remaining));
+
+
+        R_SCI_B_UART_Read_DMA(g_uart0.p_ctrl, uart0_dma_rx_data, RX_MAX);
+    }
+
+}
+</code></pre><h1 id="三-ra8x2-spi-slave-dtcdma接收不定长">三、ra8x2 spi slave dtc/dma接收不定长 </h1>
+<h2 id="31-与uart的本质区别">3.1 与uart的本质区别 </h2>
+<ul>
+<li>uart接收不定长用的是rx full事件+elc+gpt，spi slave接收不定长的思路类似，但是有个本质区别：
+<ul>
+<li>spi是同步通信伪全双工，spi master必须指定长度，master发送多少长度，时钟就产生多少拍</li>
+<li>spi slave半双工使用场景下（只收不发），slave不知道master会发多少数据，所以slave侧要用dtc/dma去"收满"一个最大长度（RX_MAX），再用gpt+elc检测spi空闲，空闲时统计实际收到多少</li>
+</ul>
+</li>
+<li>总结：接收传输数据开始前，要关闭spi的2个寄存器——SPCR寄存器里的SPTIE（SPI传输中断使能）和SPE（SPI使能）</li>
+<li>为什么要关这2个寄存器？
+<ul>
+<li>因为spi slave每次重新启动dtc/dma接收前，需要先把spi模块的传输中断和spi使能关掉，等dtc/dma重新配置好再开启，否则会出现接收错误（比如第一次接收后再次开启，数据错位/收不到）</li>
+</ul>
+</li>
+<li>框图：</li>
+</ul>
+<div class="mermaid">graph TB
+
+A[event signal：&lt;br&gt;SPI1 RXI Receive data full]
+
+C[GPT0：One-Shot]
+D[g_timer0CB]
+E[接收spi slave rx dma/dtc数据]
+
+A --Start Source--&gt;C
+A --Clear Source--&gt;C
+
+C --溢出中断--&gt; D
+D --先关闭SPCR的SPTIE和SPE--&gt; E
+</div><h2 id="32-spi-slave-dtc接收不定长">3.2 spi slave dtc接收不定长 </h2>
+<h3 id="321-fsp配置">3.2.1 fsp配置 </h3>
+<p><img src="./images/spi_slave_dtc_fsp_gpt_mode.png" alt=""></p>
+<p><img src="./images/spi_slave_dtc_fsp_gpt_start_source.png" alt=""></p>
+<p><img src="./images/spi_slave_dtc_fsp_gpt_clearsource.png" alt=""></p>
+<h3 id="322-源码">3.2.2 源码 </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>void g_timer0CB(timer_callback_args_t *p_args)
+{
+    if(p_args-&gt;event == TIMER_EVENT_CYCLE_END)
+    {
+
+        g_slave_event_flag = SPI_EVENT_TRANSFER_COMPLETE;
+
+        transfer_properties_t p_info;
+
+        R_DTC_InfoGet(g_transfer2.p_ctrl, &amp;p_info);
+
+#if 1//spi slave recv volatile
+#define R_SPI_B0_SPCR_SPTIE_Msk       (0x100000UL)   /*!&lt; SPTIE (Bitfield-Mask: 0x01)                           */
+#define R_SPI_B0_SPCR_SPE_Msk         (0x1UL)        /*!&lt; SPE (Bitfield-Mask: 0x01)                             */
+        g_spi_slave_ctrl.p_regs-&gt;SPCR &amp;= ~(R_SPI_B0_SPCR_SPTIE_Msk | R_SPI_B0_SPCR_SPE_Msk);
+        R_SPI_B_Read(&amp;g_spi_slave_ctrl, g_slave_rx_buff, (uint32_t)(RX_MAX - p_info.transfer_length_remaining), SPI_BIT_WIDTH_32_BITS);
+#endif
+
+    }
+
+}
+</code></pre><h3 id="323-日志">3.2.3 日志 </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>00&gt; Press 1 for Write() and Read()
+00&gt; Press 2 for WriteRead()
+00&gt; Press 3 to Exit
+  &lt; 1
+00&gt; 
+00&gt; Enter text input for Master buffer. Data size should be less than 64 bytes.
+  &lt; 123123123123
+00&gt; 
+00&gt; Master transmitted user input data to Slave
+00&gt; 
+00&gt; Slave transmitted the data back to Master
+00&gt; 
+00&gt; Master received data: 123123123123 
+00&gt; 
+00&gt; ** SPI WRITE AND READ Demo Successful **
+</code></pre><h2 id="33-spi-slave-dma接收不定长">3.3 spi slave dma接收不定长 </h2>
+<h3 id="331-fsp配置">3.3.1 fsp配置 </h3>
+<p><img src="./images/spi_slave_dma_fsp_gpt_mode.png" alt=""></p>
+<p><img src="./images/spi_slave_dma_fsp_gpt_start_source.png" alt=""></p>
+<p><img src="./images/spi_slave_dma_fsp_gpt_clearsource.png" alt=""></p>
+<p><img src="./images/spi_slave_dma_fsp_spib.png" alt=""></p>
+<p><img src="./images/spi_slave_dma_fsp_spirxi.png" alt=""></p>
+<p><img src="./images/spi_slave_dma_fsp_spitxi.png" alt=""></p>
+<h3 id="332-源码">3.3.2 源码 </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>void g_timer0CB(timer_callback_args_t *p_args)
+{
+    if(p_args-&gt;event == TIMER_EVENT_CYCLE_END)
+    {
+
+        g_slave_event_flag = SPI_EVENT_TRANSFER_COMPLETE;
+
+        transfer_properties_t p_info;
+
+        R_DTC_InfoGet(g_transfer2.p_ctrl, &amp;p_info);
+
+#if 1//spi slave recv volatile
+#define R_SPI_B0_SPCR_SPTIE_Msk       (0x100000UL)   /*!&lt; SPTIE (Bitfield-Mask: 0x01)                           */
+#define R_SPI_B0_SPCR_SPE_Msk         (0x1UL)        /*!&lt; SPE (Bitfield-Mask: 0x01)                             */
+        g_spi_slave_ctrl.p_regs-&gt;SPCR &amp;= ~(R_SPI_B0_SPCR_SPTIE_Msk | R_SPI_B0_SPCR_SPE_Msk);
+        R_SPI_B_Read(&amp;g_spi_slave_ctrl, g_slave_rx_buff, (uint32_t)(RX_MAX - p_info.transfer_length_remaining), SPI_BIT_WIDTH_32_BITS);
+#endif
+
+    }
+
+}
+</code></pre><h3 id="333-日志">3.3.3 日志 </h3>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>00&gt; Press 1 for Write() and Read()
+00&gt; Press 2 for WriteRead()
+00&gt; Press 3 to Exit
+  &lt; 1
+00&gt; 
+00&gt; Enter text input for Master buffer. Data size should be less than 64 bytes.
+  &lt; 123123123123
+00&gt; 
+00&gt; Master transmitted user input data to Slave
+00&gt; 
+00&gt; Slave transmitted the data back to Master
+00&gt; 
+00&gt; Master received data: 123123123123 
+00&gt; 
+00&gt; ** SPI WRITE AND READ Demo Successful **
+</code></pre><h1 id="四-总结">四、总结 </h1>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>ra6m5 uart dtc/dma接收不定长</th>
+<th>ra8x2 uart dtc/dma接收不定长</th>
+<th>ra8x2 spi slave dtc/dma接收不定长</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>通信类型</td>
+<td>uart异步全双工</td>
+<td>uart异步全双工</td>
+<td>spi同步伪全双工</td>
+</tr>
+<tr>
+<td>空闲检测</td>
+<td>rx full+elc+gpt</td>
+<td>rx full+elc+gpt</td>
+<td>spi rxi+elc+gpt</td>
+</tr>
+<tr>
+<td>是否指定长度</td>
+<td>接收方不需指定</td>
+<td>接收方不需指定</td>
+<td>master必须指定，slave半双工时收不定长</td>
+</tr>
+<tr>
+<td>uart/spi ip</td>
+<td>R_SCI</td>
+<td>R_SCI_B</td>
+<td>SPI_B</td>
+</tr>
+<tr>
+<td>接收前处理</td>
+<td>dtc无需<br>dma清IELSR</td>
+<td>dtc无需<br>dma清IELSR</td>
+<td>dtc无需<br>dma关闭SPCR的SPTIE和SPE 2个寄存器</td>
+</tr>
+<tr>
+<td>实际长度计算</td>
+<td>transfer_length_remaining</td>
+<td>transfer_length_remaining</td>
+<td>transfer_length_remaining</td>
+</tr>
+<tr>
+<td>需要封装api</td>
+<td>dtc无需<br>dma需要（fsp无sci+dma api）</td>
+<td>dtc无需<br>dma需要（fsp无sci_b+dma api）</td>
+<td>都需要（fsp无spi+dma/dtc api）</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>下一篇预告：dtc和dma差别的深度分析
+<ul>
+<li>本文中spi slave接收不定长，dtc和dma用起来"看起来一样"，只是fsp配置时选择transfer on dtc还是transfer on dma</li>
+<li>但它们本质差别很大：dma是直接寄存器配置，dtc是矢量表/描述符配置</li>
+<li>下一篇将更深入地对比dtc和dma的差别，比如：dtc占用cpu周期、dtc最大传输次数1024、dma独立于cpu、dtc一个矢量表项对应一个中断源等</li>
+</ul>
+</li>
+</ul>
+
+      </div>
+      
+      
+    
+    
+    <script type="module">
+// TODO: If ZenUML gets integrated into mermaid in the future,
+//      we can remove the following lines.
+
+
+var MERMAID_CONFIG = ({"startOnLoad":false});
+if (typeof MERMAID_CONFIG !== 'undefined') {
+  MERMAID_CONFIG.startOnLoad = false
+  MERMAID_CONFIG.cloneCssStyles = false
+  MERMAID_CONFIG.theme = "default"
+}
+
+mermaid.initialize(MERMAID_CONFIG || {})
+if (typeof(window['Reveal']) !== 'undefined') {
+  function mermaidRevealHelper(event) {
+    var currentSlide = event.currentSlide
+    var diagrams = currentSlide.querySelectorAll('div.mermaid')
+    for (var i = 0; i < diagrams.length; i++) {
+      var diagram = diagrams[i]
+      if (!diagram.hasAttribute('data-processed')) {
+        mermaid.init(null, diagram, ()=> {
+          Reveal.slide(event.indexh, event.indexv)
+        })
+      }
+    }
+  }
+  Reveal.addEventListener('slidetransitionend', mermaidRevealHelper)
+  Reveal.addEventListener('ready', mermaidRevealHelper)
+  await mermaid.run({
+    nodes: document.querySelectorAll('div.mermaid')
+  })
+} else {
+  await mermaid.run({
+    nodes: document.querySelectorAll('div.mermaid')
+  })
+}
+</script>
+    
+    
+    
+  
+    </body></html>

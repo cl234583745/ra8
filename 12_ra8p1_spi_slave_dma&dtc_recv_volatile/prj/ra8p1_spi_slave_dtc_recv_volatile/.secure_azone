@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<azone>
+    <rzone name="R7KA8P1KFLCAC.rzone"/>
+    <partition>
+        <peripheral name="PORT1.CPU0" group="PORT">
+            <slot name="P100.CPU0" secure="true"/>
+            <slot name="P101.CPU0" secure="true"/>
+            <slot name="P102.CPU0" secure="true"/>
+        </peripheral>
+        <peripheral name="PORT2.CPU0" group="PORT">
+            <slot name="P208.CPU0" secure="true"/>
+            <slot name="P209.CPU0" secure="true"/>
+            <slot name="P210.CPU0" secure="true"/>
+            <slot name="P211.CPU0" secure="true"/>
+        </peripheral>
+        <peripheral name="PORT7.CPU0" group="PORT">
+            <slot name="P700.CPU0" secure="true"/>
+            <slot name="P701.CPU0" secure="true"/>
+            <slot name="P702.CPU0" secure="true"/>
+        </peripheral>
+        <peripheral name="GPT0.CPU0" group="GPT" security="s"/>
+        <peripheral name="ICU.CPU0">
+            <slot name="IRQ0.CPU0" secure="true"/>
+            <slot name="IRQ1.CPU0" secure="true"/>
+            <slot name="IRQ2.CPU0" secure="true"/>
+            <slot name="IRQ3.CPU0" secure="true"/>
+            <slot name="IRQ4.CPU0" secure="true"/>
+            <slot name="IRQ5.CPU0" secure="true"/>
+            <slot name="IRQ6.CPU0" secure="true"/>
+            <slot name="IRQ7.CPU0" secure="true"/>
+            <slot name="IRQ8.CPU0" secure="true"/>
+        </peripheral>
+        <peripheral name="ELC.CPU0">
+            <slot name="GPT_A.CPU0" secure="true"/>
+        </peripheral>
+    </partition>
+</azone>
