@@ -1,0 +1,784 @@
+<!DOCTYPE html><html><head>
+      <title>MCUboot_Test_Summary</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\jerry\.codearts-doer-for-coding\extensions\shd101wyy.markdown-preview-enhanced-0.8.21\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script>
+    </head>
+    <body for="html-export">
+      <div class="crossnote markdown-preview  ">
+      
+<h1>十一、ra8p1 mcuboot深度分析</h1>
+
+<div class="md-toc">
+<div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:18px">
+          <a href="#一-mcuboot-简介" class="md-toc-link">
+            <p>一、MCUboot 简介</p>
+
+          </a></div><details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#二-测试环境" class="md-toc-link"><p>二、测试环境</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#21-参考工程结构" class="md-toc-link">
+            <p>2.1 参考工程结构</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#22-flash-分区布局internal-mram" class="md-toc-link">
+            <p>2.2 Flash 分区布局（internal MRAM）</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#23-mcuboot-配置" class="md-toc-link">
+            <p>2.3 MCUboot 配置</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#三-测试过程中遇到的问题" class="md-toc-link"><p>三、测试过程中遇到的问题</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#31-python-环境与-imgtool-签名工具" class="md-toc-link">
+            <p>3.1 Python 环境与 imgtool 签名工具</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#32-mcuboot-日志输出问题" class="md-toc-link">
+            <p>3.2 MCUboot 日志输出问题</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#33-签名验证失败" class="md-toc-link"><p>3.3 签名验证失败</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#问题描述" class="md-toc-link">
+            <p>问题描述</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#根因分析" class="md-toc-link">
+            <p>根因分析</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#解决" class="md-toc-link">
+            <p>解决</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#34-调试下载问题" class="md-toc-link">
+            <p>3.4 调试下载问题</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#四-mcuboot-启动流程分析" class="md-toc-link"><p>四、MCUboot 启动流程分析</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#41-完整启动日志" class="md-toc-link">
+            <p>4.1 完整启动日志</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#42-启动阶段详解" class="md-toc-link">
+            <p>4.2 启动阶段详解</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#43-签名验证机制" class="md-toc-link">
+            <p>4.3 签名验证机制</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#五-mcuboot-优缺点" class="md-toc-link"><p>五、MCUboot 优缺点</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#51-典型资源开销" class="md-toc-link">
+            <p>5.1 典型资源开销</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#六-个人总结" class="md-toc-link"><p>六、个人总结</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#61-mcuboot-的整体评价" class="md-toc-link">
+            <p>6.1 MCUboot 的整体评价</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#62-与-sas-方案的对比" class="md-toc-link">
+            <p>6.2 与 SAS 方案的对比</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#63-理解与启发" class="md-toc-link">
+            <p>6.3 理解与启发</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#64-对-ra8t2-项目的启示" class="md-toc-link">
+            <p>6.4 对 RA8T2 项目的启示</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+</div>
+<h1 id="一-mcuboot-简介">一、MCUboot 简介 </h1>
+<ul>
+<li>MCUboot 是一个开源的 secure bootloader，专门为资源受限的 MCU 设计，目前由 Linaro 维护，托管在 <a href="https://github.com/mcu-tools/mcuboot">github.com/mcu-tools/mcuboot</a>。</li>
+<li>主要功能：
+<ul>
+<li>支持三种升级模式：<strong>Overwrite Only</strong>（覆盖）、<strong>Swap</strong>（双bank交换）、<strong>Direct-XIP</strong>（原地执行）</li>
+<li>支持数字签名验证：<strong>ECDSA P-256</strong>、<strong>RSA-2048/3072</strong>、<strong>ML-DSA</strong>（Dilithium，抗量子）</li>
+<li>支持多 Image（multi-image），可同时管理多个 CPU 核的固件</li>
+<li>版本管理和降级防护</li>
+<li>固件加密（Encrypted Images）</li>
+</ul>
+</li>
+<li>Renesas FSP 将 MCUboot 集成为 <code>rm_mcuboot_port</code> 模块，与 e2 studio 深度绑定，提供图形化配置、自动签名、一键调试等支持。</li>
+<li>MCUboot 本身是<strong>硬件无关的</strong>，通过 flash_map 抽象层和 bootutil 核心逻辑实现跨平台。</li>
+</ul>
+<h1 id="二-测试环境">二、测试环境 </h1>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>硬件</strong></td>
+<td>EK-RA8P1（Cortex-M85 @ 1GHz + Cortex-M33 双核）</td>
+</tr>
+<tr>
+<td><strong>MCU 存储</strong></td>
+<td>Code MRAM 1MB（0x02000000），22 nm STT-MRAM</td>
+</tr>
+<tr>
+<td><strong>工具链</strong></td>
+<td>Clang ARM Toolchain for Embedded v21.1.1（ATfE-21.1.1），picolibc tinystdio</td>
+</tr>
+<tr>
+<td><strong>FSP 版本</strong></td>
+<td>Renesas FSP v6.4.0</td>
+</tr>
+<tr>
+<td><strong>IDE</strong></td>
+<td>e2 studio 2025-04</td>
+</tr>
+<tr>
+<td><strong>MCUboot 版本</strong></td>
+<td>集成在 FSP 中的 MCUboot 移植版</td>
+</tr>
+</tbody>
+</table>
+<h2 id="21-参考工程结构">2.1 参考工程结构 </h2>
+<p>参考工程 <code>ra8_dualcore_with_bootloader</code> 包含 5 个子项目：</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ra8p1_bootloader</code></td>
+<td>MCUboot bootloader，运行在 CPU0 Secure 模式</td>
+</tr>
+<tr>
+<td><code>ra8p1_primary_cpu0</code></td>
+<td>CPU0 主应用（LED 闪烁）</td>
+</tr>
+<tr>
+<td><code>ra8p1_primary_cpu1</code></td>
+<td>CPU1 主应用（LED 闪烁）</td>
+</tr>
+<tr>
+<td><code>ra8p1_secondary_cpu0</code></td>
+<td>CPU0 副 slot 应用（用于测试升级）</td>
+</tr>
+<tr>
+<td><code>ra8p1_secondary_cpu1</code></td>
+<td>CPU1 副 slot 应用</td>
+</tr>
+</tbody>
+</table>
+<h2 id="22-flash-分区布局internal-mram">2.2 Flash 分区布局（internal MRAM） </h2>
+<table>
+<thead>
+<tr>
+<th>分区</th>
+<th>起始地址</th>
+<th>大小</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bootloader</td>
+<td>0x02000000</td>
+<td>64 KB（0x10000）</td>
+<td>MCUboot 固件</td>
+</tr>
+<tr>
+<td>Image 0 Primary（CPU0）</td>
+<td>0x02010000</td>
+<td>192 KB（0x30000）</td>
+<td>CPU0 主应用 slot</td>
+</tr>
+<tr>
+<td>Image 1 Primary（CPU1）</td>
+<td>0x02040000</td>
+<td>192 KB（0x30000）</td>
+<td>CPU1 主应用 slot</td>
+</tr>
+<tr>
+<td>Image 0 Secondary（CPU0）</td>
+<td>0x02070000</td>
+<td>192 KB（0x30000）</td>
+<td>CPU0 升级接收 slot</td>
+</tr>
+<tr>
+<td>Image 1 Secondary（CPU1）</td>
+<td>0x020A0000</td>
+<td>192 KB（0x30000）</td>
+<td>CPU1 升级接收 slot</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>注①：每个 Image 包含 0x200 字节的 MCUboot header + 0x2FE00 字节的应用固件。总 Flash 占用约 64 + 192×4 = 832 KB，1 MB MRAM 基本用完。</p>
+</blockquote>
+<h2 id="23-mcuboot-配置">2.3 MCUboot 配置 </h2>
+<p>关键配置项（<code>mcuboot_config.h</code>，FSP 生成文件——不可直接修改）：</p>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">MCUBOOT_SIGN_EC256</span>                   <span class="token comment">// ECDSA P-256 签名</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">MCUBOOT_OVERWRITE_ONLY</span>                <span class="token comment">// Overwrite 模式（非 Swap）</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">MCUBOOT_VALIDATE_PRIMARY_SLOT</span>         <span class="token comment">// 验证 Primary slot 签名</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">MCUBOOT_HAVE_LOGGING</span>    <span class="token expression"><span class="token number">1</span>             </span><span class="token comment">// 启用日志</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">MCUBOOT_USE_MBED_TLS</span>                  <span class="token comment">// 加密库：mbed TLS</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">MCUBOOT_IMAGE_NUMBER</span>  <span class="token expression"><span class="token number">2</span>               </span><span class="token comment">// 双 Image（双核）</span></span>
+</code></pre><h1 id="三-测试过程中遇到的问题">三、测试过程中遇到的问题 </h1>
+<h2 id="31-python-环境与-imgtool-签名工具">3.1 Python 环境与 imgtool 签名工具 </h2>
+<ul>
+<li>问题描述</li>
+</ul>
+<p>按照应用笔记 R11AN1099EU0100 3.1 节配置 Python 签名环境：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>python -m pip install --upgrade pip         // 成功
+pip3 install --user -r scripts/requirements.txt  // 失败
+</code></pre><p>第二个命令报错：<code>ERROR: Could not open requirements file: [Errno 2] No such file or directory: 'scripts/requirements.txt'</code></p>
+<ul>
+<li>根因分析</li>
+</ul>
+<p>在 e2 studio 中编译工程时，工作目录是各项目根目录（如 <code>ra8p1_primary_cpu0/</code>），而 <code>requirements.txt</code> 位于 <code>ra8p1_bootloader/ra/mcu-tools/MCUboot/scripts/requirements.txt</code>，相对路径需要从 bootloader 项目根目录出发：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>pip install -r ra/mcu-tools/MCUboot/scripts/requirements.txt
+</code></pre><ul>
+<li>解决</li>
+</ul>
+<p>从 bootloader 项目根目录执行：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>pip install -r ra/mcu-tools/MCUboot/scripts/requirements.txt
+</code></pre><p>安装的依赖包：</p>
+<table>
+<thead>
+<tr>
+<th>包名</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cryptography&gt;=2.6</code></td>
+<td>RSA/EC 密钥处理</td>
+</tr>
+<tr>
+<td><code>intelhex</code></td>
+<td>Intel HEX 文件格式支持</td>
+</tr>
+<tr>
+<td><code>click</code></td>
+<td>命令行接口</td>
+</tr>
+<tr>
+<td><code>cbor2</code></td>
+<td>CBOR 数据格式</td>
+</tr>
+<tr>
+<td><code>pyyaml</code></td>
+<td>YAML 配置文件解析</td>
+</tr>
+<tr>
+<td><code>dilithium-py&gt;=1.3.0</code></td>
+<td>ML-DSA（抗量子签名）支持</td>
+</tr>
+</tbody>
+</table>
+<h2 id="32-mcuboot-日志输出问题">3.2 MCUboot 日志输出问题 </h2>
+<ul>
+<li>问题描述</li>
+</ul>
+<p>MCUboot 的 <code>[ERR]/[WRN]/[INF]/[DBG]</code> 日志不输出到串口。烧录后只能看到 bootloader 自身初始化的打印，没有 MCUboot 的运行日志。</p>
+<ul>
+<li>根因分析</li>
+</ul>
+<p>三层原因叠加：</p>
+<p><strong>第一层：mcuboot_logging.h 是生成文件</strong></p>
+<p>MCUboot 的日志宏定义在 <code>ra_cfg/mcu-tools/include/mcuboot_config/mcuboot_logging.h</code>，文件头明确标注 <code>/* generated configuration header file - do not edit */</code>。FSP 在 Generate Project Content 时会重新生成此文件，任何手动修改都会被覆盖。</p>
+<p>原始内容使用 <code>printf()</code>：</p>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name function">MCUBOOT_LOG_ERR</span><span class="token expression"><span class="token punctuation">(</span>_fmt<span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span>   <span class="token function">printf</span><span class="token punctuation">(</span></span><span class="token string">"[ERR] "</span> <span class="token expression">_fmt </span><span class="token string">"\n"</span><span class="token expression"><span class="token punctuation">,</span> </span><span class="token punctuation">##</span> <span class="token expression">__VA_ARGS__<span class="token punctuation">)</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name function">MCUBOOT_LOG_INF</span><span class="token expression"><span class="token punctuation">(</span>_fmt<span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span>   <span class="token function">printf</span><span class="token punctuation">(</span></span><span class="token string">"[INF] "</span> <span class="token expression">_fmt </span><span class="token string">"\n"</span><span class="token expression"><span class="token punctuation">,</span> </span><span class="token punctuation">##</span> <span class="token expression">__VA_ARGS__<span class="token punctuation">)</span></span></span>
+</code></pre><p><strong>第二层：picolibc tinystdio 的 printf 不走 _write()</strong></p>
+<p>RA8P1 参考工程使用 Clang + picolibc tinystdio，这与传统的 GCC + newlib-nano 有本质区别：</p>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th>GCC + newlib-nano</th>
+<th>Clang + picolibc tinystdio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>printf 实现路径</td>
+<td><code>printf → _write()</code></td>
+<td><code>printf → vfprintf(stdout) → stdout-&gt;put()</code></td>
+</tr>
+<tr>
+<td>stdout 重写方式</td>
+<td><code>_write()</code> 钩子</td>
+<td><code>FDEV_SETUP_STREAM</code> 或重定义 <code>stdout</code></td>
+</tr>
+<tr>
+<td>复杂度</td>
+<td>低</td>
+<td>中（需要理解 picolibc FILE 机制）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>第三层：FDEV_SETUP_STREAM 在 picolibc 中不生效</strong></p>
+<p><code>log.c</code> 中已经包含了 FDEV_SETUP_STREAM 的重定向代码：</p>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token keyword keyword-static">static</span> <span class="token keyword keyword-int">int</span> <span class="token function">_uart_putchar</span><span class="token punctuation">(</span><span class="token keyword keyword-char">char</span> c<span class="token punctuation">,</span> FILE <span class="token operator">*</span>stream<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">USR_SCI_UART_Write</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>g_uart8_ctrl<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token class-name">uint8_t</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>c<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-return">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword keyword-static">static</span> FILE __stdio <span class="token operator">=</span> <span class="token function">FDEV_SETUP_STREAM</span><span class="token punctuation">(</span>_uart_putchar<span class="token punctuation">,</span> <span class="token constant">NULL</span><span class="token punctuation">,</span> <span class="token constant">NULL</span><span class="token punctuation">,</span> _FDEV_SETUP_WRITE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+FILE <span class="token operator">*</span><span class="token keyword keyword-const">const</span> <span class="token constant">stdout</span> <span class="token operator">=</span> <span class="token operator">&amp;</span>__stdio<span class="token punctuation">;</span>
+</code></pre><p>但实际测试发现此方案不生效，因为 picolibc tinystdio 中 <code>stdout</code> 的实现机制与 avr-libc 不同，<code>FILE *const stdout</code> 的强定义可能被库内部符号覆盖，或者 <code>printf</code> 内部使用了不同的路径。</p>
+<ul>
+<li>解决</li>
+</ul>
+<p>修改 <code>log.c</code> 中的宏定义：</p>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">USE_UART_PRINTF_REDIRECT</span> <span class="token expression"><span class="token number">0</span>  </span><span class="token comment">// 改为 0，启用 printf 重定向</span></span>
+</code></pre><p>此宏控制了 <code>uart_printf()</code> 的启用状态和底层实现方式（轮询寄存器 vs FSP 中断）。</p>
+<h2 id="33-签名验证失败">3.3 签名验证失败 </h2>
+<h3 id="问题描述">问题描述 </h3>
+<p>首次烧录后，bootloader 执行到 <code>boot_go()</code> 时触发 assert 失败，卡住无法跳转。串口无任何 MCUboot 日志。</p>
+<h3 id="根因分析">根因分析 </h3>
+<p><code>mcuboot_config.h</code> 中定义了：</p>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">MCUBOOT_SIGN_EC256</span>             <span class="token comment">// 要求 ECDSA P-256 签名</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">MCUBOOT_VALIDATE_PRIMARY_SLOT</span>  <span class="token comment">// 验证 Primary slot</span></span>
+</code></pre><p>这意味着 bootloader 启动时会：</p>
+<ol>
+<li>读取 Primary slot 的 image header</li>
+<li>读取 image body，计算 SHA-256 hash</li>
+<li>读取 TLV 区域的 ECDSA P-256 签名</li>
+<li>用内嵌的公钥验证签名</li>
+</ol>
+<p>如果 image 未签名，第 3 步找不到有效签名 → assert 失败。</p>
+<h3 id="解决">解决 </h3>
+<p>有两种方式：</p>
+<p><strong>方式一：关闭签名验证（快速测试）</strong></p>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token comment">// 注释掉这两行</span>
+<span class="token comment">// #define MCUBOOT_SIGN_EC256</span>
+<span class="token comment">// #define MCUBOOT_VALIDATE_PRIMARY_SLOT</span>
+</code></pre><blockquote>
+<p>注意：此文件是 FSP 生成的，修改后重新 Generate Project Content 会被覆盖。需要在 FSP 配置中去掉签名选项。</p>
+</blockquote>
+<p><strong>方式二：正确签名（推荐）</strong></p>
+<p>设置环境变量后，e2 studio 会在 <strong>Boot Image Build</strong> 步骤自动签名：</p>
+<table>
+<thead>
+<tr>
+<th>环境变量</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>MCUBOOT_IMAGE_VERSION</code></td>
+<td><code>1.0.0</code></td>
+</tr>
+<tr>
+<td><code>MCUBOOT_IMAGE_SIGNING_KEY</code></td>
+<td><code>ra/mcu-tools/MCUboot/root-ec-p256.pem</code></td>
+</tr>
+</tbody>
+</table>
+<p>签名命令（自动执行）：</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>python imgtool.py sign --header-size 0x200 --slot-size 0x30000 --max-sectors 6
+  --key root-ec-p256.pem --version 1.0.0 --align 32 --max-align 32
+  --overwrite-only --confirm --pad-header app.temp.bin app.bin.signed
+</code></pre><blockquote>
+<p>注②：<code>--align 32</code> 是因为 RA8P1 的 MRAM 编程单位为 32 字节（<code>BSP_FEATURE_MRAM_PROGRAMMING_SIZE_BYTES</code>）。</p>
+</blockquote>
+<h2 id="34-调试下载问题">3.4 调试下载问题 </h2>
+<p>e2 studio 的 Debug Configuration 中，primary images 需要以 <strong>Raw Binary</strong> 格式下载到指定地址：</p>
+<table>
+<thead>
+<tr>
+<th>Image</th>
+<th>地址</th>
+<th>文件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPU0 Primary</td>
+<td>0x02010000</td>
+<td><code>&lt;project&gt;.bin.signed</code></td>
+</tr>
+<tr>
+<td>CPU1 Primary</td>
+<td>0x02040000</td>
+<td><code>&lt;project&gt;.bin.signed</code></td>
+</tr>
+</tbody>
+</table>
+<p>如果 Debug Configuration 中的 path 使用了 <code>${workspace_loc}</code> 变量，注意路径格式使用正斜杠 <code>/</code> 而非反斜杠 <code>\</code>，否则 GDB MI 会报 <code>Failed to open ... Invalid argument</code>。</p>
+<h1 id="四-mcuboot-启动流程分析">四、MCUboot 启动流程分析 </h1>
+<h2 id="41-完整启动日志">4.1 完整启动日志 </h2>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>// === Bootloader 自身初始化 ===
+[INFO] date:Jul 7 2026, time:16:47:37
+[INFO] Built with Renesas Advanced Flexible Software Package version 6.4.0
+
+// === MCUboot 开始检查 Image 0 (CPU0) ===
+[DBG] area 1                          // FLASH_AREA_0P_ID = Primary slot 0
+[DBG] area 2                          // FLASH_AREA_0S_ID = Secondary slot 0
+[DBG] read area=1, off=0, len=0x20    // 读取 image header
+
+// 检查 Secondary slot 是否有待更新
+[DBG] read area=2, off=0x2fff0, len=0x10  // 读取 trailer magic
+[DBG] read area=2, off=0x2ff80, len=0x1
+[DBG] read area=2, off=0x2ffa0, len=0x1
+[DBG] read area=2, off=0x2ffc0, len=0x1
+[INF] Image index: 0, Swap type: none     // 无待处理升级
+
+// === 同样检查 Image 1 (CPU1) ===
+[INF] Image index: 1, Swap type: none
+
+// === 开始验证 Image 0 签名 ===
+[DBG] area 1
+[DBG] read area=1, off=0, len=0x100      // 逐块读取 Image body
+[DBG] read area=1, off=0x100, len=0x100
+    ⋮
+[DBG] read area=1, off=0x3600, len=0xfa  // 读取到 image 末尾
+[DBG] read area=1, off=0x36fa, len=0x4   // 读取 TLV header
+[DBG] read area=1, off=0x36fe, len=0x4
+[DBG] read area=1, off=0x3702, len=0x20  // SHA256 hash (32 bytes)
+[DBG] read area=1, off=0x3726, len=0x20
+[DBG] read area=1, off=0x374a, len=0x48  // ECDSA P-256 signature (72 bytes)
+
+// === 同样验证 Image 1 ===
+[DBG] area 3
+    ⋮
+[DBG] read area=3, off=0x2e6a, len=0x47
+
+// === 启动应用 ===
+[DBG] Starting Application Image
+[DBG] Image Offset: 0x2010000
+[DBG] Vector Table: 0x2010200. PC=0x20112c9, SP=0x22003400
+</code></pre><h2 id="42-启动阶段详解">4.2 启动阶段详解 </h2>
+<table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>操作</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>① 硬件复位</td>
+<td>CPU0 从 0x02000000 开始执行</td>
+<td>Bootloader 向量表</td>
+</tr>
+<tr>
+<td>② BSP 初始化</td>
+<td>时钟、UART、Cache</td>
+<td>串口输出初始化</td>
+</tr>
+<tr>
+<td>③ MCUboot 初始化</td>
+<td><code>boot_go()</code> 开始</td>
+<td>初始化 flash 驱动</td>
+</tr>
+<tr>
+<td>④ 检测 Image 0</td>
+<td>读取 Primary/Secondary header+trailer</td>
+<td>判断 swap 状态</td>
+</tr>
+<tr>
+<td>⑤ 检测 Image 1</td>
+<td>同上</td>
+<td>双核需要两个 image</td>
+</tr>
+<tr>
+<td>⑥ 验证 Image 0</td>
+<td>SHA-256 hash → ECDSA P-256 签名</td>
+<td>约 8800 次 flash 读取</td>
+</tr>
+<tr>
+<td>⑦ 验证 Image 1</td>
+<td>同上</td>
+<td>约 3000 次 flash 读取</td>
+</tr>
+<tr>
+<td>⑧ 启动应用</td>
+<td>设置向量表，跳转至 <code>0x02010200</code></td>
+<td>跳过 0x200 字节 header</td>
+</tr>
+</tbody>
+</table>
+<h2 id="43-签名验证机制">4.3 签名验证机制 </h2>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>Image Layout in Primary Slot:
+┌─────────────────────────┐ 0x02010000
+│ MCUboot Header (0x200B) │ ← image version, magic, size, flags
+├─────────────────────────┤ 0x02010200
+│                         │
+│   Application Image     │ ← 实际固件代码
+│                         │
+├─────────────────────────┤ 0x02010200 + image_size
+│ TLV Area:               │
+│  - SHA256 hash (32B)    │ ← 完整性验证
+│  - ECDSA P-256 sig(72B) │ ← 来源验证（公钥内嵌在 bootloader 中）
+│  - Key hash (optional)  │
+│  - Dependency (optional)│ ← 多 image 依赖关系
+└─────────────────────────┘
+</code></pre><p>公钥内嵌在 bootloader 中，位于 <code>ra/mcu-tools/MCUboot/sim/mcuboot-sys/csupport/keys.c</code>。测试使用的是默认的 ECDSA P-256 密钥对，生产环境必须更换。</p>
+<h1 id="五-mcuboot-优缺点">五、MCUboot 优缺点 </h1>
+<table>
+<thead>
+<tr>
+<th>方面</th>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>升级方式</strong></td>
+<td>支持 Overwrite / Swap / Direct-XIP 三种模式，适应不同硬件</td>
+<td>Swap 模式需要额外的 scratch 区域，Flash 占用更大</td>
+</tr>
+<tr>
+<td><strong>安全性</strong></td>
+<td>支持 RSA/EC/ML-DSA 签名验证，可防篡改、防降级攻击</td>
+<td>签名密钥管理复杂，丢失私钥则无法发布升级</td>
+</tr>
+<tr>
+<td><strong>多核支持</strong></td>
+<td>原生支持 multi-image，一个 bootloader 管理多个 CPU 核的固件</td>
+<td>配置复杂度随 image 数量增加</td>
+</tr>
+<tr>
+<td><strong>Flash 占用</strong></td>
+<td>Overwrite 模式下约 50 KB</td>
+<td>对于小容量 MCU（≤256 KB Flash）不可接受</td>
+</tr>
+<tr>
+<td><strong>编译部署</strong></td>
+<td>应用只需单次编译，自动签名</td>
+<td>需要搭建 Python 签名工具链</td>
+</tr>
+<tr>
+<td><strong>日志调试</strong></td>
+<td>提供完整日志等级（ERR/WRN/INF/DBG）</td>
+<td>串口输出需要额外适配（picolibc 兼容性问题）</td>
+</tr>
+<tr>
+<td><strong>环境依赖</strong></td>
+<td>生成文件和配置分离，易于版本管理</td>
+<td>FSP 集成后深度绑定 e2 studio，非 Renesas 平台需手动移植</td>
+</tr>
+<tr>
+<td><strong>抗量子</strong></td>
+<td>支持 ML-DSA（Dilithium）签名</td>
+<td>签名体积大（约 2.5 KB），Flash 和 RAM 占用显著增加</td>
+</tr>
+</tbody>
+</table>
+<h2 id="51-典型资源开销">5.1 典型资源开销 </h2>
+<table>
+<thead>
+<tr>
+<th>配置</th>
+<th>Bootloader 大小</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Overwrite + 无签名</td>
+<td>~20 KB</td>
+<td>最精简配置</td>
+</tr>
+<tr>
+<td>Overwrite + ECDSA P-256</td>
+<td>~50 KB</td>
+<td>测试工程配置</td>
+</tr>
+<tr>
+<td>Swap + RSA-2048</td>
+<td>~70 KB</td>
+<td>RSA 签名验证需要更多代码</td>
+</tr>
+<tr>
+<td>Swap + ML-DSA</td>
+<td>~85 KB</td>
+<td>抗量子签名，带 dilithium 库</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>注③：上述大小为 RA8P1 MRAM 上的实测值，具体大小随工具链版本和优化选项变化。</p>
+</blockquote>
+<h1 id="六-个人总结">六、个人总结 </h1>
+<h2 id="61-mcuboot-的整体评价">6.1 MCUboot 的整体评价 </h2>
+<p>MCUboot 是一个功能完善、设计良好的开源 bootloader，但它的<strong>重量级</strong>特性决定了它并非适用于所有场景：</p>
+<p><strong>适合的场景：</strong></p>
+<ul>
+<li>资源充足的 MCU（Flash ≥ 512 KB，RAM ≥ 128 KB）</li>
+<li>多核 MCU（multi-image 管理优势明显）</li>
+<li>对安全性有要求的工业/汽车应用（需要签名验证）</li>
+<li>复杂固件管理（版本管理、降级防护、依赖管理）</li>
+</ul>
+<p><strong>不适合的场景：</strong></p>
+<ul>
+<li>小容量 MCU（≤ 256 KB Flash）—— bootloader 本身占用 20~50 KB，加上双 slot 空间，可用 Flash 所剩无几</li>
+<li>简单场景（仅需 A/B 切换）—— 硬件 dual-bank 或 SAS 方案更轻量</li>
+<li>非 Renesas 平台—— 移植工作量大</li>
+</ul>
+<h2 id="62-与-sas-方案的对比">6.2 与 SAS 方案的对比 </h2>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>SAS 方案（RA8T2 当前）</th>
+<th>MCUboot 方案</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>编译</td>
+<td>需两套不同地址编译</td>
+<td>单次编译</td>
+</tr>
+<tr>
+<td>签名</td>
+<td>无</td>
+<td>ECDSA/RSA/ML-DSA</td>
+</tr>
+<tr>
+<td>版本管理</td>
+<td>无</td>
+<td>原生支持</td>
+</tr>
+<tr>
+<td>降级防护</td>
+<td>无</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>资源占用</td>
+<td>Bootloader ~4 KB</td>
+<td>~50 KB</td>
+</tr>
+<tr>
+<td>升级方式</td>
+<td>SAS 寄存器切换</td>
+<td>overwrite/swap</td>
+</tr>
+<tr>
+<td>Flash 占用</td>
+<td>2×502 KB</td>
+<td>4×192 KB + 64 KB</td>
+</tr>
+<tr>
+<td>开发复杂度</td>
+<td>低</td>
+<td>高</td>
+</tr>
+</tbody>
+</table>
+<h2 id="63-理解与启发">6.3 理解与启发 </h2>
+<p>通过本次 MCUboot 测试，更深刻地理解了以下概念：</p>
+<ol>
+<li>
+<p><strong>Bootloader 的本质</strong>：上电后先于应用执行的一段代码，负责硬件初始化、固件校验和跳转管理。SAS 方案相当于"硬件 bootloader"，MCUboot 是"软件 bootloader"。</p>
+</li>
+<li>
+<p><strong>签名验证的必要性</strong>：在 OTA 场景中，如果没有签名验证，攻击者可以伪造固件、回滚到有漏洞的版本。MCUboot 的 TLV 签名机制（hash + 签名分离）设计合理，既做完整性校验又做来源认证。</p>
+</li>
+<li>
+<p><strong>Overwrite 与 Swap 的取舍</strong>：</p>
+<ul>
+<li>Overwrite：简单可靠，但升级失败无法回滚（需要额外的 recovery 机制）</li>
+<li>Swap：升级失败可自动回滚，但需要 scratch 区域，升级时间更长</li>
+</ul>
+</li>
+<li>
+<p><strong>picolibc tinystdio 与 printf 重定向的陷阱</strong>：在 Clang + picolibc 环境下，传统的 <code>_write()</code> 钩子不生效，需要理解 picolibc 的 <code>FILE</code> 结构和 <code>stdout</code> 实现机制。这属于工具链差异带来的隐性坑。</p>
+</li>
+</ol>
+<h2 id="64-对-ra8t2-项目的启示">6.4 对 RA8T2 项目的启示 </h2>
+<p>RA8T2 项目和 RA8P1 同属 RA8 系列，MRAM 架构相同，MCUboot 方案理论上可直接移植。但需要考虑：</p>
+<ul>
+<li>RA8T2 需要 EtherCAT 通信，升级通过 <strong>FoE（File over EtherCAT）</strong> 协议传输固件</li>
+<li>FoE 下载完成后写入 Secondary slot → 触发 MCUboot 进行 overwrite 升级</li>
+<li>MCUboot 验证签名 → 覆盖 Primary slot → 复位 → 运行新固件</li>
+</ul>
+<p>如果 RA8T2 的 Flash 和 RAM 资源允许，MCUboot 是比 SAS 方案更完善的升级方案。如果资源受限，则可以参考 MCUboot 的设计思路，实现一个精简版的软件 bootloader。</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
