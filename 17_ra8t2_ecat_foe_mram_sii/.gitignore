@@ -1,0 +1,6 @@
+# e2Studio/FSP regenerates these directories from configuration.xml.
+prj/RA8T2_ECAT_FoE_MRAM_SII_CPU0/BANK0/
+prj/RA8T2_ECAT_FoE_MRAM_SII_CPU0/BANK1/
+prj/RA8T2_ECAT_FoE_MRAM_SII_CPU0/ra/
+prj/RA8T2_ECAT_FoE_MRAM_SII_CPU0/ra_gen/
+prj/RA8T2_ECAT_FoE_MRAM_SII_CPU0/ra_cfg/

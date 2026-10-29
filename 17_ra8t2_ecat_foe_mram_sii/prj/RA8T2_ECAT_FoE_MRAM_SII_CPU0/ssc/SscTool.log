@@ -1,0 +1,63 @@
+(Info) Create slave project based on 'D:\Users\jerry\Documents\Renesas\MCU\RA\RA8\RA8T2\ep\0100-mck-ra8t2-ethercat\RA8T2_EtherCAT_MCK_rev0100\common\ETG5003\SSCconfig\RA8_EtherCAT_ETG5003.esp'
+(Info) No Process data SyncManager defined.
+(Info) "aoeappl.c" :  skipped (AOE_SUPPORTED)
+(Info) "aoeappl.h" :  skipped (AOE_SUPPORTED)
+(Info) "bootloaderappl.c" :  skipped (BOOTLOADER_SAMPLE)
+(Info) "bootloaderappl.h" :  skipped (BOOTLOADER_SAMPLE)
+(Info) "cia402appl.c" :  skipped (CiA402_SAMPLE_APPLICATION)
+(Info) "cia402appl.h" :  skipped (CiA402_SAMPLE_APPLICATION)
+(Info) "diag.c" :  skipped (DIAGNOSIS_SUPPORTED)
+(Info) "diag.h" :  skipped (DIAGNOSIS_SUPPORTED)
+(Info) "ecataoe.c" :  skipped (AOE_SUPPORTED)
+(Info) "ecataoe.h" :  skipped (AOE_SUPPORTED)
+(Info) "ecateoe.c" :  skipped (EOE_SUPPORTED)
+(Info) "ecateoe.h" :  skipped (EOE_SUPPORTED)
+(Info) "ecatsoe.c" :  skipped (SOE_SUPPORTED)
+(Info) "ecatsoe.h" :  skipped (SOE_SUPPORTED)
+(Info) "el9800appl.c" :  skipped (EL9800_APPLICATION)
+(Info) "el9800appl.h" :  skipped (EL9800_APPLICATION)
+(Info) "el9800hw.c" :  skipped (EL9800_HW)
+(Info) "el9800hw.h" :  skipped (EL9800_HW)
+(Info) "emcy.c" :  skipped (EMERGENCY_SUPPORTED)
+(Info) "emcy.h" :  skipped (EMERGENCY_SUPPORTED)
+(Info) "eoeappl.c" :  skipped (EOE_SUPPORTED)
+(Info) "eoeappl.h" :  skipped (EOE_SUPPORTED)
+(Info) "fc1100hw.c" :  skipped (FC1100_HW)
+(Info) "fc1100hw.h" :  skipped (FC1100_HW)
+(Info) "mcihw.c" :  skipped (MCI_HW)
+(Info) "mcihw.h" :  skipped (MCI_HW)
+(Info) "testappl.c" :  skipped (TEST_APPLICATION)
+(Info) "testappl.h" :  skipped (TEST_APPLICATION)
+(Info) "sampleappl.c" :  skipped (SAMPLE_APPLICATION)
+(Info) "sampleappl.h" :  skipped (SAMPLE_APPLICATION)
+(Info) "fc11xxAccess.dll" :  skipped (FC1100_HW)
+(Info) "fc11xxAccess.h" :  skipped (FC1100_HW)
+(Info) "fc11xxAccess.lib" :  skipped (FC1100_HW)
+(Info) "EtherCATSampleLibrary.h" :  skipped (SAMPLE_APPLICATION_INTERFACE)
+(Info) "SampleApplicationInterface.c" :  skipped (SAMPLE_APPLICATION_INTERFACE)
+(Info) "SampleApplicationInterface.h" :  skipped (SAMPLE_APPLICATION_INTERFACE)
+(Info) "applInterface.h" : new file written
+(Info) "bootmode.c" : new file written
+(Info) "bootmode.h" : new file written
+(Info) "coeappl.c" : new file written
+(Info) "coeappl.h" : new file written
+(Info) "ecatappl.c" : new file written
+(Info) "ecatappl.h" : new file written
+(Info) "ecatcoe.c" : new file written
+(Info) "ecatcoe.h" : new file written
+(Info) "ecatfoe.c" : new file written
+(Info) "ecatfoe.h" : new file written
+(Info) "ecatslv.c" : new file written
+(Info) "ecatslv.h" : new file written
+(Info) "esc.h" : new file written
+(Info) "foeappl.c" : new file written
+(Info) "foeappl.h" : new file written
+(Info) "mailbox.c" : new file written
+(Info) "mailbox.h" : new file written
+(Info) "objdef.c" : new file written
+(Info) "objdef.h" : new file written
+(Info) "sdoserv.c" : new file written
+(Info) "sdoserv.h" : new file written
+(Info) No Process data SyncManager defined.
+(Info) Create header file for EEPORM content
+(Info) Create header file for EEPORM content finished
